@@ -29,10 +29,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 16.25rem;
 }
 
 .navItem {
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1.5rem;
     color: #fff;
 }

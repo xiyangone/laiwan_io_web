@@ -84,6 +84,8 @@
     margin-top: 2.2rem;
     font-weight: 600;
     font-size: 3.75rem;
+    line-height: 1;
+    width: 700px
 }
 
 .subtitle {
@@ -168,7 +170,177 @@
 .qrcodeText {
     margin-top: 0.6rem;
     font-size: 1.25rem;
+    width: 140px;
     text-align: center;
+}
+
+.language {
+    position: absolute;
+    right: 5%;
+    top: 8%;
+}
+
+.buttonContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.buttonTextContainer {
+    position: absolute;
+    top: 45%;
+    left: 57%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.buttonSubtitleText {
+    text-align: center;
+    color: white;
+}
+
+.buttonTitleText {
+    text-align: center;
+    color: white;
+    font-size: 16pt;
+}
+
+.buttonTutorialTextContainer {
+    position: absolute;
+    top: 45%;
+    left: 56%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.buttonTutorialText_blue {
+    text-align: center;
+    color: #5cd3ff;
+    font-size: 11pt;
+}
+
+.buttonTutorialText_green {
+    text-align: center;
+    color: #91f37a;
+    font-size: 11pt;
+}
+
+.buttonText {
+    text-align: center;
+    width: 90%;
+}
+
+.buttonTextJP {
+    text-align: center;
+    line-height: 1;
+    width: 90%;
+}
+
+.buttonIconContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.buttonIcon {
+    position: absolute;
+    height: 60%;
+    left: 5%;
+    top: 20%;
+}
+
+.buttonIconText {
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.buttonIconTextJP {
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    width: 65%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+    z-index: 1;
+}
+
+.NewsContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.NewsIcon {
+    position: relative;
+    left: -20px;
+}
+
+.NewsBoxTrailTitle {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
+    width:fit-content;
+    height: 30px;
+    border: 3px white;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.NewsBoxTitle {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    background-color: #ff8e20;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.NewsBoxTrail {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
+    width:fit-content;
+    border: 3px white;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.NewsTextContainerTitle {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: white;
+    text-shadow: 2px 2px #03080dad;
+    font-size: 18pt;
+}
+
+.NewsBox {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    background-color: #ff8e20;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.NewsTextContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px #03080dad;
+    font-size: 16pt;
+    max-width: 600px;
 }
 
 @media screen and (max-width: 1400px) {

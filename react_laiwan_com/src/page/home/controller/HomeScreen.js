@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 import styles from '../style/HomeScreen.module.css';
 import phoneScreenshot from '../image/img-phone.png';
-import h5News from '../image/img-news.png';
-import h5Version1 from '../image/btn-h-5-blue.png';
-import h5Version2 from '../image/btn-h-5-green.png';
-import h5Tutorial1 from '../image/btn-phone-home-blue.png';
-import h5Tutorial2 from '../image/btn-phone-home-green.png';
-import googleDownload from '../image/btn-googel.png';
-import localDownload from '../image/btn-local-download.png';
+import h5Version1 from '../image/btn-h-5-blue-empty.png';
+import h5Version2 from '../image/btn-h-5-green-empty.png';
+import h5Tutorial1 from '../image/btn-phone-home-blue-empty.png';
+import h5Tutorial2 from '../image/btn-phone-home-green-empty.png';
 import NavBar from '../../../common/view/NavBar';
 import { googleStoreLink } from '../../../constant/Constant';
 import {
@@ -22,11 +20,22 @@ import DownloadModalForIOS from '../view/DownloadIOSModal';
 import Qrcode from '../../../view/Qrcode';
 import DownloadButton from '../view/DownloadButton';
 import getLocalDownloadVersion from '../../../utils/getLocalDownloadVersion';
+import { useLocalization } from '../../../localization/controller/localizationContext';
+import LanguageSelect from '../../../common/view/LanguageSelect';
+import DownloadButtonIcon from '../view/DownloadButtonIcon';
+import googleDownload from '../image/logo_google_play.png';
+import localDownload from '../image/logo_local_download.png';
+import newsIcon from '../image/logo_news.png';
 
 const HomeScreen = () => {
+    const { formatMessage } = useIntl();
+    const { switchLocale } = useLocalization();
     const [localDownloadUrl, setLocalDownloadUrl] = useState('');
     const [qrcodeDownloadUrl, setQrcodeDownloadUrl] = useState('')
     const [huaweiDownloadUrl, setHuaweiDownloadUrl] = useState('')
+    const { getCurrentLocale } = useLocalization();
+    const currentLocale = getCurrentLocale();
+
 
     useEffect(() => {
         fetch(androidDownloadUrl, { cache: 'no-cache' })
@@ -54,10 +63,19 @@ const HomeScreen = () => {
         }
     }, []);
 
+    const handleLanguageChange = (event) => {
+        switchLocale(event.target.value);
+    };
+
     return (
         <div className={styles.background}>
             <div className={styles.container}>
                 <NavBar />
+                <div className={styles.navList}>
+                    <div className={styles.language} >
+                        <LanguageSelect handleChange={handleLanguageChange} currentLanguage={currentLocale}/>
+                    </div>
+                </div>
                 <div className={styles.content}>
                     <div className={styles.screenshotContainer}>
                         <div className={styles.circle} />
@@ -70,81 +88,196 @@ const HomeScreen = () => {
                         />
                     </div>
                     <div>
-                        <img
-                            className={styles.h5News}
-                            src={h5News}
-                            alt="H5 版上线"
-                        />
-                        <div className={styles.title}>德州扑克约局社区</div>
-                        <div className={styles.subtitle}>一起，来玩</div>
+                        <div>
+                            <div className={styles.NewsContainer}>
+                                <img
+                                    className={styles.NewsIcon}
+                                    src={newsIcon}
+                                    alt="H5 版上线"
+                                />
+                                <div className={styles.NewsBoxTrailTitle}>
+                                    <div className={styles.NewsBoxTitle}>
+                                        <div className={styles.NewsTextContainerTitle}>
+                                            <p className={styles.NewsText}>
+                                                {formatMessage({ id: 'home_page_news_title' })}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.NewsBoxTrail} style={{zIndex: 0, marginTop: '-1px'}}>
+                                    <div className={styles.NewsBox}>
+                                        <div className={styles.NewsTextContainer}>
+                                            <p className={styles.NewsText}>
+                                                {formatMessage({ id: 'home_page_news_subtitle' })}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.title}>{formatMessage({ id: 'home_page_game_community' })}</div>
+                        <div className={styles.subtitle}>{formatMessage({ id: 'home_page_lets_play' })}</div>
                         <div className={styles.downloadMethod}>
                             <div className={styles.tutorialContainer}>
                                 <a href={h5VersionUrl1}>
-                                    <img
-                                        className={styles.h5Button}
-                                        src={h5Version1}
-                                        alt="H5 版本一"
-                                    />
+                                    <div className={styles.buttonContainer}>
+                                        <img
+                                            className={styles.h5Button}
+                                            src={h5Version1}
+                                            alt="H5 版本一"
+                                        />
+                                        <div className={styles.buttonTextContainer}>
+                                            {currentLocale === 'zh' ? (
+                                                <p
+                                                    className={styles.buttonTitleText}
+                                                    style={{letterSpacing:'0.5rem', fontSize: '1.7rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_link_title' })}
+                                                </p>
+                                            ) : (
+                                                <p
+                                                    className={styles.buttonTitleText}
+                                                    style={{lineHeight: '1.2rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_link_title' })}
+                                                </p>
+                                            )}
+                                            <p className={styles.buttonSubtitleText}>
+                                                {formatMessage({ id: 'home_page_web_link_subtitle' })}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </a>
                                 <Link
                                     className={styles.h5Tutorual}
                                     to="/h5-tutorial/laiwan-life"
                                 >
-                                    <img
-                                        className={styles.h5TutorualImage}
-                                        src={h5Tutorial1}
-                                        alt="如何添加到桌面"
-                                    />
+                                    <div className={styles.buttonContainer}>
+                                        <img
+                                            className={styles.h5TutorualImage}
+                                            src={h5Tutorial1}
+                                            alt="如何添加到桌面"
+                                        />
+                                        <div className={styles.buttonTutorialTextContainer}>
+                                            {currentLocale === 'zh' ? (
+                                                <p
+                                                    className={styles.buttonTutorialText_blue}
+                                                    style={{letterSpacing:'0.2rem', fontSize: '1rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_to_mobile' })}
+                                                </p>
+                                            ) : (
+                                                <p
+                                                    className={styles.buttonTutorialText_blue}
+                                                    style={{letterSpacing:'-0.06rem', lineHeight: '1.2rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_to_mobile' })}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
                                 </Link>
                             </div>
                             <div className={styles.tutorialContainer}>
                                 <a href={h5VersionUrl2}>
-                                    <img
-                                        className={styles.h5Button}
-                                        src={h5Version2}
-                                        alt="H5 版本二"
-                                    />
+                                    <div className={styles.buttonContainer}>
+                                        <img
+                                            className={styles.h5Button}
+                                            src={h5Version2}
+                                            alt="H5 版本一"
+                                        />
+                                        <div className={styles.buttonTextContainer}>
+                                            {currentLocale === 'zh' ? (
+                                                <p
+                                                    className={styles.buttonTitleText}
+                                                    style={{letterSpacing:'0.4rem', fontSize: '1.7rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_link_title' })}
+                                                </p>
+                                            ) : (
+                                                <p
+                                                    className={styles.buttonTitleText} 
+                                                    style={{lineHeight: '1.2rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_link_title' })}
+                                                </p>
+                                            )}
+                                            <p className={styles.buttonSubtitleText}>
+                                                {formatMessage({ id: 'home_page_web_link_subtitle' })}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </a>
                                 <Link
                                     className={styles.h5Tutorual}
                                     to="/h5-tutorial/laiwanpai-com"
                                 >
-                                    <img
-                                        className={styles.h5TutorualImage}
-                                        src={h5Tutorial2}
-                                        alt="如何添加到桌面"
-                                    />
+                                    <div className={styles.buttonContainer}>
+                                        <img
+                                            className={styles.h5TutorualImage}
+                                            src={h5Tutorial2}
+                                            alt="如何添加到桌面"
+                                        />
+                                        <div className={styles.buttonTutorialTextContainer}>
+                                            {currentLocale === 'zh' ? (
+                                                <p
+                                                    className={styles.buttonTutorialText_green}
+                                                    style={{letterSpacing:'0.2rem', fontSize: '1rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_to_mobile' })}
+                                                </p>
+                                            ) : (
+                                                <p
+                                                    className={styles.buttonTutorialText_green}
+                                                    style={{letterSpacing:'-0.06rem', lineHeight: '1.2rem'}}
+                                                >
+                                                    {formatMessage({ id: 'home_page_web_to_mobile' })}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
                                 </Link>
                             </div>
                         </div>
                         <div className={styles.downloadMethod}>
                             <DownloadModalForIOS />
-                            <a href={googleStoreLink}>
-                                <img
-                                    className={styles.buttonImage}
-                                    src={googleDownload}
-                                    alt="谷歌下载"
+                            <div>
+                                <DownloadButtonIcon
+                                    href={googleStoreLink}
+                                    title={formatMessage({ id: 'home_page_google_link_title'})}
+                                    subtitle={formatMessage({ id: 'home_page_google_link_subtitle'})}
+                                    icon={googleDownload}
+                                    iconAlt="谷歌下载"
                                 />
-                            </a>
+                            </div>
                             <div className={styles.localContainer}>
-                                <a href={localDownloadUrl}>
-                                    <img
-                                        className={styles.buttonImage}
-                                        src={localDownload}
-                                        alt="本地下载"
+                                <div>
+                                    <DownloadButtonIcon
+                                        href={localDownloadUrl}
+                                        title={formatMessage({ id: 'home_page_local_download_link_title'})}
+                                        subtitle={formatMessage({ id: 'home_page_local_download_link_subtitle'})}
+                                        icon={localDownload}
+                                        iconAlt="本地下载"
                                     />
-                                </a>
-                                <span>{`最新版本: ${getLocalDownloadVersion(localDownloadUrl)}`}</span>
+                                </div>
+                                <span>
+                                    {`${formatMessage({ id: 'home_page_version' })}` +
+                                    `: ${getLocalDownloadVersion(localDownloadUrl)}`}
+                                </span>
                             </div>
                             {serverType === 'staging' ?
-                                <DownloadButton href={huaweiDownloadUrl} title="华为版下载" subtitle="(支持华为)" />
+                                <DownloadButton
+                                    href={huaweiDownloadUrl}
+                                    title={formatMessage({ id: 'home_page_huawei_title' })}
+                                    subtitle={formatMessage({ id: 'home_page_huawei_subtitle' })}
+                                />
                                 : <></>
                             }
                         </div>
                     </div>
                     <div className={styles.qrcodeContainer}>
                         <Qrcode downloadUrl={qrcodeDownloadUrl} />
-                        <div className={styles.qrcodeText}>手机扫码下载</div>
+                        <div className={styles.qrcodeText}>{formatMessage({ id: 'home_page_qr_scan' })}</div>
                     </div>
                 </div>
             </div>
