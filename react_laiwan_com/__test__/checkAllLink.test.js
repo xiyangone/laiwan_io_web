@@ -3,6 +3,7 @@ import { cleanup, render, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import 'cross-fetch/polyfill';
 
+import { LocalizationProvider } from '../src/localization/controller/localizationContext';
 import HomeScreen from '../src/page/home/controller/HomeScreen';
 import H5Tutorial from '../src/page/h5-tutorial/controller/H5Tutorial';
 import Tutorial from '../src/Tutorial';
@@ -47,11 +48,11 @@ describe('链接测试', () => {
     test('所有可点击链接，不包含staging服务器', async () => {
         const { container } = render(
             componentWithRouter(
-                <>
+                <LocalizationProvider>
                     <HomeScreen />
                     <H5Tutorial />
                     <Tutorial />
-                </>
+                </LocalizationProvider>
             )
         );
         const allATagElements = await waitFor(() =>

@@ -27,6 +27,16 @@ import googleDownload from '../image/logo_google_play.png';
 import localDownload from '../image/logo_local_download.png';
 import newsIcon from '../image/logo_news.png';
 
+import phoneScreenshotZh from '../image/zh/img-phone.png';
+import phoneScreenshotEn from '../image/en/img-phone.png';
+import phoneScreenshotJa from '../image/ja/img-phone.png';
+import phoneScreenshotKo from '../image/ko/img-phone.png';
+import phoneScreenshotDe from '../image/de/img-phone.png';
+import phoneScreenshotRu from '../image/ru/img-phone.png';
+import phoneScreenshotEs from '../image/es/img-phone.png';
+import phoneScreenshotFr from '../image/fr/img-phone.png';
+import phoneScreenshotIt from '../image/it/img-phone.png';
+
 const HomeScreen = () => {
     const { formatMessage } = useIntl();
     const { switchLocale } = useLocalization();
@@ -36,6 +46,44 @@ const HomeScreen = () => {
     const { getCurrentLocale } = useLocalization();
     const currentLocale = getCurrentLocale();
 
+    let phoneImage = null;
+
+    const changeScreenshotLocale = () => {
+        switch (currentLocale) {
+            case 'zh':
+                phoneImage = phoneScreenshotZh;
+                break;
+            case 'en':
+                phoneImage = phoneScreenshotEn;
+                break;
+            case 'ja':
+                phoneImage = phoneScreenshotJa;
+                break;
+            case 'ko':
+                phoneImage = phoneScreenshotKo;
+                break;
+            case 'de':
+                phoneImage = phoneScreenshotDe;
+                break;
+            case 'ru':
+                phoneImage = phoneScreenshotRu;
+                break;
+            case 'es':
+                phoneImage = phoneScreenshotEs;
+                break;
+            case 'fr':
+                phoneImage = phoneScreenshotFr;
+                break;
+            case 'it':
+                phoneImage = phoneScreenshotIt;
+                break;
+            default:
+                phoneImage = phoneScreenshot;
+                break;
+        }
+    }
+
+    changeScreenshotLocale();
 
     useEffect(() => {
         fetch(androidDownloadUrl, { cache: 'no-cache' })
@@ -65,6 +113,7 @@ const HomeScreen = () => {
 
     const handleLanguageChange = (event) => {
         switchLocale(event.target.value);
+        changeScreenshotLocale();
     };
 
     return (
@@ -83,7 +132,7 @@ const HomeScreen = () => {
                         <div className={`${styles.circle} ${styles.third}`} />
                         <img
                             className={styles.screenshot}
-                            src={phoneScreenshot}
+                            src={phoneImage}
                             alt="应用截图"
                         />
                     </div>
