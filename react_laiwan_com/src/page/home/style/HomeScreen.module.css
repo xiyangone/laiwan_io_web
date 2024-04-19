@@ -361,4 +361,24 @@
     .qrcodeContainer {
         display: none;
     }
+
+    .buttonSubtitleText {
+        text-align: center;
+        color: white;
+        font-size: 6pt;
+    }
+    
+    .buttonTitleText {
+        text-align: center;
+        color: white;
+        font-size: 9pt;
+    }
+
+    .buttonTutorialText_blue {
+        font-size: 6pt;
+    }
+
+    .buttonTutorialText_green {
+        font-size: 6pt;
+    }
 }

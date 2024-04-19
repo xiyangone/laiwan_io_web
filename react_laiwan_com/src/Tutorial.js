@@ -22,24 +22,10 @@ import { LocalizationContext } from './localization/controller/localizationConte
 
 import en from './localization/locales/en.json';
 import zh from './localization/locales/zh.json';
-import ja from './localization/locales/ja.json';
-import ru from './localization/locales/ru.json';
-import de from './localization/locales/de.json';
-import es from './localization/locales/es.json';
-import fr from './localization/locales/fr.json';
-import it from './localization/locales/it.json';
-import ko from './localization/locales/ko.json';
 
 const messages = {
     en,
     zh,
-    ja,
-    ru,
-    de,
-    es,
-    fr,
-    it,
-    ko,
 };
 
 class Tutorial extends Component {

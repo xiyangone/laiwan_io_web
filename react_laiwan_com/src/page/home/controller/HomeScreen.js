@@ -29,13 +29,6 @@ import newsIcon from '../image/logo_news.png';
 
 import phoneScreenshotZh from '../image/zh/img-phone.png';
 import phoneScreenshotEn from '../image/en/img-phone.png';
-import phoneScreenshotJa from '../image/ja/img-phone.png';
-import phoneScreenshotKo from '../image/ko/img-phone.png';
-import phoneScreenshotDe from '../image/de/img-phone.png';
-import phoneScreenshotRu from '../image/ru/img-phone.png';
-import phoneScreenshotEs from '../image/es/img-phone.png';
-import phoneScreenshotFr from '../image/fr/img-phone.png';
-import phoneScreenshotIt from '../image/it/img-phone.png';
 
 const HomeScreen = () => {
     const { formatMessage } = useIntl();
@@ -55,27 +48,6 @@ const HomeScreen = () => {
                 break;
             case 'en':
                 phoneImage = phoneScreenshotEn;
-                break;
-            case 'ja':
-                phoneImage = phoneScreenshotJa;
-                break;
-            case 'ko':
-                phoneImage = phoneScreenshotKo;
-                break;
-            case 'de':
-                phoneImage = phoneScreenshotDe;
-                break;
-            case 'ru':
-                phoneImage = phoneScreenshotRu;
-                break;
-            case 'es':
-                phoneImage = phoneScreenshotEs;
-                break;
-            case 'fr':
-                phoneImage = phoneScreenshotFr;
-                break;
-            case 'it':
-                phoneImage = phoneScreenshotIt;
                 break;
             default:
                 phoneImage = phoneScreenshot;
@@ -109,11 +81,16 @@ const HomeScreen = () => {
                 // TODO: 缺少错误反馈，之后加
                 });
         }
+        document.title = formatMessage({ id: 'laiwan' });
     }, []);
+
+    useEffect(() => {
+        document.title = formatMessage({ id: 'laiwan' });
+        changeScreenshotLocale();
+    }, [currentLocale]);
 
     const handleLanguageChange = (event) => {
         switchLocale(event.target.value);
-        changeScreenshotLocale();
     };
 
     return (
