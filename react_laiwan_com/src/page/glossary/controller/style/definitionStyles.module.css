@@ -1,0 +1,317 @@
+
+Link, a {
+    margin: revert;
+    padding: revert;
+    all: unset;
+}
+
+.navigationExpandMenu a:hover {
+    margin: revert;
+    padding: revert;
+    color: inherit;
+    font-style: inherit;
+}
+
+.navigationContainer a:hover {
+    margin: revert;
+    padding: revert;
+    color: inherit;
+    font-style: inherit;
+}
+
+.definitionContent {
+    margin: revert;
+    padding: revert;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+.headerStyle {
+    margin: revert;
+    padding: revert;
+    line-height: 1.125;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.headerContainer {
+    margin: revert;
+    padding: revert;
+    padding-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #F5F5F5;
+}
+
+.bodyTextContainer{
+    margin: revert;
+    padding: revert;
+    border-left: 4px;
+    border-radius: 4px;
+    border-left-style: solid;
+    border-left-color: #DBDBDB;
+    padding: 1.25rem 1.5rem;
+}
+
+.bodyTextStyle {
+    margin: revert;
+    padding: revert;
+    color: #4A4A4A;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.goBackContainer {
+    margin: revert;
+    padding: revert;
+    margin-top: 50px;
+}
+
+.goBack {
+    margin: revert;
+    padding: revert;
+    color: #00d1b2;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 770px) {
+    .logoContainer {
+        position:relative;
+        left: 10%;
+        top: 50%;
+        -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+    }
+    .navigationContainer {
+        position: relative;
+        top: 50%;
+        left: 70%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 72px;
+        width: fit-content;
+    }
+    .mobileSearch {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .navigationExpandMenu {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    .navigationExpandButton {
+        visibility: hidden;
+        height: 0px;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .logoContainer {
+        margin: revert;
+        padding: revert;
+        position:absolute;
+        left: 0%;
+        cursor: pointer;
+    }
+    .navigationContainer {
+        margin: revert;
+        padding: revert;
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .navigationExpandButton {
+        margin: revert;
+        padding: revert;
+        position:absolute;
+        top: 36px;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        display: block;
+        height: 3.25rem;
+        width: 3.25rem;
+        right: 0px;
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        outline: inherit;
+    }
+
+    .navigationExpandButtonIsOpen {
+        margin: revert;
+        padding: revert;
+        position:absolute;
+        top: 36px;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        display: block;
+        height: 3.25rem;
+        width: 3.25rem;
+        right: 0px;
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        outline: inherit;
+    }
+    
+    .navigationExpandButton span {
+        margin: revert;
+        padding: revert;
+        top: calc(50% - 6px);background-color: currentColor;
+        display: block;
+        height: 1px;
+        left: calc(50% - 8px);
+        position: absolute;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        transition-duration: 86ms;
+        transition-timing-function: ease-out;
+        width: 16px;
+    }
+    
+    .navigationExpandButtonIsOpen span {
+        margin: revert;
+        padding: revert;
+        top: calc(50% - 6px);background-color: currentColor;
+        display: block;
+        height: 1px;
+        left: calc(50% - 8px);
+        position: absolute;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        transition-duration: 86ms;
+        transition-timing-function: ease-out;
+        width: 16px;
+    }
+
+    .navigationExpandButton span:nth-child(1) {
+        top: calc(50% - 6px);
+    }
+    .navigationExpandButton span:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+    .navigationExpandButton span:nth-child(3) {
+        top: calc(50% + 4px);
+    }
+
+    .navigationExpandButtonIsOpen span:nth-child(1) {
+        top: calc(50% - 6px);
+    }
+    .navigationExpandButtonIsOpen span:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+    .navigationExpandButtonIsOpen span:nth-child(3) {
+        top: calc(50% + 4px);
+    }
+
+    .navigationExpandButtonIsOpen span:nth-child(1) {
+        -webkit-transform: translateY(5px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
+    }
+    .navigationExpandButtonIsOpen span:nth-child(2) {
+        opacity: 0;
+    }
+    .navigationExpandButtonIsOpen span:nth-child(3) {
+        -webkit-transform: translateY(-5px) rotate(-45deg);
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .navigationExpandIcon {
+        color:#ffffff !important;
+    }
+
+    .navigationExpandMenu {
+        margin: revert;
+        padding: revert;
+        position: absolute;
+        top: 72px;
+        width: 100%;
+        background-color: #200C49;
+        z-index: 1;
+    }
+    .navigationExpandMenuOption {
+        margin: revert;
+        padding: revert;
+        height: fit-content;
+        width: 100%;
+        color: #ffffff;
+        text-indent: 20pt;
+        cursor:pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 0;
+    }
+    .navigationExpandMenuOption:hover {
+        margin: revert;
+        padding: revert;
+        background-color: #361870;
+        height: fit-content;
+        width: 100%;
+        color: #e0e0e0;
+        text-indent: 20pt;
+        cursor:pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 0;
+    }
+}
+
+.topSpacing {
+    margin: revert;
+    padding: revert;
+    width: 100%;
+    height: 72px;
+}
+
+.navigationBar {
+    margin: revert;
+    padding: revert;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 72px;
+    background-color: #200C49;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoLink {
+    margin: revert;
+    padding: revert;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+}
+
+.logo {
+    margin: revert;
+    padding: revert;
+    height: 48px;
+    width: auto;
+}
+
+.navigationButton {
+    margin: revert;
+    padding: revert;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:white;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+}

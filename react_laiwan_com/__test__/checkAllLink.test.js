@@ -6,6 +6,7 @@ import 'cross-fetch/polyfill';
 import { LocalizationProvider } from '../src/localization/controller/localizationContext';
 import HomeScreen from '../src/page/home/controller/HomeScreen';
 import H5Tutorial from '../src/page/h5-tutorial/controller/H5Tutorial';
+import Glossary from '../src/page/glossary/controller/glossary';
 import Tutorial from '../src/Tutorial';
 
 const STAGING_DOMAIN = 'shafayouxi.org';
@@ -52,6 +53,7 @@ describe('链接测试', () => {
                     <HomeScreen />
                     <H5Tutorial />
                     <Tutorial />
+                    <Glossary />
                 </LocalizationProvider>
             )
         );

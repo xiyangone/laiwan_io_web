@@ -1,0 +1,5951 @@
+{
+  "agaodepaixingzuhe": {
+      "name": "A高的牌型组合",
+      "definition": {
+        "definition1": {
+          "header": "A高的牌型组合: ",
+          "body": {
+            "paragraph1": "在组成的牌型组合里，A是最高牌，且没有组成对子或任何更大的牌型。 "
+          }
+        },
+        "definition2": {
+          "header": "举例说明: ",
+          "body": {
+            "paragraph1": "牌面：8s9d2d5cJh       你的手牌：AhKs "
+          }
+        },
+        "definition3": {
+          "header": "学习内容: ",
+          "body": {
+            "paragraph1": "《手牌实验室—AK》."
+          }
+        }
+      }
+  },
+  "anniuanniuwei": {
+    "name": "按钮，按钮位",
+    "definition": {
+      "definition1": {
+        "header": "按钮，按钮位:",
+        "body": {
+          "paragraph1": "游戏道具中作为标记相对位置用的圆形大塑料块儿。 也用于指代按钮位。最具优势的位置，翻牌后最后行动的位置。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Cutoff (CO) "
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Cutoff (CO).   Middle Position(MP).   Under the Gun(UTG).   《位置因素》"
+        }
+      }
+    }
+  },
+  "ansantiao": {
+    "name": "暗三条",
+    "definition": {
+      "definition1": {
+        "header": "暗三条:",
+        "body": {
+          "paragraph1": "由一张公共牌和玩家手上的一对底牌组成。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Trips"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Trips.   《埋伏三条》"
+        }
+      }
+    }
+  },
+  "aomaha": {
+    "name": "奥马哈",
+    "definition": {
+      "definition1": {
+        "header": "奥马哈:",
+        "body": {
+          "paragraph1": "奥马哈（Omaha）可供2-10人游戏。它类似于德州扑克，区别是每个玩家最初得到4张起手牌，但组成牌型时需同时使用手中两张。"
+        }
+      }
+    }
+  },
+  "aqiangjian": {
+    "name": "A-枪-尖",
+    "definition": {
+      "definition1": {
+        "header": "A-枪-尖:",
+        "body": {
+          "paragraph1": "在德州扑克游戏中的最高张。在A2345顺子中也可以当作1使用。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《手牌实验室—弱AX》."
+        }
+      }
+    }
+  },
+  "bailaohuidashun": {
+    "name": "百老汇-大顺",
+    "definition": {
+      "definition1": {
+        "header": "百老汇-大顺: ",
+        "body": {
+          "paragraph1": "(1) 最大的顺子，即10,J,Q,K,A。而用于组成大顺子的这些牌被称为broadway牌。 (2) 这个词同样用于指代「组成百老汇牌型的两张手牌」，如KJ，AQ等。 "
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Straight "
+        }
+      }
+    }
+  },
+  "banzhahu": {
+    "name": "半诈唬",
+    "definition": {
+      "definition1": {
+        "header": "半诈唬:",
+        "body": {
+          "paragraph1": "半诈唬是用听牌进行诈唬，这手听牌目前较弱，但它有潜力发展为一手强牌。半诈唬的目的不一定是赶走所有的对手，因为没听到牌仍然有机会赢得摊牌。因此，半诈唬的一个目的是在初期让对手往底池里投钱以增加潜在的收益。对手弃牌的可能性加上听牌成型的可能性使得这种打法有利可图。半诈唬运用的典型情况是，你拿到一手没有成型的牌，而如果某张牌在后面的游戏中发出，它将成为一手强成手牌。相关主题:诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "baohu": {
+    "name": "保护",
+    "definition": {
+      "definition1": {
+        "header": "保护:",
+        "body": {
+          "paragraph1": "目前最强的一手成手牌经常有被对手的听牌反超的问题。这种牌必须针对听牌进行保护。保护意味着给任何听牌不合适的底池成败比来跟注，以至于他们不再有利。保护也意味着通过让对手弃牌来减少对手的数量。相关主题:缩小战场（Thinningthe Field）,底池成败比（Pot Odds）, 莫顿定理（Morton's Theorem）"
+        }
+      }
+    }
+  },
+  "baohuxiazhu": {
+    "name": "保护下注",
+    "definition": {
+      "definition1": {
+        "header": "保护下注:",
+        "body": {
+          "paragraph1": "保护下注（protectionbet）指通过破坏对手听牌的底池成败比来下注保护自己的容易受到听牌攻击的成手牌，即对手必须投入太多的钱来看下张牌，以至于对手不能继续玩他的听牌。相关主题:保护（Protection）,听牌（Draw）,底池成败比（Pot Odds）"
+        }
+      }
+    }
+  },
+  "baoleng": {
+    "name": "爆冷",
+    "definition": {
+      "definition1": {
+        "header": "爆冷: ",
+        "body": {
+          "paragraph1": "爆冷是指一手优势很大的牌被小概率事件击败。正常打败和爆冷之间的界限根据不同的玩家而改变。通常，如果一手只有5-10%机会赢的牌获胜，或是全下后被对手后面连发两张反超，就是爆冷。通常也被人简称为BB。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "手持AA，和对手35翻前打光。牌面发出235J6。 "
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "《资金管理》"
+        }
+      }
+    }
+  },
+  "baomingfei": {
+    "name": "报名费",
+    "definition": {
+      "definition1": {
+        "header": "报名费:",
+        "body": {
+          "paragraph1": "报名费（entry fee）是参加锦标赛支付的钱，它直接交给锦标赛的主办方而不投入彩池。因此，参加锦标赛的成本是买入+报名费，只有买入投进彩池。因此，线上平台上标着\"$10+$1\"的锦标赛意味着一个玩家参加比赛必须支付$11，但只有$10投入彩池，另外的$1交给扑克平台。相关主题:锦标赛（Turnier）,买入（Buy-In）"
+        }
+      }
+    }
+  },
+  "baoxian": {
+    "name": "保险",
+    "definition": {
+      "definition1": {
+        "header": "保险:",
+        "body": {
+          "paragraph1": "一个发生于游戏外的第三方协议，领先的玩家通过购买“保险”在被反超后获得赔偿。"
+        }
+      }
+    }
+  },
+  "beidong": {
+    "name": "被动",
+    "definition": {
+      "definition1": {
+        "header": "被动:",
+        "body": {
+          "paragraph1": "如果一个玩家很少加注或下注，那么他就是被动的。他很少激进地玩牌并让其他的玩家占据主动。与主动行动相比，他更多地是作出反应。相关主题:激进（Aggressive）"
+        }
+      }
+    }
+  },
+  "beikaobei": {
+    "name": "背靠背",
+    "definition": {
+      "definition1": {
+        "header": "背靠背: ",
+        "body": {
+          "paragraph1": "连续几次比赛进决胜桌，或是连续夺冠。 "
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "Johnny Chan won back to back in 1987 and 1988”. ——Johnny Chan在1987年和1988年连续两次夺冠。"
+        }
+      }
+    }
+  },
+  "beizizhuzhe": {
+    "name": "被资助者",
+    "definition": {
+      "definition1": {
+        "header": "被资助者:",
+        "body": {
+          "paragraph1": "被资助者是指向资助者出售自己打牌的行为的玩家，或主动寻求全额资助的玩家。"
+        }
+      }
+    }
+  },
+  "bianchi": {
+    "name": "边池",
+    "definition": {
+      "definition1": {
+        "header": "边池:",
+        "body": {
+          "paragraph1": "边池是一个玩家全押后的旁边底池。主池是所有游戏的玩家都可以赢得的底池。如果一个玩家全押并至少有两个玩家在继续游戏（没有全押），那么后面所有的下注都投入边池，只有非全押的玩家可能赢得边池。相关主题:主池（MainPot）,底池（Pot）同义词:side-pot, sidepot"
+        }
+      }
+    }
+  },
+  "bianpai": {
+    "name": "边牌",
+    "definition": {
+      "definition1": {
+        "header": "边牌:",
+        "body": {
+          "paragraph1": "参见起脚牌（Kicker）"
+        }
+      }
+    }
+  },
+  "bianzhuwaiweidadu": {
+    "name": "边注-外围-打赌",
+    "definition": {
+      "definition1": {
+        "header": "边注-外围-打赌:",
+        "body": {
+          "paragraph1": "边注（side bet）是与当前游戏无关的两个或多个玩家之间下的赌注。他们可能赌下一张牌是8，翻牌圈有黑桃3或梅花3，明天会下雨或某个玩家可以在一年内绕地球走一圈。只要能想到的都可以赌，赌的东西不需要与目前的游戏有任何关系。"
+        }
+      }
+    }
+  },
+  "bodong": {
+    "name": "波动",
+    "definition": {
+      "definition1": {
+        "header": "波动:",
+        "body": {
+          "paragraph1": "波动是一个玩家的资金的巨大起伏;如果变化是负面的，它就是下风期。正面的变化是上风期。波动是扑克中随机因素的结果，这导致运气控制短期的价值表现。从长期来看，上风期和下风期将相抵平衡，余下的损失是由错误的打法造成的。一个玩家不要让自己的打法被两个方向的波动所支配，也不要因此而让情绪失控，这一点很重要。相关主题:上风期（Upswing）,下风期（Downswing）,情绪失控（ Tilt）,波动偏离（ Variance）"
+        }
+      }
+    }
+  },
+  "bodongpianli": {
+    "name": "波动偏离",
+    "definition": {
+      "definition1": {
+        "header": "波动偏离:",
+        "body": {
+          "paragraph1": "在概率原理中，正态分布离差被称为波动偏离。随机变量的偏离是衡量这个变量在短期偏离长期期望收益的程度。扑克中包含随机的因素，波动偏离是指一个玩家偏离他的期望收益。例如，翻牌圈的同花听牌有36%的获胜机率，但少量的牌平均下来，它可能只在25%的情况下获胜，或者连续五次没有打中同花。好玩家和差玩家的区别不在于好玩家每轮都获胜；差玩家有时会很走运，他看上去像是获利的玩家，因为在游戏的波动偏离中有对最终结果的小偏离发生。相关主题:上风期（Upswing）,下风期（Downswing）,情绪失控（Tilt）"
+        }
+      }
+    }
+  },
+  "bufenzizhu": {
+    "name": "部分资助",
+    "definition": {
+      "definition1": {
+        "header": "部分资助:",
+        "body": {
+          "paragraph1": "部分资助是指被资助者以事先商定的比率出售自己1%-99%的份额。一些玩家可能会增加markup，涉及的当事人也对利益分摊的百分比达成了共识。还有另一种形式的部分资助，被资助人自己也会投入资金(例如现金游戏的资助)。在这种情况中，双方都投入了一部分资金，被资助者也承担着一定的风险。当然，所有的当事人要在资助开始时对利益分摊的百分比达成共识。"
+        }
+      }
+    }
+  },
+  "buliweizhi": {
+    "name": "不利位置",
+    "definition": {
+      "definition1": {
+        "header": "不利位置:",
+        "body": {
+          "paragraph1": "在规定的下注轮中，不利位置的玩家必须比对手先行动。相关主题:有利位置（In Position）同义词:oop"
+        }
+      }
+    }
+  },
+  "bupaishu": {
+    "name": "补牌数",
+    "definition": {
+      "definition1": {
+        "header": "补牌数:",
+        "body": {
+          "paragraph1": "定义补牌，能使听型牌发展成一手成型牌的牌就叫做补牌。补牌是指尚未出现的, 但是一旦出现在公共牌中, 就能提升你的牌力或者使你取胜的牌.例子(德州扑克):PlayerFlop玩家现在拿到了听顺子的听型牌面，想2，3，4，5这样的叫做两端顺子听牌面。任意一张A或者是6就能完成我们的顺子。因为一副牌中有4张A和4张6，因此此时该玩家的补牌数为8。净补牌数(DiscountedOuts) 如上定义所指补牌数是能够形成可能获胜成手的全部牌数总和。 在此应该注意的是， 不是每张改善了至今牌面的牌都能对最好的成手有帮助，。那些虽然能够改善牌面，但却不能凑成最好的成手的牌，应该从总数中扣除，这个扣除后的结果成为净补牌数例子(德州扑克):PlayerFlop玩家现在拿到了听顺子的听型牌面，任意一张A或者是6就能完成我们的顺子。因为一副牌中有4张A和4张6，因此此时该玩家的补牌数为8。不过如果在对手拿到下面的起手牌时又该如何计算呢？此时红桃A或者红桃6能完成我们的顺子听型牌面，不过也促使我们的对手拿到了同花。因此这些牌就不再能计算入我们补牌数了，我们必须除去。我们的对手也有可能拿到了:在这种情况下，任意一张6就能让我们的对手拿到更大的顺子，因此此时只有A是我们的补牌。成败比知道补牌数的多少，例如，还有几张公共牌可以用来完成我们的听型牌是固定的。这个概率我们通常就叫做成败比就是我们无法完成我们听型牌的概率。成败比=失败 : 成功  对于下一张公共牌来说，成败比就是指成败比 =没用的牌数  : 有用的牌数或者是成败比= 未知的牌数- 补牌数 :补牌数相关主题：成败比(Odds)，底池成败比(Pot Odds)，听牌面(Draw)，净补牌数(Discounted Outs)"
+        }
+      }
+    }
+  },
+  "buquan": {
+    "name": "补全",
+    "definition": {
+      "definition1": {
+        "header": "补全:",
+        "body": {
+          "paragraph1": "补全（complete）是弥补强制性下注的差额或加注全押的差额，加注全押的对手没有足够的最小加注所要求的筹码。例子:玩家A加注40个筹码。玩家B进行最小的加注必须下注80个筹码，40个与A匹配加上额外的40个。但他只有60个并全押。A只要再下20个筹码来补全。如果还有第三个玩家在游戏，根据赌场的规则，A不能再加注，因为B的加注是不合规范的，A因此只能补全它。在带有盲注的游戏中，补全是小盲注支付它与大盲注之间的差额来继续游戏，前提是没有人在小盲注前面加注。大盲注是一个完整的下注，即一个玩家为了游戏而必须下的注。由于小盲注只支付一半的大盲注，他的下注是不完整的。在预下赌注的游戏中，一个玩家可以选择下全额的赌注而不是较小的bring-in。相关主题:全押（All-In）,（预下的赌注）Ante,盲注（Blind）,下注（Bet）"
+        }
+      }
+    }
+  },
+  "caihongmian": {
+    "name": "彩虹面",
+    "definition": {
+      "definition1": {
+        "header": "彩虹面:",
+        "body": {
+          "paragraph1": "花色不一的牌面，也可泛指没有同花可能的牌面。"
+        }
+      }
+    }
+  },
+  "canfei": {
+    "name": "残废",
+    "definition": {
+      "definition1": {
+        "header": "残废:",
+        "body": {
+          "paragraph1": "如果一个玩家损失大部分的筹码，这个玩家或他的筹码称为被残废（crippled）。这个术语用在一个玩家在锦标赛中损失大部分的筹码且无所作为，因为他没有足够的筹码来采取综合的打法。相关主题:（筹码）Stack,锦标赛（Turnier）"
+        }
+      }
+    }
+  },
+  "caohua": {
+    "name": "草花",
+    "definition": {
+      "definition1": {
+        "header": "草花:",
+        "body": {
+          "paragraph1": ""
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Spade"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Spade.   Heart.   Diamonds"
+        }
+      }
+    }
+  },
+  "caozhong": {
+    "name": "操纵",
+    "definition": {
+      "definition1": {
+        "header": "操纵:",
+        "body": {
+          "paragraph1": "当数学概率上不太可能的事件持续发生，对某个玩家有利或不利时，我们使用 rigged这个形容词来表达。它包括所谓的Set-up(先存在的因素)，指一个玩家一次又一次地击中强牌，但每次都被更强的牌击败的情况。它还包括频繁的Suckout，例如你是有望获胜的一方，却不料对手击中了为数不多的几张补牌。在线上扑克室，即使从数学角度来看做了正确的决定，但却在一段时间内持续输钱，这种情况也被称为rigged。有些人比其他人更频繁地抽中补牌，很多人都认为这是扑克室的错误，怀疑扑克室被操纵了，例如他们影响牌局的发展，导致对某些玩家不利的局面。"
+        }
+      }
+    }
+  },
+  "chaodui": {
+    "name": "超对",
+    "definition": {
+      "definition1": {
+        "header": "超对:",
+        "body": {
+          "paragraph1": "高对（overpair）是一个玩家自己手上的对子，它比公共牌上任何一张牌可能组成的对子更大。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Top pair"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Top pair.   Middlepair.   Bottompair."
+        }
+      }
+    }
+  },
+  "chaoexiazhu": {
+    "name": "超额下注",
+    "definition": {
+      "definition1": {
+        "header": "超额下注:",
+        "body": {
+          "paragraph1": "下比底池大小更大的注被称为超额下注（overbetting）。  相关主题:等额下注（Bet Pot）"
+        }
+      }
+    }
+  },
+  "chaoqiangpai": {
+    "name": "超强牌(Monster)",
+    "definition": {
+      "definition1": {
+        "header": "超强牌(Monster):",
+        "body": {
+          "paragraph1": "非常强的一手成型牌，像葫芦(Full House)就可以叫做超强牌（Monster）相关主题：Poker Hands"
+        }
+      }
+    }
+  },
+  "chanda": {
+    "name": "缠打",
+    "definition": {
+      "definition1": {
+        "header": "缠打:",
+        "body": {
+          "paragraph1": "用弱牌跟注对手的翻后下注，希望在后面一条街上尝试诈唬。比较常见的是用空气牌跟注翻牌前加注对手的持续下注，转牌进行诈唬。"
+        }
+      }
+    }
+  },
+  "changju": {
+    "name": "场-局",
+    "definition": {
+      "definition1": {
+        "header": "场-局:",
+        "body": {
+          "paragraph1": "一场游戏-一局游戏 "
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《资金管理》"
+        }
+      }
+    }
+  },
+  "changqiudafa": {
+    "name": "长球打法",
+    "definition": {
+      "definition1": {
+        "header": "长球打法:",
+        "body": {
+          "paragraph1": "长球打法(longball)意味着用少数好牌玩少数大的底池，而不是用边缘牌玩很多较小的底池（小球打法）。长球打法的玩家等待好牌并然后激进地游戏，提早往底池中投钱。相关主题:小球打法（Smallball）"
+        }
+      }
+    }
+  },
+  "changqizizhu": {
+    "name": "长期资助",
+    "definition": {
+      "definition1": {
+        "header": "长期资助:",
+        "body": {
+          "paragraph1": "长期资助是指资助人会资助相对较长的一段时间。通常是一定数量的牌局或一些锦标赛。或是某个特定的时期，例如31天或4周。"
+        }
+      }
+    }
+  },
+  "chaoshi": {
+    "name": "超时",
+    "definition": {
+      "definition1": {
+        "header": "超时:",
+        "body": {
+          "paragraph1": "如果一个玩家在分配的时间内没有行动，那么这个在线玩家就超时。它根据扑克平台有不同的结果。如果前面有下注或加注，超时通常是自动弃牌。如果前面没有下注，那么一些平台会自动观让，另一些平台会弃牌。相关主题:TimeBank同义词:time-out, timeout"
+        }
+      }
+    }
+  },
+  "chaoshipaimian": {
+    "name": "潮湿牌面",
+    "definition": {
+      "definition1": {
+        "header": "潮湿牌面:",
+        "body": {
+          "paragraph1": "有很多听牌可能的公共牌面。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "For example, a board of  Tc9h8c would be considered “wet.” (See also “Dry Board.”) "
+        }
+      },
+      "definition3": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Dry Board"
+        }
+      },
+      "definition4": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Dry Board.   Board Texture"
+        }
+      }
+    }
+  },
+  "chaosu": {
+    "name": "超速",
+    "definition": {
+      "definition1": {
+        "header": "超速:",
+        "body": {
+          "paragraph1": "超速（Speeding）用来形容一种很松的不可理解的充满诈唬的打法。 相关主题:诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "chengbaibi": {
+    "name": "成败比",
+    "definition": {
+      "definition1": {
+        "header": "成败比:",
+        "body": {
+          "paragraph1": "知道补牌数(Outs)的多少，例如，还有几张公共牌可以用来完成我们的听型牌是固定的。这个概率我们通常就叫做成败比就是我们无法完成我们听型牌的概率。成败比=失败 : 成功对于下一张公共牌来说，成败比就是指成败比 =没用的牌数 : 有用的牌数或者是成败比= (未知的牌数- 补牌数) :补牌数例子(德州扑克):PlayerFlop玩家现在拿到了听红桃同花的听型牌。这副牌中现在还有9张红桃的牌，所以他的补牌数就是9。现在我们已知5张牌了，那么一副牌是52张，52-5=47张中的一张将有可能在转牌轮作为公共牌。因此47-9=38张牌是对玩家没用的。那么成败比现在就是：成败比= 38:9 = 4.2:1换句话说就是玩家在转牌轮拿到同花的可能性为19%，在河牌轮拿到同花的可能性为35%，因此他的成败比就使1.9：1。相关主题：补牌数(Outs)，底池成败比(Pot Odds)"
+        }
+      }
+    }
+  },
+  "chengbaibipeilu": {
+    "name": "成败比-赔率",
+    "definition": {
+      "definition1": {
+        "header": "成败比-赔率: ",
+        "body": {
+          "paragraph1": "成败比= 击中一手牌的可能性 : 没击中一手牌的可能性"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《Pot Odds底池赔率》"
+        }
+      }
+    }
+  },
+  "chengdui": {
+    "name": "成对",
+    "definition": {
+      "definition1": {
+        "header": "成对:",
+        "body": {
+          "paragraph1": "如果它包含两张同样大小的牌，那么这组牌（像德州扑克的牌面）就成对。例子(德州扑克):翻牌圈翻牌圈是成对的，因为它有两张5。相关主题:对子（Pair）"
+        }
+      }
+    }
+  },
+  "chengqunxianxiang": {
+    "name": "成群现象",
+    "definition": {
+      "definition1": {
+        "header": "成群现象:",
+        "body": {
+          "paragraph1": "成群现象（Schooling或fishschooling）指由于游戏中有很多又松又被动的玩家，他们的错误对赢率的影响不是那么严重。单独的玩家进行错误的不利的跟注，但由于其他的玩家也这么做而帮助每个人提高底池成败比。例子(德州扑克): 玩家 A玩家 B玩家C牌面底池有$4，玩家C下注$3。玩家A和B松散地跟注。他们有4张补牌的内听顺子，这意味着他们的跟注是不利的。他们正在犯错，因为跟注的成本太高。但这里有两种不同的情况，一种是只有A和C参与游戏，而另一种是B也加入其中:在第一种情况下，A在7美元的底池中跟注$3，他的底池成败比是7:3。但在第二种情况下，B也往底池投入$3，这把A的成败比提高到10:3。由于另一个松且弱的玩家的存在，这减弱了他们错误的影响。成群现象是他们在又弱又被动的游戏中没有让错误恶化的原因。他们都用边缘牌太多地跟注，但其他的玩家也这么做，这使得每个人都表现良好。相关主题:（鱼）Fish,（松）Loose,（被动）Passive"
+        }
+      }
+    }
+  },
+  "chengshoupai": {
+    "name": "成手牌",
+    "definition": {
+      "definition1": {
+        "header": "成手牌:",
+        "body": {
+          "paragraph1": "成手牌也就意味着可能是牌桌上最强的牌面了, 比如说是对子或三条. 这种牌不见得非要提升或者他们已经没有什么提升的空间了. "
+        }
+      }
+    }
+  },
+  "chouma": {
+    "name": "筹码",
+    "definition": {
+      "definition1": {
+        "header": "筹码:",
+        "body": {
+          "paragraph1": ""
+        }
+      }
+    }
+  },
+  "chixuxiazhu": {
+    "name": "持续下注",
+    "definition": {
+      "definition1": {
+        "header": "持续下注:",
+        "body": {
+          "paragraph1": "如果一个玩家在前一轮下注并然后在当前这一轮再次下注，那么这被称为持续下注（continuationbet），因为它继续前一轮的攻势。持续下注的典型情况是，一个玩家在第一轮下注并被另一个玩家跟注，然后他在翻牌后继续下注，这次下注经常是诈唬而根本没有什么牌。延缓的持续下注延缓的持续下注（delayed continuationbet）是没有直接在下一轮下注，而是两轮过后再显示激进性。例如，如果一个玩家在翻牌前加注，他没有在翻牌后下注而是在转牌圈下注，那么这就是延缓的持续下注。相关主题:加注（Raise）诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "choumaliang": {
+    "name": "筹码量",
+    "definition": {
+      "definition1": {
+        "header": "筹码量:",
+        "body": {
+          "paragraph1": "筹码量是指玩家在牌桌上拥有的现金数或者是筹码数。该玩家在进行游戏的时候不能下注超过他筹码量的注。相关主题：买入费(Buy-In)"
+        }
+      }
+    }
+  },
+  "choumalingtouren": {
+    "name": "筹码领头人",
+    "definition": {
+      "definition1": {
+        "header": "筹码领头人:",
+        "body": {
+          "paragraph1": "具有最多筹码的玩家是筹码领头人（chipleader）。"
+        }
+      }
+    }
+  },
+  "choumayudichibi": {
+    "name": "筹码与底池比",
+    "definition": {
+      "definition1": {
+        "header": "筹码与底池比:",
+        "body": {
+          "paragraph1": "筹码与底池比为你手中的筹码与底池中的筹码之比. 同时,筹码与底池比也是衡量风险/收益比的一个标准.底池中有$20,而你手上的筹码有$80.你的筹码与底池比为:  $80/$20 =4.筹码与底池比越高,你可能赢得获得输掉的钱也就越多.筹码与底池比在你评估你的游戏方式的时候也很有帮助:例如,你的筹码与底池比越高,你越可以有利可图的游戏手中的听型牌. "
+        }
+      }
+    }
+  },
+  "chuan": {
+    "name": "船",
+    "definition": {
+      "definition1": {
+        "header": "船:",
+        "body": {
+          "paragraph1": "扑克术语'boat'或'full boat'指葫芦（full house）。"
+        }
+      }
+    }
+  },
+  "chuanletongle": {
+    "name": "穿了-通了",
+    "definition": {
+      "definition1": {
+        "header": "穿了-通了: ",
+        "body": {
+          "paragraph1": "翻牌前所有人弃牌，大盲注玩家直接收底的情况。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《VPIP》"
+        }
+      }
+    }
+  },
+  "chuantong": {
+    "name": "串通",
+    "definition": {
+      "definition1": {
+        "header": "串通:",
+        "body": {
+          "paragraph1": "串通（Collusion）是两个或多个玩家通过电话、聊天程序或在赌场用秘密的信号交换牌的信息。  线上扑克室针对串通具有有效的防护办法，其中包括检查特殊的玩牌模式。相关主题:作弊（Cheating）"
+        }
+      }
+    }
+  },
+  "chunzhahu": {
+    "name": "纯诈唬",
+    "definition": {
+      "definition1": {
+        "header": "纯诈唬:",
+        "body": {
+          "paragraph1": "纯诈唬（purebluff）是指用一手很可能输的弱牌下注，以达到让对手弃牌的目的。一个人的牌没有机会或很小的机会来提升。诈唬的主要目的是让对手弃牌。在游戏的心理层次，一个玩家可以用相反的目的来诈唬。他可能希望对手抓住他的诈唬，以便于以后有好牌时获得回报，因为对手（错误地）怀疑他又在诈唬。相关主题:诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "chuyulieshideyifang": {
+    "name": "处于劣势的一方",
+    "definition": {
+      "definition1": {
+        "header": "处于劣势的一方:",
+        "body": {
+          "paragraph1": "处于劣势的一方（underdog）是获胜机会较小的玩家，即持有较弱牌的玩家。经常用成败比表示，例如， \"他处于4:1的劣势之中\"。例子(德州扑克):玩家 A玩家B如果两个玩家此时全押并只等着观看翻牌、转牌和河牌，那么玩家A有大约80%的获胜机会。因此，玩家B是处于劣势的一方，4：1的劣势，因为他只有20%的获胜机会或5次中只有1次获胜。相关主题:成败比（Odds）"
+        }
+      }
+    }
+  },
+  "cunkuan": {
+    "name": "存款",
+    "definition": {
+      "definition1": {
+        "header": "存款:",
+        "body": {
+          "paragraph1": "存款（deposit）是指把钱存入账户，这里指扑克室的线上账户或线上赌场。这个账户也被称为扑克资金（bankroll）。 相关主题:取现（Cash out）, （资金）Bankroll"
+        }
+      }
+    }
+  },
+  "cunzhu": {
+    "name": "存注",
+    "definition": {
+      "definition1": {
+        "header": "存注:",
+        "body": {
+          "paragraph1": "存注（Save bets）是一个玩家不能输的赌注，因为这个玩家之前与对手商量好在他获胜时将还给对手。"
+        }
+      }
+    }
+  },
+  "daansantiao": {
+    "name": "大暗三条",
+    "definition": {
+      "definition1": {
+        "header": "大暗三条:",
+        "body": {
+          "paragraph1": "如果一个玩家的三条由他的两张牌和牌面上的一张牌组成，那么他就拿到暗三条。如果一个玩家比另一个玩家拿到更大的暗三条，那么这个玩家拿到的就是大暗三条。例子(德州扑克):玩家A玩家B翻牌圈玩家A有三条9，B有三条K，因此，B拿到高暗三条。相关主题:（暗三条）Set,（小暗三条）Underset"
+        }
+      }
+    }
+  },
+  "daibi": {
+    "name": "代币",
+    "definition": {
+      "definition1": {
+        "header": "代币:",
+        "body": {
+          "paragraph1": "代币，免费赛代币代币(token)是一场锦标赛的免费门票或邀请。拥有这种代币的玩家可以免费参加相对应的锦标赛。玩家们通常通过存款或免费比赛赢得这种代币。"
+        }
+      }
+    }
+  },
+  "dairu": {
+    "name": "带入",
+    "definition": {
+      "definition1": {
+        "header": "带入:",
+        "body": {
+          "paragraph1": "带入是一个玩家加入游戏所携带的记分牌总数量。或者是参加一场比赛所需缴纳的报名费。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Rebuy"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Rebuy.   Add-on.   《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "daitoushunzi": {
+    "name": "呆头顺子",
+    "definition": {
+      "definition1": {
+        "header": "呆头顺子:",
+        "body": {
+          "paragraph1": "呆头顺子（idiotend）是有公用牌的低端顺子。称为呆头是因为它很容易被更大的顺子打败。当牌面上出现四张连续的牌且一个玩家持有低牌形成顺子时，特别容易出现呆头顺子的情况。如果遇到很大的反抗，傻瓜拿到这种顺子时才会相信自己领先于对手。例子(德州扑克):玩家牌面这个玩家用手上的一张A形成顺子，但任何一张6会打败他。他持有呆头顺子。相关主题:顺子听牌(StraightDraw)"
+        }
+      }
+    }
+  },
+  "damangzhu": {
+    "name": "大盲注",
+    "definition": {
+      "definition1": {
+        "header": "大盲注:",
+        "body": {
+          "paragraph1": "大盲注是在有盲注的游戏中两个强制性下注中较大的一个注。较小的一个是小盲注。盲注在发牌前就下，并每轮由不同的玩家交付。在发牌员左手边的玩家将交付小盲注，他左边的玩家交付大盲注。相关主题：小盲注(SmallBlind)，盲注(Blind)，发牌员/庄家(Dealer)"
+        }
+      }
+    }
+  },
+  "dantiao": {
+    "name": "单挑",
+    "definition": {
+      "definition1": {
+        "header": "单挑:",
+        "body": {
+          "paragraph1": "扑克游戏中2个玩家进行1对1就叫做单挑。在单挑游戏中玩家没有机会去耐心等待好的起手牌，玩家能否取胜取决于他对游戏的认知以及找出他对手的弱点。相关主题：满员桌(Full Ring)，非满员桌(Shorthanded)"
+        }
+      }
+    }
+  },
+  "danzhuodingshibisai": {
+    "name": "单桌定时比赛",
+    "definition": {
+      "definition1": {
+        "header": "单桌定时比赛:",
+        "body": {
+          "paragraph1": "单桌锦标赛(STT)是只有一张牌桌的比赛，所以玩家数量和奖金都有限。SNG经常是单桌定时比赛。   相关主题:  Turnier,多桌定时比赛（MTT）   同义词:  single-table-tourtitlent, single table tourtitlent"
+        }
+      }
+    }
+  },
+  "dashun": {
+    "name": "大顺",
+    "definition": {
+      "definition1": {
+        "header": "大顺:",
+        "body": {
+          "paragraph1": "最大的顺子叫大顺（broadway）,它包含10,J,Q,K,A。这些牌被称为大牌（broadway cards）。 相关主题:顺子（Straight）,轮子（Wheel）"
+        }
+      }
+    }
+  },
+  "dazhahu": {
+    "name": "大诈唬",
+    "definition": {
+      "definition1": {
+        "header": "大诈唬:",
+        "body": {
+          "paragraph1": "诈唬一个手持强牌的对手"
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Bluff"
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Bluff.   Semi-Bluff.   《Breakeven%》"
+        }
+      }
+    }
+  },
+  "dazhu": {
+    "name": "大注",
+    "definition": {
+      "definition1": {
+        "header": "大注:",
+        "body": {
+          "paragraph1": "大注是指在有限游戏中下注额为普通下注额的2倍。在$1/$2德州扑克中，下大注就是指下注2美元。下大注会在后期下注回合中使用。例如，在德州扑克中，玩家在前2个下注轮中下小注(SmallBet)，然后会在后面的下注轮允许下大注(Big Bet)。   相关主题： 有限注(Fixed Limit)，下注结构(BettingStructure)，小注(Small Bet)   同义词： BB"
+        }
+      }
+    }
+  },
+  "dezhoupuke": {
+    "name": "德州扑克",
+    "definition": {
+      "definition1": {
+        "header": "德州扑克:",
+        "body": {
+          "paragraph1": "游戏规则德州扑克是最流行的扑克玩法，它由2-10个玩家进行游戏。在最初一轮，每个玩家被发给两张面朝下的牌。五张公共牌在相继的轮次中被面朝上发出。它们包括翻牌（最初3张牌）、转牌（第4张牌）和河牌（第5张牌）。翻牌圈转牌圈河牌圈游戏的目标是用你的两张牌和五张公共牌组成可能最好的一手牌。玩家从总共七张牌中选择。只要选出的五张牌能代表最好的牌，玩家可以挑选这五张牌的任何组合形式。在轮次结束持有最好牌的玩家或最后没有弃牌的玩家赢得所有的下注。游戏过程每次牌局分为五个基本的阶段。翻牌前所有玩家被发给两张面朝下的牌，这两张牌叫底牌。这两张牌只能被它们所属的玩家看到，玩家可以根据它们用筹码打赌或放弃它们。翻牌圈在第一个下注轮结束后，最初的三张公共牌被面朝上地发出。这三张牌属于所有的玩家，也就是任何玩家可以使用它们组成一手牌，于是玩家接着打赌;玩家下注或中止游戏。转牌圈第四张公共牌发出，第三个下注轮开始。河牌圈第五张牌也是最后一张牌发出，最后的下注轮开始。摊牌在发出所有的牌并且下注结束后，余下的玩家比较他们的牌看谁的最大。行动的顺序在德州扑克中，每轮总有人扮演发牌员（庄家）的角色。这个玩家被专门的筹码标识，被称为庄家按钮（dealerbutton）。我们也说这个玩家在按钮上。庄家按钮以顺时针的方向从一个玩家移到另一个玩家。庄家的位置确定哪些玩家必须支付盲注或被强制下注。它也决定哪个玩家首先行动。盲注紧挨庄家左边的玩家支付小盲注，小盲注左边的玩家支付大盲注。庄家小盲注大盲注下注轮中的玩家顺序在翻牌前的下注轮中，紧接大盲注左边玩家首先行动。在接下来的轮次中，庄家左边的玩家首先行动。在每个下注轮，玩家以顺时针的方向行动。因此，如果一个玩家行动，例如，下注，那么他左边的玩家将进行下一步的行动。下注轮的过程一般而言，一个玩家在下注轮中可能进行如下的行动:观让向后面玩家过牌的行为下注玩家用钱或筹码下注打赌跟注(下注)一个玩家与前面的玩家下正好同样的赌注加注(下注)前面的下注被跟注，下更多的赌注超过现有的数量。弃牌一个玩家可能放下牌并从这一轮退出如果一个玩家下注或加注，那么后面的玩家可以跟注或加注，假设加注没有超过限制。根据赌场的规定，一般限制到四次加注。如果没有人下注，那么一个玩家可以观让或下注。翻牌前下的盲注计为一次下注，支付盲注的玩家在没人加注的情况下可以观让。一个玩家不管前面是否下注都可以弃牌。行动以顺时针的方向进行，直到所有的玩家弃牌或下匹配的注，除非一个玩家没有足够的筹码来跟注。这个玩家可以用余下的筹码下注，这被称为全押。这意味着他不能再下注，但他还在玩牌并加入摊牌的行列来决定谁是胜者。相关主题:Pokerhands,盲注（Blind）,翻牌圈( Flop),转牌圈（ Turn）,河牌圈（ River）,摊牌（Showdown), 全押（All-In）,下注（ Bet）,加注（Raise）,观让（Check),弃牌（ Fold）"
+        }
+      }
+    }
+  },
+  "dichi": {
+    "name": "底池",
+    "definition": {
+      "definition1": {
+        "header": "底池:",
+        "body": {
+          "paragraph1": "底池的奖金是由这一局玩家下注的钱组成的。如果底池需要分成2份或者更多就是因为这一局这2个或者更多的玩家拿到了相同强度的牌，这又叫做平分底池。在每个牌局中也可以出现超过一个的底池。比如说，有一个或多个玩家全押了。那么其他跟注进入游戏仍然有筹码剩余的玩家们再下注就产生了副底池。第一个底池我们叫做主底池。相关主题：主底池(MainPot)，副底池(Side Pot)，平分底池(Split Pot)，保护底池(Protected Pot) "
+        }
+      }
+    }
+  },
+  "dichichengbaibi": {
+    "name": "底池成败比",
+    "definition": {
+      "definition1": {
+        "header": "底池成败比:",
+        "body": {
+          "paragraph1": "底池成败比是潜在的收益与有机会获得这些收益的所支付费用之间的比率。因此，它们是反向的成本/收益比。 底池成败比 = 潜在的收益 :支付的注额例子:底池有$10玩家A下注$5.底池中共有15$，这是潜在的利润。玩家B跟随玩家A要花费$5。因此，他有$15:$5或3:1的底池成败比。 意义当问题涉及到跟注是否有利可图时，底池成败比就变得有用起来，例如，当你听牌时。如果在权衡可能性之后，成本太高或收益太小，那么你就不值得跟注。在这种情况下，你不会足够频繁地赢得足够多的钱来使得这种投资有利可图。例如，如果两个玩家在最后一轮，第一个玩家在$10的底池中下注$2，而玩家B只能打败诈唬，那么玩家A必须每七次下注中有一次诈唬而让玩家B的跟注不会遭受长期的损失。在这种情况下，底池成败比是（10+2）:2或6:1。因此，玩家B有6：1的成败比或获胜可能性才能不盈不亏。他亏六次(每次花$2)赢一次（赚$12）。因此，玩家A必须在14%的情况下诈唬才能使得B跟注。相关主题:成败比（Odds）,潜在成败比（ImpliedOdds）,赢率（Equity）,期望收益（Expected Value）"
+        }
+      }
+    }
+  },
+  "dichikongzhi": {
+    "name": "底池控制",
+    "definition": {
+      "definition1": {
+        "header": "底池控制:",
+        "body": {
+          "paragraph1": "如果你的目标是通过让底池更大或较小来限制底池的大小，这种行为是为了控制底池。如果你有一手好牌但不是很强大，你不想投入很多钱，那么你的目标通常是想让底池较小。底池控制可以通过控制自己下注的大小来达到，也就是使它比正常情况更小。它也有放弃下注或用跟注代替加注的含义。相关主题:下注方式（Line）"
+        }
+      }
+    }
+  },
+  "dichixianzhu": {
+    "name": "底池限注",
+    "definition": {
+      "definition1": {
+        "header": "底池限注:",
+        "body": {
+          "paragraph1": "底池限注是一种下注结构，下注的大小必须少于目前底池的大小。通常，下注额超过前面的下注或加注。相关主题:有限注（Fixed Limit）,无限注（No-Limit）"
+        }
+      }
+    }
+  },
+  "didui": {
+    "name": "底对",
+    "definition": {
+      "definition1": {
+        "header": "底对:",
+        "body": {
+          "paragraph1": "底对（Bottompair）这个术语用于像德州扑克或奥马哈这样有公共牌的游戏中。底对由最小的公共牌和玩家的一张牌组成。更广泛地说，底对（bottompair）也指由较小的一张公共牌组成的对子。例子(德州扑克):玩家牌面这个玩家有一对3，而3是最小的公共牌，因此，他拿着底对。相关主题:对子（Pair）,顶对（TopPair）,中对（Middle Pair）,高对（Overpair）"
+        }
+      }
+    }
+  },
+  "diduizi": {
+    "name": "低对子",
+    "definition": {
+      "definition1": {
+        "header": "低对子:",
+        "body": {
+          "paragraph1": "低对子是玩家手上的比牌面上任何一张牌都小的对子。因此，任何与牌面组成的对子将打败低对子。例子(德州扑克):玩家翻牌圈A、K、10都比8大，因此对8是低对子。相关主题:高对子（Overpair）,对子（Pair）,顶对（TopPair）,中对子（Middle Pair）,底对子（Bottom Pair）"
+        }
+      }
+    }
+  },
+  "diduanpai": {
+    "name": "低端牌",
+    "definition": {
+      "definition1": {
+        "header": "低端牌:",
+        "body": {
+          "paragraph1": "在高/低游戏中，底池被最好的牌和最差的牌平分。高端牌争夺底池的高端部分，低端牌能同时成为一个玩家的高端牌，此时它也可以争夺底池的高端部分。相关主题:高/低（Hi/Lo）,高端牌（Hi-Hand）"
+        }
+      }
+    }
+  },
+  "diercichixuxiazhu": {
+    "name": "第二次持续下注",
+    "definition": {
+      "definition1": {
+        "header": "第二次持续下注:",
+        "body": {
+          "paragraph1": "如果你在一轮中下注并接着在下一轮又下注，这被称为第二次持续下注（second barrel）。第三次下注就称为第三次持续下注（third barrel）。相关主题:下注（Bet）,诈唬（Bluff）,半诈唬（Semibluff）同义词:2nd barrel"
+        }
+      }
+    }
+  },
+  "dijibie": {
+    "name": "低级别",
+    "definition": {
+      "definition1": {
+        "header": "低级别:",
+        "body": {
+          "paragraph1": "紧接微型级别之上的级别，下注大小以数十美元计，底池最高达几百美元。 相关主题:微型级别（Micro-Limit）,中等级别（Mid-Stake）,高级别（High-Limit）同义词:low stakes"
+        }
+      }
+    }
+  },
+  "diliangdui": {
+    "name": "低两对",
+    "definition": {
+      "definition1": {
+        "header": "低两对: ",
+        "body": {
+          "paragraph1": "玩家的两张底牌与牌面上最小的两张牌都成对。例如，玩家的牌：Qh6d； 翻牌圈：Qd6cAs "
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Top Two Pair "
+        }
+      }
+    }
+  },
+  "dingdui": {
+    "name": "顶对",
+    "definition": {
+      "definition1": {
+        "header": "顶对:",
+        "body": {
+          "paragraph1": "由玩家手里的一张牌和最大的一张公共牌组成的对子叫做顶对（top pair）。 例子(德州扑克):玩家牌面玩家有一对K，它由他手里的一张牌和牌面上最大的一张牌组成。因此，它是顶对。pair. 相关主题:中等对子（MiddlePair）,底对子（Bottom Pair）,顶对带顶踢脚（TPTK）,顶对带中等踢脚（TPMK）"
+        }
+      }
+    }
+  },
+  "dingduidaizhongqijiaopai": {
+    "name": "顶对带中起脚牌",
+    "definition": {
+      "definition1": {
+        "header": "顶对带中起脚牌:",
+        "body": {
+          "paragraph1": "TPMK是顶对/中等起脚牌的缩写，这个对子由牌面上最大的一张牌和玩家手上的一张牌组成。玩家手上的另一张牌比较大，但不是最大的。例子(德州扑克):玩家牌面玩家用他的一张K和牌面上最大的牌形成对K，这就是顶对。他最大的起脚牌是Q，这个起脚牌比较大，但它不是A。因此，这手牌有可能输给对K带一张A。相关主题:顶对（TopPair）,顶对带顶起脚牌（TPTK）"
+        }
+      }
+    }
+  },
+  "dingduidingqijiaopai": {
+    "name": "顶对顶起脚牌",
+    "definition": {
+      "definition1": {
+        "header": "顶对顶起脚牌:",
+        "body": {
+          "paragraph1": "TPTK是顶对/顶起脚牌的缩写，这个对子由牌面上最大的一张牌和玩家手上的一张牌组成。玩家手上的另一张牌是最大可能的牌。玩家用他的一张K和牌面上最大的牌形成对K，这就是顶对。他最大的起脚牌是Q，这个起脚牌比较大，但它不是A。因此，这手牌有可能输给对K带一张A。相关主题:顶对（TopPair）,顶对带顶起脚牌（TPTK）    列子(德州扑克):玩家公共牌玩家用他的一张K和牌面上最大的牌形成对K，这就是顶对。他起脚牌是A，这个起脚牌是最大的牌。不可能有持有更大起脚牌的一对K。对手必须要有一手更好的牌， 比如两对或者比两对更好的牌才能赢得这手牌。  相关主题:顶对, 顶对中等起脚牌"
+        }
+      }
+    }
+  },
+  "dingqijiaopai": {
+    "name": "顶起脚牌",
+    "definition": {
+      "definition1": {
+        "header": "顶起脚牌:",
+        "body": {
+          "paragraph1": "一手牌最大可能的边牌。例子(德州扑克):玩家牌面玩家有一对K，他还有最大可能的起脚牌A。对K不可能打败这手牌，对手需要更高级别牌，像两对或更好的牌才能打败这手牌。相关主题:起脚牌（Kicker）"
+        }
+      }
+    }
+  },
+  "dipai": {
+    "name": "底牌",
+    "definition": {
+      "definition1": {
+        "header": "底牌:",
+        "body": {
+          "paragraph1": "底牌（hole cards）是一个玩家的面朝下的牌，它只能被这个玩家看到，例如，德州扑克中的两张起手牌。 相关主题:面朝下的牌（Downcard）, 显露的牌（Exposed Card）"
+        }
+      }
+    }
+  },
+  "diyigejiaru": {
+    "name": "第一个加入",
+    "definition": {
+      "definition1": {
+        "header": "第一个加入:",
+        "body": {
+          "paragraph1": "如果一个玩家第一个加入下注轮下注或跟注，那么这个玩家第一个加入（firstin）。第一个加注或开放加注意味着一个玩家在前面的玩家弃牌后在第一个下注轮加注。相关主题:开放加注（Open Raise）,翻牌前（Preflop）, First in Vigorish"
+        }
+      }
+    }
+  },
+  "diyigexingdong": {
+    "name": "第一个行动",
+    "definition": {
+      "definition1": {
+        "header": "第一个行动:",
+        "body": {
+          "paragraph1": "如果一个玩家轮到他在下注轮第一个行动，那么这个玩家就是第一个行动（first to act）。轮到最后行动的玩家是最后行动（last to act）。 相关主题:第一个加入（First in）"
+        }
+      }
+    }
+  },
+  "dizhu": {
+    "name": "底注",
+    "definition": {
+      "definition1": {
+        "header": "底注:",
+        "body": {
+          "paragraph1": "底注是指玩家在公共牌发出前要进入游戏必须下的注。底注就相当于是牌桌上进行游戏的玩家进入下一局前的入场费，并没有记入加注的范围内。底注是与盲注相对应的，在每局由２个玩家交付。七张牌梭哈(SevenCard Stud)和五张牌梭哈(Five CardDraw)通常都采用底注，使用底注还是盲注的决定权由举办游戏方决定的。在锦标赛中一般采用盲注，然后在一定时间内增加一定数额的底注。相关主题：盲注(Blind)，强制性下注(ForcedBet)，七张牌梭哈(Seven Card Stud)"
+        }
+      }
+    }
+  },
+  "duanchouma": {
+    "name": "短筹码",
+    "definition": {
+      "definition1": {
+        "header": "短筹码:",
+        "body": {
+          "paragraph1": "相比其他玩家，有效记分牌数量很小的情况。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "If you have $10 in front of you, and everybody else at the table has over $100, you are playing on a short stack."
+        }
+      },
+      "definition3": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Deep Stack"
+        }
+      },
+      "definition4": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Deep Stack.   《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "duanqizizhu": {
+    "name": "短期资助",
+    "definition": {
+      "definition1": {
+        "header": "短期资助:",
+        "body": {
+          "paragraph1": "短期资助是指资助人只资助很短的一段时间。通常是一天，一晚，或某个单独的锦标赛。"
+        }
+      }
+    }
+  },
+  "duanxianbaohu": {
+    "name": "断线保护",
+    "definition": {
+      "definition1": {
+        "header": "断线保护:",
+        "body": {
+          "paragraph1": "见断线保护（Disconnect Protection）同义词:下注断线保护（Bet disconnect protection）, 断线保护（disconnect protection）"
+        }
+      }
+    }
+  },
+  "dubo": {
+    "name": "赌博",
+    "definition": {
+      "definition1": {
+        "header": "赌博:",
+        "body": {
+          "paragraph1": "赌博（gambling）这个术语有几个含义。赌博可以表示玩碰运气的游戏，如扑克。就扑克本身而言，赌徒不是用策略性的方式玩游戏，而是像其它赌场游戏一样依靠运气。一般而言，赌博是建立在冒巨大风险的行为上。"
+        }
+      }
+    }
+  },
+  "duishou": {
+    "name": "对手",
+    "definition": {
+      "definition1": {
+        "header": "对手:",
+        "body": {
+          "paragraph1": "习惯上把玩牌的对手称为Villain，而把被评论的玩家称为Hero。相关主题:Hero(被默认为玩家自己) "
+        }
+      }
+    }
+  },
+  "duizi": {
+    "name": "对子",
+    "definition": {
+      "definition1": {
+        "header": "对子:",
+        "body": {
+          "paragraph1": "对子是同样大小的两张牌。 例子(德州扑克):玩家翻牌圈这个玩家有一对8。相关主题:Poker Hand"
+        }
+      }
+    }
+  },
+  "dulichoumamoxing": {
+    "name": "独立筹码模型",
+    "definition": {
+      "definition1": {
+        "header": "独立筹码模型:",
+        "body": {
+          "paragraph1": "定义独立筹码模型或ICM是锦标赛的后期带有相对较少筹码时所采用打法的数学模型。它基于这样的思想，每个筹码代表变成钱的机会并由此获得收益。每个额外的筹码提高一个玩家在锦标赛中的位置并增加最终的利润。10000个筹码比100个筹码的价值更高，如果必须支付100个筹码的盲注，它将被全押。$期望收益在争夺真钱的游戏中，每个行动都有一个期望收益，从每个行动中能预期怎样的收获或损失。在锦标赛中，这转化为一个人能预期得到或损失多少筹码。但锦标赛中的筹码只是用来达到目的的手段，即它们只是用来赢钱的资本。鉴于这个原因，一个行动的期望收益必须被修正来考虑这个行动到底将带来多少钱，这被称为$期望收益。带有正期望收益的行动会有负的$期望收益，特别在一个行动会让一个玩家全押的时候。损失一个全押意味着从锦标赛淘汰并损失买入。因此，ICM在锦标赛的全押或弃牌阶段是有用的，一个玩家必须决定是否全押、跟注对手的全押或弃牌。计算$期望收益$期望收益取决于很多因素:你自己的筹码大小对手的类型和实力你自己的技术你的位置筹码在牌桌上的分布你的牌桌形象利用这些因素作为起点，我们可以假设玩家任意获得一个名次的可能性。这些可能性和支付结构允许我们计算$期望收益。$EV = P(第一) * 收益(第一) + P(第二) * 收益(第二) + P(第三) * 收益(第三) +...例子:第一、第二和第三在SNG中的收益分别是50, 30和20美元。假设一个玩家知道他获得第一、第二和第三的可能性分别10%,15%和20%，那么:$EV = 10% * 50$ + 15% * 30$ + 20% * 20$ = 13.5$使用ICM在特定的情况下，一个人必须计算每种行动的$期望收益并比较结果。如果可能的行动是全押或弃牌，那么一个玩家必须计算下面情况中的$期望收益:你弃牌你全押，被跟注并失败你全押，被跟注并获胜你全押且没有被跟注你在对付一个特定的玩家计算赢利或亏损的可能性时必须要评估这个玩家全押的跟注范围。每种可能的结果将告诉你每种行动的$期望收益，这将告诉你是弃牌还是继续游戏。这些计算在游戏时太复杂。它们为游戏提供理论的基础，尤其是评价一个玩家可以用哪些牌跟注全押。有些程序将帮助你进行ICM的计算。相关主题:（期望收益）ExpectedValue, （赢率）Equity, Turnier, （范围）Range"
+        }
+      }
+    }
+  },
+  "duochongtingpai": {
+    "name": "多重听牌",
+    "definition": {
+      "definition1": {
+        "header": "多重听牌:",
+        "body": {
+          "paragraph1": "多重听牌（draw或draw heavy)如果翻牌圈和转牌圈的牌面形成了很多听型牌的可能，我们把这种牌面称为draw或drawheavy，例如在接下来的街中有很多牌可以让牌局参与者的听型牌成型。 下面是一个draw heavy牌面的例子 (也称为湿润牌面):9 8 4在这个牌面上很多人可能有同花听牌，顺子听牌或内听顺子听牌。在转牌圈或河牌圈有很多补牌可以完成这些听型牌。因此这个牌面是drawheavy。K 8 2  这个就属于非常干燥的牌面，在转牌圈和河牌圈可提升牌力的选择很少。因此不是多重听牌牌面。"
+        }
+      }
+    }
+  },
+  "duorendichi": {
+    "name": "多人底池",
+    "definition": {
+      "definition1": {
+        "header": "多人底池:",
+        "body": {
+          "paragraph1": "参见multiway pot同义词:community-pot, family-pot, multiway"
+        }
+      }
+    }
+  },
+  "duozhuodingshibisai": {
+    "name": "多桌定时比赛",
+    "definition": {
+      "definition1": {
+        "header": "多桌定时比赛:",
+        "body": {
+          "paragraph1": "MTT是multi-table tourtitlentd的缩写,它指很多牌桌同时游戏。随着玩家被淘汰，牌桌不断合并，直到仅仅剩下最后一桌。参赛的人数可以从几十到几千。与MTT相对的是单桌定时比赛（STT），它只有一桌人游戏。    相关主题:单桌定时比赛（STT）,决胜桌（Final Table）,锦标赛（Tourtitlent）   同义词:multi-table-tourtitlent"
+        }
+      }
+    }
+  },
+  "dutu": {
+    "name": "赌徒",
+    "definition": {
+      "definition1": {
+        "header": "赌徒:",
+        "body": {
+          "paragraph1": "赌博式游戏的人，经常游戏赔率不利的情况"
+        }
+      }
+    }
+  },
+  "fanbei": {
+    "name": "翻倍",
+    "definition": {
+      "definition1": {
+        "header": "翻倍:",
+        "body": {
+          "paragraph1": "当一个玩家在一手牌里使他的筹码加倍时，这就称为翻倍（double-up）。例如，当一个玩家全押后被至少有同样多筹码的玩家跟注并获胜时，这就发生了翻倍的情况。相关主题:全押（All-In）"
+        }
+      }
+    }
+  },
+  "fanbeihuoquanwudijinbiaosai": {
+    "name": "翻倍或全无的锦标赛(Double or Nothing)",
+    "definition": {
+      "definition1": {
+        "header": "翻倍或全无的锦标赛(Double or Nothing):",
+        "body": {
+          "paragraph1": "翻倍或全无的锦标赛是SnG锦标赛中的一种特殊形式。其中一半的玩家可以赢回两个买入而另一半玩家则被淘汰。相关主题: Sng"
+        }
+      }
+    }
+  },
+  "fanchao": {
+    "name": "反超",
+    "definition": {
+      "definition1": {
+        "header": "反超:",
+        "body": {
+          "paragraph1": "反超某人（outrun somedescribe_content）指最初落后的牌在玩牌的进程中变成一手好牌而打败对手，例如，听牌成型。 相关主题:听牌（Draw）"
+        }
+      }
+    }
+  },
+  "fangpai": {
+    "name": "放牌",
+    "definition": {
+      "definition1": {
+        "header": "放牌:",
+        "body": {
+          "paragraph1": "放牌（laydown）是一个玩家放弃他的牌并从当前的轮次中退出，也叫做弃牌（fold）。相关主题:Fold"
+        }
+      }
+    }
+  },
+  "fangpian": {
+    "name": "方片",
+    "definition": {
+      "definition1": {
+        "header": "方片:",
+        "body": {
+          "paragraph1": ""
+        }
+      }
+    }
+  },
+  "fanpai": {
+    "name": "翻牌",
+    "definition": {
+      "definition1": {
+        "header": "翻牌:",
+        "body": {
+          "paragraph1": "定义在像德州扑克，Omaha等这样的扑克游戏中，翻牌圈就是指最初的3张公共牌。FlopTurnRiver翻牌圈的评估翻牌圈的评估有3个基本标准：牌的关联性，比如说公共牌数值相连或者相近，因此就非常容易组成顺子。同花面，3张公共牌拥有同样的花色，非常容易组成同花。 大牌面，比如说公共牌有A或者K，因为这样的大牌是你的对手们喜欢用来进行游戏的。HighConnectivityHigh SuitednessHighCards总的来说，玩家的惊讶程度是由翻牌圈公共牌听牌可能的多少来决定的。因为大多数玩家都倾向于用同花，相连的或者大牌来进行游戏，因此我们了解翻牌圈的牌面是非常重要的。翻牌圈的牌面组合翻牌圈的牌面组合通常用来描述翻牌圈。下面的不同分类就是经常出现的翻牌圈牌面组合：彩虹面(RainbowFlop)：3张不同花色的翻牌圈。竟没有听同花的可能也没有听顺子的可能。这样的翻牌圈有40%出现的可能。2张同花色的牌的翻牌圈(2-suitedFlop):翻牌圈有2张相同花色的公共牌，提供了听同花或者完成同花的可能。有55%的可能性在翻牌圈出现2张相同花色的牌。3张同花色的牌的翻牌圈(3-suitedFlop):翻牌圈有3张相同花色的公共牌，提供了听同花的可能。有5%的可能性在翻牌圈出现3张相同花色的牌。 有对子的翻牌圈(PairedFlop)：在翻牌圈出现一对，有17%的可能性出现。这样的翻牌圈就有玩家可能拿到了3条或者是强过顺子，同花的葫芦的可能。因此此时听同花和听顺子的价值就被大大的降低了。2张相连的翻牌圈(2-connected Flop)：翻牌圈有2张相连的公共牌，提供了听顺子的可能。这样的牌面有40%出现的可能。3张相连的翻牌圈(3-connected Flop)：翻牌圈有3张相连的公共牌，提供了听顺子的或者完成顺子的可能。这样的牌面有40%出现的可能。不规则的翻牌圈(RaggedFlop)：一个非常不协调的翻牌圈。在德州扑克中，就是指翻牌圈由很小的牌并且是不同花色，机会没有玩家能拿到什么成型牌可能的翻牌圈。听牌面很强的翻牌圈(Draw-heavy Flop)：一个非常协调的翻牌圈，提供了很多听牌的可能，通常是即能听同花又能听顺子的翻牌圈。没有听牌可能性的翻牌圈(Dry Flop)：一个没有可能听牌或者听牌可能性非常小的翻牌圈。一般看作是不规则翻牌圈的同义词。相关主题：转牌轮(Turn)，河牌轮(River)，牌面(Board)，公共牌(Community Cards)，德州扑克(TexasHold'em)，奥马哈(Omaha)，听型牌(Draw)，翻牌圈前(Preflop)，翻牌圈后(Postflop)"
+        }
+      }
+    }
+  },
+  "fanpaihou": {
+    "name": "翻牌后",
+    "definition": {
+      "definition1": {
+        "header": "翻牌后:",
+        "body": {
+          "paragraph1": "在德州扑克和奥马哈中，翻牌后（postflop）是翻牌之后的游戏部分。相关主题:翻牌前（Preflop）"
+        }
+      }
+    }
+  },
+  "fanpaiqian": {
+    "name": "翻牌前",
+    "definition": {
+      "definition1": {
+        "header": "翻牌前:",
+        "body": {
+          "paragraph1": "在德州扑克或奥马哈中，在翻牌发出之前的那部分游戏被称为翻牌前（preflop）。 相关主题:（翻牌前）Preflop, （翻牌圈）Flop"
+        }
+      }
+    }
+  },
+  "fanpaiquan": {
+    "name": "翻牌圈",
+    "definition": {
+      "definition1": {
+        "header": "翻牌圈:",
+        "body": {
+          "paragraph1": "前三张公共牌，也指代发出前三张后的这个下注轮。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Turn"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Turn.   River"
+        }
+      }
+    }
+  },
+  "fanwei": {
+    "name": "范围",
+    "definition": {
+      "definition1": {
+        "header": "范围:",
+        "body": {
+          "paragraph1": "一个玩家的范围（range）是他在特定情况下会玩的所有可能的牌。例如，如果一个玩家在德州扑克游戏中只用AA,KK,QQ和AK加注,那么他的范围是: (AA,KK,QQ,AK),也记作(QQ+, AK)。 游戏中的含义 在游戏中，这转化为一个问题:这个玩家在这种情况下会用哪些牌行动?比如，如果他用同样的方式玩这些牌，那么这足以知道他有中等大小的口袋对子。一个玩家的赢率来自于他针对对手的范围获胜的机会。一个对手可能持有他范围中较强或较弱的牌，但只要判断范围准确并针对这个范围游戏是正确的，那么他具体持有范围中的什么牌是不重要的。范围的种类一个玩家的范围总是取决于当时的情况、玩家、对立的行动和玩家的行动。跟注范围一个玩家会跟注的牌。加注范围一个玩家会加注的牌。开放加注范围一个玩家第一个进入底池并加注的牌。全押范围一个玩家会全押的牌。相关主题:赢率（Equity）,优势（Edge）"
+        }
+      }
+    }
+  },
+  "fanxiangqianzaichengbaibi": {
+    "name": "反向潜在成败比",
+    "definition": {
+      "definition1": {
+        "header": "反向潜在成败比:",
+        "body": {
+          "paragraph1": "反向潜在成败比（Reverse implied odds）是缩减的底池成败比，它考虑到后来由于对手获得强牌而给自己带来的损失。当你持有一手没有改进潜力的成手牌（现在可能是最好的牌）并面临一个或更多对手的下注或加注时，反向潜在成败比变得有帮助起来。如果对手有一手强牌或能改进他的牌，他还会在接下来的轮次中下注。如果他什么都没有或只有一手弱牌，他就会倾向于在后面的轮次中不下注或弃牌。在这种情况下，你必须比发现自己获胜花更多的钱才能发现自己被打败。例子(德州扑克):玩家A翻牌圈一个对手下注，另一个对手加注。玩家A可能持有最好的牌，但一个或两个对手仍然有可能持有强听牌或更好的牌，如高对、顺子、三条或两对。如果玩家A已经被打败或另外一个玩家改进他的牌力，那么他必须花更多的钱才能发现他被打败。但对手什么都没有时，行动就会减少。他领先时赚得不多，而在落后时亏得更多。因此，他跟注的底池成败比比最初看上去的更差。相关主题:底池成败比（PotOdds）,潜在成败比（Implied Odds）"
+        }
+      }
+    }
+  },
+  "fanyong": {
+    "name": "返佣(Rakeback)",
+    "definition": {
+      "definition1": {
+        "header": "返佣(Rakeback):",
+        "body": {
+          "paragraph1": "返佣(Rakeback)能够让你取回游戏中所产生的部分佣金。例如，你可以利用PokerStrategy.com提供的不同类型的优惠而至少能获得30%的返佣。详细介绍请查看在线扑克的最佳红利和返佣。Rakeback原理?Rakeback主要指针对于那些常规的扑克玩家来说。每一名玩家游戏时都会产生佣金，这部分被扑克室从每一个底池中定量收取。你游戏的越多，那么佣金产生的也就越多。某些扑克室，例如UnibetPoker, 24hPoker 或者 CakePoker都会以Rakeback形式将部分佣金返还给玩家。这也就意味着你会定期的收到一笔返还的佣金，其数量大约为你所产生全部佣金的三分之一。如果你希望了解有哪些扑克室提供此类Rakeback以及其返佣的数量是多少的话，那么就请参阅我们扑克室部分的详细介绍：在线扑克的返佣介绍。间接返佣然而，Rakeback并不就等同于你的赢利。一套VIP体系以及常规的扑克红利都可以被看成是间接返佣。扑克室可能不会提供Rakeback，但是会提供相应的VIP服务，从而使你可以轻松、容易的获得扑克红利。那些具有野心并且非常活跃的玩家就应该认真看一下并尝试达到要求并获得相应VIP优惠。就算是扑克室不提供任何直接形式的Rakeback，你依然有机会在这些提供此类服务的扑克室那里获利。当然你也要从这些Rakeback中减去扑克室其他的红利以及任何促销活动的赢利。如何计算Rakeback?Rakeback的多少要取决于玩家所产生的整体佣金总数。然而关于这部分的计算方法却有所不同。Dealtrakeback计算方法Dealt rakeback 的计算方法意味着返佣将依据玩家是否有被派到牌。此方法很容易解释:如果某手牌产生$1佣金而当时有10名玩家都参与到此手牌中，那么此佣金将在这10名玩家中平分。无论其在翻牌前是否弃牌或者其往地池内投入多少资金。这里所看的只是他有没有被派到牌。Contributedrakeback计算方法然而我们上边说道的计算方法对于那些打法积极、经常参与到游戏中并投入大量筹码的玩家来说有些不公平。虽然他们依然会收到因参与到牌局内后玩家部分相同数量的返佣，就算翻牌前弃牌。Contributed rakeback 计算方法依据的是玩家对于佣金产生贡献的多少。和cdealtrake不同的是此计算方式主要考虑的是玩家在实际游戏中投入的多少，而其最终佣金产生的多少都将依据于此。Progressiverakeback计算方式Progressive rakeback计算方法意味着扑克室并不按照固定百分比给玩家提供返佣。相反的，返佣的多少将取决于玩家参与游戏数量的多少。  相关主题:  Bonus,Rake, No Deposit Bonus"
+        }
+      }
+    }
+  },
+  "fanzhudongxiazhu": {
+    "name": "反主动下注",
+    "definition": {
+      "definition1": {
+        "header": "反主动下注:",
+        "body": {
+          "paragraph1": "反主动下注（donkbet）是傻瓜（donkey）和下注（bet）的组合。一个玩家进行意外的和危险的下注，他在前一轮不是激进的一方（aggressor），但他朝前一轮激进的一方下注。它还被称为gaybet或betout ofnowhere。反主动下注的典型情况是，一个玩家在第一轮跟注对手的加注，然后在下一轮朝加注方下注。反主动下注可以是没经验玩家的愚蠢行动，也可以是用来欺骗对手的打法，因为它们经常被视为软弱。此外，它们也用来作为阻拦式下注，通过下小注来防止对手下破坏底池成败比的大注。相关主题:欺骗性下注（DeceptionBet）,阻拦式下注（Blockbet）同义词:gaybet"
+        }
+      }
+    }
+  },
+  "fapaiyuan": {
+    "name": "发牌员",
+    "definition": {
+      "definition1": {
+        "header": "发牌员:",
+        "body": {
+          "paragraph1": "发牌员就是负责发牌的玩家。实际上该玩家并不一定必须要负责发牌，只是根据规则来说他应该负责发牌，他也可以指定其他的玩家代替他发牌。因此在德州扑克中，每一圈每个玩家都需要担当一次发牌员的职责，即便发牌的是Casino里面的工作人员或者是扑克软件。发牌员的指定是按照顺时针方向由玩家轮流担当的，即便实际发牌的并不是玩家。"
+        }
+      }
+    }
+  },
+  "feicunkuanhongli": {
+    "name": "非存款红利（No Deposit Bonus)",
+    "definition": {
+      "definition1": {
+        "header": "非存款红利（No Deposit Bonus）:",
+        "body": {
+          "paragraph1": "利用非存款红利（No DepositBonus），你可以不用自己存款就立刻开始免费玩真钱扑克。PokerStrategy.com为你提供在各主流扑克室上的非存款红利（NoDeposit Bonus）。如果你使用非存款红利（No DepositBonus）的话就会在扑克室收到一笔免费的赞助金。当然这样你就可以立刻开始真钱游戏了。基本上，非存款红利（No DepositBonus）属于一个资金上的赞助，使得你可以免费玩牌。当然这会有一些附加条件，毕竟天上不会掉免费的馅饼。为了获得我们提供的免费赞助金并开始扑克游戏，你首先需要通过我们的扑克基础知识测验，毕竟如果你什么都没有掌握后拿到这笔赞助金2手牌就输掉的话那样对谁都不好。我们提供的这笔免费非存款红利（NoDepositBonus）的目的就是想给那些打算认真游戏的扑克玩家。获得这笔免费赞助金的第二个要求就是在我们PokerStrategy.com的或作扑克室内注册，然后你就可以在那个扑克室的账户内获得我们的非存款红利（NoDepositBonus）了。PokerStrategy.com之所以会提供这个免费赞助金正是因为我们和众扑克室之间保持着良好的合作关系。当然，如果玩家已经在这个扑克室拥有账号的话我们就不应该再介绍并鼓励他开设新的账户了。相关主题:Bonus, Rakeback"
+        }
+      }
+    }
+  },
+  "feijiazhudichi": {
+    "name": "非加注底池",
+    "definition": {
+      "definition1": {
+        "header": "非加注底池:",
+        "body": {
+          "paragraph1": "非加注底池指的就是翻牌圈前没有玩家加注过的底池。    相关主题：  加注底池, 多人下注底池 "
+        }
+      }
+    }
+  },
+  "feimanyuanzhuo": {
+    "name": "非满员桌",
+    "definition": {
+      "definition1": {
+        "header": "非满员桌:",
+        "body": {
+          "paragraph1": "如果有3-6个人进行游戏，这个扑克游戏就被称为非满员桌、少人桌或6人桌游戏。如果有更多的人加入游戏，它就被称为满员桌游戏;只有两个玩家的游戏被称为单挑。非满员桌游戏的特点在于比满员桌游戏的激进度更高。相关主题:满员桌（FullRing）,单挑（describe_titles-up）同义词:6人桌（6max）"
+        }
+      }
+    }
+  },
+  "feitonghua": {
+    "name": "非同花",
+    "definition": {
+      "definition1": {
+        "header": "非同花:",
+        "body": {
+          "paragraph1": "不同花色的起手牌"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Suit"
+        }
+      }
+    }
+  },
+  "fengding": {
+    "name": "封顶",
+    "definition": {
+      "definition1": {
+        "header": "封顶:",
+        "body": {
+          "paragraph1": "封顶（cap）是一轮中允许的最后加注或一个牌局中下注总额的上限。通常，每轮在3、4或5次加注后封顶。最后的加注就是封顶。在特定的底池和无限注游戏中，封顶可以限制某个特别玩家在所有下注轮中的下注额。如果一个玩家达到这个上限，他被视为全押。相关主题:加注（Raise）"
+        }
+      }
+    }
+  },
+  "fengkuangwanjia": {
+    "name": "疯狂玩家",
+    "definition": {
+      "definition1": {
+        "header": "疯狂玩家:",
+        "body": {
+          "paragraph1": "疯狂玩家（maniac）是一种极其激进的玩家，他玩很多牌并经常设法通过纯粹的激进打法来获胜。疯狂玩家经常加注、下注和诈唬，他的打法是极端的松凶。相关主题:松凶型（LAG）, 松（Loose）,紧（Tight）,激进（Aggressive）,被动（Passive）,跟注站（CallingStation）"
+        }
+      }
+    }
+  },
+  "fudaideyouxi": {
+    "name": "附带的游戏",
+    "definition": {
+      "definition1": {
+        "header": "附带的游戏:",
+        "body": {
+          "paragraph1": "附带的游戏（Sidegames）是在大型锦标赛一旁举行的现金游戏，例如，玩家们在锦标赛后聚在赌场玩现金游戏。尤其，WSOP吸引很多职业玩家的原因不仅是锦标赛的奖金或广告，而且是因为有很多淘汰玩家加入的有利可图的附带游戏。相关主题:锦标赛（Tourtitlent）,现金游戏（Cash Game）"
+        }
+      }
+    }
+  },
+  "fujiaduzhu": {
+    "name": "附加赌注",
+    "definition": {
+      "definition1": {
+        "header": "附加赌注:",
+        "body": {
+          "paragraph1": "附加赌注即在两名或更多玩家间除当前游戏外的其他附加赌注. 他们可以赌下一张牌是不是一张8？Omaha中的翻牌圈开出3张黑桃或者方片？明天会不会下雨甚至某一名玩家是否能够在一年内完成徒步环球旅行。其形式不限，不一定非要与当前的游戏有关。相关主题:side bet"
+        }
+      }
+    }
+  },
+  "fuzaduobian": {
+    "name": "复杂多变",
+    "definition": {
+      "definition1": {
+        "header": "复杂多变:",
+        "body": {
+          "paragraph1": "复杂多变的打法指为了获得更多收益而在游戏中组合采取的某些行动。当你使用复杂多变的打法时，你通常不按标准的打法那样做简单的价值下注，而是试图误导你的对手。举个例子，当你面对喜欢在翻牌圈反主动下注的对手时，如果你有把握获得更多收益，就可以跳过翻牌圈的持续下注。其他重要的关键词：过牌/加注，引诱诈唬，floats或诈唬。"
+        }
+      }
+    }
+  },
+  "ganzao": {
+    "name": "干燥",
+    "definition": {
+      "definition1": {
+        "header": "干燥:",
+        "body": {
+          "paragraph1": "干燥(牌面)    Dry (board)干燥牌面是指没有或只有很少听型牌可能的牌面。与湿润牌面或多重听牌牌面相反，牌面上的牌根本不连续或只是勉强连续，而且是彩虹牌，也就是有三种不同的花色。可能的听型牌越少，牌面就越是干燥的。"
+        }
+      }
+    }
+  },
+  "gaodi": {
+    "name": "高低",
+    "definition": {
+      "definition1": {
+        "header": "高低:",
+        "body": {
+          "paragraph1": "奥马哈是七张牌梭哈是两种不同的扑克玩法。传统的玩法是那个玩家持有最大的牌就获得整个底池。后来出现了高/低的玩法，拿到最好牌的玩家与拿到最差牌的玩家平分底池。低端牌（TheLo-Hand）一手牌有多么“低”有四种不同的定义。在大多数在线扑克平台上，奥马哈或七张牌梭哈高/低中的低端牌是9以下的没有对子的5张牌组合，尽管它们可能形成同花或顺子。例子:先比较最高的牌并从8往下数，因此，8,6, 5, 4, 3是一手比8, 7, 3,2, Ace更好的低端牌。最好的低端牌是从A到5的一手顺子:平分底池通常，底池被最好的高端牌和最差的低端牌平分。如果没有合格的低端牌，那么最好的高端牌获得整个底池。如果两个玩家有一样的低端牌，那么他们每人都获得底池低端部分的一半或整个底池的四分之一。更多的同样大小的低端牌适用于同样的规则，因此，三个一样的低端牌每个获得整个底池的六分之一，以此类推。同样的规则也适用于拿到同样高端牌的玩家。如果一个玩家有最好的高端牌和最差的低端牌，他赢得整个底池。这被称为全胜（scoop）。相关主题:全胜（Scoop）, 四分（Quartered）,奥马哈（Omaha）,七张牌梭哈（Seven CardStud）同义词:8或更好（eight or better）"
+        }
+      }
+    }
+  },
+  "gaoduanpai": {
+    "name": "高端牌",
+    "definition": {
+      "definition1": {
+        "header": "高端牌:",
+        "body": {
+          "paragraph1": "在最好牌和最差牌平分底池的高/低游戏中，高端牌（hi-hand）是一个玩家争夺底池高端部分的牌。即使一个玩家没有希望获胜，他总是有高端牌。一个玩家的高端牌也可能是他的低端牌，它也加入到争夺底池的低端部分。相关主题:高/低（Hi/Lo）,低端牌（Lo-Hand）"
+        }
+      }
+    }
+  },
+  "gaodui": {
+    "name": "高对",
+    "definition": {
+      "definition1": {
+        "header": "高对:",
+        "body": {
+          "paragraph1": "高对（overpair）是一个玩家自己手上的对子，它比公共牌上任何一张牌可能组成的对子更大。例子(德州扑克):玩家牌面这个玩家有一对A，这对A比牌面上任何一张牌可能组成的对子更大。因此，它是高对。相关主题:低对（Underpair）,对子（Pair）,顶对（Top Pair）,中对（Middle Pair）,底对（Bottom Pair）"
+        }
+      }
+    }
+  },
+  "gaojibie": {
+    "name": "高级别",
+    "definition": {
+      "definition1": {
+        "header": "高级别:",
+        "body": {
+          "paragraph1": "高级别（high limit或highstakes）游戏是赌注很大的级别。这个级别没有明确的界限，但通常大于$100/$200或NL5000的级别被视为高级别。相关主题:低级别（Low-Limit）,中等级别（Mid-Stake）, （微型级别）Micro-Limit"
+        }
+      }
+    }
+  },
+  "gaojibiewanjia": {
+    "name": "高级别玩家",
+    "definition": {
+      "definition1": {
+        "header": "高级别玩家:",
+        "body": {
+          "paragraph1": "highroller是在高级别游戏的玩家。这个术语不是与某个级别相联系，而是建立在某些人所认为的高级别。因此，highroller可能在中等级别游戏。相关主题:高级别（High Stake）,中等级别（Mid-Stake）"
+        }
+      }
+    }
+  },
+  "gaopai": {
+    "name": "高牌",
+    "definition": {
+      "definition1": {
+        "header": "高牌:",
+        "body": {
+          "paragraph1": "一组比桌面公共牌大的牌就叫做大牌。比如说在德州扑克中你的起手牌比桌面上的公共牌都要大那么你的起手牌就叫做大牌。例子(德州扑克):PlayerFlop玩家现在的起手牌就比翻牌圈上的公共牌都要大这就是两张大牌。在这种情况下拿到了大牌就意味着在后面很有可能拿到顶对。相关主题：顶对(TopPair)"
+        }
+      }
+    }
+  },
+  "gaopaijiazhi": {
+    "name": "高牌价值",
+    "definition": {
+      "definition1": {
+        "header": "高牌价值:",
+        "body": {
+          "paragraph1": "一组牌的高牌价值是这组牌中最高牌的价值。例如，如果两个顺子或同花相互抗争，那么高牌价值决定谁获胜。这个术语也用作评估牌面的结构以说明牌面上有多少张高牌以及它们是什么牌。相关主题:连接性（Connectivity）,同花性（Suitedness）"
+        }
+      }
+    }
+  },
+  "geli": {
+    "name": "隔离",
+    "definition": {
+      "definition1": {
+        "header": "隔离:",
+        "body": {
+          "paragraph1": "通过激进的行为把其他的玩家赶出游戏并与一个玩家形成单挑。隔离被用来让一个弱的玩家留在游戏中或为了确保位置上的优势而赶走可能削除这种优势的玩家。 相关主题:单挑（describe_titles-up）"
+        }
+      }
+    }
+  },
+  "genjin": {
+    "name": "跟进",
+    "definition": {
+      "definition1": {
+        "header": "跟进:",
+        "body": {
+          "paragraph1": "在带有盲注的游戏中，一个玩家跟注大盲注作为他的第一个行动时就是跟进（limp）。他跟注大盲注而没有加注。相关主题:盲注（Blind）,跟进-加注（Limp-Raise）,跟注（Call）"
+        }
+      }
+    }
+  },
+  "genjinjiazhu": {
+    "name": "跟进-加注",
+    "definition": {
+      "definition1": {
+        "header": "跟进-加注:",
+        "body": {
+          "paragraph1": "在带有盲注的游戏中，一个玩家把跟注大盲注作为他的第一个行动，这种行动就叫跟进。如果他后面有人加注，然后他决定加注，那么这被称为跟进-加注，因为他先跟进并然后加注。 相关主题:Backraise"
+        }
+      }
+    }
+  },
+  "genzhu": {
+    "name": "跟注",
+    "definition": {
+      "definition1": {
+        "header": "跟注:",
+        "body": {
+          "paragraph1": "跟注是玩家在对手下注后的行动，它指玩家与对手下注相同的数额。相关主题：过牌(Check)，下注(Bet)，加注(Raise)，弃牌(Fold)"
+        }
+      }
+    }
+  },
+  "genzhuzhan": {
+    "name": "跟注站",
+    "definition": {
+      "definition1": {
+        "header": "跟注站:",
+        "body": {
+          "paragraph1": "定义 跟注站（callingstation或station）是一个极其松和被动的玩家，他玩太多的牌并玩得太过。他每注都跟，甚至即使拥有边缘牌，并不能预见自己何时被击败。他也被动地玩好牌，即：他很少下注来建立底池或保护易受攻击的牌。他们被称为跟注站，因为跟注是他们最喜欢的打法。因此，他们不会诈唬对手。这种打法的原因跟注站采用这种打法有很多原因。一方面，他们不能分辨自己的牌力，因此而用弱牌玩得太远且没有足够激进地玩他们的强牌。另一方面，他们可能更寻求扑克交际的一面，只想加入游戏而不想引起战斗的气氛。或者玩家缺乏信心，把对手的每次下注都视为诈唬，这也会让他成为跟注站。相关主题:疯狂玩家（Maniac）,紧凶型（TAG）,松凶型（LAG）,被动（Passive）,激进（Aggressive）同义词:station "
+        }
+      }
+    }
+  },
+  "gonggongpai": {
+    "name": "公共牌",
+    "definition": {
+      "definition1": {
+        "header": "公共牌:",
+        "body": {
+          "paragraph1": "所有进行游戏的玩家都可以使用的牌叫做公共牌。5张公共牌： 先3张翻牌，然后1张转牌， 最后1张河牌。相关主题：桌面牌(Board cards)"
+        }
+      }
+    }
+  },
+  "gongjifang": {
+    "name": "攻击方",
+    "definition": {
+      "definition1": {
+        "header": "攻击方:",
+        "body": {
+          "paragraph1": "近期最先下注或加注的玩家。他掌握主动权并支配游戏。相关主题:主动权（Initiative）"
+        }
+      }
+    }
+  },
+  "gongkaijiazhu": {
+    "name": "公开加注",
+    "definition": {
+      "definition1": {
+        "header": "公开加注:",
+        "body": {
+          "paragraph1": "第一个加注入池的主动入池者。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "《VPIP》"
+        }
+      }
+    }
+  },
+  "gongkaijiazhuzhe": {
+    "name": "公开加注者",
+    "definition": {
+      "definition1": {
+        "header": "公开加注者:",
+        "body": {
+          "paragraph1": "第一个主动加注入池的玩家"
+        }
+      }
+    }
+  },
+  "guaishoupaichaoqiangpai": {
+    "name": "怪兽牌-超强牌",
+    "definition": {
+      "definition1": {
+        "header": "怪兽牌-超强牌:",
+        "body": {
+          "paragraph1": "非常强的一手成牌。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "葫芦"
+        }
+      }
+    }
+  },
+  "guanrangdaodi": {
+    "name": "观让到底",
+    "definition": {
+      "definition1": {
+        "header": "观让到底:",
+        "body": {
+          "paragraph1": "观让到底（check down）是参与一手牌的玩家只是一路观让到摊牌而没有下任何注。这种情况发生在很被动的游戏中，没人有什么牌且没有信心下注。相关主题:跟注到底（Call down）,观让（Check）,摊牌（Showdown）"
+        }
+      }
+    }
+  },
+  "guanrangjiazhu": {
+    "name": "观让-加注",
+    "definition": {
+      "definition1": {
+        "header": "观让-加注:",
+        "body": {
+          "paragraph1": "观让-加注（check-raise）是一个组合打法，它包含一个玩家先观让并在后面有人下注时加注。观让-加注的流程:玩家A观让玩家B下注玩家A加注观让加注有许多目的。它可以用来诱骗对手，它也展示实力并用来诈唬。在一些赌场和家庭游戏中，观让-加注被认为是不礼貌而不被允许。相关主题:观让（check）,加注（raise）"
+        }
+      }
+    }
+  },
+  "guanshawei": {
+    "name": "关煞位",
+    "definition": {
+      "definition1": {
+        "header": "关煞位:",
+        "body": {
+          "paragraph1": "关煞位是在按钮位前面的一个位置，关煞位和按钮位置同属后面位置。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Button(BTN) "
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Button(BTN).   (HJ).   Middle Position(MP).   Under the Gun(UTG).   《位置因素》"
+        }
+      }
+    }
+  },
+  "guoding": {
+    "name": "过顶",
+    "definition": {
+      "definition1": {
+        "header": "过顶:",
+        "body": {
+          "paragraph1": "当一个玩家加注对手的加注，这也称为他在过顶（coming over the top）。  相关主题:加注（Raise）,再加注（Reraise）"
+        }
+      }
+    }
+  },
+  "guofen": {
+    "name": "过分",
+    "definition": {
+      "definition1": {
+        "header": "过分:",
+        "body": {
+          "paragraph1": "过分（overplay）指投入比一手牌实际价值更多的钱。这种情况经常发生在一个玩家最初拿到一手强牌并掌握主动权，但没有认识到他的牌落后的时候。此时，他应该降低他的激进性并试图控制底池。相关主题:底池控制（Pot Control）"
+        }
+      }
+    }
+  },
+  "guopai": {
+    "name": "过牌",
+    "definition": {
+      "definition1": {
+        "header": "过牌:",
+        "body": {
+          "paragraph1": "如果轮到一个玩家做决定时使用Check, 意思就是他不下注, 让出下注的权利给后面的玩家. 只有在之前没有人下注的情况下你才可以过牌(check) 相关主题:跟注(Call), 下注(Bet), 加注(Raise), 弃牌(Fold)"
+        }
+      }
+    }
+  },
+  "guopaijiazhu": {
+    "name": "过牌-加注",
+    "definition": {
+      "definition1": {
+        "header": "过牌-加注:",
+        "body": {
+          "paragraph1": "过牌-加注是一个组合打法，它包含一个玩家先过牌并在后面有人下注时加注。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "过牌-加注的流程:玩家A过牌玩家B下注玩家A加注过牌加注有许多目的，有诈唬或拿价值。"
+        }
+      }
+    }
+  },
+  "hanleigenzhu": {
+    "name": "含泪跟注",
+    "definition": {
+      "definition1": {
+        "header": "含泪跟注: ",
+        "body": {
+          "paragraph1": "指在最后一轮面临很大的失败可能性时作出的跟注明知自己很可能输，但出于好奇或执拗，还是选择了跟注。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "e.g., “I know you’ve got me, but I have to call.”——“我知道你比我大，但我还是得跟。”"
+        }
+      },
+      "definition3": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Hero Call"
+        }
+      },
+      "definition4": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Hero Call.   Flat Call.   Cold Call"
+        }
+      }
+    }
+  },
+  "hepaihepaiquan": {
+    "name": "河牌-河牌圈",
+    "definition": {
+      "definition1": {
+        "header": "河牌-河牌圈:",
+        "body": {
+          "paragraph1": "在德州扑克或者Omaha中发出的第5张公共牌即最后一张公共牌 ，也指代这一下注轮。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Prefolp"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Prefolp.   Flop.   Turn"
+        }
+      }
+    }
+  },
+  "hepailaoshu": {
+    "name": "河牌老鼠",
+    "definition": {
+      "definition1": {
+        "header": "河牌老鼠:",
+        "body": {
+          "paragraph1": "河牌老鼠（River rat）指一个玩家在德州扑克或奥马哈游戏中获得一张幸运的河牌，这让他打败对手原先较好的一手牌。 相关主题:Suckout, 幸运河牌（Lucky River）"
+        }
+      }
+    }
+  },
+  "hepailin": {
+    "name": "河牌轮",
+    "definition": {
+      "definition1": {
+        "header": "河牌轮:",
+        "body": {
+          "paragraph1": "定义在德州扑克或者Omaha中发第5张公共牌即最后一张公共牌 FlopTurnRiver在Seven Card Stud中发第7张公共牌即最后一张公共牌. 在德州扑克和Omaha中如何评估河牌轮的牌和转牌轮(Turn)相似，如果河牌轮发出的牌对桌面上的玩家都没有什么帮助也叫做无用牌。比如说这张牌既不是大牌也不是能完成什么听型牌面的牌。在转牌轮时公共牌是大牌并且不同花色，那么河牌轮发出张2就是无用牌。河牌轮的牌如果是张很可能帮助某些玩家提升牌力的牌那么叫做威胁牌。比如说第三张同花色的牌很可能让有的玩家拿到了同花。一张A在河牌轮出现同样也是张威胁卡。当这样的牌发出的时候，玩家们就能让他们的诈唬增加成功性，因为此时能更加让你的对手相信你拿到了一手很强的牌。相关主题：转牌轮(Turn)，河牌轮(River)，牌面(Board)，公共牌(Community )，德州扑克(TexasHold'em)， 奥马哈(Omaha), 听型牌(Draw)，翻牌圈前(Preflop)，翻牌圈后(Postflop)"
+        }
+      }
+    }
+  },
+  "hezuogongsi": {
+    "name": "合作公司",
+    "definition": {
+      "definition1": {
+        "header": "合作公司:",
+        "body": {
+          "paragraph1": "合作公司（affiliate）是指为它的合伙人发布广告或生产产品的合伙公司，它们的利益关系是建立在临时的基础上。PokerStrategy是一个合作公司的例子，因为它为线上扑克室设法争取新的玩家并获得它的玩家所创造的一部分佣金作为报酬。PokerStrategy还教它的会员如何玩扑克、为扑克室培养成功的和目标明确的玩家并不断获得返回的一部分佣金作为报酬- 这是一个典型的双赢局面。 相关主题:  扑克策略（PokerStrategy）"
+        }
+      }
+    }
+  },
+  "haoke": {
+    "name": "豪客",
+    "definition": {
+      "definition1": {
+        "header": "豪客:",
+        "body": {
+          "paragraph1": "游戏高额级别的玩家。“豪客”的定义是相对的。极高额级别的玩家也被称为“鲸鱼”。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "《资金管理》"
+        }
+      }
+    }
+  },
+  "hongli": {
+    "name": "红利(Bonus)",
+    "definition": {
+      "definition1": {
+        "header": "红利(Bonus):",
+        "body": {
+          "paragraph1": "扑克红利(Bonus)是当玩家在扑克室存款时作为附加奖励而获得的额外资金。PokerStrategy.com所提供的最佳红利(Bonus)以及相关代码都可以在我们的合作扑克室网页在线扑克的最佳红利中找到。扑克红利(Bonus)工作原理?很简单，你在扑克室存入一定数额的资金，所谓“回馈”，你将会受到一定数额的额外奖励。扑克红利(Bonus)可以是个固定的数额。比如说，无论你存入多少，你最多只能收到$1,000的红利(Bonus)。更简单的是你获得的扑克红利(Bonus)的多少都取决于你的存款多少。也就是说你会看到诸如\"100%高达$500红利\"的说法，也就是说你会收到100%的存款红利(Bonus)，其最高额度为$500.如何获得扑克红利(Bonus)?扑克红利(Bonus)都不是立刻给你的，你需要逐步的获得它。你需要打牌先，然后依据你产生佣金的多少，扑克室会分期、分批的将其注入你的常规扑克账户内。但是其具体的支付计算方式会因为扑克室的不同而有所差别。通常来说你都会在打牌的同时获得类似于\"忠诚积分（loyaltypoints）\",然后当你获得一定数量的这个积分后就会获得相应的扑克红利(Bonus)。你可以在我们的合作扑克室网页在线扑克的最佳红利中找到详细介绍。什么是首存红利（firstdeposit bonus）?首存红利（first deposit bonus）是一个你只能在第一次在扑克室存款时收到的红利(Bonus)，它是扑克室对你扑克生涯起始的一个激励的奖励。什么是reloadbonus?Reload bonus和首存红利极其类似，你可以收到这个红利(Bonus)当你已经在这个扑克室游戏。当你进行存款时，你将会收到这个reload bonus.这是对于玩家忠诚性和额外投入的刺激, 比如说去更高级别游戏。什么是no deposit bonus?No deposit bonus是一个特殊的扑克红利(Bonus)，它不需要你自己存款。相反的是，no depositbonus是一种免费的bankroll,比如说你从PokerStrategy.com收到的免费赞助金。PokerStrategy.com为大家提供多种获得免费打扑克的机会。几乎在我们网站上的任何地方你都可以看到一个“免费赞助金”的字样。作为一个扑克学校，我们为大家提供这个免费的赞助金，使得玩家不用花费自己的一分一毫即可开始扑克生涯。为了获得免费赞助金,你需要做的就是在PokerStrategy.com免费注册, 通过我们的扑克测验后选择一个你希望以后在哪里游戏的扑克室。 相关主题:Bonus Code, Rakeback, No Deposit Bonus "
+        }
+      }
+    }
+  },
+  "honglidaima": {
+    "name": "红利代码",
+    "definition": {
+      "definition1": {
+        "header": "红利代码:",
+        "body": {
+          "paragraph1": "通过使用红利代码你将有机会在扑克室存款时获得一笔额外的奖励。比如说当使用了代码PSVIP后，你将可以在PokerStrategy.com众多的合作伙伴扑克室中获得最高的红利。红利代码工作原理?如果你使用扑克红利代码，你将有机会在扑克室存款时获得一笔额外的奖励。这可能是一笔固定的数目，也可能会是一笔一定比例的金额。比如说，一个200%的红利，如果你存入$100,你会收到额外的$200。为了获得一个bonus或者首存红利（FirstDeposit），你可以在我们的合作扑克室网页在线扑克的最佳红利中找到详细介绍。在你注册的过程中你就要在特定的位置填入相应的红利代码。通过使用链接和红利代码，扑克室就知道你希望使用PokerStrategy.com的红利。在某些扑克室，直到你存款之前你甚至都不需要填写任何代码。当然也有些扑克室你根本不需要填写- 这些当然都在在线扑克的最佳红利中会找到。红利代码的叫法并非统一对于新手玩家来说有些头痛的可能是红利代码（BonusCode）的不同界定。比如说在PokerStars它被称为市场代码（MarketingCode）。但是无论怎样，你都肯定能在我们的扑克室专区找到详尽、细致的介绍。你能在哪里找到好的红利代码?正如前边提到的，你并不是在所有扑克室都需要一个红利代码。当然你可以在我们这里获得最好的红利和返佣。那里还有你可能会用到的链接以及其需要的相应红利代码。不用存款的红利代码扑克红利代码并不单单针对那些自己存款的玩家。此外，还有一种被称作nodeposit bonuses. 这种no depositbonus使得玩家可以免费打牌并获得资金，而不必自己主动存款。PokerStrategy.com在几乎所有主流的扑克室中都有提供一个免费赞助金，当然你需要使用我们页面中提供的下载链接去注册，其间可能也需要填写相应红利代码。当你在PokerStrategy.com注册、通过扑克测验并选择了自己中意的扑克时候后即可获得这个不需要自己存款的免费赞助金。相关主题:  Bonus, Rakeback, No Deposit Bonus, Poker Strategy"
+        }
+      }
+    }
+  },
+  "hongliwulai": {
+    "name": "红利无赖",
+    "definition": {
+      "definition1": {
+        "header": "红利无赖:",
+        "body": {
+          "paragraph1": "红利无赖（bonus whore）是指一个玩家只是为了获得首存红利而从一家线上扑克室跑到另外一家。他在一家扑克室首次存款并一直玩到他得到红利，然后他又继续“搬家”。相关主题:红利（Bonus）"
+        }
+      }
+    }
+  },
+  "hongxin": {
+    "name": "红心",
+    "definition": {
+      "definition1": {
+        "header": "红心:",
+        "body": {
+          "paragraph1": ""
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Club"
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Club.   Spade.   Diamonds"
+        }
+      }
+    }
+  },
+  "houjiazhu": {
+    "name": "后加注",
+    "definition": {
+      "definition1": {
+        "header": "后加注:",
+        "body": {
+          "paragraph1": "后加注（backraise）是跟注之后再加注。 例子:玩家A下注玩家B跟注玩家C加注玩家A跟注 玩家B加注 ->他进行后加注，因为他先跟注并再加注C的加注。后加注的一种特殊形式是跟进-加注（limp-raise）。在带有盲注的游戏中，跟注盲注被称为跟进（limping）。因此，先跟进然后再加注接着的加注被称为跟进-加注（limp-raise）。相关主题:跟注（Call）,加注（Raise）,再加注（Reraise）,跟进（Limp）"
+        }
+      }
+    }
+  },
+  "houmentingpai": {
+    "name": "后门听牌",
+    "definition": {
+      "definition1": {
+        "header": "后门听牌:",
+        "body": {
+          "paragraph1": "后门听牌（backdoor draw或runner-runnerdraw）是需要两张牌而不是一张牌来完成的听牌。例如，如果一个玩家有三张梅花，那么他有梅花的后门同花听牌。他还需要两张梅花来形成同花。例子(德州扑克):玩家翻牌圈这个玩家有梅花后门同花听牌和后门顺子听牌。如果转牌是一张梅花，那么他将有正常的同花听牌。如果它是4,6或9,他还将有顺子听牌。后门听牌不是很强，但在势均力敌的情况下是有帮助的。三张同花牌形成同花的机会大约是4.2%。在上面的例子中，这个玩家有大约8.5%的机会在转牌圈获得一张6来形成两端顺子听牌，有17%的机会碰到4或9来形成内听顺子。总的来说，他有3%的机会在河牌圈打中顺子。相关主题:听牌（Draw）,同花（Flush）,同花听牌（FlushDraw）,两端顺子听牌（Open Ended Straight Draw）, 内听顺子（Inside Straight Draw）"
+        }
+      }
+    }
+  },
+  "houmianweizhi": {
+    "name": "后面位置",
+    "definition": {
+      "definition1": {
+        "header": "后面位置:",
+        "body": {
+          "paragraph1": "在玩家行动的顺序由庄家位置决定的游戏中，后面位置（late positions）是两个最后行动的位置，cutoff和button。在这些位置的玩家对其他的玩家有很大的优势，因为他们知道前面所有玩家的行动。例子:盲注位前面位置中间位置后面位置相关主题:有利位置（InPosition）,不利位置（Out of Position）,前面位置（Early Position）,中间位置（MiddlePosition）同义词:lp"
+        }
+      }
+    }
+  },
+  "houmianguanrang": {
+    "name": "后面观让",
+    "definition": {
+      "definition1": {
+        "header": "后面观让:",
+        "body": {
+          "paragraph1": "后面观让（Check behind）是最后一个玩家在前面玩家已经观让后又观让。这意味着行动转到下一轮或无人下注而摊牌。流程玩家A观让玩家B观让(在后面)"
+        }
+      }
+    }
+  },
+  "huaerjiepuke": {
+    "name": "华尔街扑克",
+    "definition": {
+      "definition1": {
+        "header": "华尔街扑克:",
+        "body": {
+          "paragraph1": "华尔街扑克是由七张牌梭哈衍变而来的，不同之处是在牌桌上有额外的四张牌(公共牌)，可以被玩家购买。这种扑克可以由2-7个玩家一起玩，共有五个下注轮。在每个玩家都投入底注之后，发牌员会发出四张明牌，也就是所谓的华尔街。最左边的牌由一个筹码标记。之后每个玩家会得到两张暗牌，和七张牌梭哈不同的是，玩家现在可以选择从发牌员那得到一张明牌或从华尔街中买一张牌。用筹码标记的那张牌恰好值一个筹码，下一张牌值两个筹码，第三张值三个筹码，第四张值四个筹码。如果有玩家从华尔街中买走一张牌，会马上发另一张牌补上那个位置。明牌最小的玩家开启第一个下注轮。他必须至少下注一个bring-in，也可以加注。在第一个下注轮之后，每个留在牌局中的玩家都可以从发牌员那得到一张明牌或从华尔街买一张牌。然后是第二个下注轮。之后的游戏就不能再从华尔街中买牌了，每个留在牌局中的玩家都会得到一张明牌，然后开始下一个下注轮。在倒数第二个下注轮时，玩家们会得到第六张牌。之后，每位玩家再从发牌员那得到另一张暗牌，因此每位玩家都一共有七张牌。接着是最后一个下注轮。比大小：华尔街扑克比大小的方法和德州扑克一样。"
+        }
+      }
+    }
+  },
+  "huangjiatonghuashun": {
+    "name": "皇家同花顺",
+    "definition": {
+      "definition1": {
+        "header": "皇家同花顺:",
+        "body": {
+          "paragraph1": "皇家同花顺是从10到A的同花色的顺子。是最强的成型牌。 例子:相关主题：Poker hands, 同花顺(Straight Flush) "
+        }
+      }
+    }
+  },
+  "huapai": {
+    "name": "花牌",
+    "definition": {
+      "definition1": {
+        "header": "花牌:",
+        "body": {
+          "paragraph1": "花牌（face cards）指牌面上画人的牌。有三种花牌：K、Q、J。它们也被认为是“paint cards”。"
+        }
+      }
+    }
+  },
+  "hulu": {
+    "name": "葫芦",
+    "definition": {
+      "definition1": {
+        "header": "葫芦:",
+        "body": {
+          "paragraph1": "葫芦是指3条和1对的组合牌面。葫芦又叫做3带2等等。如果2个玩家都拿到了葫芦，那么持有大的3条的玩家胜出。如果他们持有相同的3条，那么持有大的对子的玩家胜出。例子:这手牌就是3条Q带一对A。"
+        }
+      }
+    }
+  },
+  "huomangzhu": {
+    "name": "活盲注",
+    "definition": {
+      "definition1": {
+        "header": "活盲注:",
+        "body": {
+          "paragraph1": "活盲注（live blind）是一个或多个玩家在发牌前支付的强制性下注。下注是活的，因为支付它的玩家在轮到他时仍然能加注。相关主题:强制性下注（Forced Bet）, 盲注（Blind）"
+        }
+      }
+    }
+  },
+  "huopai": {
+    "name": "活牌",
+    "definition": {
+      "definition1": {
+        "header": "活牌:",
+        "body": {
+          "paragraph1": "如果一个玩家能用某张牌形成对子而获胜，那么这张牌对他是活的。例子  (德州扑克):玩家 A玩家B玩家A的A受制于玩家B的A，因为K会成为更大的踢脚，但Q是活的，因为Q成对后仍然能帮助玩家A获胜。 活牌（livecards）的另一个含义是还没有发出的牌。相关主题:受制（Dominated）"
+        }
+      }
+    }
+  },
+  "huoting": {
+    "name": "活听",
+    "definition": {
+      "definition1": {
+        "header": "活听:",
+        "body": {
+          "paragraph1": "活听（Drawing live）与死听（drawing dead）相对，它意味着这手听牌仍然有很好的机会获胜。这副牌中还有牌发出后能让这手听牌成为最好的牌。相关主题:听牌（Draw）,死听（Drawing dead）,弱听（Drawing thin）"
+        }
+      }
+    }
+  },
+  "jiagou": {
+    "name": "加购",
+    "definition": {
+      "definition1": {
+        "header": "加购: ",
+        "body": {
+          "paragraph1": "指锦标赛中的重购阶段结束前最后一次加购，通常能获得两倍于初始记分牌的量。 "
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Buy-In "
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Buy-In,Rebuy,《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "jiangepai": {
+    "name": "间隔牌",
+    "definition": {
+      "definition1": {
+        "header": "间隔牌:",
+        "body": {
+          "paragraph1": "间隔牌（gaphand）在德州扑克中是牌的大小不相连的起手牌。相互连续的牌被称为连牌（connectors）。如果牌之间分开而不相邻，那么它们被称为间隔连牌（gapconnectors）或间隔牌（gap hands）。 There are:间隔一张牌的连牌 间隔两张牌的连牌间隔三张牌的连牌......相关主题:（连牌）Connectors"
+        }
+      }
+    }
+  },
+  "jiangjin": {
+    "name": "奖金",
+    "definition": {
+      "definition1": {
+        "header": "奖金:",
+        "body": {
+          "paragraph1": "奖金（payout）是一场锦标赛为具体的名次设置的奖励。相关主题:奖金结构（Payout Structure）,锦标赛（Tourtitlents）"
+        }
+      }
+    }
+  },
+  "jianguo": {
+    "name": "坚果",
+    "definition": {
+      "definition1": {
+        "header": "坚果:",
+        "body": {
+          "paragraph1": "坚果牌指的是某个牌面上可能组成的最强、不可能被打败的牌型组合。"
+        }
+      }
+    }
+  },
+  "jianguopai": {
+    "name": "坚果牌",
+    "definition": {
+      "definition1": {
+        "header": "坚果牌:",
+        "body": {
+          "paragraph1": "坚果牌（nuts）或上锁牌（lock）是某种情况下最好可能的牌。如果一个玩家就目前所有发出的牌中持有最好可能的牌，那么这个玩家就持有坚果牌。这个术语也用在某一类牌的背景中。坚果-同花牌或坚果-顺子牌分别是最好可能的同花或顺子。相关主题:Pokerhands"
+        }
+      }
+    }
+  },
+  "jianguotonghua": {
+    "name": "坚果同花",
+    "definition": {
+      "definition1": {
+        "header": "坚果同花:",
+        "body": {
+          "paragraph1": "一手牌局中，可能出现的最大的同花牌型。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "小勇手持草花K3，牌面为草花A9T。淑芬草花Q86。则小勇的牌为坚果同花。"
+        }
+      }
+    }
+  },
+  "jianguotonghuatingpai": {
+    "name": "坚果同花听牌",
+    "definition": {
+      "definition1": {
+        "header": "坚果同花听牌:",
+        "body": {
+          "paragraph1": "还差一张牌就能凑齐坚果同花。 "
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《Pot Odds底池赔率》.   《单张同花听牌》.   《手牌实验室—同花连张》"
+        }
+      }
+    }
+  },
+  "jianhaojiushou": {
+    "name": "见好就收",
+    "definition": {
+      "definition1": {
+        "header": "见好就收:",
+        "body": {
+          "paragraph1": "见好就收（Hit andrun）是一种策略，加入游戏并等待一次大的丰收，然后一获胜就离开牌桌。因此，对手没有机会在短期内赢回他们的钱。大部分玩家认为这种行为缺乏游戏的勇气或不愿承担风险，而且很不合群。另一方面，由于它尽可能快地获利并撤回这些收益，这么做也十分有利。小筹码策略基于带入很少的钱并在筹码变多时离开，因此，它也是见好就收的策略。相关主题:Chop"
+        }
+      }
+    }
+  },
+  "jiazaizhongjian": {
+    "name": "夹在中间",
+    "definition": {
+      "definition1": {
+        "header": "夹在中间:",
+        "body": {
+          "paragraph1": "如果一个玩家被困在两个对手之间，他就被夹在中间，以至于他必须总是在第一个人之后行动而在第二个人之前行动，特别当这个两个对手都很激进且在争夺底池时，这种感觉使人不愉快。相关主题:压迫打法（Squeeze）"
+        }
+      }
+    }
+  },
+  "jiazhi": {
+    "name": "价值",
+    "definition": {
+      "definition1": {
+        "header": "价值:",
+        "body": {
+          "paragraph1": "价值是期望收益在扑克中的俚语，即使你预期来自于一手牌或一个行动的利润。当它指赢率或纯收益时，这个词更冗长和不具体，以至于有人说一手牌或某种情况能长期获利时具有价值。实现价值的行为是会带来长期收益的。它也指一手牌的地位或强度，或指某张牌有多大。相关话题:期望收益（Expected Value）,赢率（Equity）,价值下注（ValueBet）"
+        }
+      }
+    }
+  },
+  "jiazhixiazhu": {
+    "name": "价值下注",
+    "definition": {
+      "definition1": {
+        "header": "价值下注:",
+        "body": {
+          "paragraph1": "价值下注就是通过下注来扩大你的胜利战果，比如说你在最后一轮下注轮拿到了最好的成型牌，你期望你对手能往底池里投入更多的钱。这个下注是正的期望值的，因此能够增加底池大小，从而增加你的赢率及你的胜利战果。相关主题：期望值(ExpectedValue)，赢率(Equity)，阻拦式下注(Blockbet)，保护式下注(Protection Bet)"
+        }
+      }
+    }
+  },
+  "jiazhu": {
+    "name": "加注",
+    "definition": {
+      "definition1": {
+        "header": "加注:",
+        "body": {
+          "paragraph1": "定义加注就是指玩家在其他玩家下注的情况下下更多的注。加注就是要下比你对手下注更多的注。加注的数量以及大小一般是由游戏举办方来定的。通常每个下注轮都允许有3-5次加注的。在玩家加注后另一个玩家又加注叫做再加注(Reraise)。完整的和不完整的加注如果一个玩家用全押(All-In)来加注，比如说该玩家用他所有的资金来下注，然而此时的下注额仍然不足最低加注的要求，那么他的加注就叫做不完整加注(IncompleteRaise)或者非常规加注。根据游戏举办方定的规矩不同，如果这样的加注没达到最低加注数量要求的一半那么可能只能叫做不完整加注。一个不完整的加注之后就不允许再加注了，比如说一个玩家在不完整加注玩家之前已经决策过了，那么他此时只能是跟注不完整加注或者是弃牌。例子:玩家A下注$4.玩家B跟注.玩家C只剩下$5并且他此时全押了.此时最低加注额应该是$4。玩家C应该先交付$4去跟注玩家A的下注然后再用他所剩下的资金来做加注。此时他就是不完整加注，因为最低加注额应该是$4。玩家A和B此时只能再跟注$1或者是弃牌。他们此时就不能在做其它的决定了。相关主题：过牌(Check)，跟注(Call)，下注(Bet)，弃牌(Fold)，全押All-In()，完整加注(CompleteRaise)"
+        }
+      }
+    }
+  },
+  "jiazhudichi": {
+    "name": "加注底池",
+    "definition": {
+      "definition1": {
+        "header": "加注底池:",
+        "body": {
+          "paragraph1": "加注底池指的是在翻牌圈前有人加注过的底池。   相关主题：  非加注底池, 多人下注底池"
+        }
+      }
+    }
+  },
+  "jiazhuguodedichi": {
+    "name": "加注过的底池",
+    "definition": {
+      "definition1": {
+        "header": "加注过的底池: ",
+        "body": {
+          "paragraph1": "指有人在翻牌前加注过的底池。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Unraised Pot"
+        }
+      }
+    }
+  },
+  "jibie": {
+    "name": "级别",
+    "definition": {
+      "definition1": {
+        "header": "级别:",
+        "body": {
+          "paragraph1": "级别（Limit）是另一个措辞用来表示游戏的大小或赌注。例如，NL400表示最大买入为$400的级别，并且是无限注的下注结构。有时也用来表示有限注的简写形式。相关主题:有限注（Fixed Limit）, （赌注）Stakes"
+        }
+      }
+    }
+  },
+  "jie": {
+    "name": "街",
+    "definition": {
+      "definition1": {
+        "header": "街:",
+        "body": {
+          "paragraph1": "游戏或发牌的单个部分被称为街。例如，在德州扑克中，转牌圈是第四街，因为转牌是发出的第四张公共牌。 相关主题:翻牌圈（Flop）,转牌圈（Turn）,河牌圈（River）同义词:streets"
+        }
+      }
+    }
+  },
+  "jiedudupai": {
+    "name": "解读/读牌",
+    "definition": {
+      "definition1": {
+        "header": "解读/读牌",
+        "body": {
+          "paragraph1": "解读是从一个对手的已知信息中得出的有用结论。解读可以来自于暗示、下注模式、历史牌局或打法风格。它们使得对特定的对手调整打法或预测一个玩家的牌成为可能。"
+        }
+      },
+      "definition2": {
+        "header": "相关主题:",
+        "body": {
+          "paragraph1": "暗示（Tell）,下注模式（Betting Pattern）,未知玩家（Unknown）"
+        }
+      }
+    }
+  },
+  "jiegou": {
+    "name": "结构",
+    "definition": {
+      "definition1": {
+        "header": "结构:",
+        "body": {
+          "paragraph1": "见下注结构（betting structure）同义词:下注结构（betting structure）"
+        }
+      }
+    }
+  },
+  "jietoupuke": {
+    "name": "街头扑克",
+    "definition": {
+      "definition1": {
+        "header": "街头扑克:",
+        "body": {
+          "paragraph1": "街头扑克也就是五张牌梭哈。可以由2-10位玩家一起玩。共有四个下注轮。在牌局开始之前，每位玩家都要投底注(一个最小下注)，之后得到一明一暗两张底牌。在第一个下注轮中，由底牌中明牌最小的那个玩家开始下注，这个注被称为bring-in，其大小取决于底注。这位玩家也可以选择加注这个bring-in。如果两位玩家都有最小的明牌，则由花色决定哪位玩家下bring-in。大小顺序为草花，方块，红心，黑桃。bring-in左边的玩家继续游戏，他可以选择跟注，弃牌或加注。第一个下注轮结束之后，每一个仍留在牌局中的玩家会得到另一张明牌。由牌面组合最大的那位玩家开始第二个下注轮。第二，第三，第四下注轮都采用这个模式。在第四个下注轮结束之后，每位仍在牌局中的玩家都有一张暗牌，四张明牌。摊牌：最后一个下注轮之后就是摊牌。比大小的方法和德州扑克一样。最弱的牌是杂牌，最强的牌是皇家同花顺。"
+        }
+      }
+    }
+  },
+  "jifenpaizongliang": {
+    "name": "记分牌总量",
+    "definition": {
+      "definition1": {
+        "header": "记分牌总量:",
+        "body": {
+          "paragraph1": "指玩家用于参与游戏的道具筹码总量。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Short Stack"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Short Stack.   Deep Stack.   《SPR详解 — 诱敌深入，穷寇莫追》"
+        }
+      }
+    }
+  },
+  "jihua": {
+    "name": "极化",
+    "definition": {
+      "definition1": {
+        "header": "极化:",
+        "body": {
+          "paragraph1": "如果一个范围既倾向于很强的牌，或倾向于很弱的牌，那么这个牌面范围是极化的。极化的范围可以描述成“坚果或一无所有”( \"nuts ornothing\")，例如一个牌手想通过超额下注表现出自己持有葫芦，他既可能真的有葫芦，也可能一无所有，想通过诈唬拿下底池。他不会用中等强度的牌这么做，因此他的牌面范围是极化的。在极化的范围中只包括两种类型相反的牌(价值牌和空气牌)，很容易被解读。因此一名牌手应该让自己的牌面范围尽可能宽，从而可以表现出多种不同强度的牌，这个过程被称为范围融合 (merged range)。"
+        }
+      }
+    }
+  },
+  "jijin": {
+    "name": "激进",
+    "definition": {
+      "definition1": {
+        "header": "激进:",
+        "body": {
+          "paragraph1": "一个激进的玩家会经常下注或加注。他在多数时间里掌握主动权并决定游戏的整体状况。相关主题:（被动）Passive"
+        }
+      }
+    }
+  },
+  "jijindexiong": {
+    "name": "激进的-凶",
+    "definition": {
+      "definition1": {
+        "header": "激进的-凶: ",
+        "body": {
+          "paragraph1": "一个激进的玩家更倾向于频频下注或加注，而非过牌和跟注（“被动”玩家更倾向于后者）。他在多数时间里掌握主动权并决定游戏的整体状况。需与“松”区分开，因为“松”指的是参与的底池相对更多。“激进”可分为“松凶型”和“紧凶型”。前者游戏的牌数更多，下注-加注频繁；而后者游戏的牌数更少，一旦入池也会频繁下注-加注。 "
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Passive "
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Passive"
+        }
+      }
+    }
+  },
+  "jileijiangjin": {
+    "name": "积累奖金",
+    "definition": {
+      "definition1": {
+        "header": "积累奖金:",
+        "body": {
+          "paragraph1": "积累奖金（jackpot）指随着时间推移而不断增加的奖金底池，当一个或多个玩家满足获奖的条件时将赢得这些奖金。积累奖金的一种普遍形式是爆冷大奖，它指一个或更多玩家拿到强牌时以一种很不可能的方式输给更强的牌，失败的玩家将获得爆冷奖金，例如，四条输给同花顺。相关主题:（爆冷）Bad Beat"
+        }
+      }
+    }
+  },
+  "jin": {
+    "name": "紧",
+    "definition": {
+      "definition1": {
+        "header": "紧:",
+        "body": {
+          "paragraph1": "紧是一种打法风格，玩家只玩经过挑选的较少的牌。与紧相对的是松（loose）。相关主题:松（loose）,（紧而激进）TAG同义词:tighter, tighten"
+        }
+      }
+    }
+  },
+  "jinbiaosai": {
+    "name": "锦标赛",
+    "definition": {
+      "definition1": {
+        "header": "锦标赛:",
+        "body": {
+          "paragraph1": "扑克锦标赛是一种游戏形式，每个玩家通过支付买入（buy-in）来获得赢取底池中买入的机会。每个玩家最初获得同样数额的筹码并在损失所有筹码后淘汰出局。续买锦标赛（Rebuytourtitlents）允许玩家在比赛的早期阶段再次买入参赛。奖金的分配按照玩家被淘汰的顺序进行设置。详细的支付结构确定哪个位置获得多少钱。当然，非现金的奖励也可以被采用，像物品或下一步比赛的安置。锦标赛（Tourtitlents）FreezeOut（胜者通吃）一种传统的锦标赛形式，一个玩家在损失所有筹码后将被永久淘汰。只有获得第一名的玩家赢得整个底池，这种形式锦标赛也被称为freezeouts。续买（Rebuy）玩家在损失所有的筹码后在锦标赛的早期阶段再次买入。通常，每个玩家在续买阶段结束前有机会增加他的筹码，这被称为add-on。多桌锦标赛（MTT）多桌锦标赛最多有几千人同时参加，因此它在初期需要更多的牌桌。随着比赛的进行，牌桌随着玩家被淘汰而关闭，余下的玩家被重新分配在空着的位置上。这样一直进行到剩下最后一张决赛桌。单桌锦标赛（STT）这是只有一张牌桌的锦标赛，它对玩家的数量和比赛的长度都有所限制。即时锦标赛（SNG）即时锦标赛在规定数量的玩家注册后开始。它不像MTT那样在特定的时间才开始，相反，它只要有足够的玩家加入就立刻开始。卫星比赛（Satellite）卫星赛是获得资格的锦标赛，玩家为了在后面的锦标赛中获得席位而进行游戏。通常，排名第一或靠前的玩家获得参加后面锦标赛的资格。参加卫星比赛的买入通常大大少于参加主赛事的费用，这意味着玩家用相对很小的投入就可以获得赚大钱的机会。ChrisMoneymaker就是一个很好的例子，他参加$40的卫星赛并最终赢得WSOP的主赛事，赚到200万美元，而参加WSOP通常要支付$10000的买入。免费比赛（Freeroll）免费比赛是无需支付买入的赞助性比赛。所有玩家都可以免费参加。相关主题:现金游戏（CashGame）,报名费（Entry Fee）,买入（Buy-In）,支付结构(Payout Structure) "
+        }
+      }
+    }
+  },
+  "jineng": {
+    "name": "技能",
+    "definition": {
+      "definition1": {
+        "header": "技能:",
+        "body": {
+          "paragraph1": "你的技能，也就是你的才干和能力，与其相对的是扑克中的运气成分。在扑克成功之路上，你的技能越多，对运气或侥幸的依赖就越少。没有任何技能的玩家可能会在短期上取得成功，然而，这只是由于侥幸，因为这种玩家不会策略性地利用自己的能力来进行有盈利的扑克游戏。扑克玩家的技能基本上包括多种对长期发展来说必不可少的能力，例如正确的起手牌选择，好的牌桌选择，适当的资金管理，以及玩家的心态和抵抗情绪失控的能力。"
+        }
+      }
+    }
+  },
+  "jinjingenzhupinggen": {
+    "name": "仅仅跟注-平跟",
+    "definition": {
+      "definition1": {
+        "header": "仅仅跟注-平跟:",
+        "body": {
+          "paragraph1": "一手本可以用来加注的牌，却选择了跟注。亦作“smooth call”。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "He raised on the button and I looked down to see AQ in the big blind, but I decided just to flat call."
+        }
+      }
+    }
+  },
+  "jinruqianquan": {
+    "name": "进入钱圈",
+    "definition": {
+      "definition1": {
+        "header": "进入钱圈:",
+        "body": {
+          "paragraph1": "如果有足够多的玩家已经被淘汰出锦标赛，一个玩家进入钱圈(ITM)并能确保获得奖金。相关主题:锦标赛（Tourtitlent）,泡沫阶段（Bubble）同义词:itm"
+        }
+      }
+    }
+  },
+  "jinxiongxing": {
+    "name": "紧凶型",
+    "definition": {
+      "definition1": {
+        "header": "紧凶型:",
+        "body": {
+          "paragraph1": "TAG代表紧（ tight）和凶（aggressive），它是一种用激进的方式玩少数挑选的牌的打法。一般而言，特别在较低的级别，TAG的打法十分有利可图。就像LAG一样,你必须注意一个玩家是持续地激进还是开始凶然后陷入被动。因此，我们还要提到紧-凶-凶(TAA)和紧-凶-被动(TAP)。相关主题:松凶型（LAG）,紧（Tight）,松（Loose）, 激进（Aggressive）,被动（Passive）同义词:tight-aggressive, tags"
+        }
+      }
+    }
+  },
+  "jiqiren": {
+    "name": "机器人",
+    "definition": {
+      "definition1": {
+        "header": "机器人:",
+        "body": {
+          "paragraph1": "定义扑克机器人（pokerbot）是一种玩扑克的自主软件。这个模拟的玩家被称为扑克机器人或机器人（bot）。这种程序能同时玩一到多桌游戏并根据某种算法作出打牌的决定。使用这种软件的主要用途是通过让机器人与真人对抗而达到培训或线上游戏的目的。大部分扑克室和玩家认为后者是作弊的行为，扑克室运营方采取措施限制它们的使用。有相当多的程序员致力于研究这些机器人，他们主要出于科学和技术上的兴趣。他们也致力于其它的游戏，像西洋双陆棋、象棋，并用他们的程序与人比赛。也有一些程序员的目的是从机器人上赚钱。技术发展水平由于没有专业的知识很难讨论他们，围绕这些机器人的状况有一些解释和辩论。在较低级别的有限下注和无限下注现金游戏和锦标赛中，确实有能赚钱的机器人，这可能是这些级别的玩家玩得不太好。在学术的领域中研发出的程序，例如VexBot可以与中等水平的玩家相媲美。相关主题:作弊（Cheating）,串通（Collusion）"
+        }
+      }
+    }
+  },
+  "jishijinbiaosai": {
+    "name": "即时锦标赛",
+    "definition": {
+      "definition1": {
+        "header": "即时锦标赛:",
+        "body": {
+          "paragraph1": "即时锦标赛(SNG)是一种事先确定数目的玩家注册后就开始的扑克锦标赛。这与无论多少人注册而在固定时间开始的锦标赛形成对照。SNG有许多形式，一些是单桌比赛，一些是多桌的比赛，有2,6, 10, 20, 50桌或更多。它们唯一的共同点是玩家坐满就开始。     相关主题:  锦标赛（tourtitlents）同义词:  sit and go"
+        }
+      }
+    }
+  },
+  "jiya": {
+    "name": "挤压",
+    "definition": {
+      "definition1": {
+        "header": "挤压:",
+        "body": {
+          "paragraph1": "挤压打法（squeeze、put a squeeze on somebody或a squeeze play）指玩家在面对有对手加注并另有至少一位对手跟注的情况下进行再加注。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "玩家 A 加注到$4。玩家 B 跟注。玩家 C 加注到$20 -> 他在挤压对手。"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《诈唬性挤压》"
+        }
+      }
+    }
+  },
+  "jizhong": {
+    "name": "击中",
+    "definition": {
+      "definition1": {
+        "header": "击中:",
+        "body": {
+          "paragraph1": "击中公共牌，牌力获得提升。"
+        }
+      }
+    }
+  },
+  "jueshengzhuo": {
+    "name": "决胜桌",
+    "definition": {
+      "definition1": {
+        "header": "决胜桌:",
+        "body": {
+          "paragraph1": "在以多张牌桌开始的锦标赛中，比赛确定的最后剩下的牌桌称为决胜桌（final table）。相关主题:多桌锦标赛（MTT）"
+        }
+      }
+    }
+  },
+  "juewangdegenzhu": {
+    "name": "绝望的跟注",
+    "definition": {
+      "definition1": {
+        "header": "绝望的跟注: ",
+        "body": {
+          "paragraph1": "参见Crying Call "
+        }
+      }
+    }
+  },
+  "kaifangzuowei": {
+    "name": "开放座位",
+    "definition": {
+      "definition1": {
+        "header": "开放座位:",
+        "body": {
+          "paragraph1": "可以坐下开始游戏的位置。 "
+        }
+      }
+    }
+  },
+  "kashunneitingshunzi": {
+    "name": "卡顺，内听顺子",
+    "definition": {
+      "definition1": {
+        "header": "卡顺，内听顺子:",
+        "body": {
+          "paragraph1": "差一张中间的牌凑成顺子的听牌。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "If you have 9s-8s, the flop comes 7c 5h 2d, and the turn is the 6c, youhave made your gutshot straight.——你手持9s 8s，翻牌发出7c 5h 2d，转牌6c，你就击中了卡顺听牌。"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《Pot Odds底池赔率》.   《隐含赔率》"
+        }
+      }
+    }
+  },
+  "keyouxixing": {
+    "name": "可游戏性",
+    "definition": {
+      "definition1": {
+        "header": "可游戏性:",
+        "body": {
+          "paragraph1": "一手牌的可游戏性（playability）是对一手牌在多大程度上有助于游戏的大致衡量。牌的排列越复杂，评估牌力越困难，情况越模糊不清，可游戏性就越小。对于具有高可游戏性的一手牌，一个人能相对轻松地知道它的位置。游戏性很高的牌容易避免受制或成为第二大的情况。相关主题:受制（Dominated）"
+        }
+      }
+    }
+  },
+  "kongqi": {
+    "name": "空气",
+    "definition": {
+      "definition1": {
+        "header": "空气: ",
+        "body": {
+          "paragraph1": "通常指“啥也没中的手牌”。 "
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "I bluffed him with total air and won.”——“我拿空气牌诈唬了他，还赢了。 "
+        }
+      }
+    }
+  },
+  "koudaiduizi": {
+    "name": "口袋对子",
+    "definition": {
+      "definition1": {
+        "header": "口袋对子:",
+        "body": {
+          "paragraph1": "在德州扑克中，口袋对子是是由玩家的两张底牌构成的对子。例如，如果一个玩家有两张K，那么他有口袋对K。 相关主题:对子（Pair）同义词:pockets"
+        }
+      }
+    }
+  },
+  "koudaihuojian": {
+    "name": "口袋火箭",
+    "definition": {
+      "definition1": {
+        "header": "口袋火箭:",
+        "body": {
+          "paragraph1": "德州扑克中的起手牌AA叫做口袋火箭（pocket rockets）。相关主题:底牌（Hole Cards）同义词:rockets"
+        }
+      }
+    }
+  },
+  "koupai": {
+    "name": "扣牌",
+    "definition": {
+      "definition1": {
+        "header": "扣牌:",
+        "body": {
+          "paragraph1": "扣牌（downcard）是牌桌上面朝下发出的牌，它只能让一个玩家看到。德州扑克中的起手牌和七张牌梭哈中第七张牌都是扣牌。相关主题:显露的牌（Exposed Card）"
+        }
+      }
+    }
+  },
+  "kuaisukuaisusai": {
+    "name": "快速-快速赛",
+    "definition": {
+      "definition1": {
+        "header": "快速-快速赛:",
+        "body": {
+          "paragraph1": "一种涨盲速度快的锦标赛类型，尤其是在线上。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《锦标赛课程基础》"
+        }
+      }
+    }
+  },
+  "lamo": {
+    "name": "拉磨",
+    "definition": {
+      "definition1": {
+        "header": "拉磨:",
+        "body": {
+          "paragraph1": "拉磨（grind）是指在特定的游戏级别不冒大风险地始终如一地赚钱。推磨人是在他能力所能胜任的级别上游戏的玩家，以此赚钱作为他收入的一部分或全部，即使他可以在较高的级别承担更大的风险。拉磨的另一个含义是，一个玩家在较高的级别遇到资金困难后又回到较低的级别建立他的资金。我们说一个玩家贯通不同的级别进行拉磨。相关主题:（破产）Broke, （资金管理）Bankroll Management, （级别）Limit"
+        }
+      }
+    }
+  },
+  "lenggenzhu": {
+    "name": "冷跟注",
+    "definition": {
+      "definition1": {
+        "header": "冷跟注:",
+        "body": {
+          "paragraph1": "冷跟注（coldcall）是在下注和一人或更多人加注之后再跟注。当一个玩家同时跟注超过一注，那么他在冷跟注。在德州扑克中，冷跟注发生在一个玩家在翻牌前加注另外有人跟注的情况下。这里只有一次加注，但盲注算作一次下注。例子:玩家A下注玩家B加注玩家C跟注，即他冷跟注。相关主题:下注（Bet）,加注（Raise）,平跟（Flat Call）"
+        }
+      }
+    }
+  },
+  "lengyin": {
+    "name": "冷饮",
+    "definition": {
+      "definition1": {
+        "header": "冷饮:",
+        "body": {
+          "paragraph1": "冷饮（cooler）是一手失败的牌，失败不是因为错误的打法而是牌的出现方式;一个持有强牌的玩家败于另一个持有更强牌的玩家。通常，玩家损失很多钱但采取正确的打法也无法避免。例如，两个玩家都有高对子并都在翻牌圈打中三条。这不是爆冷而是运气不佳，两个玩家都采取正确的打法，但这导致一个玩家损失惨重。两个玩家都有很强的牌。相关主题:爆冷（BadBeat）, Cold Deck"
+        }
+      }
+    }
+  },
+  "liangdidui": {
+    "name": "两底对",
+    "definition": {
+      "definition1": {
+        "header": "两底对:",
+        "body": {
+          "paragraph1": "在有公共牌的德州扑克游戏中，由最小的两张公共牌和玩家的两张牌组成的两对叫两底对（bottom two）。例子(德州扑克):玩家牌面这个玩家有一对7和一对3，它们是由最小的公共牌组成的，因此是两底对。相关主题:两对（TwoPair）,公共牌（board cards）,两顶对（Top Two）"
+        }
+      }
+    }
+  },
+  "liangdingdui": {
+    "name": "两顶对",
+    "definition": {
+      "definition1": {
+        "header": "两顶对:",
+        "body": {
+          "paragraph1": "玩家手上的牌和牌面上最大的两张牌组成的两个对子叫做两顶对（top two）。例子(德州扑克):玩家公共牌玩家有一对K和一对Q，K和Q是牌面上最大的两张牌。因此，这是两顶对。相关主题:两对（Two Pair）,公共牌（Communal Cards、Community Cards）,牌面（Board Cards）,两底对（ Bottom Two）"
+        }
+      }
+    }
+  },
+  "liangduanshunzitingpai": {
+    "name": "两端顺子听牌",
+    "definition": {
+      "definition1": {
+        "header": "两端顺子听牌:",
+        "body": {
+          "paragraph1": "两端顺子听牌(OESD)是一种连续的没有第一张和最后一张的的顺子听牌。例子(德州扑克):玩家翻牌圈2,3,4,5这手顺子听牌只要碰到A或6就可以成型。河牌出现A或6的可能性大约是17.4%，玩家玩到河牌成顺的可能性大约是31.5%。相关主题:听牌（Draw）,顺子（Straight）,内听顺子（InsideStraight Draw） 同义词:open-ended-straight-draw, open ended straightdraw,open ended straightdraw, openender, openended straightdraw, open-endedstraightdraw"
+        }
+      }
+    }
+  },
+  "liangdui": {
+    "name": "两对",
+    "definition": {
+      "definition1": {
+        "header": "两对:",
+        "body": {
+          "paragraph1": "由两个不同的对子组成的一手牌。例子(德州扑克): 玩家牌面玩家有一对K和一对Q，总共有两对。相关主题:牌型（Poker hands）,两底对（Bottom Two）,两顶对(Top Two)"
+        }
+      }
+    }
+  },
+  "lianjieduizi": {
+    "name": "连接对子",
+    "definition": {
+      "definition1": {
+        "header": "连接对子:",
+        "body": {
+          "paragraph1": "wired pair (连接的对子)是指由一个玩家的第一张和第二张牌组成的对子。在德州扑克中，连接对子是你最初拿到的两张隐秘的牌。在七张牌梭哈中，它是起手牌中的两张盖住的牌。相关主题:对子"
+        }
+      }
+    }
+  },
+  "lianjiexing": {
+    "name": "连接性",
+    "definition": {
+      "definition1": {
+        "header": "连接性:",
+        "body": {
+          "paragraph1": "连接性（Connectivity或connectedness）是描述一组牌连接程度的特性。例如，如果牌面上的牌大小相邻，那么它们是连接的。高连接性意味着牌是相邻的，像K、Q、J。低连接性意味着牌的大小不是相连的。顺子听牌只在具有高连接性时才可能，更高的连接性意味着有可能形成更多的顺子。因此，玩家在德州扑克和奥马哈游戏中喜欢玩78这样的连牌，因为它们容易形成顺子。相关主题:同花性（Suitedness）,高牌价值（High Card Value）,连牌（Connectors）"
+        }
+      }
+    }
+  },
+  "lianpai": {
+    "name": "连牌",
+    "definition": {
+      "definition1": {
+        "header": "连牌:",
+        "body": {
+          "paragraph1": "连牌（Connectors）是像87, 54,32相继的牌。如果它们是同样的花色，那么他们被称为同花连牌,否则它们是非同花连牌。除此还有隔一张的连牌，如53或86；隔两张的连牌52和96。连牌是强牌，因为它们容易形成顺子听牌。两张牌越近，成顺子听牌的可能性越大。87比96能形成更多的顺子。87能形成四种顺子:45678567896789t789TJ但96只能形成两种:567896789T例子:相关主题:同花连牌（Suited Connectors）,顺子听牌（Straight Draw）"
+        }
+      }
+    }
+  },
+  "lianzhang": {
+    "name": "连张",
+    "definition": {
+      "definition1": {
+        "header": "连张:",
+        "body": {
+          "paragraph1": "相连的两张起手牌。如是同样的花色，则被称为同花连张,否则它们是非同花连张。除此还有隔张，如53或86；隔两张的52和96等。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "如Jc Ts 或8h 7d."
+        }
+      }
+    }
+  },
+  "liehu": {
+    "name": "猎狐",
+    "definition": {
+      "definition1": {
+        "header": "猎狐:",
+        "body": {
+          "paragraph1": "猎狐（fox hunt）是指在早期结束的某轮游戏中要求看本来会发出的下张牌。这让一个已经弃牌的玩家知道继续游戏是否本来会打中他的听牌。相关主题:猎兔（Rabbit Hunt）同义词:猎兔（rabbit hunt）"
+        }
+      }
+    }
+  },
+  "lietu": {
+    "name": "猎兔",
+    "definition": {
+      "definition1": {
+        "header": "猎兔:",
+        "body": {
+          "paragraph1": "在带有公共牌的游戏中，没有摊牌而结束当前的一轮，猎兔（rabbithunt）指看一看本来应该发到牌面上的牌。比如，一个已经弃牌的玩家可能希望知道如果他继续游戏是否会完成他的听牌。在电视游戏中，显示本来会发出公共牌的照相机叫兔子相机（rabbitcam）。 相关主题:猎狐（Fox Hunt）"
+        }
+      }
+    }
+  },
+  "lingda": {
+    "name": "领打",
+    "definition": {
+      "definition1": {
+        "header": "领打:",
+        "body": {
+          "paragraph1": "第一个往底池下注。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《下注的理由》.   《下注量》"
+        }
+      }
+    }
+  },
+  "lingdaren": {
+    "name": "领打人",
+    "definition": {
+      "definition1": {
+        "header": "领打人:",
+        "body": {
+          "paragraph1": "第一个往底池下注的人。"
+        }
+      }
+    }
+  },
+  "liujin": {
+    "name": "溜进",
+    "definition": {
+      "definition1": {
+        "header": "溜进:",
+        "body": {
+          "paragraph1": "在带有盲注的游戏中，第一个主动入池的玩家跟注大盲的行为。"
+        }
+      }
+    }
+  },
+  "liuruzhe": {
+    "name": "溜入者",
+    "definition": {
+      "definition1": {
+        "header": "溜入者:",
+        "body": {
+          "paragraph1": "在翻前跟注大盲入池的玩家。"
+        }
+      }
+    }
+  },
+  "liuweilizhuo": {
+    "name": "留位离桌",
+    "definition": {
+      "definition1": {
+        "header": "留位离桌:",
+        "body": {
+          "paragraph1": "暂时离开牌桌"
+        }
+      }
+    }
+  },
+  "liyifentan": {
+    "name": "利益分摊",
+    "definition": {
+      "definition1": {
+        "header": "利益分摊:",
+        "body": {
+          "paragraph1": "利益分摊是指玩家在盈利之后，将资助总额返还给资助者，然后将利润进行分配。这在全额资助和部分资助中都会出现。例1:玩家A得到了全额资助，按50:50进行利益分摊。这意味着在返还资助者的资助之后，奖金将被五五平分。例2:玩家A需要一个现金游戏的资助，他自己投入$1,000，另外$1,000由他人提供。现在利益分摊由标准的50/50变为倾向于被资助者的60/40，因为被资助者要承担潜在的损失。"
+        }
+      }
+    }
+  },
+  "loudong": {
+    "name": "漏洞",
+    "definition": {
+      "definition1": {
+        "header": "漏洞:",
+        "body": {
+          "paragraph1": "漏洞（leak）是一个玩家打法或策略中的弱点，这个弱点导致他亏钱。相关主题:下风期（Downswing）"
+        }
+      }
+    }
+  },
+  "loudongliyong": {
+    "name": "漏洞利用",
+    "definition": {
+      "definition1": {
+        "header": "漏洞利用:",
+        "body": {
+          "paragraph1": "漏洞利用漏洞利用是一个识别和利用对手的漏洞的过程。了解对手的打法可以帮你选择正确的下注方式。特别是在一些边缘化的情况中，你应该利用所谓的读牌来帮助你做决定。例如，你知道你的对手什么时候打得弱，什么时候打得激进，什么时候容易被诈唬，或者他自己对其他玩家的读牌，这些会对你非常有用。为了收集这样的信息，在参与或不参与牌局的时候都应该认真观察对手们的行动。"
+        }
+      }
+    }
+  },
+  "lunzi": {
+    "name": "轮子",
+    "definition": {
+      "definition1": {
+        "header": "轮子: ",
+        "body": {
+          "paragraph1": "轮子、自行车或脚踏车是某种“顺子”。它由A、2、3、4、5组成。从另一个意义上说，“轮子”这个词经常被用在lowball这种扑克游戏中。它描叙由低牌可能形成的最大组合。最初的“轮子”描叙lowball游戏中的同样组合(A, 2, 3, 4, 5)，但后来它的含义发生改变。但在“2-7 TripleDraw”这样的游戏中，最好的最小组合(7, 5, 4,3,2)也被称为轮子。相关主题:顺子、大顺子（broadway）、lowball(抽牌扑克的一种，最低的一手牌赢)同义词:自行车(bike)、脚踏车(bicycle)"
+        }
+      }
+    }
+  },
+  "luzi": {
+    "name": "驴子",
+    "definition": {
+      "definition1": {
+        "header": "驴子: ",
+        "body": {
+          "paragraph1": "比较冒失的新手玩家，缩写为“donk”。"
+        }
+      }
+    }
+  },
+  "maipai": {
+    "name": "埋牌",
+    "definition": {
+      "definition1": {
+        "header": "埋牌:",
+        "body": {
+          "paragraph1": "埋牌处是牌桌的一个区域，所有的死牌都放至此，即，所有的削牌和玩家放弃的牌。埋牌(muck)这个动作是指放弃牌而不亮出它们。相关主题:弃牌（Fold）"
+        }
+      }
+    }
+  },
+  "maipaigaipai": {
+    "name": "埋牌，盖牌",
+    "definition": {
+      "definition1": {
+        "header": "埋牌，盖牌:",
+        "body": {
+          "paragraph1": "1）明明可以过牌，却选择弃牌，则称埋牌； 2）摊牌时，知道自己牌小，于是选择埋牌来隐藏实际手牌信息。 也指所有不参与游戏的死牌。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Fold"
+        }
+      }
+    }
+  },
+  "mairu": {
+    "name": "买入",
+    "definition": {
+      "definition1": {
+        "header": "买入:",
+        "body": {
+          "paragraph1": "买入（buy-in）是一个玩家加入游戏所必须支付的数额。在现金游戏中，它是他必须带上牌桌的数额。在锦标赛中，它是他必须支付到彩池中的数额。加入锦标赛所支付的总额是买入加上报名费，报名费直接交给锦标赛的主办方。标有\"$10+1\"的锦标赛意味着一个玩家总共支付11美元来参加锦标赛，10投入彩池，1交给主办方。相关主题:（现金游戏）Cash Game,（锦标赛）Turnier,报名费（Entry Fee）"
+        }
+      }
+    }
+  },
+  "mangxiazhumangda": {
+    "name": "盲下注-盲打",
+    "definition": {
+      "definition1": {
+        "header": "盲下注-盲打: ",
+        "body": {
+          "paragraph1": "在发牌前或看牌前下注。对应的概念还有盲过牌（check in the dark）。"
+        }
+      }
+    }
+  },
+  "mangzhu": {
+    "name": "盲注",
+    "definition": {
+      "definition1": {
+        "header": "盲注:",
+        "body": {
+          "paragraph1": "盲注是指在扑克游戏中玩家们强制性下的注。这个注必须是在牌发出前就需要交付的。盲注轮流由在牌桌上的玩家中的2个交付的。盲注可以是同样大小的也可以是一个多一个少的；一多一少就是大盲注和小盲注。发牌员的位置决定了谁来交付盲注。发牌员左边的2位玩家交付盲注。盲注算作这2个玩家的下注，因此在接下来就不需要再下注了。底注(Ante)是与盲注相对应的。牌桌上的其他玩家要想进行游戏就需要交付底注。扑克游戏像德州扑克，Omaha,和2-7 Triple Draw是采用底注的规则还是盲注的规则都是由游戏举办方决定的。相关主题底注(Ante)，大盲注(BigBlind)，小盲注(Small Blind)，强制性下注(Forced Bet)，发牌员(Dealer)"
+        }
+      }
+    }
+  },
+  "mangzhubaohu": {
+    "name": "盲注保护",
+    "definition": {
+      "definition1": {
+        "header": "盲注保护:",
+        "body": {
+          "paragraph1": "在策略上与偷盲相反的是盲注保护（blinddefense），它试图防止盲注被偷而经常用弱牌进行保护。保护盲注采取加注来夺取主动的方式或迫使对手弃牌。目标就是为了在后面的轮次中用适当的牌打败对手。相关主题:（盲注）Blinds,（偷盲）Blindsteal"
+        }
+      }
+    }
+  },
+  "manwan": {
+    "name": "慢玩",
+    "definition": {
+      "definition1": {
+        "header": "慢玩:",
+        "body": {
+          "paragraph1": "慢玩是指用被动的方式玩一手强牌，以达到让对手继续游戏的目的，它给对手持有一手弱牌的印象，或给他们机会在玩牌的过程中获得相对好的牌，因而，导致他们错误地相信自己能获胜。同义词:sandbagging, sandbag, slowplayer,"
+        }
+      }
+    }
+  },
+  "manyuanzhuo": {
+    "name": "满员桌",
+    "definition": {
+      "definition1": {
+        "header": "满员桌:",
+        "body": {
+          "paragraph1": "满员桌（full ring）是指7-10个玩家游戏的牌桌，它也被称为10max。线上扑克也有9max的牌桌。非满员桌只有6个或更少的玩家，也被称为6max。玩满员桌比非满员桌更平稳，因此，喜欢行动的玩家更喜欢玩非满员桌，他们可以玩更多的牌，但同时也带来更大的波动。相关主题:非满员桌（Shorthanded）"
+        }
+      }
+    }
+  },
+  "meipai": {
+    "name": "没牌",
+    "definition": {
+      "definition1": {
+        "header": "没牌:",
+        "body": {
+          "paragraph1": "如果一个玩家长时间没有得到很多或任何好牌，那么他就没牌（card dead）。相关主题:Cold Deck"
+        }
+      }
+    }
+  },
+  "meixiaoshiyinglu": {
+    "name": "每小时赢率",
+    "definition": {
+      "definition1": {
+        "header": "每小时赢率:",
+        "body": {
+          "paragraph1": "每小时赢率（hourlywinrate）是一个玩家每小时期望的收益。赢率取决于很多因素，如级别、游戏类型、玩家和对手的实力，牌桌数以及他每小时玩多少手牌。赢率可以告诉一个玩家应该玩哪个级别和玩多少张牌桌。相关主题:期望收益（Expected Value）同义词:hourly rate"
+        }
+      }
+    }
+  },
+  "menpai": {
+    "name": "门牌",
+    "definition": {
+      "definition1": {
+        "header": "门牌:",
+        "body": {
+          "paragraph1": "在七张牌梭哈中，每个玩家得到两张扣牌（downcards）和两张公开牌作为起手牌。公开的牌被称为门牌（door card）。 相关主题:七张牌梭哈（Seven Card Stud）"
+        }
+      }
+    }
+  },
+  "mianfeiyouxi": {
+    "name": "免费游戏",
+    "definition": {
+      "definition1": {
+        "header": "免费游戏:",
+        "body": {
+          "paragraph1": "在大盲注位置上,翻牌前没有人加注你不需要再投入任何资金进入翻牌圈因此获得免费游戏的机会."
+        }
+      }
+    }
+  },
+  "mianfeipai": {
+    "name": "免费牌",
+    "definition": {
+      "definition1": {
+        "header": "免费牌:",
+        "body": {
+          "paragraph1": "免费牌（free card）是一个玩家不再花钱就能看到的牌。例如，德州扑克中有多个玩家游戏，没有人在翻牌圈下注，那么所有玩家没有再投入钱就看到转牌，这就是免费牌。"
+        }
+      }
+    }
+  },
+  "mianfeijinbiaosai": {
+    "name": "免费锦标赛",
+    "definition": {
+      "definition1": {
+        "header": "免费锦标赛:",
+        "body": {
+          "paragraph1": "freeroll的奖金是赞助的，因此不需要买入。freeroll还指一种情况，两个玩家有一样强的牌，但其中有个玩家还有一手听牌，如果他打中听牌就能净赚整个底池;第二个玩家没有这样的听牌。例子 (德州扑克):玩家 A玩家B翻牌圈这两个玩家都有6-10的顺子，他们会平分底池，但玩家A没有机会改进他的牌。玩家B还是同花听牌，如果他打中同花就能获胜。因此他在freeroll。他不可能输给对手，而且他碰到合适的牌就能获胜。相关主题:锦标赛（tourtitlent）"
+        }
+      }
+    }
+  },
+  "mingsantiao": {
+    "name": "明三条",
+    "definition": {
+      "definition1": {
+        "header": "明三条:",
+        "body": {
+          "paragraph1": "明三条被称为普通三条。在游戏中，明三条是由公共牌中的一对与玩家起手牌中的一张组成的三条。 与暗三条的区别在于，暗三条是由玩家手中的两张起手牌与公共牌中的一张组成的三条。   列子 (Texas Hold'em): 玩家翻牌该玩家持有三条5.因为所组成的三条五是由公共牌中的一对与玩家手中起手牌中的一张组合而成， 故称为明三条。相关概念:暗三条"
+        }
+      }
+    }
+  },
+  "modundingli": {
+    "name": "莫顿定理",
+    "definition": {
+      "definition1": {
+        "header": "莫顿定理:",
+        "body": {
+          "paragraph1": "定义 它是用AndyMorton的名字命名的定理，它说明不管对手是否作出正确的决定，一个玩家在多人底池中的期望收益都增加。Sklansky的扑克基本原理说的与之相反，即对手的错误提高一个玩家的期望收益。解释例如，如果一个玩家用当前最好的牌对付多个拿听牌的对手，那么他在一个对手正确地弃牌时比这个对手错误地跟注时有更高的期望收益。对手的听牌之间互相阻挠。例子(有限注德州扑克):玩家A玩家B玩家C牌面每个玩家在转牌圈获胜的机率是: ABC69.05%21.43%9.52%我们假设玩家都知道对手的牌，因此，他们总知道正确的打法。底池在转牌圈有x大注。玩家A下注，B跟注。C的决定取决于底池p有多大。EV(弃牌)= 0 BBEV(跟注) = 9.52% * p + 90.48%*(-1 BB)EV(弃牌) = EV(跟注)0 BB= 9.52% * p- 0,91 BBp = 0.91 BB / 9.52%p = 9.56 BB玩家C在底池大于9.6BB时可以正确地跟注。由于两个对手在转牌圈下的赌注必须扣除，底池的最初大小必须有x = p - 2 = 7.6BB。现在，我们必须考察玩家A希望C怎么做。如果C弃牌，那么A将有79.55%的机会获胜，否则他有69.05%的机会获胜。问题是那种情况对A更有利。EV(C弃牌) = 79.55% * (x + 1 BB) + 20.45% * (-1 BB)EV(C 跟注) = 69.05% * (x + 2BB) + 30.95%*(-1 BB)EV(C 弃牌) = EV(C 跟注)79.55% * (x + 1 BB) + 20.45% *(-1 BB) = 69.05% * (x + 2 BB) + 30.95%*(-1 BB)(79.55% - 69.05%) * x =0.48 BB x = 0.48 BB / 10.5%x = 4.58 BB只要底池最初的大小x比4.6BB多，玩家A在C正确地弃牌时将更有利。C只能在x大于7.6 BB时才能正确地跟注。如果x少于4.6BB，A在C继续游戏时将最有利。但在4.6-7.6之间, A的EV在C作出正确决定时被最大化。相关主题:扑克的基本原理（FundamentalTheorem of Poker）,期望收益（Expected Value）"
+        }
+      }
+    }
+  },
+  "namanjiazhi": {
+    "name": "拿满价值",
+    "definition": {
+      "definition1": {
+        "header": "拿满价值:",
+        "body": {
+          "paragraph1": "在牌力领先的情况下，通过下注、加注或再加注来将盈利最大化。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《扑克中的弹性与非弹性》"
+        }
+      }
+    }
+  },
+  "neitingshunzi": {
+    "name": "内听顺子",
+    "definition": {
+      "definition1": {
+        "header": "内听顺子:",
+        "body": {
+          "paragraph1": "inside straight draw、belly buster或gutshot都是指中间差一张牌的顺子听牌。例子(德州扑克):玩家翻牌圈这个玩家的内听顺子是5,7,8,9，因为任何一张6将形成顺子。牌中余下的6是他的补牌，转牌圈出现6的可能性大约是8.5%。河牌圈至少出现一张6的可能性大约是16.5%。相关主题:听牌（Draw）, 顺子（Straight）,两端顺子听牌（Open Ended Straight Draw）同义词:BellyBuster, Gutshot"
+        }
+      }
+    }
+  },
+  "niuzai": {
+    "name": "牛仔",
+    "definition": {
+      "definition1": {
+        "header": "牛仔:",
+        "body": {
+          "paragraph1": "在德州扑克中的起手牌KK叫做牛仔。相关主题:底牌（Hole Cards）同义词:Kings"
+        }
+      }
+    }
+  },
+  "nushi": {
+    "name": "女士",
+    "definition": {
+      "definition1": {
+        "header": "女士:",
+        "body": {
+          "paragraph1": "女士（Ladies）是德州扑克中起手牌为QQ的另一个名字。这手牌的其它表达方式有: Canadian Aces, Siegfriedand Roy, Whores, Queens或Pussys。相关主题:德州扑克（Texas Hold'em）"
+        }
+      }
+    }
+  },
+  "pahuolamo": {
+    "name": "公开加注",
+    "definition": {
+      "definition1": {
+        "header": "公开加注:",
+        "body": {
+          "paragraph1": "如果一手牌在第一个下注轮以加注开始，那么这被称为公开加注（openraise）。例如，如果所有的玩家都向CO弃牌，而CO加注而不是仅仅支付大盲注，那么CO的加注就叫公开加注。相关主题:首入（First in）"
+        }
+      }
+    }
+  },
+  "paijutongbu": {
+    "name": "牌局同步",
+    "definition": {
+      "definition1": {
+        "header": "牌局同步:",
+        "body": {
+          "paragraph1": "这是MTT中的一个步骤，开始于泡沫破灭之前，只剩下一定数量玩家的时候。Hand for a hand是指当一手牌结束时，牌桌会等到其他所有牌桌的牌局都结束后才开始下一手牌。这会持续到泡沫破灭，之后锦标赛回到正常模式。"
+        }
+      }
+    }
+  },
+  "paimian": {
+    "name": "牌面",
+    "definition": {
+      "definition1": {
+        "header": "牌面:",
+        "body": {
+          "paragraph1": "在带有公共牌的游戏中，牌面是全部所有的公共牌。例如，在德州扑克中，牌面包括翻牌、转牌和河牌。相关主题:（公共牌）Community Cards"
+        }
+      }
+    }
+  },
+  "paimianjiiegou": {
+    "name": "牌面结构",
+    "definition": {
+      "definition1": {
+        "header": "牌面结构: ",
+        "body": {
+          "paragraph1": "公共牌面的结构。用于描述公共牌在发展听牌等牌型方面的潜力。如“干燥牌面”和“潮湿牌面“。 "
+        }
+      }
+    }
+  },
+  "paimianpaichuxiaoying": {
+    "name": "牌面排除效应",
+    "definition": {
+      "definition1": {
+        "header": "牌面排除效应:",
+        "body": {
+          "paragraph1": "牌面排除效应是指你自己持有的牌让对手持有某些牌或某些牌的组合的可能性降低。 例如，如果你持有AK，你的对手持有带A和K的牌的可能性就会降低，因为你的牌占了八张牌(4x A, 4x K)中的两张。因此这会影响你的对手的范围。"
+        }
+      }
+    }
+  },
+  "paimingpaixu": {
+    "name": "排名-排序",
+    "definition": {
+      "definition1": {
+        "header": "排名-排序:",
+        "body": {
+          "paragraph1": "牌力大小的等级。"
+        }
+      }
+    }
+  },
+  "paizhuoxingxiang": {
+    "name": "牌桌形象",
+    "definition": {
+      "definition1": {
+        "header": "牌桌形象:",
+        "body": {
+          "paragraph1": "一个玩家的牌桌形象是其他玩家对他打法的看法。他们可能认为他被动或激进，是诈唬者或只用好牌下注，等等......牌桌形象对其他对手的行动有直接的影响，它影响到在多大程度上激起对手的反应。随着级别的提高，牌桌形象变得越来越重要。建立牌桌形象的目标是引起对手错误的想法和行动。因此，具有稳固保守的牌桌形象的玩家可以更频繁地诈唬，因为对手会认为他持有一手好牌，而一个被认为疯狂的玩家更容易从他的好牌上获得回报。相关主题:欺骗（Deception）"
+        }
+      }
+    }
+  },
+  "paomo": {
+    "name": "泡沫",
+    "definition": {
+      "definition1": {
+        "header": "泡沫:",
+        "body": {
+          "paragraph1": "锦标赛中没有奖金获得的最高名次叫做泡沫（bubble）。如果一场锦标赛的前十名有奖金，那么第十一名就是泡沫。获得这个名次的玩家叫泡沫男孩。泡沫的另一个意思是锦标赛刚好在进入钱圈之前的阶段，在进入有奖金的名次之前只需再淘汰几个玩家。相关主题:锦标赛（Tourtitlent）,多桌锦标赛（MTT）,进入钱圈（ITM）"
+        }
+      }
+    }
+  },
+  "paomoyinsu": {
+    "name": "泡沫因素",
+    "definition": {
+      "definition1": {
+        "header": "泡沫因素:",
+        "body": {
+          "paragraph1": "泡沫因素是指你在筹码上的成败比和在真钱上的成败比不同。另参见: $EV"
+        }
+      }
+    }
+  },
+  "paoyingbi": {
+    "name": "抛硬币",
+    "definition": {
+      "definition1": {
+        "header": "抛硬币:",
+        "body": {
+          "paragraph1": "抛硬币（coinflip）指两个玩家有几乎相等的机会获胜的情况。由于机会接近于50:50，游戏的胜负等于是由抛硬币决定。例子 (德州扑克):玩家A玩家B德州扑克中典型的抛硬币情况是，翻牌前的一对与两张高牌相互对抗。获胜的可能性大约是44:56，QQ有微弱的优势。相关主题:（成败比）Odds,（高牌）Overcards"
+        }
+      }
+    }
+  },
+  "pingfendichi": {
+    "name": "平分底池",
+    "definition": {
+      "definition1": {
+        "header": "平分底池:",
+        "body": {
+          "paragraph1": "平分底池是在多个玩家间平分的底池，因为他们有同样大小的牌。相关主题:底池（Pot）同义词:splitpot, split-pot"
+        }
+      }
+    }
+  },
+  "pingfenguafen": {
+    "name": "平分/瓜分",
+    "definition": {
+      "definition1": {
+        "header": "平分/瓜分:",
+        "body": {
+          "paragraph1": "1. 在无人下注的底池里，盲注位玩家同意收回各自的下注，并直接进入下一手牌。 2. 多个获胜者平分底池。 3. 锦标赛决胜桌上的玩家一致协议后评分奖池。"
+        }
+      }
+    }
+  },
+  "pinggen": {
+    "name": "平跟",
+    "definition": {
+      "definition1": {
+        "header": "平跟:",
+        "body": {
+          "paragraph1": "见flat call同义词:flatcall, flat-call, flatcall, flat-caller, flat-called,flatcaller, smoothcall,smooth-caller, smoothcaller, smooth-called,"
+        }
+      }
+    }
+  },
+  "pingheng": {
+    "name": "平衡",
+    "definition": {
+      "definition1": {
+        "header": "平衡:",
+        "body": {
+          "paragraph1": "平衡高水平的扑克玩家经常要面对其他高水平的玩家，对他们来说，平衡自己的范围非常重要。平衡范围是指改变不同的牌在范围中出现的频率。目的就是让自己变得难以捉摸。这意味着可能没有任何范围中的牌会比其他牌出现地更频繁。以前，线上玩家只用很强的牌再加注，例如QQ,KK,AA和AK。因为这个范围很小，一些玩家可以很好地适应这种打法，弃掉其他中等强度的牌。时过境迁，一些玩家开始用更广的范围三次下注来迫使对手弃掉JJ,AQ这样的牌。从那以后，三次下注不再是大对子的代表；有些人甚至会用56s这样的牌再加注来平衡自己的范围。这也迫使对手们不断调整自己的范围。现在他们必须玩更多的牌，否则就会频繁地弃牌。优秀的玩家总是试图把对手们限定在一个范围内。因此在翻牌后平衡自己的范围，让自己变得难以解读是非常重要的。如果你的对手不能对你的牌做出任何准确的假设，那么你的平衡范围是成功的。"
+        }
+      }
+    }
+  },
+  "pingjunchoumaliang": {
+    "name": "平均筹码量",
+    "definition": {
+      "definition1": {
+        "header": "平均筹码量:",
+        "body": {
+          "paragraph1": "平均筹码量（average stack）等于牌桌上或锦标赛中所有流通的筹码量除以拥有这些筹码的玩家数。通过计算平均筹码量可以衡量一个玩家在锦标赛中所处的位置。相关主题:Turnier, Q, （筹码）Stack, （筹码领头人）Chipleader"
+        }
+      }
+    }
+  },
+  "pochan": {
+    "name": "破产",
+    "definition": {
+      "definition1": {
+        "header": "破产:",
+        "body": {
+          "paragraph1": "破产（bust或bust out）是一个人损失全部的筹码，或被淘汰出锦标赛。bust某人是指把他淘汰出牌桌或锦标赛。相关主题:破产（Broke）,锦标赛（Turnier）"
+        }
+      }
+    }
+  },
+  "pochanfengxian": {
+    "name": "破产风险",
+    "definition": {
+      "definition1": {
+        "header": "破产风险:",
+        "body": {
+          "paragraph1": "破产风险（risk of ruin）是一个玩家在机率游戏中遭受全部损失的可能性。在带有随机因素的扑克游戏中，短期的结果由运气决定。好的玩家也不会总是赢，他们有时也像其他人一样得到差牌。但从长远来看，运气会相互抵消。不过，短期可能不会抵消，它会表现为对正态分布的强烈偏离，这被称为波动偏离（variance）。对于扑克游戏，破产风险是指由于短期波动而损失所有资金的可能性。当资金量很大时，这种可能性较小，因为完全亏光很大的资金需要长期一连串的坏运气，由于时间长度的增加，这种持续亏损的可能性迅速降低。因此，可靠的资金管理对于长期的扑克玩家度过亏损的时期十分重要，足够的资金能帮助他们恢复收益。相关主题:（资金管理）BankrollManagement"
+        }
+      }
+    }
+  },
+  "puke": {
+    "name": "扑克",
+    "definition": {
+      "definition1": {
+        "header": "扑克:",
+        "body": {
+          "paragraph1": "介绍扑克是一族牌类游戏，它们的共同目标是形成最好的一手牌的组合并在下注轮中对这些牌进行压注。下注被投入底池，最终持有最好一手组合牌的玩家赢得底池。一手牌通常包含5张牌。扑克是一个机会游戏，但其中也有策略的因素。策略取决于一个玩家是否在对抗赌场的庄家或对抗其他的玩家，还是对抗通过调兵布阵能获得优势的人。扑克的玩法扑克有不计其数玩法。最常见的玩家可以分为如下几类:带有公共牌的游戏每个玩家最初被发给一些面朝下的牌。在后面的轮次中，更多的牌被面朝上地发到牌桌上，这些牌属于所有的玩家。任何玩家都可以利用这些公共牌来组成一手牌。最受欢迎的这类游戏是德州扑克和奥马哈。梭哈-扑克梭哈中没有公共牌。每个玩家在一手牌的进程中被发给新牌并在发牌后下注。例如，在七张牌梭哈中，每个玩家最初得到两张扣牌和一张公开牌。之后还有四个下注轮，玩家还会得到三张公开牌和一张扣牌。从这七张牌中，玩家必须组成一手5张牌。他的对手可以看到他的4张牌，但他们不能利用它们来组成自己的牌。抽牌-扑克抽牌扑克与带有公共牌的游戏完全不同。每个玩家只得到面朝下的牌，对手对它们一无所知。接下来是一次或多次的抽牌轮，玩家可以用他们手上的牌交换新的牌。五张抽牌（FiveCarddraw）这种玩法中最流行的，即使在西方不是扑克玩家也知道它。低牌-游戏低牌游戏是拿到最差的牌或不是最好牌的玩家获胜。例如，Razz、LowballDraw和Deuce to Seven TripleDraw。高/低-游戏高/低游戏是拿到最好牌或最差牌的玩家获胜；他们平分底池。奥马哈和七张牌梭哈都有高/低的玩法。相关主题:一手牌（Pokerhands）,德州扑克（Texas Hold'em）, （奥马哈）Omaha, 七张牌梭哈（Seven Card Stud）"
+        }
+      }
+    }
+  },
+  "pukecelue": {
+    "name": "扑克策略",
+    "definition": {
+      "definition1": {
+        "header": "扑克策略:",
+        "body": {
+          "paragraph1": "扑克过去常常与碰运气、成堆的牌、肮脏的场所和充满烟雾的房间联系起来;但在当今的扑克发展中，它被公认为一种特有的策略游戏。扑克是一种从长远来看好的玩家通过仔细的考虑和策略上的行动能打败差的玩家的游戏。玩牌没有一成不变的策略，相反，它有很多玩牌的途径是和方式基于数学、概率和玩家心理。在PokerStrategy上,玩家们先学到无限注德州扑克的小筹码策略。它的基础是只玩少数的强牌并在牌桌上只带很少的钱。还有一些策略是带很多钱并设法赢取很多小底池或少数的大底池。只要一个人坚持玩牌的基本法则，特别是概率，他从长远来看就能获胜。相关主题:扑克学校（PokerSchool）, 扑克策略（PokerStrategy）"
+        }
+      }
+    }
+  },
+  "pukechouma": {
+    "name": "扑克筹码",
+    "definition": {
+      "definition1": {
+        "header": "扑克筹码:",
+        "body": {
+          "paragraph1": "筹码是代表特定价值的塑料圆块。它在锦标赛或现金游戏中用作货币，以便于玩家不必在牌桌上乱堆钞票或硬币。筹码之后可以换成钱。相关主题:取现（Cash out）"
+        }
+      }
+    }
+  },
+  "pukejiqiren": {
+    "name": "扑克机器人",
+    "definition": {
+      "definition1": {
+        "header": "扑克机器人:",
+        "body": {
+          "paragraph1": "参见机器人（bot）"
+        }
+      }
+    }
+  },
+  "pukelian": {
+    "name": "扑克脸",
+    "definition": {
+      "definition1": {
+        "header": "扑克脸:",
+        "body": {
+          "paragraph1": "不透露任何表情和信息的脸"
+        }
+      }
+    }
+  },
+  "pukexuexiao": {
+    "name": "扑克学校",
+    "definition": {
+      "definition1": {
+        "header": "扑克学校:",
+        "body": {
+          "paragraph1": "正如名字所暗示，扑克学校是一个现实的或虚拟的空间，人们在这里可以学习如何玩扑克。PokerStrategy是世界上最大的此类学校之一，从2005年开始，它为会员提供各种理论、来自职业玩家的课程和充满活力的社区交流。相关主题:PokerStrategy"
+        }
+      }
+    }
+  },
+  "qiangkouwei": {
+    "name": "枪口位",
+    "definition": {
+      "definition1": {
+        "header": "枪口位:",
+        "body": {
+          "paragraph1": "Under the Gun (UTG)指大盲位左手边的玩家位置，是个非常没有优势的位置。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Button(BTN)"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Button(BTN).   Cutoff(CO).   HJ.   Middle Position(MP).   《位置因素》.   《VPIP》"
+        }
+      }
+    }
+  },
+  "qiangzhizhu": {
+    "name": "强制注",
+    "definition": {
+      "definition1": {
+        "header": "强制注:",
+        "body": {
+          "paragraph1": "强制注（forced bet）是第一轮中的强制性赌注，它以不同的形式存在于不同的扑克玩法中，像ante、blind或bring-in。Antes是每个玩家在发牌前的每轮之初必须支付的强制性下注。Blinds是两个玩家每轮在发牌前必须支付的强制性下注。bring-in是梭哈游戏中一个玩家在发牌后必须支付的强制性下注。哪个玩家支付由露出的第一张牌（doorcard）的大小决定，它可能是最大的或最小的牌。相关主题:Blind, Ante, Bring-in, （七张牌梭哈）Seven CardStud, （梭哈游戏中露出的第一张牌）Door Card"
+        }
+      }
+    }
+  },
+  "qianmianweizhi": {
+    "name": "前面位置",
+    "definition": {
+      "definition1": {
+        "header": "前面位置:",
+        "body": {
+          "paragraph1": "前面位置的玩家指的是最先行动的几名玩家，即盲注位左边的两名玩家。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Middle Position"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Middle Position.   Late Position.   《位置因素》"
+        }
+      }
+    }
+  },
+  "qianzaichengbaibi": {
+    "name": "潜在成败比",
+    "definition": {
+      "definition1": {
+        "header": "潜在成败比:",
+        "body": {
+          "paragraph1": "潜在底池成败比（Implied odds或implied potodds）是玩听牌时采用的修正底池成败比。它们考虑到打中听牌后能从对手那里赢得更多的钱。它们包括对手将要下的赌注，而不仅仅是已经投入底池的钱。潜在成败比= 期望的潜在收益 : 支付的赌注因此，潜在成败比包括一个推测的因素:如果我完成听牌，我能从对手那里赚多少钱?无限注游戏经常要考虑某个行动的潜在成败比，因为你在最好的情况下能赢得对手的所有筹码。德州扑克中的典型例子是跟注以听暗三条，一个玩家用口袋对子跟注对手的加注并知道他在翻牌圈大约有12%的机会打中三条。由于他打中三条后有很好的机会赢得一个大底池，这使得他的跟注合情合理。如果他只考虑目前底池中的钱，他经常没有合适的成败比来跟注。相关主题:成败比（Odds）,底池成败比（PotOdds）,赢率（Equity）,期望收益（Expected Value）同义词:implieds"
+        }
+      }
+    }
+  },
+  "qianzhu": {
+    "name": "前注",
+    "definition": {
+      "definition1": {
+        "header": "前注: ",
+        "body": {
+          "paragraph1": "为了提高游戏速度或刺激玩家活跃，要求所有玩家在发牌前投入的强制性下注。一般是小盲注的一半。每位玩家都要交。 "
+        }
+      }
+    }
+  },
+  "qijiaopai": {
+    "name": "起脚牌",
+    "definition": {
+      "definition1": {
+        "header": "起脚牌:",
+        "body": {
+          "paragraph1": "起脚牌就是指属于玩家的起手牌并且这张不是用来组成成型牌但是能决定胜负的牌。只有低于用5张组成的成型牌例如，4条，3条，对子等等。当2个玩家拿到了相似的成型牌，将会由起脚牌来决定胜负，不过如果2个玩家的起脚牌都不高过公共牌那么2个玩家将平分底池。例子(德州扑克): Player APlayerBBoard2个玩家都拿到了相同的2对，对K和对6，不过玩家A的起脚牌是A，而玩家B的起脚牌是Q，因此玩家A获胜。在德州扑克里，2张起手牌中小的那张就叫做起脚牌。 相关主题：Poker hands近义词side card"
+        }
+      }
+    }
+  },
+  "qingkong": {
+    "name": "清空",
+    "definition": {
+      "definition1": {
+        "header": "清空:",
+        "body": {
+          "paragraph1": "清空对手就是指赢完对手所有的筹码或者是跟注对手所有在牌桌上的筹码相关：全押，清空"
+        }
+      }
+    }
+  },
+  "qingsonggenzhu": {
+    "name": "轻松跟注",
+    "definition": {
+      "definition1": {
+        "header": "轻松跟注:",
+        "body": {
+          "paragraph1": "不需要任何考虑,快速而轻松地跟注."
+        }
+      }
+    }
+  },
+  "qingxushikong": {
+    "name": "情绪失控",
+    "definition": {
+      "definition1": {
+        "header": "情绪失控:",
+        "body": {
+          "paragraph1": "定义从广义上说，情绪失控是指一个玩家不能再作出理智的决定，而是根据情绪进行行动。例如，当一个玩家遭受大的损失，他想通过激进地下注并用弱牌争夺大的底池来尽快弥补损失，这时他就处于情绪失控的状态之中。情绪失控的种类最明显的失控形式是激进。一个玩家通过激进的打法来设法赢得大的底池。他会诈唬并下大注。他会变得非常激进并倾向于并用边缘化的成手牌争夺大的底池，这导致无望的孤注一掷的情形，就像赌轮盘时一直押在红色上。这种失控也意味着玩家忽视资金管理，下太大的注超过资金的承受能力。此外，另一种隐秘的失控种类是被动的失控，一个玩家变得胆怯和担心，以至于他不再有足够的激进度。他甚至在拿到好牌时也不激进地玩牌，总是担心接下来有badbeat潜伏在每个角落。失控的起因和后果失控通常由损失触发。损失不一定很大，但玩家只需受到影响，以至于他陷入一种不惜一切代价想夺回损失的状态。后果常常是灾难性的。如果玩家没有很好的运气，他的激进打法会立刻让较小的损失变得很大，甚至危及整个资金。在被动的形式下，玩家不断地减少他的收益，以至于他最终成为稳定的长期的输家。他玩得太被动或胆怯。一个好玩家变差，以至于他做必须的行动和反应。他经常知道这一点。避免情绪失控失控是机率游戏中很常见的现象。在某一点上，玩家大脑中的关键部位中断，他所能做的是眼睁睁地看着自己的钱飞出窗外。很少有玩家能不受影响。避免失控的唯一方式是在出现征兆时作自我检查，一旦发现问题就立刻停止游戏。这意味着情绪化地游戏，玩很多牌并设法在短期内赚不合情理的利润。一旦开始失控，你很难控制自己的游戏。相关主题:BadBeat, （资金管理）Bankroll Management "
+        }
+      }
+    }
+  },
+  "qipai": {
+    "name": "弃牌",
+    "definition": {
+      "definition1": {
+        "header": "弃牌:",
+        "body": {
+          "paragraph1": "玩家放弃他现在的起手牌就意味着退出现在这一轮的游戏。他之前的下注将保留在现有底池中，该玩家也只能在下一局开始的时候才能继续游戏。相关主题：过牌，下注，跟注，加注"
+        }
+      }
+    }
+  },
+  "qipailu": {
+    "name": "弃牌率",
+    "definition": {
+      "definition1": {
+        "header": "弃牌率:",
+        "body": {
+          "paragraph1": "一个玩家有两种可能获胜的方式，要么他在摊牌时有最好的牌，要么他在下注轮迫使其他的玩家弃牌。随着对手弃牌的可能性增加，他获胜的机会也提高。根据牌力大小属于一个玩家的底池份额被称为底池赢率（potequity）,根据他的对手的弃牌可能性被称为弃牌率（fold equity）。当计算期望收益时，一个玩家会计算收益x获此收益的可能性，比如10%。例子:两个玩家在摊牌前的最后下注轮。玩家A有20%的机会赢得摊牌。玩家B在玩家A下注时将在10%的情况下弃牌，在其它情况下，他将跟注。底池有$4，下注的大小是$1。期望收益(下注) = 20% * 收益(B跟注且A赢得摊牌) + 10%* 收益(B弃牌)+ 70% *收益(B跟注且A摊牌)期望收益(下注)= 20% * 5$ + 10% * 4$ + 70% * (-1$)期望收益(下注)=0.7$因此，这个玩家在20%的情况下赢得$5，在70%的情况下损失$1。总的来说，他下注$1将赢得$0.7。把这个结果与B既不下注也不加注和A只是观让的情况比较:期望收益(观让)= 20% * 4$ + 80% * 0$期望收益(观让) = 0.8$期望收益(观让) >期望收益(下注)因此，在这个例子中，玩家A只是观让较好。相关主题:（赢率）Equity, （期望收益）Expected Value "
+        }
+      }
+    }
+  },
+  "qipianxingdafa": {
+    "name": "欺骗性打法",
+    "definition": {
+      "definition1": {
+        "header": "欺骗性打法:",
+        "body": {
+          "paragraph1": "参见欺骗（Deception）"
+        }
+      }
+    }
+  },
+  "qiqiang": {
+    "name": "骑墙",
+    "definition": {
+      "definition1": {
+        "header": "骑墙:",
+        "body": {
+          "paragraph1": "定义:在线下游戏中，如果一个玩家决定“骑墙”，他在发牌前投入两倍的大盲注。通常，在枪口位置的玩家会这么做。本质上，它是在黑暗中加注，因为所有后面的玩家必须跟注或按骑墙注的数量加注。这么做的原因是，一个玩家可以离开牌桌后又回来玩牌或作为一种制造更多行动的方式。也被称为:straddling"
+        }
+      }
+    }
+  },
+  "qishoupaiyilanbiao": {
+    "name": "起手牌一览表",
+    "definition": {
+      "definition1": {
+        "header": "起手牌一览表:",
+        "body": {
+          "paragraph1": "起手牌一览表用表格来说明哪些牌从第一轮可以玩并说明如何玩这些牌。SHC对于初学者特别有用，他们可以用来作为在第一轮游戏的策略。同义词:shc, starting-hands-chart"
+        }
+      }
+    }
+  },
+  "qiwangyingludichifene": {
+    "name": "期望赢率-底池份额",
+    "definition": {
+      "definition1": {
+        "header": "期望赢率-底池份额:",
+        "body": {
+          "paragraph1": "根据玩家获胜的几率计算出的该玩家应该赢得的底池的份额大小。与赢率直接相关联的就是期望值（EV），也可也说就是从长期来说他应该赢得底池大小的平均值。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《EV基础篇 — 所有决策理论的基石》.   《EV进阶》"
+        }
+      }
+    }
+  },
+  "qiwangzhi": {
+    "name": "期望值",
+    "definition": {
+      "definition1": {
+        "header": "期望值:",
+        "body": {
+          "paragraph1": "定义期望值就是指在一种局面下考虑了所有的结果以及不同结果出现的可能性之后长期情况下得到的平均值。期望值的计算为了能计算出期望值，我们必须知道所有情况出现的概率。EV是建立在考虑了所有的结果，不同结果出现的可能性以及不同结果盈利情况之上的。EV = P(结果 1) * 盈利 1 + P(结果  2) *盈利 2 + ... + P(结果 n) * 盈利n例子:2个玩家玩掷硬币，如果人头朝上，那么玩家A赢1美元，字朝上玩家B赢1美元。硬币人头和字朝上的概率都是50%。那么2个玩家的EV就是：EV = 50% * (+1$) + 50% * (-1$) = 0$另外一种计算下注利益的方法是：EV(下注) = 底池赢率 - 下注例子:玩家A和B公平的玩掷硬币。盈利多少和之前一样。现在不同的就是在每局开始之前玩家都交付1美元到底池中然后最后的赢家将赢取底池。因此每个玩家赢取$2的激烈都是50%。他们底池的赢率都是50%*$2=$1.因此EV：EV = 赢率 - 下注 = 1$ - 1$ = 0$因此每个玩家都没输没赢。相关主题：赢率(Equity)缩写：EV"
+        }
+      }
+    }
+  },
+  "qizha": {
+    "name": "欺诈",
+    "definition": {
+      "definition1": {
+        "header": "欺诈:",
+        "body": {
+          "paragraph1": "欺诈（Deception）是一个关于各种诡计的广义用语，它用来愚弄对手使之相信假的情况或作出错误的行为。为了欺骗而采取的行动具有迷惑对手使得之不清楚你的牌力和牌型的意图。欺诈性的打法描述了这种行为，它们是诈唬、半诈唬、慢玩和做广告的玩法。相关主题:诈唬（Bluff）,做广告（Advertise）,慢玩（Slowplay）"
+        }
+      }
+    }
+  },
+  "qizhangpaisuoha": {
+    "name": "七张牌梭哈",
+    "definition": {
+      "definition1": {
+        "header": "七张牌梭哈",
+        "body": {
+          "paragraph1": "介绍 七张牌梭哈（Seven CardStud）通常以有限注的形式游戏，它没有公共牌并可供2-9人游戏。开始时每人发两张面朝下和一张面朝上的牌；两张底牌和一张门牌。在游戏的过程中，每个游戏的玩家再发3张面朝上的牌和最后1张面朝下的牌，他们必须在摊牌时用其中的5张牌组成一手牌。拿到最大一手牌的玩家赢得本轮和底池。玩法(有限注)1.第一个下注轮在发牌前，每个玩家支付强制性的底注。然后发给每个玩家两张面朝下的底牌和一张面朝上的门牌。拿到最小门牌的玩家必须支付最初的下注，叫做bring-in。它通常是小注的一半，或有时是一整个小注。如果两个玩家有同样大小的门牌，那么花色按照向上的次序决定谁来支付bringin:梅花,钻石, 红心, 黑桃。 在支付bring-in后, 从支付它的玩家开始，其他的玩家可以加注、跟注或弃牌。 2.中间的下注轮(第4街,或转牌,到第6街)每个游戏的玩家在每条街和随后的下注轮得到一张公开的牌，谁的公开牌有最大的组合就从谁开始下注5.最后的下注轮(第7街,河牌)每个游戏的玩家获得一张面朝下的牌，同样还是从公开牌最大的玩家开始。如果牌的数量不够，那么用公共牌取代发每个玩家一张牌。每个游戏的玩家必须使用这张牌。摊牌游戏的玩家从7张牌中组成最好的组合。拿到最好的5张牌的玩家赢得本轮。下注轮的玩法一般而言,一个玩家轮到他下注时可以有5种行为。观让向下一个玩家过牌下注用筹码或钱当赌注跟注其他玩家下注来匹配对手的下注加注匹配下注并投入更多的赌注弃牌玩家从本轮退出如果没有人下注，那么一个玩家可能向下一个玩家观让。如果牌桌上有新的下注，那么一个玩家必须下注来匹配它(跟注),加注,或弃牌。加注不能超过限制，其数量取决于赌场的规定，但每轮通常允许4次加注。拿到最小门牌的玩家开始第一个下注轮。在后面的下注轮中，拿到最好公开牌的玩家第一个开始。行动围绕牌桌以顺时针方向移动，直到所有的玩家弃牌或匹配牌桌上的下注。例外的情况是，一个玩家投入他所有的筹码。他被视为全押并不再加入下注。他将参加摊牌并被发给有权得到的所有其它的牌。七张牌梭哈高/低七张牌梭哈高/低是一种变型的玩法，拿到最好牌和最差牌的玩家平分底池。低端牌是只包含小于8的牌。这种变型也被称为七张牌梭哈8或更好，缩写为7stud8b。组成低端牌的牌有:A,2,3,4,5,6,7,8。A在这种情况下是低牌。顺子和同花在低端牌中被忽略。因此，最好的低端牌是5432A。对子、三条和四条不能成为低端牌，所以，544AA不是一手低端牌。最好的低端牌带有最小的高牌，这与一些初学者经常认为的不一样。例如，76543打败8542A。如果没有牌是合格的低牌，那么拿到最好高端牌的玩家赢得整个底池。原则上，一个玩家可以认为底池被分为高端的一半和低端的一半。如果两个或更多的玩家有一样大小的牌，那么他们每人将得到整个底池的1/4，或底池低端一半的1/2。高端牌在这种情况下将得到底池的1/2。相关主题:Pokerhands, 底注（Ante）, Razz "
+        }
+      }
+    }
+  },
+  "quanezizhu": {
+    "name": "全额资助",
+    "definition": {
+      "definition1": {
+        "header": "全额资助:",
+        "body": {
+          "paragraph1": "在全额资助中，被资助者出售了自己100%的份额。所有的当事人在资助开始时对利益分摊的百分比达成共识。全额资助通常都伴随着资助回报。"
+        }
+      }
+    }
+  },
+  "quansheng": {
+    "name": "全胜",
+    "definition": {
+      "definition1": {
+        "header": "全胜:",
+        "body": {
+          "paragraph1": "在高/低扑克游戏中，全胜（scoop）意味着一个玩家同时持有最好的一手强牌和最差的一手弱牌而赢得整个底池。相关主题:高/低（Hi/Lo）"
+        }
+      }
+    }
+  },
+  "quanxia": {
+    "name": "全下",
+    "definition": {
+      "definition1": {
+        "header": "全下: ",
+        "body": {
+          "paragraph1": "全下就是玩家下注了他所有的筹码。一旦一个玩家全下了，那么他在接下来的游戏中就不需要决策是跟注还是下注。他也不再会因为对手的施压弃牌玩不到摊牌。其他进入游戏的玩家仍然正常进行游戏不受任何影响。 "
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "Im going all in.”——“我全下。”  "
+        }
+      },
+      "definition3": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Shove "
+        }
+      },
+      "definition4": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Shove, Push, 《扑克中的弹性与非弹性》"
+        }
+      }
+    }
+  },
+  "quanxiatui": {
+    "name": "全下-推",
+    "definition": {
+      "definition1": {
+        "header": "全下-推:",
+        "body": {
+          "paragraph1": "俚语，全下。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "All in"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "All in.   Push"
+        }
+      }
+    }
+  },
+  "quanya": {
+    "name": "全押",
+    "definition": {
+      "definition1": {
+        "header": "全押:",
+        "body": {
+          "paragraph1": "全押就是玩家押下了他所有的筹码。一旦一个玩家全押了，那么他在接下来的游戏中就不需要决策是跟注还是下注。他也不再会因为对手的施压弃牌玩不到摊牌。其他进入游戏的玩家仍然正常进行游戏不受任何影响相关主题：下注(Bet)，加注(Raise)，摊牌(Showdown)。　近义词：shove,push"
+        }
+      }
+    }
+  },
+  "quekougainian": {
+    "name": "缺口概念",
+    "definition": {
+      "definition1": {
+        "header": "缺口概念:",
+        "body": {
+          "paragraph1": "缺口概念（gap concept）首先被DavidSklansky确切地阐述出来。他说跟注对手加注的牌力要比首先加注的牌要强。跟注对手加注的牌与加注的牌之间有一个缺口。在锦标赛的后期，与跟注对手全押的牌相比，一个玩家可以用更多的牌全押。同样，与保护盲注或底注的牌相比，一个玩家有更大范围的牌用来偷取盲注或底注。缺口概念的结果是激进的玩家总是具有优势。相关主题:（偷盲）Blindsteal,First in vigorish "
+        }
+      }
+    }
+  },
+  "qukuan": {
+    "name": "取款",
+    "definition": {
+      "definition1": {
+        "header": "取款:",
+        "body": {
+          "paragraph1": "见取现(Cash out)"
+        }
+      }
+    }
+  },
+  "quxianjin": {
+    "name": "取现金",
+    "definition": {
+      "definition1": {
+        "header": "取现金:",
+        "body": {
+          "paragraph1": "取现金（cash out）指获得支付的钱。这个术语用作从扑克账户取钱，或在娱乐场用筹码换钱，或当一个玩家离开牌桌时，他在牌桌上的钱记入他的账户。相关主题:买入（Buy-In）,资金（Bankroll）同义词:取款（withdrawal）"
+        }
+      }
+    }
+  },
+  "ronghe": {
+    "name": "融合",
+    "definition": {
+      "definition1": {
+        "header": "融合:",
+        "body": {
+          "paragraph1": "融合 (范围融合)融合(merging)是指调整自己的范围，防止出现极化的过程。这意味着牌手的范围必须包括多种强度的牌，而不是只有两种相反类型的牌。通过融合自己的范围，你的范围会变得难以确定，你的对手会因此而犯错。例子:如果一名玩家只用暗三条在这个干燥的翻牌上再加注，那他的范围是极化的，不平衡的。如果他偶尔用空气牌再加注，他的范围仍然是极化的，只是在强牌和空气牌之间做了平衡。如果他既用暗三条，空气牌再加注，又用顶对这样的牌再加注，那他的范围就是非极化的，平衡的。(=范围融合)。相关主题: 极化"
+        }
+      }
+    }
+  },
+  "rouniedichi": {
+    "name": "揉捏底池",
+    "definition": {
+      "definition1": {
+        "header": "揉捏底池:",
+        "body": {
+          "paragraph1": "揉捏底池（Massaging the pot）意味着用往底池投很多小注的方式让对手继续游戏；底池的大小逐渐增加。  相关主题:慢玩（Slowplay）,饵注（Suckbet）"
+        }
+      }
+    }
+  },
+  "ruo": {
+    "name": "弱",
+    "definition": {
+      "definition1": {
+        "header": "弱:",
+        "body": {
+          "paragraph1": "弱在通常的含义上被用来描叙不强的事务。它可能是听牌、牌局、玩家、打法等。如果一个玩家总体上玩得很差或很胆怯，避免对抗并总是找理由弃牌，那么这个玩家就是一个弱玩家。 相关主题:弱听牌、弱紧型"
+        }
+      }
+    }
+  },
+  "ruojinxing": {
+    "name": "弱紧型",
+    "definition": {
+      "definition1": {
+        "header": "弱紧型:",
+        "body": {
+          "paragraph1": "弱紧型确定一种又紧又被动的打法。又弱又紧的玩家在极端的情况下是岩石类玩家，但也被称为傻瓜。这种打法的特点在于小心和谨慎，避免大的底池和风险。他只愿意用坚果牌全押。他一点也不激进并容易被激进的打法赶出底池。相关主题:岩石类玩家（Rock）、傻瓜(Nit)"
+        }
+      }
+    }
+  },
+  "ruoting": {
+    "name": "弱听",
+    "definition": {
+      "definition1": {
+        "header": "弱听:",
+        "body": {
+          "paragraph1": "与死听相比，弱听的玩家仍然有很小的机会在河牌圈形成最好的牌。数学上获胜的可能性很小，因为只有很少的牌会带来胜利。 相关主题:听牌（Draw）,死听（Drawing dead）,活听（Drawing live）"
+        }
+      }
+    }
+  },
+  "ruotingpai": {
+    "name": "弱听牌",
+    "definition": {
+      "definition1": {
+        "header": "弱听牌:",
+        "body": {
+          "paragraph1": "弱听牌（Weak draws）是只有几张补牌或只有很小机会获胜的听牌。例如，内听顺子或由玩家手中的一张小牌和三张公共牌组成的同花听牌，因为即使这个玩家打中同花，这手牌也容易输给对手更大的同花。相关主题:听牌（Draw）"
+        }
+      }
+    }
+  },
+  "sanbu": {
+    "name": "散步",
+    "definition": {
+      "definition1": {
+        "header": "散步:",
+        "body": {
+          "paragraph1": "你在所有对手弃牌时就轻松地散了一次步，这手牌就在没有任何对抗的情况下结束。在带有盲注的游戏中，如果没有人游戏，也就是他获得大小盲注并结束这手牌，那么大盲位的玩家就轻松地散了一次步。相关主题:盲注（Blind）"
+        }
+      }
+    }
+  },
+  "sancixiazhu": {
+    "name": "三次下注",
+    "definition": {
+      "definition1": {
+        "header": "三次下注:",
+        "body": {
+          "paragraph1": "3bet是下注和加注之后的再加注。它是一个下注轮中的第三个加注。有限注玩家通常使用这个术语，但它在底池限注和无限注游戏中也用来代替再加注这个术语。概要:玩家 A 下注玩家 B 加注玩家 C 3bets"
+        }
+      }
+    }
+  },
+  "santiao": {
+    "name": "三条",
+    "definition": {
+      "definition1": {
+        "header": "三条:",
+        "body": {
+          "paragraph1": "参见3颗橡树（3oak）"
+        }
+      }
+    }
+  },
+  "santonghua": {
+    "name": "三同花",
+    "definition": {
+      "definition1": {
+        "header": "三同花:",
+        "body": {
+          "paragraph1": "由三张同一花色组成的牌叫三同花。例子:相关主题:同花（Suited、Suitedness）, （二同花）Twosuited同义词:3suited, 3-suited"
+        }
+      }
+    }
+  },
+  "shangfengqi": {
+    "name": "上风期",
+    "definition": {
+      "definition1": {
+        "header": "上风期:",
+        "body": {
+          "paragraph1": "上风期是一个玩家有很好运气的时期或阶段。他碰到好牌或有利的情况。与之相反的是下风期。相关主题:（波动）Swing,（上风期）Upswing,（波动偏离）Variance"
+        }
+      }
+    }
+  },
+  "shangsuopai": {
+    "name": "上锁牌",
+    "definition": {
+      "definition1": {
+        "header": "上锁牌:",
+        "body": {
+          "paragraph1": "参见坚果牌（Nuts）"
+        }
+      }
+    }
+  },
+  "shangtou": {
+    "name": "上头",
+    "definition": {
+      "definition1": {
+        "header": "上头: ",
+        "body": {
+          "paragraph1": "由于心情极度沮丧而冲动游戏。"
+        }
+      }
+    }
+  },
+  "sanxiangshu": {
+    "name": "三橡树",
+    "definition": {
+      "definition1": {
+        "header": "三橡树:",
+        "body": {
+          "paragraph1": "三橡树（3oak）表示三条，同等大小的三张牌。例子:相关主题:Poker hands, 暗三条（Set）,三条（Trips）"
+        }
+      }
+    }
+  },
+  "shadai": {
+    "name": "沙袋",
+    "definition": {
+      "definition1": {
+        "header": "沙袋:",
+        "body": {
+          "paragraph1": "参见慢玩（slowplay）,观让-加注（check-raise）相关主题:慢玩（Slowplay）,观让-加注（Check-Raise）"
+        }
+      }
+    }
+  },
+  "shagua": {
+    "name": "傻瓜",
+    "definition": {
+      "definition1": {
+        "header": "傻瓜:",
+        "body": {
+          "paragraph1": "傻瓜（nit）是紧-被动、岩石类或弱-紧型的玩家，他避免大的底池并经常在作决定时假设最差的情况。相关主题:岩石类玩家（Rock）,弱-紧型（Weak-Tight）同义词:nitty"
+        }
+      }
+    }
+  },
+  "shayu": {
+    "name": "鲨鱼",
+    "definition": {
+      "definition1": {
+        "header": "鲨鱼:",
+        "body": {
+          "paragraph1": "鲨鱼是牌桌上既强大又激进的玩家，他为了赚钱而攻击弱的玩家。相关主题:鱼（Fish）"
+        }
+      }
+    }
+  },
+  "shenduchouma": {
+    "name": "深度筹码",
+    "definition": {
+      "definition1": {
+        "header": "深度筹码:",
+        "body": {
+          "paragraph1": "如果筹码量大幅度地多于牌桌上的最大买入，那么这个筹码量是深度的。例如，如果一个玩家在最大买入为100美元的牌桌上带有200美元，那么他的筹码是深度的。这个玩家可以从其他深度筹码玩家那里赚更多的钱，但他也同时容易亏很多钱。这样的安排对打法和策略有影响，因为带着深度筹码的玩家有更好的潜在成败比并能承担较高的成本。基于底池成败比和潜在成败比的损益比被改变，因为由于更高的潜在收益，成本可能更大。在锦标赛中，如果筹码量大大超过牌桌上其他人的筹码或强制性下注，这个筹码量就是深度的。相关主题:小筹码（Shortstack）,Turnier,潜在成败比（Implied Odds）"
+        }
+      }
+    }
+  },
+  "shijianyinghang": {
+    "name": "时间银行",
+    "definition": {
+      "definition1": {
+        "header": "时间银行:",
+        "body": {
+          "paragraph1": "一些在线平台提供额外的思考时间，它被称为时间银行。时间银行存在于一次牌局或一场锦标赛的持续期，需要更多时间作决定的玩家可以从时间银行中提取时间，直到用完这些时间为止。例如，如果时间银行里仍然有60秒，那么一个玩家能够在相继的行动中使用它作为额外的思考时间。相关主题:锦标赛同义词:timebank,time-bank"
+        }
+      }
+    }
+  },
+  "shijiepukedasai": {
+    "name": "世界扑克大赛",
+    "definition": {
+      "definition1": {
+        "header": "世界扑克大赛:",
+        "body": {
+          "paragraph1": "无"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "shijiepukexunhuisai": {
+    "name": "世界扑克巡回赛",
+    "definition": {
+      "definition1": {
+        "header": "世界扑克巡回赛:",
+        "body": {
+          "paragraph1": ""
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "shitanxiazhu": {
+    "name": "试探下注",
+    "definition": {
+      "definition1": {
+        "header": "试探下注:",
+        "body": {
+          "paragraph1": "用下注来试探对手的反应以获得更多的信息。这中下注通常都是在底池限注或者无限下注游戏中的一种较小的下注。  同义词:  feeler bet"
+        }
+      }
+    }
+  },
+  "shitou": {
+    "name": "势头",
+    "definition": {
+      "definition1": {
+        "header": "势头:",
+        "body": {
+          "paragraph1": "势头是一个在体育运动中普遍使用的术语，用来表现一支队伍或一个运动员的精神状态。成功可以提高一个玩家的自我价值，让他感到自己非常强大，相信自己实力，这种积极心态甚至能提高玩家的战斗力。在扑克比赛中，势头通常是左右胜利或失败的众多因素之一。一个玩家在短时间内多次加倍他的筹码会产生积极的势头。这些成功会让他感觉更强大，更自信，控制整个牌桌，不断地建立起筹码优势。势头也有副作用。经历过下风期的玩家都出现过这种现象：记不起上次牌面帮到他是什么时候了。这会导致打牌不专心，做出很多错误的决定。由于自信随着赢率的降低而不断降低，想结束这一系列的负面结果是很困难的。玩家会认为下一次抛硬币仍会对自己不利，下一个超强听牌仍不会到来，下一个赛期仍会是失败的。消极的势头会在很长时间上影响玩家的决定。玩家们不应该让过去的决定影响自己的心态。正在经历消极势头的人必须接受现在的处境，从过去的失败阴影中尽快走出来，一切向前看。"
+        }
+      }
+    }
+  },
+  "shitoujianguopai": {
+    "name": "石头坚果牌",
+    "definition": {
+      "definition1": {
+        "header": "石头坚果牌:",
+        "body": {
+          "paragraph1": "石头坚果牌（stone cold nuts）是存在的最强的牌，拿到这手牌的玩家赢得整个底池。另一个玩家不可能拿到同样强的牌而平分底池。相关主题:坚果牌（Nuts）"
+        }
+      }
+    }
+  },
+  "shoubaohudedichi": {
+    "name": "受保护的底池",
+    "definition": {
+      "definition1": {
+        "header": "受保护的底池:",
+        "body": {
+          "paragraph1": "受保护的底池（protected pot）是指一个玩家已经在底池中全押，这意味着对手不再可能用诈唬赢得底池，因为它肯定将看到摊牌。  相关主题:底池（Pot）,（诈唬）Bluff, （套入底池）Pot committed"
+        }
+      }
+    }
+  },
+  "shoukong": {
+    "name": "受控",
+    "definition": {
+      "definition1": {
+        "header": "受控:",
+        "body": {
+          "paragraph1": "在带有公共牌的游戏中，如果你没有对子且与对手的最高牌一样，但对手的踢脚较大，那么你的这手牌受控于对手的牌。如果用最高的牌形成对子，对手将由于较大的踢脚而总是获胜。例子(德州扑克):玩家翻牌圈玩家B的牌受控于A的牌。B获得另外一张A也无法获胜，因为它给A更好的对子。相关主题:踢脚（Kicker）,活牌（LiveCard）"
+        }
+      }
+    }
+  },
+  "shujucaiji": {
+    "name": "数据采集",
+    "definition": {
+      "definition1": {
+        "header": "数据采集:",
+        "body": {
+          "paragraph1": "数据采集（Datamining）指利用软件收集其他在线玩家的玩牌信息，而收集人没有加入到游戏中。收集人使用程序观测各种牌桌并收集几千手牌，以便于他事后分析并把这种信息融入到他的游戏中。通过这种方式，他有可能知道对手的打法而无需以前与他一起游戏过。数据采集被很多线上扑克室所禁止，它被认为是一种作弊。因此，它与扑克机器人的管理规则是一样的，即，在客户的电脑上检查可疑的运行程序。一般而言，使用从网络上采集的中央数据库或使用按月付费的数据也是被禁止的。相关主题:作弊（Cheating）"
+        }
+      }
+    }
+  },
+  "shunzi": {
+    "name": "顺子",
+    "definition": {
+      "definition1": {
+        "header": "顺子:",
+        "body": {
+          "paragraph1": "顺子是由5张相连的牌组成的。例子:相关主题：Poker hands"
+        }
+      }
+    }
+  },
+  "sifen": {
+    "name": "四分",
+    "definition": {
+      "definition1": {
+        "header": "四分:",
+        "body": {
+          "paragraph1": "一个玩家赢得底池的四分之一时就叫quarter。这种情况经常发生在高/低游戏中，像奥马哈高/低,当两个玩家只有同样大小的低端牌时，他们每人得到为低端牌预备的底池的一半。他们每人得到半个底池的一半。相关主题:高/低（Hi/Lo）,平分底池（SplitPot）"
+        }
+      }
+    }
+  },
+  "simangzhu": {
+    "name": "死盲注",
+    "definition": {
+      "definition1": {
+        "header": "死盲注:",
+        "body": {
+          "paragraph1": "如果一个玩家没有支付盲注并回到游戏中，他根据赌场的规定不仅要为回到游戏中支付大盲注还要支付小盲注。后者被称为死盲注（deadblind）,因为它不算作一个玩家下的赌注，而更多地作为直接投入底池的罚金。 相关主题:盲注（Blind） 死钱（Dead Money）"
+        }
+      }
+    }
+  },
+  "sipai": {
+    "name": "死牌",
+    "definition": {
+      "definition1": {
+        "header": "死牌:",
+        "body": {
+          "paragraph1": "死牌是指那些不会再在游戏中出现的牌，因为它们已经被弃掉了。"
+        }
+      }
+    }
+  },
+  "siqian": {
+    "name": "死钱",
+    "definition": {
+      "definition1": {
+        "header": "死钱:",
+        "body": {
+          "paragraph1": "死钱一般指底池中不属于任何玩家的钱，或指一个可能要弃牌玩家下的赌注。因此，死盲注是已经弃牌的玩家或将要弃牌的玩家下的注。这种死钱能直接改善底池成败比，因为它意味他能赚比游戏的对手所下赌注更多的钱。一个玩家几乎没有机会获胜，他所下的注叫死钱；或者一个玩家待在牌桌上会认为亏掉所有的钱。从这个意义上说，它也用作俚语来表示一个很差的玩家。相关主题:Dead,（盲注）Blind,底池成败比（PotOdds）,鱼（Fish）"
+        }
+      }
+    }
+  },
+  "sitiao": {
+    "name": "四条",
+    "definition": {
+      "definition1": {
+        "header": "四条:",
+        "body": {
+          "paragraph1": "参见四橡树（4oak）"
+        }
+      }
+    }
+  },
+  "siting": {
+    "name": "死听",
+    "definition": {
+      "definition1": {
+        "header": "死听:",
+        "body": {
+          "paragraph1": "如果没有牌发出后会帮助一个玩家获胜，那么他在死听（drawing dead）。 相关主题:听牌（Draw）,活听（Drawing live）,弱听（Drawing thin）"
+        }
+      }
+    }
+  },
+  "sixiangshu": {
+    "name": "四橡树",
+    "definition": {
+      "definition1": {
+        "header": "四橡树:",
+        "body": {
+          "paragraph1": "四橡树（4oak）表示四条，也被称为quads。  例子:相关主题:Poker hands同义词:four of a kind, quads"
+        }
+      }
+    }
+  },
+  "song": {
+    "name": "松",
+    "definition": {
+      "definition1": {
+        "header": "松:",
+        "body": {
+          "paragraph1": "一个松的玩家玩很多牌，与只玩少数牌的紧的玩家相对。 相关主题:紧（Tight）,松凶型（LAG）"
+        }
+      }
+    }
+  },
+  "songxiongxing": {
+    "name": "松凶型",
+    "definition": {
+      "definition1": {
+        "header": "松凶型:",
+        "body": {
+          "paragraph1": "定义松凶型（LAG）是loose-aggressive的首个字母缩写，这种打法的玩家玩很多牌（松）并采用激进的方式。这种打法在高级别和非满员桌的游戏中特别有利可图。松凶玩家的类型松凶是一个广义上的用语，它也适用于一个玩家游戏的特定阶段，一个玩家可能在翻牌前采用松凶的打法，但在翻牌后变得更加保守。这种打法被称为松-凶-被动(LAP),因为玩家在翻牌前激进地玩很多牌，但接下来不能自始至终地保持他的激进性。一直保持激进的玩家是松-凶-凶(LAA)。这种打法的极端是疯狂玩家，这种玩家试图通过纯粹的激进打法（诈唬、加注、胡乱的下注）来赢得每个底池。LAA的平衡方式能成为有利可图的打法，但要求对手会弃牌。这种打法在较低的级别没有什么作用，许多玩家拿着牌跟得太远。LAA打法的价值和优势经常体现在迫使对手出局上，它有让底池更小的作用，也有拿到好牌时增加收益的作用，因为他的牌桌形象会被认为持有一手弱牌。相关主题:松（Loose）,紧（Tight）,激进（Aggressive）,被动（Passive）,紧凶型（TAG）"
+        }
+      }
+    }
+  },
+  "suihouguopai": {
+    "name": "随后过牌",
+    "definition": {
+      "definition1": {
+        "header": "随后过牌:",
+        "body": {
+          "paragraph1": "一个玩家过牌且坐在他后面的另一个玩家也过牌。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《摊牌价值》"
+        }
+      }
+    }
+  },
+  "suipai": {
+    "name": "碎牌",
+    "definition": {
+      "definition1": {
+        "header": "碎牌:",
+        "body": {
+          "paragraph1": "碎牌（Rags）是没有价值或差的牌。例如，在德州扑克中，一张A和一张4的起手牌被称为ace rag。相关主题:底牌（Hole Cards）"
+        }
+      }
+    }
+  },
+  "suoxiaozhangchang": {
+    "name": "缩小战场",
+    "definition": {
+      "definition1": {
+        "header": "缩小战场:",
+        "body": {
+          "paragraph1": "缩小战场是指减少玩一手牌的玩家数量。玩家尽量迫使更多的玩家出局来增加获胜的机会。相关主题:赢率(Equity)"
+        }
+      }
+    }
+  },
+  "suoxie": {
+    "name": "缩写",
+    "definition": {
+      "definition1": {
+        "header": "缩写:",
+        "body": {
+          "paragraph1": "常见缩写列表:AF 激进度 - 一个玩家加注与跟注频率的比率ATS 偷盲 - 一个玩家从后面位置攻击盲注的频率B/C 下注 / 跟注 -一个玩家下注后又对注对手的加注跟注B/F 下注 / 弃牌 - 一个玩家下注后因为对手的加注而弃牌BB大盲注 BR资金BRB资金建立或\"马上回来\" BRM资金管理BSS 大筹码策略 - 用满筹码游戏的策略 BU 按钮 - 发牌员的位置C/B 后面观让 -在一个对手观让后也观让C/C 观让 / 跟注 - 一个玩家观让后对对手的下注跟注C/F观让 / 弃牌 -一个玩家观让后面对对手的下注而弃牌C/R 观让 / 加注 - 一个玩家观让后对对手的下注加注CO Cutoff - 发牌员(BU)之前的位置EP前面位置 - 牌桌上的前面位置 EV 期望收益 FL 有限注FR 满员桌 - 7个或更多玩家的游戏HU 单挑 - 2个玩家的游戏 ICM独立筹码模型 - 锦标赛中高盲注级别的数学模型IP 有利位置 - 如果一个玩家在对手的后面行动，那么他在有利位置ITM 进入钱圈 -如果一个玩家被保证有赢得奖金的名次，那么他在锦标赛中进入钱圈LAG 松-凶 - 这种玩家玩很多局牌并玩得很激进LHLonghand -有7个或更多玩家参与的游戏 LP 后面位置 - 牌桌上后面的位置MP中间位置 - 牌桌上中间的位置MTT 多桌锦标赛 -很多人参加的锦标赛，并且多牌桌同时游戏NL 无限注 OOP 不利位置 - 如果一个玩家必须在对手之前行动，那么他在不利位置PFR 翻牌前加注 -在翻牌之前的加注，或衡量一个玩家在翻牌前加注的频率ROI投资收益率 - 投资和收益之间的比率，锦标赛买入和收益之间的比率SB小盲注SH非满员桌 - 3-6个玩家参加的游戏SHC 起手牌一览表 - 表格说明在特定情况下（像位置和对手的反应）拿到特定的牌该如何行动SNG 即时锦标赛- 当固定人数的玩家注册后就开始的锦标赛SSS 小筹码策略 - 用少量筹码参与无限注游戏的游戏策略STT 单桌锦标赛 -只在一张牌桌上游戏的锦标赛TAF 介绍朋友 - 一种玩家介绍新会员而得到奖金的红利系统TAG 紧-凶 -如果一个玩家玩很少的牌但玩得很激进，那么他是一个TAGTPMK 顶对 / 中等踢脚 -一张起手牌和最大的公共牌组成对子且玩家的第二张牌为中等大小TPTK 顶对 / 顶踢脚 -一张起手牌和最大的公共牌组成对子且第二张牌是最大的牌UTG 枪口位置 - 紧接在大盲注后面的位置VPIP / VP$IP 主动往底池投入$ -玩家在第一个下注轮投钱的牌局百分比WSD 摊牌获胜率 - 一个玩家在摊牌获胜的频率WTSD 摊牌率 - 一个玩家玩到摊牌的频率"
+        }
+      }
+    }
+  },
+  "tanpailiangpaibipai": {
+    "name": "摊牌-亮牌-比牌",
+    "definition": {
+      "definition1": {
+        "header": "摊牌-亮牌-比牌:",
+        "body": {
+          "paragraph1": "摊牌是一手牌的最后一部分，余下的玩家亮出他们的牌并比比看谁有最好的牌，谁的牌最好就是获胜者。摊牌出现在最后一轮下注结束之后。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《摊牌价值 — 不见兔子不撒鹰》"
+        }
+      }
+    }
+  },
+  "tanpaijiazhi": {
+    "name": "摊牌价值",
+    "definition": {
+      "definition1": {
+        "header": "摊牌价值:",
+        "body": {
+          "paragraph1": "通常，这个术语表示一手牌在摊牌时有一定的价值，你可以用这种价值赢得令人满意的摊牌数，从而在长期游戏中盈利。然而，这个术语通常用在这种情况中：你不再能做价值下注，因为几乎不会有任何较弱的牌会跟注，而你的牌仍值得便宜地玩到摊牌，而且在摊牌时通常是最好的牌。下面的例子可以说明这个原理：筹码量 & 游戏数据  UTG ($100.00) MP ($100.00) CO ($100.00) Hero ($100.00)BB ($100.00)  SB ($100.00) 翻牌前: Hero 在 BU位置持有 7  8  3 人弃牌, Hero下注$3,1人弃牌, BB跟注翻牌圈: ($6.50) 2 K A (2位玩家) BB过牌, Hero下注$4, BB跟注转牌圈: ($14.50)  7(2位玩家) BB过牌, Hero过牌河牌圈: ($14.50) 6 (2位玩家) BB过牌, Hero过牌你在后面位置用同花连牌加注第一个进入底池，大盲位玩家跟注。翻牌圈出现了两张高牌，你没有击中对子，也没有击中同花听型牌和顺子听型牌。对手在翻牌圈让牌，你作为翻牌前的攻击方在翻牌圈持续下注，唯一的目的就是让对手弃牌，你的牌除了制造弃牌率以外没有任何价值。然而，对手选择跟注，你在转牌圈击中了一个小对子。对手过牌。即使你现在有一个对子，你也不能做价值下注，因为你的对手不太可能用较弱的牌跟注。你的对手现在可能持有一手听型牌，如果听型牌最终没有完成，在河牌圈时他也会过牌。因此你的对子有了摊牌价值，你过牌的目的是玩到摊牌。"
+        }
+      }
+    }
+  },
+  "taoru": {
+    "name": "套入",
+    "definition": {
+      "definition1": {
+        "header": "套入:",
+        "body": {
+          "paragraph1": "当玩家在一个相当大的底池中投入大量的筹码时, 就算对手全押加注他也不可能选择弃牌了.  与常规想法相不同的是,这并不是依据玩家已经投入自身筹码的大部分的事实而是因为他有着非常好的成败比去跟注。比如说,如果一名玩家已经投入他筹码总数的一半到底池后另一名玩家选择全押, 那么他就获得至少为3:1的底池成败比,即意味着他只需25%的几率去获得盈亏平衡。如果底池中还有其他死钱, 那么他的成败比就更好了.如果玩家觉得他已经遥遥落后，而跟注已经没有正确的成败比了，此时就算他投下大量筹码，弃牌依然是正确的。因为已经投入大量筹码而选择跟注对手的加注是错误的，毕竟投入到底池中的钱还并未属于任何人。相关主题:  底池成败比"
+        }
+      }
+    }
+  },
+  "taorudichi": {
+    "name": "套入底池",
+    "definition": {
+      "definition1": {
+        "header": "套入底池:",
+        "body": {
+          "paragraph1": "如果一个玩家已经投入很多筹码，以至于他在被加注全押后再不能弃牌，那么这个玩家就套入底池（potcommitted或committed）。与通常的误解相反，这种情况不是基于下面的事实，玩家已经投入他的大部分筹码，而是相反，他有很好的成败比来跟注。例如，如果一个玩家已经投入他一半的筹码，另一个玩家全押，那么他至少会得到3：1的底池成败比，这意味着他只需在25%的情况下获胜就能打平。如果底池中还有其它的死钱，那么他的成败比就更好。如果玩家相信自己远远落后以至于没有合适的成败比来跟注，即使他已经投入很多钱，弃牌仍然是正确的。你仅仅因为已经投入很多钱而跟注对手的加注，这么做是错误的，因为底池中的钱不再属于任何人。相关主题:底池成败比（PotOdds）同义词:committed"
+        }
+      }
+    }
+  },
+  "taotai-chuju": {
+    "name": "淘汰-出局",
+    "definition": {
+      "definition1": {
+        "header": "淘汰-出局:",
+        "body": {
+          "paragraph1": "输掉全部记分牌或者锦标赛被淘汰。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《资金管理》"
+        }
+      }
+    }
+  },
+  "taotaijianglijinbiaosai": {
+    "name": "淘汰奖励锦标赛",
+    "definition": {
+      "definition1": {
+        "header": "淘汰奖励锦标赛:",
+        "body": {
+          "paragraph1": "淘汰奖励锦标赛和其它标准的锦标赛基本一样,唯一不同之处在于买入费用被分入总奖金和对淘汰每位选手的悬赏. 如果你淘汰了另外一名选手,你将立刻获得他的悬赏奖金.相关主题:锦标赛"
+        }
+      }
+    }
+  },
+  "tijiao": {
+    "name": "踢脚",
+    "definition": {
+      "definition1": {
+        "header": "踢脚:",
+        "body": {
+          "paragraph1": "玩家手中没用于组成对子的最高单牌。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "If you haveAdJc , your opponent has AsQh, and the board comes4c9dAh2h8c, you both have made a pair of aces, but your opponent has thehigher “kicker” with a queen versus your jack. "
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "《手牌实验室—AK》"
+        }
+      }
+    }
+  },
+  "tingpai": {
+    "name": "听牌",
+    "definition": {
+      "definition1": {
+        "header": "听牌:",
+        "body": {
+          "paragraph1": "听牌是指未成型的牌需要通过再拿一张或者更多的牌才能发展成一手成型牌。   相关主题:  听牌"
+        }
+      }
+    }
+  },
+  "tisheng": {
+    "name": "提升",
+    "definition": {
+      "definition1": {
+        "header": "提升:",
+        "body": {
+          "paragraph1": "某张公共牌的发出，使某玩家的牌力变强。"
+        }
+      }
+    }
+  },
+  "tixian": {
+    "name": "提现",
+    "definition": {
+      "definition1": {
+        "header": "提现:",
+        "body": {
+          "paragraph1": "提现指一个玩家离开游戏时，将记分牌拿去兑换的意思。"
+        }
+      }
+    }
+  },
+  "tiyi": {
+    "name": "提议",
+    "definition": {
+      "definition1": {
+        "header": "提议:",
+        "body": {
+          "paragraph1": "一种用来激励扑克游戏中有更多额外行动的玩法。例如，在线上游戏中开一张牌桌送红利(经常是双倍积分),或在线下游戏中让其他玩家下与结果不一定相关的注。在GSN的高额赌注电视秀中可以看到一个有关提议的例子。在第四季的开头部分，如果有玩家用72获胜，大家同意每人给获胜者额外的$500。"
+        }
+      }
+    }
+  },
+  "tiyiwanjia": {
+    "name": "提议玩家",
+    "definition": {
+      "definition1": {
+        "header": "提议玩家:",
+        "body": {
+          "paragraph1": "被赌场雇佣用来刺激行动的玩家。有时，赌场给这种玩家提供资金；其它情况下，他按小时挣薪水。"
+        }
+      }
+    }
+  },
+  "tonghua": {
+    "name": "同花",
+    "definition": {
+      "definition1": {
+        "header": "同花:",
+        "body": {
+          "paragraph1": "同花是指在扑克游戏中拿到的5张牌面花色是相同的。例子:相关主题：Poker Hands"
+        }
+      }
+    }
+  },
+  "tonghuagezhang": {
+    "name": "同花隔张",
+    "definition": {
+      "definition1": {
+        "header": "同花隔张: ",
+        "body": {
+          "paragraph1": "起手牌两张同花色，数字接近但中间隔了一两张。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "QTs  KJs "
+        }
+      },
+      "definition3": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Suited Connectors"
+        }
+      },
+      "definition4": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Suited Connectors.   Connectors.   《手牌实验室—同花连张》"
+        }
+      }
+    }
+  },
+  "tonghualianpai": {
+    "name": "同花连牌",
+    "definition": {
+      "definition1": {
+        "header": "同花连牌:",
+        "body": {
+          "paragraph1": "同花连牌（Suited connectors）是同花色的两张大小连续的牌。53、86属于隔一张的连牌（one-gapconnectors），52、96属于隔两张的连牌。连牌的优点在于它们容易变成顺子听牌;更多的牌挨次相连，就存在更多的顺子听牌。同花连牌比非同花的连牌更强，因为它们还有成为同花听牌的额外机会。例子:相关主题:（连牌）Connectors,（顺子）Straight,（同花）Flush,（听牌）Draw"
+        }
+      }
+    }
+  },
+  "tonghualianzhang": {
+    "name": "同花连张",
+    "definition": {
+      "definition1": {
+        "header": "同花连张:",
+        "body": {
+          "paragraph1": "起手牌两张同花色，且相连。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "e.g.,QhJh ,7c6c . "
+        }
+      },
+      "definition3": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Connectors"
+        }
+      },
+      "definition4": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Connectors.   Suited Gappers.   《手牌实验室—同花连张》"
+        }
+      }
+    }
+  },
+  "tonghuashun": {
+    "name": "同花顺",
+    "definition": {
+      "definition1": {
+        "header": "同花顺:",
+        "body": {
+          "paragraph1": "同花顺是由5张相连并且同花色的牌组成的。例子:相关主题：Poker hands, 皇家同花顺(Royal Flush)"
+        }
+      }
+    }
+  },
+  "tonghuatingpai": {
+    "name": "同花听牌",
+    "definition": {
+      "definition1": {
+        "header": "同花听牌:",
+        "body": {
+          "paragraph1": "同花听牌（flushdraw）是由同一花色的四张牌组成的听牌，它只需要另一张同样花色的牌形成同花。例子(德州扑克):玩家翻牌圈这个玩家在转牌圈碰到余下9张红心之一的可能性大约是19%。在转牌圈或河牌圈碰到红心的可能性大约是35%。坚果同花听牌是能形成最大同花的听牌。它包括一张同花色的A。如果牌面上有A，那么玩家需要同花色的K来听坚果同花。如果牌面上有A和K，那么他需要Q，以此类推。相关主题:听牌（Draw）同花（Flush）"
+        }
+      }
+    }
+  },
+  "tonghuaxing": {
+    "name": "同花性",
+    "definition": {
+      "definition1": {
+        "header": "同花性:",
+        "body": {
+          "paragraph1": "同花性用来评估一组牌的性质，像评估翻牌圈。它表明一组牌上有多少张同花牌出现。更强的同花性意味着牌面上出现更多的同花牌。例子:最弱的同花性最强的同花性相关主题:翻牌圈（Flop）,连接性（Connectivity）,高牌（High Card）,价值（Value）"
+        }
+      }
+    }
+  },
+  "toumang": {
+    "name": "偷盲",
+    "definition": {
+      "definition1": {
+        "header": "偷盲:",
+        "body": {
+          "paragraph1": "在像德州扑克这种带有强制性盲注的游戏中，偷盲（blindsteal）是在其他玩家弃牌后从后面位置用弱牌加注来攻击盲注或在小盲位攻击大盲注。这种打法经常是用弱牌来进行，希望盲注位的玩家会弃牌并毫无反抗地把盲注留给偷取者。与偷盲策略相反的是保护盲注，玩家针对这种偷取的企图而用弱牌保护盲注。相关主题:盲注（Blind）,盲注保护（Blind defense）"
+        }
+      }
+    }
+  },
+  "touqu": {
+    "name": "偷取",
+    "definition": {
+      "definition1": {
+        "header": "偷取:",
+        "body": {
+          "paragraph1": "在没有其他玩家进入牌局的情况下，如果你在后面位置加注，你通常可以没有任何困难地拿走盲注。另参见: 偷盲(blind steal)"
+        }
+      }
+    }
+  },
+  "touzihuibaobi": {
+    "name": "投资回报比",
+    "definition": {
+      "definition1": {
+        "header": "投资回报比:",
+        "body": {
+          "paragraph1": "锦标赛中，投入和产出的比例。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "tuantidichi": {
+    "name": "团体底池",
+    "definition": {
+      "definition1": {
+        "header": "团体底池:",
+        "body": {
+          "paragraph1": "参见多人底池（Multiway Pot）"
+        }
+      }
+    }
+  },
+  "tuoyipuke": {
+    "name": "脱衣扑克",
+    "definition": {
+      "definition1": {
+        "header": "脱衣扑克:",
+        "body": {
+          "paragraph1": "任何玩法都可以用作脱衣扑克，但实际中五张抽牌、德州扑克或五张牌梭哈被用来玩这种游戏，因为它们简单易学且结构简单。目标是让其他玩家脱下他们的衣服。有两种主要的玩法，具体如下:衣服被用作赌注。如果一个玩家想继续游戏，他必须用他的一件衣服下注。失败者必须脱掉他用作赌注的一件衣服。使用筹码游戏。如果一个玩家损失他所有的筹码，他可以以一件衣服为代价继续买入参加游戏。但脱衣扑克没有固定的规则，游戏的过程不能真正地描述。有无数的方式把脱衣扑克的要素带入游戏。唯一的要求是:它必须与扑克有点关系。它必须引导参与者除去衣服。相关主题:五张抽牌（FiveCard Draw）, 德州扑克（Texas Hold'em）"
+        }
+      }
+    }
+  },
+  "waike": {
+    "name": "外壳",
+    "definition": {
+      "definition1": {
+        "header": "外壳:",
+        "body": {
+          "paragraph1": "许多扑克站已经加入网路组织。例如，我们的合作伙伴 Mansion Poker 属于Ongame网络组织。MansionPoker被称为网络组织的外壳。所有在外壳网站游戏的玩家可以在同样的牌桌上一起游戏，即使他们不是在同样的外壳上游戏。单独的站点为同样的玩家群体提供服务。Bwin和Pokerroom也属于Ongame网络组织。你可以在MansionPoker上注册并与在这些网站上注册的玩家一起游戏。"
+        }
+      }
+    }
+  },
+  "weijiagaijin": {
+    "name": "未加改进",
+    "definition": {
+      "definition1": {
+        "header": "未加改进:",
+        "body": {
+          "paragraph1": "如果一手牌没有比开始变得更好，那么它是未加改进的（unimproved）。例如，一个人说：“我在翻牌圈跟注并在转牌圈未加改进时弃牌”。"
+        }
+      }
+    }
+  },
+  "weijiazhudichi": {
+    "name": "未加注底池",
+    "definition": {
+      "definition1": {
+        "header": "未加注底池:",
+        "body": {
+          "paragraph1": "指没有人在翻牌前加注过的底池。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Raised Pot"
+        }
+      }
+    }
+  },
+  "weiqian": {
+    "name": "危钱",
+    "definition": {
+      "definition1": {
+        "header": "危钱:",
+        "body": {
+          "paragraph1": "一些玩家使用危钱进行游戏,相当害怕输掉他们的资金,因此玩得过于小心.好的玩家通常会利用这点对这些玩家施加额外的压力,因为他们会因为怕输掉资金而在很多情形下弃牌."
+        }
+      }
+    }
+  },
+  "weixianpai": {
+    "name": "危险牌",
+    "definition": {
+      "definition1": {
+        "header": "危险牌:",
+        "body": {
+          "paragraph1": "危险牌看上去很危险，因为它很可能帮助对手。一张高牌或可能让听牌成型的牌都是危险牌，与之相对的是无用牌，每个人都知道它不会帮助任何人。相关主题:无用牌（Blank）,转牌（Turn)"
+        }
+      }
+    }
+  },
+  "weixingjibie": {
+    "name": "微型级别",
+    "definition": {
+      "definition1": {
+        "header": "微型级别:",
+        "body": {
+          "paragraph1": "非常小的级别，下注的大小以分计，这种级别被称为微型级别。他们是你能用真钱游戏的最小级别。 相关主题:低级别（Low-Limit）,中等级别（Mid-Stake）,高级别（High-Limit）"
+        }
+      }
+    }
+  },
+  "weixingsai": {
+    "name": "卫星赛",
+    "definition": {
+      "definition1": {
+        "header": "卫星赛:",
+        "body": {
+          "paragraph1": "卫星赛（satellite）是一种锦标赛，参与者能赢得买入或加入更高级别的锦标赛。如果一个玩家不想为参加大型的锦标赛而支付昂贵的买入，那么他可以参加卫星赛并尝试赢得更大的买入。  相关主题:资格赛（Qualifier）,锦标赛（Tourtitlent）"
+        }
+      }
+    }
+  },
+  "weizhi": {
+    "name": "位置",
+    "definition": {
+      "definition1": {
+        "header": "位置:",
+        "body": {
+          "paragraph1": "玩家在牌桌上的位置"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《位置因素》"
+        }
+      }
+    }
+  },
+  "weizhiwanjia": {
+    "name": "未知玩家",
+    "definition": {
+      "definition1": {
+        "header": "未知玩家:",
+        "body": {
+          "paragraph1": "如果你没有与某个玩家玩很多牌，这个对手就是未知的，你因而对他的打法知之甚少。相关主题:Hero（默认为玩家自己）, Villain（对手）"
+        }
+      }
+    }
+  },
+  "wenjian": {
+    "name": "稳健",
+    "definition": {
+      "definition1": {
+        "header": "稳健:",
+        "body": {
+          "paragraph1": "一个比较紧的玩家（通常也是比较好的玩家）。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Loose"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Loose.   Tight.   《VPIP》"
+        }
+      }
+    }
+  },
+  "wu": {
+    "name": "无",
+    "definition": {
+      "definition1": {
+        "header": "无: ",
+        "body": {
+          "paragraph1": "最低级别的游戏；最差状态。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "A-Game"
+        }
+      }
+    }
+  },
+  "wufabeijibaideyishoupai": {
+    "name": "无法被击败的一手牌",
+    "definition": {
+      "definition1": {
+        "header": "无法被击败的一手牌:",
+        "body": {
+          "paragraph1": "参见Nuts（坚果牌）同义词:lock, nuts"
+        }
+      }
+    }
+  },
+  "wuhaipai": {
+    "name": "无害牌",
+    "definition": {
+      "definition1": {
+        "header": "无害牌:",
+        "body": {
+          "paragraph1": "无害牌（blank或brick）是一张可能不会帮助完成任何听牌的公共牌。如果我们说转牌是一张无害牌，我们的意思是转牌没有改变游戏的形势。例如，翻牌出现三张非同花的高牌之后，转牌再来一张2就被认为是无害牌。相关主题:转牌（Turn）,听牌（Draw）同义词:Brick"
+        }
+      }
+    }
+  },
+  "wuxianxiazhu": {
+    "name": "无限下注",
+    "definition": {
+      "definition1": {
+        "header": "无限下注:",
+        "body": {
+          "paragraph1": "无限下注(No-Limit)的下注方式就是指玩家下注的限额制和该玩家所拥有的筹码多少有关。玩家可以在轮到他决策的时候下任意数量的注甚至是他所有的筹码量，这时叫做全押(All-In)。所以说在无限注的游戏中，玩家们可以根据他们自己的筹码量下超过最后一次下注或加注额的任意大小的注。相关主题：底池限注游戏(PotLimit)，有限下注游戏(Fixed Limit)，全押(All-In)"
+        }
+      }
+    }
+  },
+  "wuxianzhu": {
+    "name": "无限注",
+    "definition": {
+      "definition1": {
+        "header": "无限注:",
+        "body": {
+          "paragraph1": "无限注是指在游戏过程中对于玩家的下注数量没有上限，最高可以达到“全下”。"
+        }
+      }
+    }
+  },
+  "wuzhangchoupai": {
+    "name": "五张抽牌",
+    "definition": {
+      "definition1": {
+        "header": "五张抽牌:",
+        "body": {
+          "paragraph1": "介绍五张抽牌（Five CardDraw）可供2-8个玩家游戏。每个最初得到5张面朝下的牌。在接下来的轮次中，被称为抽牌轮，他们可以放弃任意数目的牌以换取新牌。下注轮在抽牌的前后进行。玩法支付强制性下注(底注或盲注)，每个玩家得到5张面朝下的牌。第一个下注轮。抽牌:每个玩家丢弃5张牌中的任意数目并用随机的新牌代替。第二个下注轮。摊牌:余下的玩家比较他们的牌并看谁获胜。德州扑克或奥马哈中牌的等级:皇家同花顺同花顺四条葫芦同花顺子三条两对对子高牌变体五张抽牌有不同的变型玩法。差别在于:牌的等级。在2-7三次抽牌中，最小的牌获胜。还有一些玩法是最好和最差的牌平分底池。采用王牌或万能牌，它们在特定的规则下能代替任何牌。抽牌的数量何时发牌，例如，一个玩家最初可能获得4张牌并在第一次抽牌时得到第5张牌。相关主题:2-7三次抽牌（Deuceto Seven Triple Draw）,抽牌扑克（Drawpoker）, Lowball"
+        }
+      }
+    }
+  },
+  "xiafengqi": {
+    "name": "下风期",
+    "definition": {
+      "definition1": {
+        "header": "下风期:",
+        "body": {
+          "paragraph1": "定义下风期（downswing）是一个玩家由于运气差而遭受长期损失的阶段或时期。 对待下风期的态度下风期（Downswings）是属于机会游戏的自然事件，就像与他们相应的上风期（一个玩家长时间地赚钱）。由于牌在短期内是随机发出的并会偏离正态分布，任何带有机会成分的游戏都有一定程度的波动偏离。但从长期来看，即使下风期能持续一万手牌以上，这种表现也会平静下来。第二个因素也能影响游戏，像情绪失控或游戏受挫的影响。优秀玩家的标志是有能力和毅力来对待长期一连串的坏运气。稳健的资金管理是必要的，这有助于一个玩家在下风期结束时仍然有足够的资金并重新开始赚钱。最常见的错误是玩家在下风期让情绪失控并增加不必要的损失，耗尽他们的资金以至于他们在坏运气减少时无法再重整旗鼓。相关主题:情绪失控（Tilt）,波动（Swing）,上风期（Upswing）,波动偏离（Variance）"
+        }
+      }
+    }
+  },
+  "xianjinyouxi": {
+    "name": "现金游戏",
+    "definition": {
+      "definition1": {
+        "header": "现金游戏:",
+        "body": {
+          "paragraph1": "现金游戏于锦标赛是不同的游戏方式。参与游戏的玩家们用现金下注。玩家买入牌桌后还能在游戏进行的任何时间续买，只要不超过该牌桌的买入上限即可。无限注(No-Limit)和底池限注(Pot-Limit)的游戏通常都叫做现金游戏，因为玩家们在牌桌上可以随意的下多少注。与这相对的是有限注游戏(FixedLimit)，每步的下注额有限制。在此意义上，有限注不被看作是“真正的”扑克游戏。相关主题； 锦标赛(Turnier)"
+        }
+      }
+    }
+  },
+  "xianlupai": {
+    "name": "显露牌",
+    "definition": {
+      "definition1": {
+        "header": "显露牌:",
+        "body": {
+          "paragraph1": "显露牌（Exposed cards）是所有人能看到的面朝上发出的牌，即德州扑克中的公共牌或七张牌梭哈中一个玩家手上第一张面朝上的牌（door card）。相关主题:倒扣牌（Downcard）"
+        }
+      }
+    }
+  },
+  "xianxiawanjia": {
+    "name": "线下玩家",
+    "definition": {
+      "definition1": {
+        "header": "线下玩家:",
+        "body": {
+          "paragraph1": "线下玩家（live player）是在真实的牌桌上与真人游戏的玩家，它与线上玩家相对。这个术语也用来指在本轮没有弃牌的玩家。相关主题:弃牌（Fold）"
+        }
+      }
+    }
+  },
+  "xiaoansantiao": {
+    "name": "小暗三条",
+    "definition": {
+      "definition1": {
+        "header": "小暗三条:",
+        "body": {
+          "paragraph1": "如果一个玩家的三条由他手里的两张牌和一张公共牌组成，那么他就拿到了暗三条。如果一个玩家的暗三条比另外一个玩家的暗三条较小，那么他就拿到小暗三条。例子(德州扑克):玩家A玩家 B翻牌圈玩家A有三条9，玩家B有三条K，三条9因此是小暗三条。相关主题:三条（Set）同义词:undersets"
+        }
+      }
+    }
+  },
+  "xiaochouma": {
+    "name": "小筹码",
+    "definition": {
+      "definition1": {
+        "header": "小筹码:",
+        "body": {
+          "paragraph1": "与其他玩家相比拥有比较少的筹码量就叫做小筹码。比如说一个牌桌上的最大买入是100倍大盲注，那么拥有20倍大盲注的玩家的筹码量就叫做小筹码。小筹码直接影响玩家进行游戏的策略。小筹码玩家不需要做过多的决策或者是在面对复杂的局面的时候会有很大的压力。他只能押下他所有的筹码，因此这类玩家的潜在成败比往往是无用的。在锦标赛中，一个小筹码玩家面对着要筹码翻倍的压力，并且没有足够长的时间去等待拿到好的起手牌。相关主题：ICM，锦标赛，买入费"
+        }
+      }
+    }
+  },
+  "xiaojimianfeitanpai": {
+    "name": "消极免费摊牌",
+    "definition": {
+      "definition1": {
+        "header": "消极免费摊牌:",
+        "body": {
+          "paragraph1": "一个玩家在摊牌前的最后下注轮观让，并打算跟注对手的全押或下注而自己不主动下注，消极免费摊牌（ negativefreeroll）就发生在这种情况下。由于他观让，他给对手机会用弱牌观让摊牌而不用花钱，但持有好牌的对手会在任何情况下下注。下注或全押是一个玩家唯一的方式来从持有弱牌玩家那里榨取更多利润，另一方面也同时损失同样数量的钱。当一个玩家一直表现激进，而最后一张牌可能让对手的听牌成型时，这种情况就经常发生。如果这手牌很强或底池成败比很好而不能放弃，那么他应该自己主动下注而不是让弱牌免费地看到摊牌。相关主题:底池成败比（PotOdds）"
+        }
+      }
+    }
+  },
+  "xiaomang": {
+    "name": "小盲",
+    "definition": {
+      "definition1": {
+        "header": "小盲:",
+        "body": {
+          "paragraph1": "每轮游戏开始前按照规则被强制投入记分牌的玩家。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Big Blind"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Big Blind.   《小盲位补齐》"
+        }
+      }
+    }
+  },
+  "xiaomangzhu": {
+    "name": "小盲注",
+    "definition": {
+      "definition1": {
+        "header": "小盲注:",
+        "body": {
+          "paragraph1": "在有盲注的扑克游戏里，小盲注就是盲注中较小的那个。它也可以用来称呼交付小盲注的玩家。相关主题：盲注(Blind)，大盲注(Big Blind)"
+        }
+      }
+    }
+  },
+  "xiaopai": {
+    "name": "销牌",
+    "definition": {
+      "definition1": {
+        "header": "销牌:",
+        "body": {
+          "paragraph1": "在发新牌之前，一张牌必须被销掉或放到一边。这被称为销牌（burncard）。它用来防止玩家猜牌而影响游戏。在德州扑克或奥马哈中，在发起手牌、翻牌、转牌和河牌之前有一张牌被销掉。在七张牌梭哈中，在发牌之前和每轮之间有一张牌被销掉。相关主题:发牌员（Dealer）,一副牌（Deck）"
+        }
+      }
+    }
+  },
+  "xiaoqiudafa": {
+    "name": "小球打法",
+    "definition": {
+      "definition1": {
+        "header": "小球打法:",
+        "body": {
+          "paragraph1": "小球打法意味着用许多牌甚至是边缘牌来玩很多小底池，而不是用少数好牌来玩大底池（长球）。小球打法的玩家设法尽量多地赢得底池，特别是没有加注的底池。他尽量迅速地赶走对手来夺取小底池，而不是在很大的底池中与对手抗衡。相关主题:长球打法（Longball）"
+        }
+      }
+    }
+  },
+  "xiaozhu": {
+    "name": "小注",
+    "definition": {
+      "definition1": {
+        "header": "小注:",
+        "body": {
+          "paragraph1": "在有限游戏里面，下小注就是指2个下注选项中小的那个，是最初下注轮里面下注的一个。下大注只允许在后面的下注轮时用。相关主题：大注(Big Bet)，有限下注游戏(Fixed Limit)"
+        }
+      }
+    }
+  },
+  "xiazhu": {
+    "name": "下注",
+    "definition": {
+      "definition1": {
+        "header": "下注:",
+        "body": {
+          "paragraph1": "一个玩家只能在他前面没有玩家下注的情况下才能下注。如果在该牌桌上前面已经有玩家下注了那么你只能跟注或者是加注。相关主题：过牌(Check)，跟注(Call)，弃牌(Fold)，加注(Raise)，全押(All-In)"
+        }
+      }
+    }
+  },
+  "xiazhudezuidixianzhi": {
+    "name": "下注的最低限制",
+    "definition": {
+      "definition1": {
+        "header": "下注的最低限制:",
+        "body": {
+          "paragraph1": "下注的最低限制就是为了限制一个牌桌上的最小下注额。比如说在有限注$2/$4中下小注为2美元，下大注就为4美元。然而在无限注游戏中最低下注为$4那么下注的最低限制就是$4/$4，因为在无限游戏中最低下注额不会改变。下注的最低限制越高就意味着下注越大，能赢取的底池也就越大。相关主题：限注(Limit)，有限下注游戏(FixedLimit)，无限注(No-Limit)，底池限注游戏(Pot Limit)"
+        }
+      }
+    }
+  },
+  "xiazhufangshi": {
+    "name": "下注方式",
+    "definition": {
+      "definition1": {
+        "header": "下注方式:",
+        "body": {
+          "paragraph1": "下注方式是指在进行游戏的时候使用的下注策略或者说是下注的方式和顺序。下注方式由一局中的多次下注行动组成，比如说过牌/弃牌(Check/Fold)这样的下注方式，就是指玩家先选择过牌，在其他玩家下注或者加注的情况下就选择弃牌。同样的还有过牌/跟注(Check/Call)等等不同下注方式。相关主题：下注(Bet)，过牌(Check)，跟注(Call)，加注(Raise)，弃牌(Fold)近义词：下注顺序(betsequence)"
+        }
+      }
+    }
+  },
+  "xiazhujiegou": {
+    "name": "下注结构",
+    "definition": {
+      "definition1": {
+        "header": "下注结构:",
+        "body": {
+          "paragraph1": "下注结构（bettingstructure）是确定如何下注的规则。它确定最大和最小的下注量、每轮允许的加注次数、强制性下注的种类和其它相关的规则。相关主题:（下注）Bet,（加注）Raise, （封顶）Cap, （固定的）Fixed, （底池限注）Limit Pot, （有限注）Limit,（无限注）No-Limit"
+        }
+      }
+    }
+  },
+  "xiazhukaiqiang": {
+    "name": "下注-开枪",
+    "definition": {
+      "definition1": {
+        "header": "下注-开枪:",
+        "body": {
+          "paragraph1": "指下注，通常用作在翻后几条街中连续下注。可以做名词也做动词。 "
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "“He fired three barrels on the flop, turn, and river, and his opponent kept calling.”——“他在翻牌、转牌和河牌上各开了一枪，而对手只是一味地跟注。 "
+        }
+      },
+      "definition3": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Bet "
+        }
+      },
+      "definition4": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Bet, 《Double Barrel》独立课程包."
+        }
+      }
+    }
+  },
+  "xiazhumoshi": {
+    "name": "下注模式",
+    "definition": {
+      "definition1": {
+        "header": "下注模式:",
+        "body": {
+          "paragraph1": "下注模式（bettingpattern）是一个玩家在不同情况下下注的习惯。下注模式可以推断处一个玩家如何玩某种类型的牌;观察下注模式还能告诉我们一个玩家可能持有什么牌。高级玩家会经常改变他们的下注习惯，从而避免泄露相关的信息。相关主题:暗示（Tell）,解读（Read）,下注方式（Line）同义词:pattern"
+        }
+      }
+    }
+  },
+  "xieyi": {
+    "name": "协议",
+    "definition": {
+      "definition1": {
+        "header": "协议:",
+        "body": {
+          "paragraph1": "定义协议（deal）或决胜桌协议是大型锦标赛的提前结束，它发生在所有剩下玩家同意以某种方式分割奖金的时候。通常，奖金的分配是基于筹码的计数。还有一种方式也很普遍，先发放大部分奖金，然后把剩下的比赛进行到底并看谁获胜。协议的种类筹码计算法每个玩家获得他本来应该赢得的部分。奖金的余下部分按照筹码确定的名次进行分配。独立筹码模型法采用独立筹码模型计算筹码的金钱价值，彩池据此进行分割。这个方式基于每个玩家预期他目前的筹码所能产生的利润。事后协议法奖金在玩家间分割，所有的玩家获得同样的数额，但继续游戏争夺余下的数额。座位+筹码计算法每个玩家先获得固定的数量。余下的按照筹码计算法进行分配。相关主题:锦标赛（Tourtitlent）,多桌锦标赛（MTT）,决胜桌（Final Table）,（独立筹码模型）ICM"
+        }
+      }
+    }
+  },
+  "xingdongdongzuo": {
+    "name": "行动-动作",
+    "definition": {
+      "definition1": {
+        "header": "行动-动作: ",
+        "body": {
+          "paragraph1": "过牌、弃牌、跟注、加注都是行动。此外，某一个被频频下注、加注的牌桌也被称作“action game”，即玩家动作很多的局。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "老板局 "
+        }
+      },
+      "definition3": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Call "
+        }
+      },
+      "definition4": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Call, Check, Raise, Fold"
+        }
+      }
+    }
+  },
+  "xingyunhepai": {
+    "name": "幸运河牌",
+    "definition": {
+      "definition1": {
+        "header": "幸运河牌:",
+        "body": {
+          "paragraph1": "在德州扑克或奥马哈中，如果河牌圈赐予一个玩家特别幸运的牌并让他的没有几张补牌的听牌获胜，那么这张河牌被称为幸运牌（luck river）。 相关主题:反超（Suckout）,爆冷（Bad Beat）,河牌圈（River）"
+        }
+      }
+    }
+  },
+  "xishua": {
+    "name": "戏耍",
+    "definition": {
+      "definition1": {
+        "header": "戏耍:",
+        "body": {
+          "paragraph1": "摊牌时慢慢地相继揭开牌，或拿到强牌时故意迟迟不决，目的是为了激怒一个仍然认为自己持有最强牌的对手。"
+        }
+      }
+    }
+  },
+  "xiuzhengdebupaishu": {
+    "name": "修正的补牌数",
+    "definition": {
+      "definition1": {
+        "header": "修正的补牌数:",
+        "body": {
+          "paragraph1": "参见折扣的补牌数（Discounted Outs）"
+        }
+      }
+    }
+  },
+  "xumai": {
+    "name": "续买",
+    "definition": {
+      "definition1": {
+        "header": "续买:",
+        "body": {
+          "paragraph1": "与freezeout这种锦标赛（玩家在筹码打光后必须被淘汰）比较，续买锦标赛允许被淘汰的或只有少量筹码的玩家买进更多的筹码。通常，一个玩家在自己的筹码低于最初的起始量时就可以续买，他可以支付最初的买入费并再次获得开始的筹码量。这种行为只在比赛的初期所允许。续买阶段过后，游戏进入正常的freezeout。在$20的续买锦标赛中，每个玩家获得2000的筹码，一个玩家的筹码只要低于2000，他就可以用$20再买2000的筹码。与损失所有筹码就必须离开比赛不同，他可以第二次、第三次、第四次......买进筹码并重新开始。相关主题:Freezeout,锦标赛（Tourtitlent）"
+        }
+      }
+    }
+  },
+  "yadao": {
+    "name": "压倒",
+    "definition": {
+      "definition1": {
+        "header": "压倒:",
+        "body": {
+          "paragraph1": "压倒某人（coversomedescribe_content）是比他有更多的筹码。带有更多筹码的玩家在跟注被压倒玩家的全押受损时仍然有剩下的筹码。这在锦标赛中很重要，每个具有压倒性优势的玩家可以淘汰被压倒的玩家。.相关主题:筹码（Stack）,全押（All-In）"
+        }
+      }
+    }
+  },
+  "yajun": {
+    "name": "亚军",
+    "definition": {
+      "definition1": {
+        "header": "亚军:",
+        "body": {
+          "paragraph1": "在锦标赛中获得第二名的玩家被称为runner-up。 相关主题:锦标赛（Turnier）"
+        }
+      }
+    }
+  },
+  "yanhuandechixuxiazhu": {
+    "name": "延缓的持续下注",
+    "definition": {
+      "definition1": {
+        "header": "延缓的持续下注:",
+        "body": {
+          "paragraph1": "参见continuation bet同义词:delayed contibet"
+        }
+      }
+    }
+  },
+  "yanshileiwanjia": {
+    "name": "岩石类玩家",
+    "definition": {
+      "definition1": {
+        "header": "岩石类玩家:",
+        "body": {
+          "paragraph1": "岩石类玩家（rock）是一种只玩少数强牌的保守型玩家。他的策略是只玩绝对的强牌，而且他激进地玩这些强牌并很少弃牌，即使有迹象表明他已经被对手超过。相关主题:紧（Tight）"
+        }
+      }
+    }
+  },
+  "yapodafa": {
+    "name": "压迫打法",
+    "definition": {
+      "definition1": {
+        "header": "压迫打法:",
+        "body": {
+          "paragraph1": "定义压迫打法（squeeze、put a squeeze on somedescribe_content或a squeezeplay）指在有人加注并至少有一个人跟注的情况下用加很大注。理想的情况是第一个玩家弃牌，因为他被夹在两个或更多玩家的中间，并且他也不知道后面的玩家会怎么行动，第二个玩家和他之后的所有玩家常常拿到一手不很强的牌而经常会弃牌。如果再加注被跟注，这个玩家仍然有可能通过在随后的一轮中进行持续下注来赢得底池。例子:玩家A 加注到$4。 玩家 B 跟注。 玩家 C 加注到$20 -> 他在压迫对手。采用压迫打法的前提你的牌桌形象、对手的打法、你的相对位置和筹码的数量都是成功实施压迫打法的重要因素。一般的定则是压迫打法在对手能弃牌时才行得通。另一方面，对手的起手范围，特别是加注玩家的范围必须宽到他会立刻弃牌。如果对手很松或只用很少的牌加注，以至于他很少会弃牌，那么采用压迫打法就不明智。此外，对手必须尊重你的再加注。相关主题:  诈唬（Bluff）,再加注（Reraise）,开放加注（Open Raise）,持续下注（Continuation Bet）"
+        }
+      }
+    }
+  },
+  "yiduanfanwei": {
+    "name": "臆断范围",
+    "definition": {
+      "definition1": {
+        "header": "臆断范围:",
+        "body": {
+          "paragraph1": "臆断范围是指你的对手在某一情况中认为你可能持有的牌的数量。与你实际的范围无关，你的对手会对你的打法风格有非常不同的感想，因此他对你范围的判断不一定是正确的。"
+        }
+      }
+    }
+  },
+  "yifupai": {
+    "name": "一副牌",
+    "definition": {
+      "definition1": {
+        "header": "一副牌:",
+        "body": {
+          "paragraph1": "deck指一套扑克牌。"
+        }
+      }
+    }
+  },
+  "yilianchuan": {
+    "name": "一连串",
+    "definition": {
+      "definition1": {
+        "header": "一连串:",
+        "body": {
+          "paragraph1": "好的一连串是一系列的连续获胜，坏的一连串是一系列连续失败。相关主题:一连串成功或失败（Streak）"
+        }
+      }
+    }
+  },
+  "yingkuixiangdi": {
+    "name": "盈亏相抵",
+    "definition": {
+      "definition1": {
+        "header": "盈亏相抵:",
+        "body": {
+          "paragraph1": "盈亏相抵即意味着你的收入与支出/亏损数额相等: 也就是说你不输、不赢。"
+        }
+      }
+    }
+  },
+  "yinglu": {
+    "name": "赢率",
+    "definition": {
+      "definition1": {
+        "header": "赢率:",
+        "body": {
+          "paragraph1": "定义赢率或者是底池赢率(PotEquity)是指根据玩家获胜的几率计算出的该玩家应该赢得底池的大小。解释比如说一个玩家有50%的几率在$10的底池中获胜，那么从长期来说$5就是他应该赢得的平均底池大小。与赢率直接相关联的就是期望值（EV），也可也说就是从长期来说他应该赢得底池大小的平均值。然而成败比(Odds)和底池成败比(PotOdds)只关心玩家再拿到听型牌的时候应不应该去跟注(Call)。而赢率的计算则关注与做这样的决策是否是有利可图的或者是做这样的决策能否市赢率或者期望值利益最大化。在不考虑听型牌和成型牌我们只评估这手牌能获胜概率的情况下。获胜的概率越高那么获得底池的就越大，就拥有越大的赢率和期望值。列子(Texas Hold'em):Player APlayerBFlop玩家A拿到了一对A。如果现在大家摊牌那么玩家A就获胜。但是玩家B此时也拿到了不错的牌。并且在河牌轮他又66%的机会拿到最好的成型牌，因此玩家A其实只有34%的机会能够在河牌轮获胜。因此，现在玩家B希望能够把底池最大化，因为在这样的翻拍圈，最终底池的66%应该是属于他的。所以他可以在A玩家下注的时候再加注，甚至可以直接全押来利益最大化。.玩家A此时需要在这种情况下慎重考虑而玩家B就尽可能的把底池最大化。AEV (fold) = 0$ EV (call) =...EV(raise) =...EV值最高的决策就是最明智的获利最大的决策. 相关主题:期望值(Expected Value)，底池成败比(PotOdds)，成败比(Odds) "
+        }
+      }
+    }
+  },
+  "yinyouzhahu": {
+    "name": "引诱诈唬",
+    "definition": {
+      "definition1": {
+        "header": "引诱诈唬:",
+        "body": {
+          "paragraph1": "引诱诈唬（induce a bluff）是用一手好牌采取行动并打算吸引对手的诈唬。一个玩家为了刺激对手诈唬而表示软弱或愿意弃牌。相关主题:诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "yishoupai": {
+    "name": "一手牌",
+    "definition": {
+      "definition1": {
+        "header": "一手牌: ",
+        "body": {
+          "paragraph1": "a)完整的一局b) 玩家拿到的牌"
+        }
+      }
+    }
+  },
+  "yonggangenzhu": {
+    "name": "勇敢跟注",
+    "definition": {
+      "definition1": {
+        "header": "勇敢跟注:",
+        "body": {
+          "paragraph1": "这个行为指的是：在最后的下注轮上，因怀疑对手在诈唬而持较弱的牌跟注对手的下注。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "For example, in hold’em a board comes9d6c2dTsAd, a player makes a largebet, and his opponent calls holding only 7s6s for a pair of sixes aftersuspecting his opponent is falsely representing having a flush or anace. The lead bettor then shows QdJc for no pair, and the player makingthe “hero call” wins the pot.  "
+        }
+      },
+      "definition3": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Crying Call"
+        }
+      },
+      "definition4": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Crying Call.   Cold Call.   Flat Call.   《Breakeven%》"
+        }
+      }
+    }
+  },
+  "yongjin": {
+    "name": "佣金-抽水-服务费",
+    "definition": {
+      "definition1": {
+        "header": "佣金-抽水-服务费:",
+        "body": {
+          "paragraph1": "rake或chop是赌场对每个底池的抽水。被收取佣金的一手牌被称为a rakedhand。收取佣金的条件和数量是各种各样的。通常,只要超过规定的限制，佣金提取量最多为底池的5%。根据具体的规定和级别，每手牌的最大佣金量也是受限的。扑克室对于没有进行到翻牌圈的牌局不会收取佣金，这也就是所谓的noflop, no drop"
+        }
+      }
+    }
+  },
+  "youliweizhi": {
+    "name": "有利位置",
+    "definition": {
+      "definition1": {
+        "header": "有利位置:",
+        "body": {
+          "paragraph1": "一个玩家对于所有玩家占据有利位置，这些玩家必须在下注轮中先于他行动。他具有知道这些玩家行动的优势。相关主题:不利位置（Out of Position）"
+        }
+      }
+    }
+  },
+  "youshi": {
+    "name": "优势",
+    "definition": {
+      "definition1": {
+        "header": "优势:",
+        "body": {
+          "paragraph1": "定义具有优势（having anedge）意味着优于另一个玩家。例如，一手较好的牌比一手较弱的牌占有优势。牌桌上具有较好技术或位置的玩家也有优势。优势比（Edge Odds）优势比用来衡量一个玩家在一个或多个游戏中的平均优势:优势比 = 平均收益/最大赢家的平均收益一个好玩家的优势比在.25至.65之间。"
+        }
+      }
+    }
+  },
+  "youshilieshi": {
+    "name": "优势/劣势",
+    "definition": {
+      "definition1": {
+        "header": "优势/劣势",
+        "body": {
+          "paragraph1": "优势/劣势（way ahead/way behind）也被写作wa/wb，当你有一手不能改进的强成手牌，而对手也有一手没有机会改进的好牌或差牌时，这种情况就会出现。你不是已经获胜就是已经被打败。因此，你要么占优要么处于劣势。"
+        }
+      },
+      "definition2": {
+        "header": "相关主题:",
+        "body": {
+          "paragraph1": "补牌、保护"
+        }
+      },
+      "definition3": {
+        "header": "同义词:",
+        "body": {
+          "paragraph1": "wa/wb"
+        }
+      }
+    }
+  },
+  "youxianxiazhu": {
+    "name": "有限下注",
+    "definition": {
+      "definition1": {
+        "header": "有限下注:",
+        "body": {
+          "paragraph1": "有限注游戏中你只能下固定数额的注。在早期下注轮只能下小注，在后面的下注轮允许下大注。例子:在一个$1/$2的德州扑克中，下小注就是下注$1，下大注就是下$1下大注就是下注$2。在翻牌圈前和翻牌圈只可以下小注。在转牌轮和河牌轮的下注轮玩家们就可以下注$2，并且不允许玩家下更多的注。相关主题：底池限注游戏(Pot Limit)，无限下注游戏(No-Limit)"
+        }
+      }
+    }
+  },
+  "youxiaojifenpaishuliang": {
+    "name": "有效记分牌数量",
+    "definition": {
+      "definition1": {
+        "header": "有效记分牌数量:",
+        "body": {
+          "paragraph1": "几名后手深浅不一的玩家中，最短的那个筹码是他们之间的实际有效能争夺的记分牌数量。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "For example, if one player has 10,000 chips and another only 5,500chips, the most either player can win from the other in the hand is5,500.  ——小勇后手10，000，淑芬后手仅5，500，则两人最多可从一局游戏中赢得5，500。淑芬的后手5，500为有效筹码量。"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "yu": {
+    "name": "鱼",
+    "definition": {
+      "definition1": {
+        "header": "鱼:",
+        "body": {
+          "paragraph1": "鱼可以是骂人的话，也可以只表示一个差的玩家，对付这种玩家是有利可图的。鱼可以通过他们没有策略和负期望收益的打法而辨认出来。他们玩边缘牌并下太多的注。它也是一种侮辱性的说法，与智障（retard）,笨蛋（idiot）和傻子（moron）等用语交替使用。与鱼相反的是鲨鱼（shark），这种玩家抢走鱼的钱。梭鱼（Barracudas）是它们之间的那些玩家，他们仍然从鱼身上赚钱，他们是中等到好的玩家。非常激进的玩家被称为水虎鱼（piranha）。充斥很多差玩家的牌桌被称为养鱼缸（aquarium）。相关主题:松（Loose）,紧（Tight）,被动（Passive）,激进（Aggressive）同义词:（智障）retard,（傻子）moron "
+        }
+      }
+    }
+  },
+  "yuanjiadaomei": {
+    "name": "冤家/倒霉",
+    "definition": {
+      "definition1": {
+        "header": "冤家/倒霉:",
+        "body": {
+          "paragraph1": "通常用来描述策略上没有犯错而且有时甚至是不得不去的情况结果输掉的一方。常见的cooler比如说锦标赛翻牌前所有人弃牌大小盲一个AA一个KK，翻前全打光，最后KK输了。他没有犯错，且不能不去，这就是一个cooler；或者两个玩家都在干燥牌面击中暗三条，打光了，对输掉的那个玩家来说这就是一个cooler，冤家牌。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "拿大牌打得差最后输了，或者被反超了， 这都不是cooler。"
+        }
+      }
+    }
+  },
+  "yuegui": {
+    "name": "越轨",
+    "definition": {
+      "definition1": {
+        "header": "越轨:",
+        "body": {
+          "paragraph1": "一个玩家在偏离他惯常的打法时就发生越轨的行为（out of line）。越轨可能意味着他正情绪失控或他目前的打法不符合他通常的打法。如果一个玩家越轨并与正常的玩法不同，不管是一手牌还是很多手牌，这是一个信号。到底怎么回事取决于当时的情况和对手。相关主题:情绪失控（Tilt）"
+        }
+      }
+    }
+  },
+  "zaigenzhu": {
+    "name": "再跟注",
+    "definition": {
+      "definition1": {
+        "header": "再跟注:",
+        "body": {
+          "paragraph1": "当一个玩家在另外的对手已经跟注后又接着跟注，那么他就进行了再跟注（overcall）。由于再跟注的玩家不仅要打败下注者还要打败跟注者，这意味着他要么有较好的底池成败比要么有更好的牌来跟注。相关主题:跟注（Call）,底池成败比（Pot Odds）"
+        }
+      }
+    }
+  },
+  "zaiheianzhongguanrang": {
+    "name": "在黑暗中观让",
+    "definition": {
+      "definition1": {
+        "header": "在黑暗中观让:",
+        "body": {
+          "paragraph1": "在黑暗中观让（check in thedark）类似于在黑暗中下注，但这是观让。它指一个玩家在下注轮之前宣布他将观让。他宣布不管下一轮会发出什么牌都将观让。例如，一个玩家在翻牌前宣布他将在翻牌圈观让，那么不管翻牌出现什么牌他在翻牌后都将观让。相关主题:观让（Check）,在黑暗中下注（Bet in the Dark）"
+        }
+      }
+    }
+  },
+  "zaiheianzhongxiazhu": {
+    "name": "在黑暗中下注",
+    "definition": {
+      "definition1": {
+        "header": "在黑暗中下注:",
+        "body": {
+          "paragraph1": "在黑暗中下注（bet in thedark）指一个玩家在后一下注轮次发牌就对这一轮下注。一个玩家宣布不管之后的牌是什么都会下注。例如，如果一个玩家宣布他将在黑暗中下注翻牌圈，那么不管翻牌圈出现什么牌他都将下注。相关主题:下注（Bet）, （在黑暗中观让）Check in the Dark"
+        }
+      }
+    }
+  },
+  "zaijiazhu": {
+    "name": "再加注",
+    "definition": {
+      "definition1": {
+        "header": "再加注:",
+        "body": {
+          "paragraph1": "再加注是指再其他玩家加注后我们再次加注。如果一个玩家下注，而第二个玩家加注，轮到第三个玩家的时候该玩家继续加注，那么第三个玩家的加注就叫做再加注。相关主题：加注(Raise)，Cap(封顶)"
+        }
+      }
+    }
+  },
+  "zaitingpai": {
+    "name": "再听牌",
+    "definition": {
+      "definition1": {
+        "header": "再听牌:",
+        "body": {
+          "paragraph1": "如果一个玩家有一手成手牌并还有机会听到更好的牌，那么这种听牌称为再听牌（redraw）。 例子(德州扑克): 玩家翻牌圈这个玩家在翻牌圈有一手顺子，同时也是最大的牌。他还有再听方块同花的机会。相关主题:听牌（Draw）"
+        }
+      }
+    }
+  },
+  "zigesai": {
+    "name": "资格赛",
+    "definition": {
+      "definition1": {
+        "header": "资格赛:",
+        "body": {
+          "paragraph1": "在高/低扑克中，qualifier指一手牌为了获得底池的特定份额而必须达到的最小标准。qualifier的其它含义与卫星赛和为赢得另外一个锦标赛席位而参加的锦标赛是同义词。相关主题:高/低（Hi/Lo）,锦标赛（Tourtitlent）,卫星赛（Satellite）同义词:卫星赛（satellite）"
+        }
+      }
+    }
+  },
+  "zijin": {
+    "name": "资金",
+    "definition": {
+      "definition1": {
+        "header": "资金:",
+        "body": {
+          "paragraph1": "一个玩家的资金是指该玩家用来进行扑克游戏的所有资金。是玩家决定投入到扑克中的所有资金。对于在线扑克就是指该玩家帐户里的资金。相关主题：资金管理(Bankroll Management)或者BRM"
+        }
+      }
+    }
+  },
+  "zijinguanli": {
+    "name": "资金管理",
+    "definition": {
+      "definition1": {
+        "header": "资金管理:",
+        "body": {
+          "paragraph1": "资金管理(BRM)是一玩家用来管理他可用扑克资金的系统，决定他参与游戏的级别，从而最小化由于输赢波动造成的破产风险。资金管理有很保守和很激进的方式。保守的资金管理可能说一个玩家有30倍的全筹码或300个大盲注时才升到下一个级别，并且在某个级别没有足够的资金时降到满足条件的级别。激进的资金管理可能只要求10倍的筹码量。常用的资金管理规则是你只有在拥有20-30倍的全筹码(无限或底池限注)或200-300个大注(有限注)事才可以参与这一级别的游戏。相关主题:破产风险（Riskof ruin）, 筹码（Stack）, （大注）Big Bet, （级别）Limit"
+        }
+      }
+    }
+  },
+  "zijinxiaojinku": {
+    "name": "资金-小金库",
+    "definition": {
+      "definition1": {
+        "header": "资金-小金库: ",
+        "body": {
+          "paragraph1": "一个玩家的资金是指该玩家用来进行扑克游戏的所有资金。是玩家决定投入到扑克中的所有资金。对于在线扑克就是指该玩家帐户里的资金。亦可用作“资助某人打牌。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "《资金管理》"
+        }
+      }
+    }
+  },
+  "zizhu": {
+    "name": "资助",
+    "definition": {
+      "definition1": {
+        "header": "资助:",
+        "body": {
+          "paragraph1": "资助一个玩家（stake a player）是给他钱以帮助他能参加锦标赛或现金游戏。资助人和受资助人平分收益。 相关主题:赞助人（Backer）"
+        }
+      }
+    }
+  },
+  "zizhuhuibao": {
+    "name": "资助回报",
+    "definition": {
+      "definition1": {
+        "header": "资助回报:",
+        "body": {
+          "paragraph1": "如果玩家实现了盈利，被资助者应首先把买入或资助总额返还给资助者，然后和所有的当事人分配奖金。这意味着被资助者在没有返还资助之前不能保留任何奖金。例1:玩家A提供了一个$1,000的资助计划，想得到全额资助。当事人同意按40/60进行利益分摊。之后玩家A赢到了2,000$。首先要拿出$1,000还给资助者，剩下的$1,000进行利益分摊(在这个例子中是$400/$600)。资助者们按百分比分配这$600。例2:玩家A提供了一个$1,000的资助计划，想得到全额资助。当事人同意按40/60进行利益分摊。但玩家A这次只赢到了$400。在这种情况中，全部的资金都应该根据之前商定的百分比交给资助者。"
+        }
+      }
+    }
+  },
+  "zizhuren": {
+    "name": "资助人",
+    "definition": {
+      "definition1": {
+        "header": "资助人:",
+        "body": {
+          "paragraph1": "资助人（backer）是指借钱给一个玩家参加锦标赛或现金游戏的人。资助人和玩家通常平分收益。相关主题:（赌注）Stake"
+        }
+      }
+    }
+  },
+  "zizhuzhe": {
+    "name": "资助者",
+    "definition": {
+      "definition1": {
+        "header": "资助者:",
+        "body": {
+          "paragraph1": "资助者是指提供金钱资助的人。他向某个玩家(被资助者)投资，希望从中获取高额回报。之后他可以收回所有的投资和事先商定好的奖金分成。"
+        }
+      }
+    }
+  },
+  "zizhuzonge": {
+    "name": "资助总额",
+    "definition": {
+      "definition1": {
+        "header": "资助总额:",
+        "body": {
+          "paragraph1": "资助者向玩家提供的资助总额。"
+        }
+      }
+    }
+  },
+  "zhahutoujizhaji": {
+    "name": "诈唬-偷鸡-诈鸡",
+    "definition": {
+      "definition1": {
+        "header": "诈唬-偷鸡-诈鸡: ",
+        "body": {
+          "paragraph1": "诈唬是指玩家误导他的对手认为他现在拿到了一手很强的牌或者是一手很弱的牌。诈唬就是迷惑你的对手让他相信你的行动是真实的；从而让他们弃牌或者是投入更加多的钱到底池中来。因此，诈唬可以分为很多种，并不仅仅是为了让你的对手弃牌。我们把诈唬分为纯诈唬和半诈唬。前者只有迫使对手弃牌才能获胜；而后者的获利融合了对手弃牌或者跟注这2种结果，你很可能会在接下来发展成很强的成手牌，或者你的对手因为不相信你拿到了很好的牌就将会下注更多。在你拿到了很强的成手牌而你进行Slowplay，当你拿到了很弱的牌的时候你采用欺骗性的下注，都可以看作是诈唬的一种。 "
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Super-Bluff "
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Super-Bluff, 《Breakeven%》"
+        }
+      }
+    }
+  },
+  "zhahuxinggenzhu": {
+    "name": "诈唬性跟注",
+    "definition": {
+      "definition1": {
+        "header": "诈唬性跟注:",
+        "body": {
+          "paragraph1": "诈唬是一种没有拿到牌而假装拿到某种牌的打法。诈唬性跟注（bluffcall）是实施诈唬多个方面设置的一部分，它通常包括用弱牌让对手在后面的轮次弃牌以达到获胜的目的。诈唬性跟注可能给对手你在慢玩的印象。它也可能意指扮演一手听牌。采取诈唬性跟注是想float对手，在对手加注后跟注他的持续性下注并打算在他观让或示弱时下注夺取底池。相关主题:诈唬（Bluff）,Float"
+        }
+      }
+    }
+  },
+  "zhahuxuzhangshengshi": {
+    "name": "诈唬（虚张声势)",
+    "definition": {
+      "definition1": {
+        "header": "诈唬（虚张声势）: ",
+        "body": {
+          "paragraph1": "定义诈唬是指玩家误导他的对手认为他现在拿到了一手很强的牌或者是一手很弱的牌。诈唬就是迷惑你的对手让他相信你的行动是真实的；从而让他们弃牌或者是投入更加多的钱到底池中来。因此，诈唬可以分为很多种，并不仅仅是为了让你的对手弃牌。诈唬的种类我们把诈唬分为：纯诈唬；只有逼迫对手弃牌才能获胜，半诈唬；是指现在你只拿到了一手很差的牌不过很有可能发展成为很强的成手牌，比如说听同花面。半诈唬的获利融合了对手弃牌或者跟注这2种结果，你很可能会在接下来发展成很强的成手牌，或者你的对手因为不相信你拿到了很好的牌就将会下注更多。在你拿到了很强的成手牌而你进行Slowplay，当你拿到了很弱的牌的时候你采用欺骗性的下注，都可以看作是诈唬的一种。相关主题：诈唬性跟注，DarkTunnel诈唬，Post Oak 诈唬, Slowplay"
+        }
+      }
+    }
+  },
+  "zhekoubupaishu": {
+    "name": "折扣补牌数",
+    "definition": {
+      "definition1": {
+        "header": "折扣补牌数:",
+        "body": {
+          "paragraph1": "定义折扣补牌数（Discountedouts）是扣除一些补牌后的补牌数，扣除的补牌会提升牌力但不能成为最好的牌，或者扣除的补牌可能更多地帮助对手。解释例子(德州扑克):玩家翻牌圈这个玩家有听顺子的机会。在转牌圈或河牌圈出现任何一张A或6会形成顺子。这些牌是他的补牌，他最初可以假定有8张补牌；四张A和四张6。但如果对手手上拿着:在这种情况下，红心A或红心6会让对手形成同花。这两张补牌是不干净的，它们因此必须被折扣。另一个对手可能还有这手牌:在这种情况下，任何一张6会让对手形成更好的顺子，这意味着只有四张A是干净的。因此，他必须从最初的8张补牌中扣除4张补牌。重要性但在游戏中很难说一个对手可能持有什么牌，他总有一定的可能性持有更好的听牌。游戏中的玩家越多，他们中间拿到这种牌的可能性越大。能让听牌成型的牌的可游戏性越强，其他玩家就越可能拿到它们。因此，一个玩家必须折扣补牌的严格程度要视这些因素而定。折扣补牌考虑到听牌成型而没有获胜的可能性。它们保留用成败比和补牌数计算一个人获胜的机会。相关主题:补牌数（Outs）,成败比（Odds）同义词:modifiedouts"
+        }
+      }
+    }
+  },
+  "zhidi": {
+    "name": "质地",
+    "definition": {
+      "definition1": {
+        "header": "质地:",
+        "body": {
+          "paragraph1": "质地，牌面质地在扑克游戏中牌面质地用来描述牌面的构成。牌面可能是多重听牌的(draw heavy），或湿润的，或干燥的。在做决定之前彻底分析质地结构是非常重要的。"
+        }
+      }
+    }
+  },
+  "zhidingxiazhuzhe": {
+    "name": "指定下注者",
+    "definition": {
+      "definition1": {
+        "header": "指定下注者:",
+        "body": {
+          "paragraph1": "在下注轮中第一个行动的玩家被称作指定下注者（assigned bettor）。 相关主题:（首入）First in, （开放加注）Open Raise"
+        }
+      }
+    }
+  },
+  "zhifu": {
+    "name": "支付",
+    "definition": {
+      "definition1": {
+        "header": "支付:",
+        "body": {
+          "paragraph1": "用输了的牌跟注对手的下注。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《VPIP — “入池率”到底是个什么东西》"
+        }
+      }
+    }
+  },
+  "zhifujiegou": {
+    "name": "支付结构",
+    "definition": {
+      "definition1": {
+        "header": "支付结构:",
+        "body": {
+          "paragraph1": "锦标赛的支付结构确定奖金如何分配以及有多少人将赢得奖金。即时锦标赛的典型支付结构:1. 第一名, 底池的50%2. 第二名, 底池的30%3. 第三名, 底池的20%4. 第四名或更低, 没有奖金相关主题:锦标赛（tourtitlent）"
+        }
+      }
+    }
+  },
+  "zhongdengjibie": {
+    "name": "中等级别",
+    "definition": {
+      "definition1": {
+        "header": "中等级别:",
+        "body": {
+          "paragraph1": "中等级别（mid-stakes）是高于低级别的层次，下注的大小以几十美元计，底池大小从几百到数千美元。相关主题:微型级别（Micro-Limit）,低级别（Low-Limit）,高级别（High-Limit）"
+        }
+      }
+    }
+  },
+  "zhongdui": {
+    "name": "中对",
+    "definition": {
+      "definition1": {
+        "header": "中对:",
+        "body": {
+          "paragraph1": "由玩家手上的一张牌和牌面上的一张中等牌组成的对子就叫中对。例子(德州扑克):玩家牌面这个玩家有一对Q，同时Q是牌面上第二大的牌。因此，他持有中对。相关主题:顶对（Top Pair）,底对（Bottom Pair）"
+        }
+      }
+    }
+  },
+  "zhonggou": {
+    "name": "重购",
+    "definition": {
+      "definition1": {
+        "header": "重购:",
+        "body": {
+          "paragraph1": "在游戏中，重购固定的筹码量。不一定得打光了才能重购。"
+        }
+      },
+      "definition2": {
+        "header": "举例说明:",
+        "body": {
+          "paragraph1": "在$20的续买锦标赛中，每个玩家获得2000的筹码，一个玩家的筹码只要低于2000，他就可以用$20再买2000的筹码。与损失所有筹码就必须离开比赛不同，他可以第二次、第三次、第四次......买入筹码并重新开始。"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《锦标赛系列课程基础篇》"
+        }
+      }
+    }
+  },
+  "zhongjianweizhi": {
+    "name": "中间位置",
+    "definition": {
+      "definition1": {
+        "header": "中间位置:",
+        "body": {
+          "paragraph1": "在扑克游戏中玩家的位置是由发牌员的位置来决定的，中间位置就是指牌桌上相对于发牌员来说中间的位置。在德州扑克满员10人的牌桌上那么从发牌员开始数的第6，7，8，就是中间位置，也叫做：MP,MP2, MP3. 例子:盲注(Blind)前面位置(Early Position)中间位置(MiddlePosition)后面位置(Late Position)相关主题：有利位置(In Position)，不利位置(Out ofPosition)，前面位置(Early Position)，后面位置(Late Position)缩写:mp"
+        }
+      }
+    }
+  },
+  "zhua": {
+    "name": "抓",
+    "definition": {
+      "definition1": {
+        "header": "抓:",
+        "body": {
+          "paragraph1": "枪口位玩家在拿到起手牌之前先投入两倍于大盲注的记分牌数量，客观上变成了翻牌前的“大盲位”玩家，也起到了改变游戏级别的效果。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《是否应该Straddle》"
+        }
+      }
+    }
+  },
+  "zhuankuai": {
+    "name": "砖块",
+    "definition": {
+      "definition1": {
+        "header": "砖块:",
+        "body": {
+          "paragraph1": "无害牌（blank）的同义词见无害牌（Blank）"
+        }
+      }
+    }
+  },
+  "zhuanpailun": {
+    "name": "转牌轮",
+    "definition": {
+      "definition1": {
+        "header": "转牌轮:",
+        "body": {
+          "paragraph1": "定义德州扑克和Omaha中发第四张公共牌。FlopTurnRiverSeven CardStud中的第四张牌。德州扑克和Omaha中转牌轮牌的分类转牌轮的牌如果对玩家们改善牌力无用的话就叫做无用牌。如果这张牌既不是大牌，也不能完成一种听型牌的可能，也不与桌面相连的那么这张牌就叫做无用牌。如果转牌轮的牌很有可能提高了玩家的牌力那么这张牌就叫做威胁牌。例子1：在翻牌圈有2张方片，再转牌轮出现了第三张方片，那么这张牌就叫做威胁牌，因为很有可能有玩家拿到了同花。例子2：不规则的翻牌圈牌面在转牌轮来了一张A，那么这样A也算作是威胁牌。当出现威胁牌的时候玩家们使用诈唬的成功率就会比出现一张无用牌的成功率要高很多。相关主题：翻牌圈(Flop)，河牌轮(River)，牌面(Board)，公共牌(Community Cards)，德州扑克(TexasHold'em)，奥马哈(Omaha), 听型牌(Draw)，翻牌圈前(Preflop)，翻牌圈后(Postflop)"
+        }
+      }
+    }
+  },
+  "zhuanpaiquan": {
+    "name": "转牌圈",
+    "definition": {
+      "definition1": {
+        "header": "转牌圈:",
+        "body": {
+          "paragraph1": "德州扑克和Omaha中发第四张公共牌。"
+        }
+      },
+      "definition2": {
+        "header": "相关概念:",
+        "body": {
+          "paragraph1": "Preflop"
+        }
+      },
+      "definition3": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "Preflop.   Flop.   Turn.   River"
+        }
+      }
+    }
+  },
+  "zhuazhafanwei": {
+    "name": "抓诈范围",
+    "definition": {
+      "definition1": {
+        "header": "抓诈范围:",
+        "body": {
+          "paragraph1": "这是一些在摊牌时没有任何真正价值的牌，但仍足以抓住对手的诈唬，也就是能打败对手正在诈唬的牌。例如：你认为对手在翻牌圈有一手同花听牌，但在河牌圈没有成型。你也没有成手牌，并假设对手会在河牌圈用失败的同花听牌诈唬。你需要考虑清楚对手会有多大的可能性用什么范围的牌这么做，并据此选择可以抓诈的范围。"
+        }
+      }
+    }
+  },
+  "zhuazhapai": {
+    "name": "抓诈牌",
+    "definition": {
+      "definition1": {
+        "header": "抓诈牌:",
+        "body": {
+          "paragraph1": "抓诈牌（bluff catcher）是一手只能打败诈唬的牌。它也表示一个很被动或透明的玩家。他只在对手过分地诈唬时才能获胜。大部分的这种玩家没有激进地玩自己的好牌，但他们在对手经常诈唬或错误地下注时获胜。 相关主题:诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "zhuchi": {
+    "name": "主池",
+    "definition": {
+      "definition1": {
+        "header": "主池:",
+        "body": {
+          "paragraph1": "主池（main pot）是所有活动的玩家争夺的底池。如果一个玩家全押，那么所有更多的下注进入边池，边池只能由非全押的玩家赢得。 相关主题:边池（Side Pot）,底池（Pot）"
+        }
+      }
+    }
+  },
+  "zhudongxing": {
+    "name": "主动性",
+    "definition": {
+      "definition1": {
+        "header": "主动性:",
+        "body": {
+          "paragraph1": "激进的一方和领头人掌握主动权。"
+        }
+      }
+    }
+  },
+  "zhuipai": {
+    "name": "追牌",
+    "definition": {
+      "definition1": {
+        "header": "追牌:",
+        "body": {
+          "paragraph1": "追牌（chase）是指跟注对手的下注，即使他的牌为一手获胜机会很小的听牌；或者发展成一手获胜牌的机会很小或者根据支付的赌注具有负期望收益。这么做是期望获得一张幸运牌，但它从长远来看是无利可图的。相关主题:Equity Draw"
+        }
+      }
+    }
+  },
+  "zuduanpai": {
+    "name": "阻断牌",
+    "definition": {
+      "definition1": {
+        "header": "阻断牌:",
+        "body": {
+          "paragraph1": "阻断牌（Blockers）是一个玩家完成听牌所需要的牌，但这张牌已经在对手的手上。例子 (德州扑克):玩家 A玩家B翻牌圈两个玩家都有内听顺子。玩家A需要一张7和玩家B需要一张6来形成顺子45678。因此，他们每人都持有对方需要的一张牌;A有B需要的6，B有A需要的7。它们都是阻断牌。不存在有四张6和四张7来完成听牌，而只有三张。这减少任何一个玩家形成顺子的机会。相关主题:补牌数（Outs）,听牌（Draw）"
+        }
+      }
+    }
+  },
+  "zuduanxingxiazhu": {
+    "name": "阻断性下注",
+    "definition": {
+      "definition1": {
+        "header": "阻断性下注: ",
+        "body": {
+          "paragraph1": "一种翻前加注：在不利位置下注（通常是小注），旨在阻止-阻断对手下一个更大的注。 "
+        }
+      },
+      "definition2": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Value Bet"
+        }
+      },
+      "definition3": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Value Bet, Continue Bet, Donk Bet, 《下注的理由 》, 《下注量》"
+        }
+      }
+    }
+  },
+  "zuduanzhang": {
+    "name": "阻断张",
+    "definition": {
+      "definition1": {
+        "header": "阻断张: ",
+        "body": {
+          "paragraph1": "游戏中用于减少特定组合的已知的一张牌。 "
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "For example, in hold’em if Player A has TT and the flop comesQJ9 , thelikelihood that Player B has a straight is reduced because Player A hastwo “blockers” (i.e., two of the four tens in thedeck).——比如，小勇手持TT，翻牌发出QJ9，淑芬拿到顺子的几率就降低了，因为小勇有两张阻断张（即4张T里的其中2张）。"
+        }
+      },
+      "definition3": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Blocking Bet"
+        }
+      },
+      "definition4": {
+        "header": "学习内容: ",
+        "body": {
+          "paragraph1": "Blocking Bet, 《利用阻断张进行3-Bet》"
+        }
+      }
+    }
+  },
+  "zuijiazhuangtai": {
+    "name": "最佳状态",
+    "definition": {
+      "definition1": {
+        "header": "最佳状态:",
+        "body": {
+          "paragraph1": "指的是玩家决策效率最高、表现最好的状态。 "
+        }
+      },
+      "definition2": {
+        "header": "举例说明: ",
+        "body": {
+          "paragraph1": "E.g.I was playing my A-Game, but the cards just didn‘t cooperate.  我当时打出了A-Game状态，可惜牌力不配合。）"
+        }
+      },
+      "definition3": {
+        "header": "相关概念: ",
+        "body": {
+          "paragraph1": "Z-Game"
+        }
+      }
+    }
+  },
+  "zuixiaomairu": {
+    "name": "最小买入",
+    "definition": {
+      "definition1": {
+        "header": "最小买入:",
+        "body": {
+          "paragraph1": "参与一场游戏所需带入的最低要求。"
+        }
+      },
+      "definition2": {
+        "header": "学习内容:",
+        "body": {
+          "paragraph1": "《资金管理》"
+        }
+      }
+    }
+  },
+  "zuobi": {
+    "name": "作弊",
+    "definition": {
+      "definition1": {
+        "header": "作弊:",
+        "body": {
+          "paragraph1": "作弊（Cheating）是以任何骗人或不公正的方式来操控游戏。在扑克中，它可能是设定牌、与其他玩家达成协议、藏牌或偷筹码等。在线上游戏中，主要的作弊形式有串通、扑克机器人（玩扑克的程序）以及收集玩家的全部数据。收集数据是通过自动观察玩家的打法而收集他们的数据，之后一些扑克软件例如Pokertracker或Pokeroffice也都应用这种技术。不同的扑克室对收集数据有不同的观点。线上扑克平台尽最大的力量通过寻找可疑的玩牌模式来抑制作弊情况的发生。他们也检查被禁用的程序是否在客户的机器使用。相关主题:（串通）Collusion,（机器人）Bot"
+        }
+      }
+    }
+  },
+  "zuoguanggao": {
+    "name": "做广告",
+    "definition": {
+      "definition1": {
+        "header": "做广告:",
+        "body": {
+          "paragraph1": "做广告（advertise）是作出暂时可能不利的行为，但它给对手一个有关打法的错误印象，由此引诱他以后作出错误的决定。一个玩家在一次或多次诈唬后亮牌，或让自己被“抓住”在诈唬，以至于他的对手认为他经常诈唬，让他以后靠好牌赚钱。做广告还有另外的意思，先给对手一个稳健和令人畏惧的印象，从而让做广告的玩家更频繁地诈唬。相关主题:诈唬（Bluff）"
+        }
+      }
+    }
+  },
+  "zuoweibiao": {
+    "name": "座位表",
+    "definition": {
+      "definition1": {
+        "header": "座位表:",
+        "body": {
+          "paragraph1": "等待上桌的排队玩家名单。"
+        }
+      }
+    }
+  },
+  "zuxiaojiazhu": {
+    "name": "最小加注",
+    "definition": {
+      "definition1": {
+        "header": "最小加注:",
+        "body": {
+          "paragraph1": "这个术语是指在某个给定的牌桌上能做出的最小的加注。例如，如果大盲注是$1，那么加注到$2就被称为最小加注。"
+        }
+      }
+    }
+  }
+}

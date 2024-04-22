@@ -13,7 +13,7 @@ const NavBar = ({ className = '' }) => {
             </div>
             <div className={styles.navList}>
                 <a className={styles.navItem} href="/">{formatMessage({ id: 'navbar_home_page' })}</a>
-                <a className={styles.navItem} href="/glossary">{formatMessage({ id: 'navbar_terminology_list' })}</a>
+                <a className={styles.navItem} href="/#/glossary">{formatMessage({ id: 'navbar_terminology_list' })}</a>
             </div>
         </div>
     );

@@ -1,0 +1,446 @@
+
+p {
+    font-style: normal;
+    text-decoration: none;
+}
+a {
+    color: #666666;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    color: #00C4A7;
+    text-decoration: underline;
+}
+a:active {
+    text-decoration: none;
+}
+
+.glossaryListItem Link {
+    cursor: pointer;
+}
+.link Link {
+    cursor: pointer;
+}
+
+.glossaryListItem a {
+    cursor: pointer;
+}
+.link a {
+    cursor: pointer;
+}
+
+.glossaryHeader {
+    margin: revert;
+    padding: revert;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #363636;
+}
+.glossaryHeaderBody {
+    margin: revert;
+    padding: revert;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    color: #666666;
+}
+.link {
+    color: #666666;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.searchContainer2 {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:520px;
+}
+.searchIconContainer {
+    position: relative;
+    left: 2rem;
+    max-width: 1.2rem;
+    max-height: 1rem;
+}
+.searchIcon {
+    height: 19px;
+    width: auto;
+}
+.searchBar {
+    width: 300px;
+    height: 43px;
+    border: 0px;
+    background-color: #F5F5F5;
+    border-bottom: 4px;
+    border-color: #2D2D2D;
+    border-bottom-style: groove;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.searchBar:focus {
+    outline-width: 0;
+    outline-style: none;
+}
+.searchList {
+    display: block;
+    justify-content: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.searchListItem {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-style: none;
+    cursor: pointer;
+    text-align: center;
+    color: #666666;
+    font-size: 16pt;
+    background-color: #F5F5F5;
+}
+.searchListItem:link {
+    text-decoration: none;
+}
+.searchListItem:visited {
+    text-decoration: none;
+}
+.searchListItem:hover {
+    color: #B394FD;
+    text-decoration: none;
+}
+.searchListItem:active {
+    text-decoration: none;
+}
+
+.glossaryTable {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.glossaryGroup {
+    padding: 15px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px;
+    border-color: #F5F5F5;
+    border-bottom-style: solid;
+}
+.glossaryListItem {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 770px) {
+    .languageSelect {
+        position: relative;
+        left: 50px;
+        top: 50px;
+        z-index: 0;
+    }
+
+    .glossaryHeaderContainer {
+        margin-left: 180px;
+        margin-right: 180px;
+        margin-bottom: 60px;
+    }
+    .glossaryList {
+        margin: 0;
+        column-count: 6;
+        column-gap: 40px;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        list-style-type: none;
+    }
+    .searchContainer {
+        background-color: #F5F5F5;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top:44px;
+        padding-bottom:44px;
+    }
+
+    
+    .logoContainer {
+        position:relative;
+        left: 10%;
+        top: 50%;
+        -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        cursor: pointer;
+    }
+    .navigationContainer {
+        position: relative;
+        top: 50%;
+        left: 70%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 72px;
+        width: fit-content;
+    }
+    .mobileSearch {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .navigationExpandMenu {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    .navigationExpandButton {
+        visibility: hidden;
+        height: 0px;
+    }
+}
+@media only screen and (max-width: 769px) {
+    .languageSelect {
+        position: relative;
+        top: 10px;
+        left: 70%;
+        z-index: 0;
+    }
+    .glossaryHeaderContainer {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 60px;
+    }
+    .glossaryList { 
+        margin: 0;
+        column-count: 3;
+        column-gap: 40px;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        list-style-type: none;
+    }
+    .searchContainer {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    
+    .logoContainer {
+        position:absolute;
+        left: 0%;
+    }
+    .navigationContainer {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+    .mobileSearch {
+        position:relative;
+        left: 70px;
+        top: 50%;
+        background-color: #ffffff;
+        width: 230px;
+        padding: 8px 15px 8px 15px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        border: 1px solid transparent;
+        border-color: #dbdbdb;
+        border-radius: 290486px;
+        box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+        -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+    }
+
+    .navigationExpandButton {
+        position:absolute;
+        top: 36px;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        display: block;
+        height: 3.25rem;
+        width: 3.25rem;
+        right: 0px;
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        outline: inherit;
+    }
+
+    .navigationExpandButtonIsOpen {
+        position:absolute;
+        top: 36px;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        display: block;
+        height: 3.25rem;
+        width: 3.25rem;
+        right: 0px;
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        outline: inherit;
+    }
+    
+    .navigationExpandButton span {
+        top: calc(50% - 6px);background-color: currentColor;
+        display: block;
+        height: 1px;
+        left: calc(50% - 8px);
+        position: absolute;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        transition-duration: 86ms;
+        transition-timing-function: ease-out;
+        width: 16px;
+    }
+    
+    .navigationExpandButtonIsOpen span {
+        top: calc(50% - 6px);background-color: currentColor;
+        display: block;
+        height: 1px;
+        left: calc(50% - 8px);
+        position: absolute;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        transition-duration: 86ms;
+        transition-timing-function: ease-out;
+        width: 16px;
+    }
+
+    .navigationExpandButton span:nth-child(1) {
+        top: calc(50% - 6px);
+    }
+    .navigationExpandButton span:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+    .navigationExpandButton span:nth-child(3) {
+        top: calc(50% + 4px);
+    }
+
+    .navigationExpandButtonIsOpen span:nth-child(1) {
+        top: calc(50% - 6px);
+    }
+    .navigationExpandButtonIsOpen span:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+    .navigationExpandButtonIsOpen span:nth-child(3) {
+        top: calc(50% + 4px);
+    }
+
+    .navigationExpandButtonIsOpen span:nth-child(1) {
+        -webkit-transform: translateY(5px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
+    }
+    .navigationExpandButtonIsOpen span:nth-child(2) {
+        opacity: 0;
+    }
+    .navigationExpandButtonIsOpen span:nth-child(3) {
+        -webkit-transform: translateY(-5px) rotate(-45deg);
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .navigationExpandIcon {
+        color:#ffffff !important;
+    }
+
+    .navigationExpandMenu {
+        position: absolute;
+        top: 72px;
+        width: 100%;
+        background-color: #200C49;
+        z-index: 1;
+    }
+    .navigationExpandMenuOption {
+        height: fit-content;
+        width: 100%;
+        color: #ffffff;
+        text-indent: 20pt;
+        cursor:pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 0;
+    }
+    .navigationExpandMenuOption:hover {
+        background-color: #361870;
+        height: fit-content;
+        width: 100%;
+        color: #e0e0e0;
+        text-indent: 20pt;
+        cursor:pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 0;
+    }
+}
+
+.topSpacing {
+    width: 100%;
+    height: 72px;
+}
+
+.navigationBar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 72px;
+    background-color: #200C49;
+    display: flex;
+    flex-direction: row;
+}
+.logoLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+}
+.logo {
+    height: 48px;
+    width: auto;
+}
+.navigationButton {
+    padding-left: 10px;
+    padding-right: 10px;
+    color:white;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.toTopButton {
+    all: unset;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.toTopIcon {
+    width: 48px;
+    height: auto;
+}
