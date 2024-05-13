@@ -10,15 +10,12 @@ import h5Tutorial2 from '../image/btn-phone-home-green-empty.png';
 import NavBar from '../../../common/view/NavBar';
 import { googleStoreLink } from '../../../constant/Constant';
 import {
-    server_type as serverType,
     h5_version_url_1 as h5VersionUrl1,
     h5_version_url_2 as h5VersionUrl2,
     android_download_url as androidDownloadUrl,
-    android_huawei_download_url as androidHuaweiDownloadUrl
 } from '../../../config.json';
 import DownloadModalForIOS from '../view/DownloadIOSModal';
 import Qrcode from '../../../view/Qrcode';
-import DownloadButton from '../view/DownloadButton';
 import getLocalDownloadVersion from '../../../utils/getLocalDownloadVersion';
 import { useLocalization } from '../../../localization/controller/localizationContext';
 import LanguageSelect from '../../../common/view/LanguageSelect';
@@ -35,7 +32,6 @@ const HomeScreen = () => {
     const { switchLocale } = useLocalization();
     const [localDownloadUrl, setLocalDownloadUrl] = useState('');
     const [qrcodeDownloadUrl, setQrcodeDownloadUrl] = useState('')
-    const [huaweiDownloadUrl, setHuaweiDownloadUrl] = useState('')
     const { getCurrentLocale } = useLocalization();
     const currentLocale = getCurrentLocale();
 
@@ -70,17 +66,6 @@ const HomeScreen = () => {
                 console.log(`error .meesage :: ${error.message}`);
             });
 
-        if (serverType === 'staging') {
-            fetch(androidHuaweiDownloadUrl)
-                .then((response) => response.json())
-                .then((data) => {
-                    const { ok, result } = data;
-                    if (ok) {
-                        setHuaweiDownloadUrl(result.cdn_download_url)
-                    }
-                // TODO: 缺少错误反馈，之后加
-                });
-        }
         document.title = formatMessage({ id: 'laiwan' });
     }, []);
 
@@ -285,14 +270,6 @@ const HomeScreen = () => {
                                     />
                                 </div>
                             </div>
-                            {serverType === 'staging' ?
-                                <DownloadButton
-                                    href={huaweiDownloadUrl}
-                                    title={formatMessage({ id: 'home_page_huawei_title' })}
-                                    subtitle={formatMessage({ id: 'home_page_huawei_subtitle' })}
-                                />
-                                : <></>
-                            }
                         </div>
                         <span>
                             {`${formatMessage({ id: 'home_page_version' })}` +
