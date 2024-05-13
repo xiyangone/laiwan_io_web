@@ -113,30 +113,28 @@ const HomeScreen = () => {
                             alt="应用截图"
                         />
                     </div>
-                    <div>
-                        <div>
-                            <div className={styles.NewsContainer}>
-                                <img
-                                    className={styles.NewsIcon}
-                                    src={newsIcon}
-                                    alt="H5 版上线"
-                                />
-                                <div className={styles.NewsBoxTrailTitle}>
-                                    <div className={styles.NewsBoxTitle}>
-                                        <div className={styles.NewsTextContainerTitle}>
-                                            <p className={styles.NewsText}>
-                                                {formatMessage({ id: 'home_page_news_title' })}
-                                            </p>
-                                        </div>
+                    <div className={styles.infoContent}>
+                        <div className={styles.NewsContainer}>
+                            <img
+                                className={styles.NewsIcon}
+                                src={newsIcon}
+                                alt="H5 版上线"
+                            />
+                            <div className={styles.NewsBoxTrailTitle}>
+                                <div className={styles.NewsBoxTitle}>
+                                    <div className={styles.NewsTextContainerTitle}>
+                                        <p className={styles.NewsText}>
+                                            {formatMessage({ id: 'home_page_news_title' })}
+                                        </p>
                                     </div>
                                 </div>
-                                <div className={styles.NewsBoxTrail} style={{zIndex: 0, marginTop: '-1px'}}>
-                                    <div className={styles.NewsBox}>
-                                        <div className={styles.NewsTextContainer}>
-                                            <p className={styles.NewsText}>
-                                                {formatMessage({ id: 'home_page_news_subtitle' })}
-                                            </p>
-                                        </div>
+                            </div>
+                            <div className={styles.NewsBoxTrail} style={{zIndex: 0, marginTop: '-1px'}}>
+                                <div className={styles.NewsBox}>
+                                    <div className={styles.NewsTextContainer}>
+                                        <p className={styles.NewsText}>
+                                            {formatMessage({ id: 'home_page_news_subtitle' })}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -286,10 +284,6 @@ const HomeScreen = () => {
                                         iconAlt="本地下载"
                                     />
                                 </div>
-                                <span>
-                                    {`${formatMessage({ id: 'home_page_version' })}` +
-                                    `: ${getLocalDownloadVersion(localDownloadUrl)}`}
-                                </span>
                             </div>
                             {serverType === 'staging' ?
                                 <DownloadButton
@@ -300,6 +294,10 @@ const HomeScreen = () => {
                                 : <></>
                             }
                         </div>
+                        <span>
+                            {`${formatMessage({ id: 'home_page_version' })}` +
+                            `: ${getLocalDownloadVersion(localDownloadUrl)}`}
+                        </span>
                     </div>
                     <div className={styles.qrcodeContainer}>
                         <Qrcode downloadUrl={qrcodeDownloadUrl} />

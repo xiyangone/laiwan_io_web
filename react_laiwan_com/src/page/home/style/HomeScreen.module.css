@@ -85,7 +85,8 @@
     font-weight: 600;
     font-size: 3.75rem;
     line-height: 1;
-    width: 700px
+    width: 700px;
+    max-width: 105%;
 }
 
 .subtitle {
@@ -136,7 +137,7 @@
     flex-direction: column;
     align-items: center;
     justify-content:space-around;
-    margin-top: 35px;
+    margin-top: 1rem;
 }
 
 .tutorialContainer {
@@ -343,21 +344,56 @@
     max-width: 600px;
 }
 
+
 @media screen and (max-width: 1400px) {
     .screenshotContainer {
         display: none;
     }
 
     .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 1400px;
+        margin: 0 auto;
         padding: 0 1.1rem;
     }
 
     .content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
         padding: 0 1rem;
+    }
+
+    .downloadMethod {
+        width: 1200px;
     }
 }
 
 @media screen and (max-width: 800px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        max-width: 100%;
+    }
+
     .qrcodeContainer {
         display: none;
     }
@@ -381,4 +417,44 @@
     .buttonTutorialText_green {
         font-size: 6pt;
     }
+
+    .downloadMethod {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 2rem;
+        align-items: center;
+        max-width: 80%;
+        margin-top: 1rem;
+    }
+
+    .infoContent {
+        max-width: 100%;
+    }
+
+    .NewsTextContainerTitle {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 10pt;
+    }
+
+    .NewsTextContainer {
+        font-size: 10pt;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        .downloadMethod {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 0.5rem;
+            align-items: center;
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
 }
