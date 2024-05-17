@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { injectIntl, FormattedMessage, IntlProvider } from 'react-intl';
+import Cookies from 'js-cookie';
 import './view/style/tutorial.css';
 import TemporaryDrawer from './TemporaryDrawer';
 import logo from './source/logo.png';
@@ -17,7 +18,6 @@ import {
     h5_version_url_1 as h5VersionUrl1,
     h5_version_url_2 as h5VersionUrl2,
 } from './config.json';
-import LanguageSelect from './common/view/LanguageSelect';
 import { LocalizationContext } from './localization/controller/localizationContext';
 
 import en from './localization/locales/en.json';
@@ -69,7 +69,7 @@ class Tutorial extends Component {
                         />
                     </p>
                 </a>
-                <a href="/glossary">
+                <a href="/#/glossary">
                     <p className="tutorial_nav_subtitle">
                         <FormattedMessage
                             id="navbar_terminology_list"
@@ -85,13 +85,11 @@ class Tutorial extends Component {
         const { show } = this.state;
         const { switchLocale, locale, getCurrentLocale } = this.context;
 
+        switchLocale(Cookies.get('language'));
+
         if (!show) {
             return <div />;
         }
-
-        const handleLanguageChange = (event) => {
-            switchLocale(event.target.value);
-        };
 
         return (
             <LocalizationContext.Provider value={{ locale, switchLocale, getCurrentLocale }}>
@@ -103,11 +101,6 @@ class Tutorial extends Component {
                             this._renderPcNavigator()
                         )}
                         <div className="tutorial_content">
-                            <div>
-                                <div>
-                                    <LanguageSelect handleChange={handleLanguageChange} />
-                                </div>
-                            </div>
                             <div className="tutorial_container">
                                 <p className="can_not_download_text">
                                     &nbsp;&nbsp;&nbsp;&nbsp;

@@ -18,7 +18,7 @@ export const LocalizationContext = createContext();
 export const useLocalization = () => useContext(LocalizationContext);
 
 export const LocalizationProvider = ({ children }) => {
-    const [locale, setLocale] = useState('en');
+    const [locale, setLocale] = useState('zh');
 
     const switchLocale = (newLocale) => setLocale(newLocale);
 

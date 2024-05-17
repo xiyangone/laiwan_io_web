@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
+import Cookies from 'js-cookie';
 import { useLocalization } from '../../../localization/controller/localizationContext';
 
 import FooterBar from '../view/FooterBar';
@@ -23,14 +24,33 @@ const languages = {
 
 const Glossary = () => {
     const { formatMessage } = useIntl();
-    const { getCurrentLocale } = useLocalization();
+    const { getCurrentLocale, switchLocale } = useLocalization();
     const currentLocale = getCurrentLocale();
 
     const [mobileNavigationIsOpen, setMobileNavigationIsOpen] = useState(false);
 
     const [selectedLetter, setSelectedLetter] = useState('');
     const [searchText, setSearchText] = useState('');
-    const [terms] = useState(JSON.parse(JSON.stringify(languages[currentLocale])));
+    const [terms, setTerms] = useState(JSON.parse(JSON.stringify(languages[currentLocale])));
+
+
+    const setLocale = (locale) => {
+        Cookies.set('language', locale, { expires: 365, SameSite: 'strict' });
+        switchLocale(locale);
+        setTerms(JSON.parse(JSON.stringify(languages[locale])));
+    }
+
+    useEffect(() => {
+        const savedLanguage = Cookies.get('language');
+        if (savedLanguage) {
+            setLocale(savedLanguage);
+        }
+        else {
+            setLocale('zh');
+        }
+
+        document.title = formatMessage({ id: 'laiwan' });
+    }, []);
 
     const getChars = (set) => {
         let lastChar = '';

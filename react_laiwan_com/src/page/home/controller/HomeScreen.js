@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
+import Cookies from 'js-cookie';
 import styles from '../style/HomeScreen.module.css';
 import phoneScreenshot from '../image/img-phone.png';
 import h5Version1 from '../image/btn-h-5-blue-empty.png';
@@ -53,6 +54,23 @@ const HomeScreen = () => {
 
     changeScreenshotLocale();
 
+    const setLocale = (locale) => {
+        Cookies.set('language', locale, { expires: 365, SameSite: 'strict' });
+        switchLocale(locale);
+    }
+
+    const handleLanguageChange = (event) => {
+        setLocale(event.target.value);
+    };
+
+    const getLocaleCookie = () => {
+        const savedLanguage = Cookies.get('language');
+        if (savedLanguage) {
+            return savedLanguage;
+        }
+        return 'zh';
+    }
+
     useEffect(() => {
         fetch(androidDownloadUrl, { cache: 'no-cache' })
             .then((response) => response.json())
@@ -66,6 +84,14 @@ const HomeScreen = () => {
                 console.log(`error .meesage :: ${error.message}`);
             });
 
+        const savedLanguage = Cookies.get('language');
+        if (savedLanguage) {
+            setLocale(savedLanguage);
+        }
+        else {
+            setLocale('zh');
+        }
+
         document.title = formatMessage({ id: 'laiwan' });
     }, []);
 
@@ -74,17 +100,13 @@ const HomeScreen = () => {
         changeScreenshotLocale();
     }, [currentLocale]);
 
-    const handleLanguageChange = (event) => {
-        switchLocale(event.target.value);
-    };
-
     return (
         <div className={styles.background}>
             <div className={styles.container}>
                 <NavBar />
                 <div className={styles.navList}>
                     <div className={styles.language} >
-                        <LanguageSelect handleChange={handleLanguageChange} currentLanguage={currentLocale}/>
+                        <LanguageSelect handleChange={handleLanguageChange} currentLanguage={getLocaleCookie()}/>
                     </div>
                 </div>
                 <div className={styles.content}>
