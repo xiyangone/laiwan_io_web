@@ -109,5 +109,9 @@ ENV/
 *.retry
 .DS_Store
 
+# Node.js
+package-lock.json
+node_modules/
+
 *,cover
 *.coverage

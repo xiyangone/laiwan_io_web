@@ -1,12 +1,14 @@
 {
     "transform": {
-        "^.+.[t|j]sx?$": "babel-jest"
+        "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "testTimeout": 20000,
     "verbose": true,
     "bail": 0,
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
-        ".+\\.(css|scss|png|jpg|svg)$": "jest-transform-stub"
-    }
+        "^.+\\.(css|less|scss|sass)$": "identity-obj-proxy",
+        ".+\\.(png|jpg|jpeg|gif|svg)$": "jest-transform-stub"
+    },
+    "setupFilesAfterEnv": ["<rootDir>/__test__/setup.js"]
 }

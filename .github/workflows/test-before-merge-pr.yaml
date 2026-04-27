@@ -17,7 +17,7 @@ jobs:
                   node-version: '14.x'
             # 安装依赖
             - name: Installing Dependencies
-              run: cd react_laiwan_com && yarn
+              run: cd react_laiwan_com && yarn --ignore-engines
             # 配置production 环境
             - name: Set production config
               run: cd react_laiwan_com/src && rm config.json && cp config_production.json config.json
