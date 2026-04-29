@@ -63,14 +63,17 @@ npm run test:visual:watch:docker
 - Docker 会在容器内启动 webpack dev server 和 watcher
 - 默认把截图写到挂载目录 `visual_regression/test`
 - 默认用例名为 `docker-watch.spec.js`
+- 默认开启单次捕获模式，首次有效变化后自动退出
 
 ## 当前系统行为
 
 - 启动后先等待页面稳定，再保存第一张稳定帧
 - 后续只在页面进入新的稳定状态后才继续保存下一张图
+- Docker watcher 默认在首次有效变化后退出，因此单次验证只保留当前 case 的 3 个核心产物
 - Playwright 正式回归会读取 `baseline-*.png`
-- watcher 会为显著变化额外生成 `diff-*.png`
+- watcher 会为显著变化额外生成与稳定帧同尺寸的 `diff-*.png`
 - watcher 不再生成 `before_*`、`after_*`、`.json`
+- watcher 启动时会自动清理当前 case 的 `.1/.2/.3...` 稳定帧与 `diff-*.png`
 - 同一时间只允许一个 watcher 实例运行
 - 会忽略动态类 `_1zAX1KISmCqHJI2_KxdiQu`
 - 对于低于阈值的微小变化，默认不保存新图
@@ -91,6 +94,8 @@ npm run test:visual:watch:docker
   - 可选，逗号分隔的动态类忽略列表
 - `VISUAL_MIN_DIFF_PIXELS`
   - 可选，控制最小差异像素阈值
+- `VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE`
+  - 可选，控制首次有效变化后是否自动退出；Docker 默认开启，本地连续监听可显式设为 `0`
 
 ## 当前实际说明
 

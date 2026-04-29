@@ -146,7 +146,11 @@ const HomeScreen = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.title}>{formatMessage({ id: 'home_page_game_community' })}</div>
+                        <div className={styles.title}>
+                            <span className={styles.titleBadge}>
+                                {formatMessage({ id: 'home_page_game_community' })}
+                            </span>
+                        </div>
                         <div className={styles.subtitle}>{formatMessage({ id: 'home_page_lets_play' })}</div>
                         <div className={styles.downloadMethod}>
                             <div className={styles.tutorialContainer}>

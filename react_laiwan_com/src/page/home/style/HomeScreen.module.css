@@ -89,6 +89,15 @@
     max-width: 105%;
 }
 
+.titleBadge {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    background-color: #6a0dad;
+    color: #fff;
+}
+
 .subtitle {
     margin-top: 0.5rem;
     font-weight: normal;

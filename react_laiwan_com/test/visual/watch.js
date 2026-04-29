@@ -74,6 +74,19 @@ let devServerProcess = null;
 let shuttingDown = false;
 let lockFilePath = null;
 
+function shouldExitOnFirstCapture(env = process.env) {
+    const raw = env.VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE;
+
+    if (raw === undefined) {
+        return env.VISUAL_DOCKER === '1';
+    }
+
+    const normalized = `${raw}`.trim().toLowerCase();
+    return normalized !== '0' && normalized !== 'false';
+}
+
+const EXIT_ON_FIRST_CAPTURE = shouldExitOnFirstCapture(process.env);
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -193,7 +206,7 @@ function escapeRegex(value) {
 }
 
 function cleanupLegacyArtifacts(outputRoot) {
-    const legacyPattern = /(^baseline_|^before_|^after_|^diff_.*\.png$|\.json$)/i;
+    const legacyPattern = /(^baseline[-_]|^before[-_]|^after[-_]|^diff_.*\.png$|\.json$)/i;
 
     for (const entry of fs.readdirSync(outputRoot, { withFileTypes: true })) {
         if (!entry.isFile()) {
@@ -201,6 +214,20 @@ function cleanupLegacyArtifacts(outputRoot) {
         }
 
         if (legacyPattern.test(entry.name)) {
+            fs.rmSync(path.join(outputRoot, entry.name), { force: true });
+        }
+    }
+}
+
+function cleanupCaseDiffArtifacts(outputRoot, casePrefix) {
+    const diffPattern = new RegExp(`^diff-${escapeRegex(casePrefix)}-\\d+-.*\\.png$`, 'i');
+
+    for (const entry of fs.readdirSync(outputRoot, { withFileTypes: true })) {
+        if (!entry.isFile()) {
+            continue;
+        }
+
+        if (diffPattern.test(entry.name)) {
             fs.rmSync(path.join(outputRoot, entry.name), { force: true });
         }
     }
@@ -405,6 +432,7 @@ async function main() {
     ensureDir(outputRoot);
     cleanupLegacyArtifacts(outputRoot);
     cleanupCaseSequenceArtifacts(outputRoot, casePrefix);
+    cleanupCaseDiffArtifacts(outputRoot, casePrefix);
     acquireSingleInstanceLock(path.join(outputRoot, '.visual-watch.lock'));
 
     console.log(`🌐 打开页面: ${TARGET_URL}`);
@@ -524,17 +552,37 @@ async function main() {
             );
             console.log(`🖼️ 已保存差异图: ${diffPath}`);
         }
-        console.log('✅ 已更新稳定帧基线，继续监听。');
+        if (EXIT_ON_FIRST_CAPTURE) {
+            console.log('🛑 单次捕获模式已完成，准备退出 watcher。');
+        } else {
+            console.log('✅ 已更新稳定帧基线，继续监听。');
+        }
         console.log('');
 
         baselineComparable = stableComparable;
         baselineBuffer = candidateBuffer;
+
+        if (EXIT_ON_FIRST_CAPTURE) {
+            break;
+        }
     }
+
+    await cleanup(browser);
 }
 
-main().catch(async (error) => {
-    console.error('❌ 脚本执行失败:');
-    console.error(error);
-    await cleanup();
-    process.exit(1);
-});
+if (require.main === module) {
+    main().catch(async (error) => {
+        console.error('❌ 脚本执行失败:');
+        console.error(error);
+        await cleanup();
+        process.exit(1);
+    });
+}
+
+module.exports = {
+    cleanupCaseDiffArtifacts,
+    cleanupCaseSequenceArtifacts,
+    cleanupLegacyArtifacts,
+    main,
+    shouldExitOnFirstCapture,
+};

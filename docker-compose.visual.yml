@@ -10,6 +10,7 @@ services:
       PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
       VISUAL_DOCKER: "1"
       VISUAL_WATCH_HEADLESS: "1"
+      VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE: "1"
       VISUAL_CASE_FILE: visual_regression/test/docker-watch.spec.js
       CHOKIDAR_USEPOLLING: "1"
       WATCHPACK_POLLING: "true"

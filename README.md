@@ -49,7 +49,10 @@ $ npm run test:visual:watch:docker
 说明：
 - watcher 启动后会先保存第一张稳定帧，文件名类似 `docker-watch.1.png`
 - 当页面出现稳定的文字、样式或布局变化后，会继续生成 `docker-watch.2.png`
-- 如果差异像素达到阈值，会额外生成一张 `diff-*.png`
+- 如果差异像素达到阈值，会额外生成一张与稳定帧同尺寸的 `diff-*.png`
+- Docker watcher 默认开启单次捕获模式，首次有效变化后自动退出
+- 单次验证默认只保留 3 个当前 case 产物：`docker-watch.1.png`、`docker-watch.2.png`、最新一张 `diff-*.png`
+- 重启 Docker watcher 时会自动清理当前 case 的旧 `diff-*.png`
 - 详细约定见 `visual_regression/README.md`
 
 ## 如何发布到 production
