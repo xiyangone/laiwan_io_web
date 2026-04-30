@@ -9,7 +9,10 @@ test('首页导航语言切换与英文状态视觉回归', async ({ page }) => 
     await page.goto('/#/');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('select');
+    await page.locator('select').selectOption('en');
     await expect(page.getByRole('combobox')).toBeVisible();
+    await expect(page.getByRole('combobox')).toHaveValue('en');
+    await expect(page.getByText('Home page', { exact: true })).toBeVisible();
 
     await stabilizePage(page);
     const { buffer } = await captureTimestampedScreenshotBuffer(page, 'home-nav-en');
