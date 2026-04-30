@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const { createDiffImageBuffer } = require('../helpers/screenshot');
+const { COMMENT_MARKER } = require('./review-comment-constants');
 
-const COMMENT_MARKER = '<!-- visual-review-comment -->';
 const EXPECTED_SUFFIX = '-expected.png';
 const ACTUAL_SUFFIX = '-actual.png';
 const DIFF_SUFFIX = '-diff.png';

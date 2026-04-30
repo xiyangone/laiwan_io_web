@@ -67,105 +67,23 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           VISUAL_REVIEW_ARTIFACT_BRANCH: visual-review-artifacts
-        run: |
-          set -eu
-          publish_dir="$(mktemp -d)"
-          repo_url="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-
-          if git clone --depth 1 --branch "$VISUAL_REVIEW_ARTIFACT_BRANCH" "$repo_url" "$publish_dir"; then
-            echo "Using existing $VISUAL_REVIEW_ARTIFACT_BRANCH branch."
-          else
-            git init "$publish_dir"
-            cd "$publish_dir"
-            git checkout --orphan "$VISUAL_REVIEW_ARTIFACT_BRANCH"
-            git remote add origin "$repo_url"
-          fi
-
-          cd "$publish_dir"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          run_target="pr-${PR_NUMBER}/run-${GITHUB_RUN_ID}"
-          latest_target="pr-${PR_NUMBER}/latest"
-          rm -rf "$run_target" "$latest_target"
-          mkdir -p "$run_target" "$latest_target"
-          cp -R "$GITHUB_WORKSPACE/visual-review/." "$run_target/"
-          cp -R "$GITHUB_WORKSPACE/visual-review/." "$latest_target/"
-
-          git add .
-          if git diff --cached --quiet; then
-            echo "No visual review image changes to publish."
-          else
-            git commit -m "chore: update visual review artifacts for PR #${PR_NUMBER}"
-            git push origin "HEAD:$VISUAL_REVIEW_ARTIFACT_BRANCH"
-          fi
+        run: node visual_regression/scripts/publish-review-artifacts.js
 
       - name: Upsert visual review comment
         if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const marker = '<!-- visual-review-comment -->';
-            const body = fs.readFileSync('visual-review/summary.md', 'utf8');
-            const { owner, repo } = context.repo;
-            const issue_number = context.issue.number;
-            const comments = await github.rest.issues.listComments({
-              owner,
-              repo,
-              issue_number,
-              per_page: 100,
-            });
-            const existing = comments.data.find((comment) => comment.body && comment.body.includes(marker));
-
-            if (existing) {
-              await github.rest.issues.updateComment({
-                owner,
-                repo,
-                comment_id: existing.id,
-                body,
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number,
-                body,
-              });
-            }
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          COMMENT_BODY_PATH: visual-review/summary.md
+        run: node visual_regression/scripts/upsert-review-comment.js
 
       - name: Upsert visual pass comment
         if: github.event_name == 'pull_request' && steps.visual.outcome == 'success'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const marker = '<!-- visual-review-comment -->';
-            const body = `${marker}\n## 视觉回归 Diff\n\n✅ 视觉回归通过，无 diff。`;
-            const { owner, repo } = context.repo;
-            const issue_number = context.issue.number;
-            const comments = await github.rest.issues.listComments({
-              owner,
-              repo,
-              issue_number,
-              per_page: 100,
-            });
-            const existing = comments.data.find((comment) => comment.body && comment.body.includes(marker));
-
-            if (existing) {
-              await github.rest.issues.updateComment({
-                owner,
-                repo,
-                comment_id: existing.id,
-                body,
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number,
-                body,
-              });
-            }
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          VISUAL_REVIEW_STATUS: pass
+        run: node visual_regression/scripts/upsert-review-comment.js
 
       - name: Fail on visual diff
         if: steps.visual.outcome == 'failure'
