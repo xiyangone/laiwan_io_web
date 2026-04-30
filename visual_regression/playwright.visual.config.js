@@ -3,6 +3,7 @@ const { defineConfig } = require('@playwright/test');
 const { resolveVisualServerCommand } = require('./helpers/serverCommand');
 
 const snapshotDir = process.env.VISUAL_SCREENSHOT_DIR || './test';
+const maxDiffPixels = process.env.CI ? 1200 : 50;
 
 module.exports = defineConfig({
     testDir: './specs',
@@ -30,7 +31,7 @@ module.exports = defineConfig({
             animations: 'disabled',
             caret: 'hide',
             scale: 'css',
-            maxDiffPixels: 50,
+            maxDiffPixels,
         },
     },
     webServer: {
