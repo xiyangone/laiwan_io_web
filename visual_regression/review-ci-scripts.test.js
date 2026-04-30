@@ -40,10 +40,19 @@ describe('upsertReviewComment', () => {
             env: {
                 COMMENT_BODY_PATH: 'summary.md',
                 VISUAL_REVIEW_APPROVED: 'false',
+                GITHUB_REPOSITORY: 'xiyangone/laiwan_io_web',
+                GITHUB_RUN_ID: '25160001688',
+                GITHUB_SERVER_URL: 'https://github.com',
+                GITHUB_SHA: 'a5448314d71a4240b63657c0fdcdb8a43939bb94',
             },
             readFile: () => '<!-- visual-review-comment -->\n## 视觉回归 Diff\n\n### home-nav-zh',
         });
 
+        expect(body).toContain('### 本轮运行');
+        expect(body).toContain('Run ID: `25160001688`');
+        expect(body).toContain('Commit: `a5448314`');
+        expect(body).toContain('https://github.com/xiyangone/laiwan_io_web/actions/runs/25160001688');
+        expect(body.indexOf('### 本轮运行')).toBeLessThan(body.indexOf('### home-nav-zh'));
         expect(body).toContain('`visual-approved`');
         expect(body).toContain('CI 保持绿色');
         expect(body).toContain('等待人工或 AI 审阅');
