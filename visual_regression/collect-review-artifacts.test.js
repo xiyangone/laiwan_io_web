@@ -174,6 +174,6 @@ describe('collectReviewArtifacts', () => {
             requireCases: true,
         })).toThrow('Visual regression failed, but no reviewable screenshot diff artifacts were found.');
 
-        expect(fs.readFileSync(path.join(outputDir, 'summary.md'), 'utf8')).toContain('未找到失败视觉用例的截图产物。');
+        expect(fs.readFileSync(path.join(outputDir, 'summary.md'), 'utf8')).toContain('未找到视觉变更截图产物。');
     });
 });

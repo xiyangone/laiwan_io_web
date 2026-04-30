@@ -48,11 +48,11 @@ function buildSummary({ cases, repo, prNumber, runId, artifactBranch }) {
     ];
 
     if (cases.length === 0) {
-        lines.push('未找到失败视觉用例的截图产物。');
+        lines.push('未找到视觉变更截图产物。');
         return `${lines.join('\n')}\n`;
     }
 
-    lines.push(`本次检测到 ${cases.length} 个失败视觉用例；以下图片均为整张浏览器截图，只展示失败用例。`);
+    lines.push(`本次检测到 ${cases.length} 个视觉变更用例；以下图片均为整张浏览器截图，只展示发生视觉变化的用例。`);
     lines.push('');
 
     cases.forEach((visualCase) => {
