@@ -11,6 +11,12 @@ const {
     copyReviewArtifacts,
     resolvePublishTargets,
 } = require('./scripts/publish-review-artifacts');
+const {
+    appendCodeContextToSummary,
+    buildCodeContextMarkdown,
+    filterChangedFilesForCase,
+    summarizePatch,
+} = require('./scripts/collect-pr-code-context');
 
 describe('upsertReviewComment', () => {
     test('builds the pass summary with the stable marker', () => {
@@ -134,5 +140,93 @@ describe('publishReviewArtifacts helpers', () => {
         expect(fs.readFileSync(path.join(publishDir, 'pr-1', 'run-456', 'home-nav-en', 'diff.png'), 'utf8')).toBe('diff');
         expect(fs.readFileSync(path.join(publishDir, 'pr-1', 'latest', 'home-nav-en', 'diff.png'), 'utf8')).toBe('diff');
         expect(fs.existsSync(path.join(publishDir, 'pr-1', 'latest', 'stale.png'))).toBe(false);
+    });
+});
+
+describe('collect PR code context helpers', () => {
+    let tempDir;
+
+    beforeEach(() => {
+        tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'visual-code-context-'));
+    });
+
+    afterEach(() => {
+        fs.rmSync(tempDir, { recursive: true, force: true });
+    });
+
+    const changedFiles = [
+        {
+            filename: 'react_laiwan_com/src/page/home/style/HomeScreen.module.css',
+            patch: '@@ -1,3 +1,3 @@\n-.title { color: white; }\n+.title { color: red; }\n context',
+        },
+        {
+            filename: 'react_laiwan_com/src/page/glossary/controller/style/glossaryStyle.module.css',
+            patch: '@@ -10,7 +10,7 @@\n-.glossaryHeader { font-size: 60px; }\n+.glossaryHeader { font-size: 64px; }',
+        },
+        {
+            filename: 'react_laiwan_com/src/page/h5-tutorial/style/H5Tutorial.module.css',
+            patch: '@@ -5,7 +5,7 @@\n-.title { margin: 1rem; }\n+.title { margin: 2rem; }',
+        },
+        {
+            filename: 'README.md',
+            patch: '@@ -1 +1 @@\n-old\n+new',
+        },
+    ];
+
+    test('matches changed files to each visual case family', () => {
+        expect(filterChangedFilesForCase('home-nav-en', changedFiles).map((file) => file.filename)).toEqual([
+            'react_laiwan_com/src/page/home/style/HomeScreen.module.css',
+        ]);
+        expect(filterChangedFilesForCase('glossary-page-zh', changedFiles).map((file) => file.filename)).toEqual([
+            'react_laiwan_com/src/page/glossary/controller/style/glossaryStyle.module.css',
+        ]);
+        expect(filterChangedFilesForCase('h5-tutorial-laiwan-life', changedFiles).map((file) => file.filename)).toEqual([
+            'react_laiwan_com/src/page/h5-tutorial/style/H5Tutorial.module.css',
+        ]);
+    });
+
+    test('summarizes patch hunks without unchanged context noise', () => {
+        expect(summarizePatch('@@ -1,3 +1,3 @@\n unchanged\n-old\n+new\n unchanged 2')).toBe('@@ -1,3 +1,3 @@\n-old\n+new');
+    });
+
+    test('builds markdown with fallback UI files when a case has no direct match', () => {
+        const markdown = buildCodeContextMarkdown({
+            caseNames: ['tutorial-page'],
+            changedFiles,
+        });
+
+        expect(markdown).toContain('#### 相关代码改动');
+        expect(markdown).toContain('react_laiwan_com/src/page/home/style/HomeScreen.module.css');
+        expect(markdown).toContain('react_laiwan_com/src/page/glossary/controller/style/glossaryStyle.module.css');
+        expect(markdown).not.toContain('README.md');
+    });
+
+    test('appends code context after matching case section in summary', () => {
+        const outputDir = path.join(tempDir, 'visual-review');
+        const summaryPath = path.join(outputDir, 'summary.md');
+
+        fs.mkdirSync(path.join(outputDir, 'glossary-page-zh'), { recursive: true });
+        fs.writeFileSync(summaryPath, [
+            '<!-- visual-review-comment -->',
+            '## 视觉回归 Diff',
+            '',
+            '### glossary-page-zh',
+            '| 修改前 | 修改后 | 差异 |',
+            '| --- | --- | --- |',
+            '| before | after | diff |',
+            '',
+        ].join('\n'));
+
+        appendCodeContextToSummary({
+            outputDir,
+            changedFiles,
+        });
+
+        const summary = fs.readFileSync(summaryPath, 'utf8');
+        expect(summary).toContain('### glossary-page-zh');
+        expect(summary).toContain('#### 相关代码改动');
+        expect(summary).toContain('glossaryStyle.module.css');
+        expect(summary).toContain('-.glossaryHeader { font-size: 60px; }');
+        expect(summary).toContain('+.glossaryHeader { font-size: 64px; }');
     });
 });
