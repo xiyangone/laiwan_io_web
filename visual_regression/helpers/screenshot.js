@@ -5,6 +5,8 @@ const { PNG } = require('pngjs');
 
 const pixelmatch = pixelmatchModule.default || pixelmatchModule;
 const DEFAULT_DYNAMIC_CLASS_NAMES = '_1zAX1KISmCqHJI2_KxdiQu';
+const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
+const DEFAULT_SCREENSHOT_DIR = path.join(PROJECT_ROOT, 'visual_regression', 'test');
 
 function formatTimestamp(date = new Date()) {
     const pad = (value, size = 2) => value.toString().padStart(size, '0');
@@ -15,11 +17,15 @@ function formatTimestamp(date = new Date()) {
 }
 
 function resolveScreenshotsDir() {
-    const configuredDir = process.env.VISUAL_SCREENSHOT_DIR || 'test/screenshots';
+    const configuredDir = process.env.VISUAL_SCREENSHOT_DIR;
+
+    if (!configuredDir) {
+        return DEFAULT_SCREENSHOT_DIR;
+    }
 
     return path.isAbsolute(configuredDir)
         ? configuredDir
-        : path.resolve(__dirname, '..', '..', '..', configuredDir);
+        : path.resolve(PROJECT_ROOT, configuredDir);
 }
 
 function normalizeDynamicClassNames(rawValue) {
@@ -32,6 +38,17 @@ function normalizeDynamicClassNames(rawValue) {
     }
 
     return [...new Set(`${source}`.split(',').map((item) => item.trim()).filter(Boolean))];
+}
+
+function sanitizeScreenshotName(name) {
+    return name
+        .toString()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/[<>:"/\\|?*\x00-\x1F]+/g, '-')
+        .replace(/-{2,}/g, '-')
+        .replace(/^-|-$/g, '')
+        || 'visual-shot';
 }
 
 function escapeClassName(className) {
@@ -106,18 +123,12 @@ async function captureTimestampedScreenshotBuffer(page, name) {
     };
 }
 
-function sanitizeScreenshotName(name) {
-    return name
-        .toString()
-        .trim()
-        .replace(/[^A-Za-z0-9_-]+/g, '-')
-        .replace(/-{2,}/g, '-')
-        .replace(/^-|-$/g, '')
-        || 'visual-shot';
+function buildDiffImagePath(outputDir, name) {
+    fs.mkdirSync(outputDir, { recursive: true });
+    return path.join(outputDir, `diff-${sanitizeScreenshotName(name)}.png`);
 }
 
-function buildTimestampedScreenshotPath(name, prefix = '') {
-    const screenshotsDir = resolveScreenshotsDir();
+function buildTimestampedScreenshotPath(name, prefix = '', screenshotsDir = resolveScreenshotsDir()) {
     fs.mkdirSync(screenshotsDir, { recursive: true });
 
     const normalizedPrefix = sanitizeScreenshotName(prefix);
@@ -127,13 +138,18 @@ function buildTimestampedScreenshotPath(name, prefix = '') {
     if (normalizedPrefix !== 'visual-shot') {
         segments.push(normalizedPrefix);
     }
+
     segments.push(normalizedName, formatTimestamp());
 
     return path.join(screenshotsDir, `${segments.join('-')}.png`);
 }
 
 function saveTimestampedScreenshotBuffer(buffer, name, prefix = '') {
-    const filePath = buildTimestampedScreenshotPath(name, prefix);
+    const screenshotsDir = resolveScreenshotsDir();
+    const filePath = prefix === 'diff'
+        ? buildDiffImagePath(screenshotsDir, name)
+        : buildTimestampedScreenshotPath(name, prefix, screenshotsDir);
+
     fs.writeFileSync(filePath, buffer);
     return filePath;
 }
@@ -312,12 +328,14 @@ function createDiffImageBuffer(beforeBuffer, afterBuffer, options = {}) {
         ? expandBounds(getPngDiffBounds(diff), width, height, diffPadding)
         : null;
 
+    const contextDiff = createContextDiffPng(after, diff);
+
     return {
         diffPixels,
         diffBuffer: PNG.sync.write(
             bounds
-                ? cropPngToBounds(diff, bounds)
-                : createContextDiffPng(after, diff)
+                ? cropPngToBounds(contextDiff, bounds)
+                : contextDiff
         ),
         bounds,
     };
@@ -356,16 +374,17 @@ function saveSnapshotDiffFromBuffer(snapshotName, actualBuffer, artifactName) {
 }
 
 module.exports = {
-    buildTimestampedScreenshotPath,
+    buildDiffImagePath,
     buildDynamicClassHideCss,
+    buildTimestampedScreenshotPath,
     captureTimestampedScreenshot,
     captureTimestampedScreenshotBuffer,
     createDiffImageBuffer,
     getBaselineSnapshotPath,
     isVisualDiffEnabled,
     normalizeDynamicClassNames,
-    saveTimestampedScreenshotBuffer,
     saveSnapshotDiffFromBuffer,
+    saveTimestampedScreenshotBuffer,
     sanitizeScreenshotName,
     stabilizePage,
     waitForFontsReady,

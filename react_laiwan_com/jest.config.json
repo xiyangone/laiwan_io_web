@@ -6,9 +6,6 @@
     "verbose": true,
     "bail": 0,
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": [
-        "<rootDir>/test/visual/"
-    ],
     "moduleNameMapper": {
         "^.+\\.(css|less|scss|sass)$": "identity-obj-proxy",
         ".+\\.(png|jpg|jpeg|gif|svg)$": "jest-transform-stub"

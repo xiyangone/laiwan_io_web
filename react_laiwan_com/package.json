@@ -5,14 +5,12 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --open --mode development --host=0.0.0.0 --disable-host-check --useLocalIp",
-        "start:visual": "cmd /c \"set NODE_OPTIONS=--openssl-legacy-provider&& webpack-dev-server --mode development --host 127.0.0.1 --disable-host-check --port 8080\"",
         "build": "webpack",
         "test": "jest",
         "lint": "eslint .",
-        "test:visual": "playwright test -c playwright.visual.config.js",
-        "test:visual:update": "playwright test -c playwright.visual.config.js --update-snapshots",
-        "test:visual:report": "playwright show-report playwright-report",
-        "test:visual:watch": "cmd /c \"set VISUAL_SCREENSHOT_DIR=..\\visual_regression\\test&& node test\\visual\\watch.js\""
+        "test:visual": "playwright test -c ../visual_regression/playwright.visual.config.js",
+        "test:visual:update": "playwright test -c ../visual_regression/playwright.visual.config.js --update-snapshots",
+        "test:visual:report": "playwright show-report ../playwright-report"
     },
     "husky": {
         "hooks": {

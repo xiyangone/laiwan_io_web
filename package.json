@@ -1,14 +1,13 @@
 {
+  "name": "laiwan_io_web",
+  "private": true,
   "scripts": {
-    "start:visual:watch": "sh ./start_visual_watch.sh",
-    "start:visual:watch:docker": "sh ./start_visual_watch_docker.sh",
-    "test:visual": "npm --prefix react_laiwan_com run test:visual",
-    "test:visual:docker": "docker compose -f docker-compose.visual.yml run --rm visual yarn test:visual",
-    "test:visual:update": "npm --prefix react_laiwan_com run test:visual:update",
-    "test:visual:update:docker": "docker compose -f docker-compose.visual.yml run --rm visual yarn test:visual:update",
-    "test:visual:watch": "npm --prefix react_laiwan_com run test:visual:watch",
-    "test:visual:watch:docker": "docker compose -f docker-compose.visual.yml run --rm visual sh -lc \"rm -f /workspace/visual_regression/test/.visual-watch.lock && node test/visual/watch.js\"",
-    "visual:docker:build": "docker compose -f docker-compose.visual.yml build visual"
+    "test:visual": "bun --cwd react_laiwan_com run test:visual",
+    "test:visual:docker": "docker compose -f deploy/docker-compose.visual.yml run --rm visual bun run test:visual",
+    "test:visual:update": "bun --cwd react_laiwan_com run test:visual:update",
+    "test:visual:update:docker": "docker compose -f deploy/docker-compose.visual.yml run --rm visual bun run test:visual:update",
+    "test:visual:watch:docker": "sh visual_regression/run-visual-watch.sh",
+    "visual:docker:build": "docker compose -f deploy/docker-compose.visual.yml build visual"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.1.5"

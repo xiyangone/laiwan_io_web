@@ -3,7 +3,7 @@ const {
     captureTimestampedScreenshotBuffer,
     saveSnapshotDiffFromBuffer,
     stabilizePage,
-} = require('./helpers/screenshot');
+} = require('../helpers/screenshot');
 
 test('首页导航语言切换与英文状态视觉回归', async ({ page }) => {
     await page.goto('/#/');

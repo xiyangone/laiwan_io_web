@@ -3,7 +3,7 @@ const {
     captureTimestampedScreenshotBuffer,
     saveSnapshotDiffFromBuffer,
     stabilizePage,
-} = require('./helpers/screenshot');
+} = require('../helpers/screenshot');
 
 test('术语表页面视觉回归且不显示语言下拉', async ({ page }) => {
     await page.goto('/#/glossary');

@@ -5,7 +5,9 @@ const { spawn, execFileSync } = require('child_process');
 const { chromium } = require('@playwright/test');
 const {
     getCasePrefix,
-    getSequenceScreenshotPath,
+    getStableScreenshotPath,
+    getWatchDiffImagePath,
+    normalizeWatchName,
 } = require('./helpers/watchNaming');
 const {
     resolveVisualServerCommand,
@@ -14,19 +16,25 @@ const {
     buildDynamicClassHideCss,
     createDiffImageBuffer,
     isVisualDiffEnabled,
-    saveTimestampedScreenshotBuffer,
     waitForFontsReady,
 } = require('./helpers/screenshot');
 
-const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
+const PROJECT_ROOT = path.resolve(__dirname, '..');
+const REACT_PROJECT_ROOT = path.join(PROJECT_ROOT, 'react_laiwan_com');
 const TARGET_URL = process.env.TARGET_URL || process.env.VISUAL_BASE_URL || 'http://127.0.0.1:8080/#/';
 const SERVER_URL = 'http://127.0.0.1:8080';
 const SERVER_START_TIMEOUT_MS = 120000;
 
 const WATCH_SELECTOR = process.env.WATCH_SELECTOR || 'body *';
-const OUTPUT_DIR = process.env.OUTPUT_DIR || process.env.VISUAL_SCREENSHOT_DIR || '../visual_regression/test';
-const VISUAL_CASE_FILE = process.env.VISUAL_CASE_FILE || '';
+const OUTPUT_DIR = process.env.OUTPUT_DIR || process.env.VISUAL_SCREENSHOT_DIR || 'visual_regression/test';
+const VISUAL_CHANGE_NAME = process.env.VISUAL_CHANGE_NAME
+    || (
+        process.env.VISUAL_CASE_FILE
+            ? getCasePrefix(process.env.VISUAL_CASE_FILE)
+            : 'visual-change'
+    );
 const MIN_DIFF_PIXELS = Number(process.env.VISUAL_MIN_DIFF_PIXELS || 80);
+const DEFAULT_WATCH_DIFF_PADDING = 80;
 const VIEWPORT_WIDTH = Number(process.env.VIEWPORT_WIDTH || 1440);
 const VIEWPORT_HEIGHT = Number(process.env.VIEWPORT_HEIGHT || 900);
 const WAIT_AFTER_CHANGE = Number(process.env.WAIT_AFTER_CHANGE || 800);
@@ -87,8 +95,69 @@ function shouldExitOnFirstCapture(env = process.env) {
 
 const EXIT_ON_FIRST_CAPTURE = shouldExitOnFirstCapture(process.env);
 
+function isEnabledFlag(rawValue, defaultValue = true) {
+    if (rawValue === undefined || rawValue === null) {
+        return defaultValue;
+    }
+
+    const normalized = `${rawValue}`.trim().toLowerCase();
+    return normalized !== '0' && normalized !== 'false';
+}
+
+function resolveWatchDiffOptions(env = process.env) {
+    const configuredPadding = Number(env.VISUAL_WATCH_DIFF_PADDING);
+    const diffPadding = Number.isFinite(configuredPadding) && configuredPadding >= 0
+        ? configuredPadding
+        : DEFAULT_WATCH_DIFF_PADDING;
+    return {
+        cropToDiff: isEnabledFlag(env.VISUAL_WATCH_DIFF_CROP, false),
+        diffPadding,
+    };
+}
+
+const WATCH_DIFF_OPTIONS = resolveWatchDiffOptions(process.env);
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function createWatchSessionState(initialComparable, initialBuffer) {
+    return {
+        initialComparable,
+        initialBuffer,
+        currentComparable: initialComparable,
+    };
+}
+
+function processWatchStableChange(state, stableComparable, candidateBuffer, options = {}) {
+    const {
+        minDiffPixels = MIN_DIFF_PIXELS,
+        diffOptions = WATCH_DIFF_OPTIONS,
+    } = options;
+    const {
+        diffPixels,
+        diffBuffer,
+    } = createDiffImageBuffer(state.initialBuffer, candidateBuffer, diffOptions);
+    const nextState = {
+        ...state,
+        currentComparable: stableComparable,
+    };
+
+    if (diffPixels < minDiffPixels) {
+        return {
+            shouldCapture: false,
+            diffPixels,
+            diffBuffer,
+            nextState,
+        };
+    }
+
+    return {
+        shouldCapture: true,
+        diffPixels,
+        diffBuffer,
+        nextState,
+    };
 }
 
 function ensureDir(dir) {
@@ -134,7 +203,7 @@ function findOtherWatcherPids() {
         const command = [
             "$ErrorActionPreference = 'Stop'",
             "Get-CimInstance Win32_Process",
-            "| Where-Object { $_.Name -eq 'node.exe' -and $_.CommandLine -match 'test\\\\\\\\visual\\\\\\\\watch\\\\.js' }",
+            "| Where-Object { $_.Name -eq 'node.exe' -and $_.CommandLine -match 'visual_regression\\\\\\\\watch\\\\.js' }",
             '| Select-Object -ExpandProperty ProcessId',
             '| ConvertTo-Json -Compress',
         ].join(' ');
@@ -220,7 +289,8 @@ function cleanupLegacyArtifacts(outputRoot) {
 }
 
 function cleanupCaseDiffArtifacts(outputRoot, casePrefix) {
-    const diffPattern = new RegExp(`^diff-${escapeRegex(casePrefix)}-\\d+-.*\\.png$`, 'i');
+    const normalizedPrefix = normalizeWatchName(casePrefix);
+    const diffPattern = new RegExp(`^diff-${escapeRegex(normalizedPrefix)}(?:-\\d+(?:-.*)?)?\\.png$`, 'i');
 
     for (const entry of fs.readdirSync(outputRoot, { withFileTypes: true })) {
         if (!entry.isFile()) {
@@ -233,15 +303,16 @@ function cleanupCaseDiffArtifacts(outputRoot, casePrefix) {
     }
 }
 
-function cleanupCaseSequenceArtifacts(outputRoot, casePrefix) {
-    const sequencePattern = new RegExp(`^${escapeRegex(casePrefix)}\\.\\d+\\.png$`);
+function cleanupCaseStableArtifacts(outputRoot, casePrefix) {
+    const normalizedPrefix = normalizeWatchName(casePrefix);
+    const stablePattern = new RegExp(`^${escapeRegex(normalizedPrefix)}(?:\\.\\d+|-修改前|-修改后)\\.png$`);
 
     for (const entry of fs.readdirSync(outputRoot, { withFileTypes: true })) {
         if (!entry.isFile()) {
             continue;
         }
 
-        if (sequencePattern.test(entry.name)) {
+        if (stablePattern.test(entry.name)) {
             fs.rmSync(path.join(outputRoot, entry.name), { force: true });
         }
     }
@@ -253,9 +324,9 @@ async function ensureDevServer() {
         return;
     }
 
-    console.log('🚀 启动本地 webpack dev server...');
+    console.log('🚀 启动视觉回归页面服务...');
     devServerProcess = spawn(resolveVisualServerCommand(), {
-        cwd: PROJECT_ROOT,
+        cwd: REACT_PROJECT_ROOT,
         shell: true,
         stdio: 'inherit',
     });
@@ -423,7 +494,7 @@ async function cleanup(browser) {
 }
 
 async function main() {
-    const casePrefix = getCasePrefix(VISUAL_CASE_FILE);
+    const changeName = normalizeWatchName(VISUAL_CHANGE_NAME);
     await ensureDevServer();
 
     const outputRoot = path.isAbsolute(OUTPUT_DIR)
@@ -431,12 +502,12 @@ async function main() {
         : path.resolve(PROJECT_ROOT, OUTPUT_DIR);
     ensureDir(outputRoot);
     cleanupLegacyArtifacts(outputRoot);
-    cleanupCaseSequenceArtifacts(outputRoot, casePrefix);
-    cleanupCaseDiffArtifacts(outputRoot, casePrefix);
+    cleanupCaseStableArtifacts(outputRoot, changeName);
+    cleanupCaseDiffArtifacts(outputRoot, changeName);
     acquireSingleInstanceLock(path.join(outputRoot, '.visual-watch.lock'));
 
     console.log(`🌐 打开页面: ${TARGET_URL}`);
-    console.log(`📝 截图前缀: ${casePrefix}`);
+    console.log(`📝 修改名称: ${changeName}`);
 
     const browser = await chromium.launch({
         headless: HEADLESS,
@@ -470,7 +541,7 @@ async function main() {
             timeout: 30000,
         });
     } catch (error) {
-        console.error('❌ 页面打开失败。请确认 React 项目已经启动。');
+        console.error('❌ 页面打开失败。请确认视觉回归页面服务已经启动。');
         console.error(error);
         await cleanup(browser);
         process.exit(1);
@@ -479,20 +550,20 @@ async function main() {
     await disableAnimations(page);
     await sleep(1000);
 
-    let baselineComparable = await waitForStableSnapshot(page);
-    let baselineBuffer = await page.screenshot({
+    const initialComparable = await waitForStableSnapshot(page);
+    const initialBuffer = await page.screenshot({
         fullPage: FULL_PAGE,
     });
-    let screenshotIndex = 1;
+    let watchState = createWatchSessionState(initialComparable, initialBuffer);
 
-    const initialPath = getSequenceScreenshotPath(outputRoot, casePrefix, screenshotIndex);
-    fs.writeFileSync(initialPath, baselineBuffer);
+    const initialPath = getStableScreenshotPath(outputRoot, changeName, 'before');
+    fs.writeFileSync(initialPath, initialBuffer);
 
     console.log(`📸 已保存稳定帧: ${initialPath}`);
     console.log('⏳ 正在监听页面变化...');
     console.log('   你现在可以修改 React 代码、CSS、字体、文字内容，或者直接在 DevTools 里改样式。');
     if (IGNORED_CLASS_NAMES.length > 0) {
-        console.log(`   已忽略动态类: ${IGNORED_CLASS_NAMES.join(', ')}`);
+        console.log(`   已禁用动态类: ${IGNORED_CLASS_NAMES.join(', ')}`);
     }
     console.log('');
 
@@ -507,7 +578,7 @@ async function main() {
             continue;
         }
 
-        if (currentComparable === baselineComparable) {
+        if (currentComparable === watchState.currentComparable) {
             continue;
         }
 
@@ -518,7 +589,7 @@ async function main() {
         await disableAnimations(page);
 
         const stableComparable = await waitForStableSnapshot(page);
-        if (!stableComparable || stableComparable === baselineComparable) {
+        if (!stableComparable || stableComparable === watchState.currentComparable) {
             console.log('ℹ️ 变化已回落到上一稳定帧，继续监听。');
             continue;
         }
@@ -527,29 +598,30 @@ async function main() {
             fullPage: FULL_PAGE,
         });
         const {
+            shouldCapture,
             diffPixels,
             diffBuffer,
-        } = createDiffImageBuffer(baselineBuffer, candidateBuffer);
+            nextState,
+        } = processWatchStableChange(watchState, stableComparable, candidateBuffer, {
+            minDiffPixels: MIN_DIFF_PIXELS,
+            diffOptions: WATCH_DIFF_OPTIONS,
+        });
 
-        if (diffPixels < MIN_DIFF_PIXELS) {
+        watchState = nextState;
+
+        if (!shouldCapture) {
             console.log(`ℹ️ 忽略微小变化，diffPixels=${diffPixels}`);
-            baselineComparable = stableComparable;
-            baselineBuffer = candidateBuffer;
             continue;
         }
 
-        screenshotIndex += 1;
-        const targetPath = getSequenceScreenshotPath(outputRoot, casePrefix, screenshotIndex);
+        const targetPath = getStableScreenshotPath(outputRoot, changeName, 'after');
         fs.writeFileSync(targetPath, candidateBuffer);
 
         console.log(`📸 已保存稳定帧: ${targetPath}`);
         console.log(`📊 差异像素: ${diffPixels}`);
         if (isVisualDiffEnabled()) {
-            const diffPath = saveTimestampedScreenshotBuffer(
-                diffBuffer,
-                `${casePrefix}-${screenshotIndex}`,
-                'diff'
-            );
+            const diffPath = getWatchDiffImagePath(outputRoot, changeName);
+            fs.writeFileSync(diffPath, diffBuffer);
             console.log(`🖼️ 已保存差异图: ${diffPath}`);
         }
         if (EXIT_ON_FIRST_CAPTURE) {
@@ -558,9 +630,6 @@ async function main() {
             console.log('✅ 已更新稳定帧基线，继续监听。');
         }
         console.log('');
-
-        baselineComparable = stableComparable;
-        baselineBuffer = candidateBuffer;
 
         if (EXIT_ON_FIRST_CAPTURE) {
             break;
@@ -581,8 +650,11 @@ if (require.main === module) {
 
 module.exports = {
     cleanupCaseDiffArtifacts,
-    cleanupCaseSequenceArtifacts,
+    cleanupCaseStableArtifacts,
     cleanupLegacyArtifacts,
+    createWatchSessionState,
     main,
+    processWatchStableChange,
+    resolveWatchDiffOptions,
     shouldExitOnFirstCapture,
 };
