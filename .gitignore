@@ -115,3 +115,13 @@ node_modules/
 
 *,cover
 *.coverage
+.ace-tool/
+.playwright-mcp
+
+# Visual regression artifacts
+playwright-report/
+test-results/
+visual_regression/test/*.png
+!visual_regression/test/baseline-*.png
+visual_regression/test/*.log
+visual_regression/test/.visual-watch.lock

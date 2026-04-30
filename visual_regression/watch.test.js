@@ -45,8 +45,10 @@ const {
     cleanupCaseStableArtifacts,
     cleanupLegacyArtifacts,
     createWatchSessionState,
+    hasWatchUrlChanged,
     processWatchStableChange,
     resolveWatchDiffOptions,
+    resolveTargetUrl,
     shouldExitOnFirstCapture,
 } = require('./watch');
 const {
@@ -211,11 +213,13 @@ describe('visual watch naming helpers', () => {
     test('cleans up current-case diff artifacts without touching other files', () => {
         const outputRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'visual-watch-'));
         const currentDiff = path.join(outputRoot, 'diff-文案-来玩.png');
+        const staleCumulativeDiff = path.join(outputRoot, 'diff-文案-来玩-累积.png');
         const otherDiff = path.join(outputRoot, 'diff-other-case-2.png');
         const legacyDiff = path.join(outputRoot, 'diff-文案-来玩-2-20260429-062710-267.png');
         const stableFrame = path.join(outputRoot, '文案-来玩-修改后.png');
 
         fs.writeFileSync(currentDiff, 'current');
+        fs.writeFileSync(staleCumulativeDiff, 'stale-cumulative');
         fs.writeFileSync(otherDiff, 'other');
         fs.writeFileSync(legacyDiff, 'legacy');
         fs.writeFileSync(stableFrame, 'stable');
@@ -223,6 +227,7 @@ describe('visual watch naming helpers', () => {
         cleanupCaseDiffArtifacts(outputRoot, '文案-来玩');
 
         expect(fs.existsSync(currentDiff)).toBe(false);
+        expect(fs.existsSync(staleCumulativeDiff)).toBe(false);
         expect(fs.existsSync(legacyDiff)).toBe(false);
         expect(fs.existsSync(otherDiff)).toBe(true);
         expect(fs.existsSync(stableFrame)).toBe(true);
@@ -259,7 +264,17 @@ describe('visual watch naming helpers', () => {
         });
     });
 
-    test('keeps diff cumulative against the initial baseline across multiple captures', () => {
+    test('resolves target URL from explicit environment values', () => {
+        expect(resolveTargetUrl({ TARGET_URL: 'http://127.0.0.1:8080/#/glossary' })).toBe(
+            'http://127.0.0.1:8080/#/glossary'
+        );
+        expect(resolveTargetUrl({ VISUAL_BASE_URL: 'http://127.0.0.1:8080/#/tutorial' })).toBe(
+            'http://127.0.0.1:8080/#/tutorial'
+        );
+        expect(resolveTargetUrl({})).toBe('http://127.0.0.1:8080/#/');
+    });
+
+    test('keeps one final diff against the initial baseline across multiple captures', () => {
         const before = new PNG({ width: 2, height: 1 });
         const afterFirstChange = new PNG({ width: 2, height: 1 });
         const afterSecondChange = new PNG({ width: 2, height: 1 });
@@ -279,7 +294,8 @@ describe('visual watch naming helpers', () => {
 
         const initialState = createWatchSessionState(
             'initial-stable',
-            PNG.sync.write(before)
+            PNG.sync.write(before),
+            'http://127.0.0.1:8080/#/'
         );
         const firstCapture = processWatchStableChange(
             initialState,
@@ -304,8 +320,23 @@ describe('visual watch naming helpers', () => {
         expect(firstCapture.diffPixels).toBe(1);
         expect(secondCapture.shouldCapture).toBe(true);
         expect(secondCapture.diffPixels).toBe(2);
+        expect(Buffer.isBuffer(secondCapture.diffBuffer)).toBe(true);
+        expect(secondCapture.incrementalDiffPixels).toBeUndefined();
+        expect(secondCapture.cumulativeDiffPixels).toBeUndefined();
         expect(secondCapture.nextState.initialComparable).toBe('initial-stable');
+        expect(secondCapture.nextState.captureCount).toBe(2);
         expect(Buffer.compare(secondCapture.nextState.initialBuffer, initialState.initialBuffer)).toBe(0);
+    });
+
+    test('detects URL changes so cross-page navigation does not overwrite the page diff', () => {
+        const state = createWatchSessionState(
+            'initial-stable',
+            Buffer.from('before'),
+            'http://127.0.0.1:8080/#/'
+        );
+
+        expect(hasWatchUrlChanged(state, 'http://127.0.0.1:8080/#/glossary')).toBe(true);
+        expect(hasWatchUrlChanged(state, 'http://127.0.0.1:8080/#/')).toBe(false);
     });
 
     test('allows watch diff crop and padding to be configured', () => {
@@ -347,7 +378,7 @@ describe('visual watch naming helpers', () => {
     test('enables single-capture exit mode only when requested', () => {
         expect(shouldExitOnFirstCapture({ VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE: '1' })).toBe(true);
         expect(shouldExitOnFirstCapture({ VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE: 'true' })).toBe(true);
-        expect(shouldExitOnFirstCapture({ VISUAL_DOCKER: '1' })).toBe(true);
+        expect(shouldExitOnFirstCapture({ VISUAL_DOCKER: '1' })).toBe(false);
         expect(shouldExitOnFirstCapture({ VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE: '0' })).toBe(false);
         expect(shouldExitOnFirstCapture({})).toBe(false);
     });

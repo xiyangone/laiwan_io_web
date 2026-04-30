@@ -9,7 +9,7 @@
 
 ## 平时会产出什么
 
-watcher 默认会生成 3 张图，文件都放在 `visual_regression/test`：
+watcher 每次只验证一个页面，默认会生成 3 张图，文件都放在 `visual_regression/test`：
 
 - `修改内容-修改前.png`
 - `修改内容-修改后.png`
@@ -29,8 +29,14 @@ visual_regression/test/文案-来玩-修改后.png
 visual_regression/test/diff-文案-来玩.png
 ```
 
-`diff-*.png` 不是只看最后一步，它会一直以最开始那张 `修改前` 为基准。  
-也就是说，如果你在同一轮监听里连续改了两次同一个页面，最终这张 diff 会把两次变化都带上。
+`diff-*.png` 表示“本轮启动时的修改前”和“当前最新状态”的最终差异。  
+同一轮里可以连续改多次同一个页面，watcher 只覆盖更新最终的 `修改后` 和 `diff`，不额外保存每一步的 diff。
+
+验证其他页面时，重新启动 watcher 并在第二个参数传入目标 URL：
+
+```sh
+sh visual_regression/run-visual-watch.sh 文案-术语页 http://127.0.0.1:8080/#/glossary
+```
 
 ## 怎么用
 
@@ -62,16 +68,20 @@ sh visual_regression/run-visual-watch.sh 文案-来玩
 
 - 通过 `deploy/docker-compose.visual.yml` 拉起 Docker 容器
 - 容器里启动页面服务
-- 打开首页并先保存一张 `修改前`
-- 监听页面变化
-- 捕获到有效变化后生成 `修改后` 和 `diff`
+- 打开目标页面并先保存一张 `修改前`
+- 持续监听当前页面变化
+- 捕获到有效变化后覆盖生成 `修改后` 和最终 `diff`
+
+Docker watcher 默认会持续监听。完成本轮修改后，在宿主端用 `Ctrl-C` 关闭 compose 进程。
 
 ## 这套逻辑现在怎么理解
 
 - watcher 的截图目录固定是 `visual_regression/test`
-- `修改前` 只保留本轮开始时的初始状态
-- `修改后` 始终表示当前最新状态
-- `diff` 始终表示“初始状态”和“当前最新状态”的差异
+- 一次 watcher 只验证启动时打开的目标页面
+- `修改前` 表示目标页面启动时的初始状态
+- `修改后` 表示目标页面当前最新状态
+- `diff` 表示目标页面初始状态和当前最新状态的最终差异
+- 运行中切到其他 URL 时，watcher 会提示重新启动并忽略跨页面 capture，避免污染 diff
 - diff 图使用整页截图，样式是旧版的粉色高亮
 - watcher 启动时会清理同名旧图，避免和本轮结果混在一起
 - 页面里的动态类会直接被禁用，日志里会输出 `已禁用动态类`

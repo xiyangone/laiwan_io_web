@@ -21,7 +21,6 @@ const {
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const REACT_PROJECT_ROOT = path.join(PROJECT_ROOT, 'react_laiwan_com');
-const TARGET_URL = process.env.TARGET_URL || process.env.VISUAL_BASE_URL || 'http://127.0.0.1:8080/#/';
 const SERVER_URL = 'http://127.0.0.1:8080';
 const SERVER_START_TIMEOUT_MS = 120000;
 
@@ -82,11 +81,17 @@ let devServerProcess = null;
 let shuttingDown = false;
 let lockFilePath = null;
 
+function resolveTargetUrl(env = process.env) {
+    return env.TARGET_URL || env.VISUAL_BASE_URL || 'http://127.0.0.1:8080/#/';
+}
+
+const TARGET_URL = resolveTargetUrl(process.env);
+
 function shouldExitOnFirstCapture(env = process.env) {
     const raw = env.VISUAL_WATCH_EXIT_ON_FIRST_CAPTURE;
 
     if (raw === undefined) {
-        return env.VISUAL_DOCKER === '1';
+        return false;
     }
 
     const normalized = `${raw}`.trim().toLowerCase();
@@ -121,12 +126,24 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function createWatchSessionState(initialComparable, initialBuffer) {
+function createWatchSessionState(initialComparable, initialBuffer, urlOrOptions = {}) {
+    const options = typeof urlOrOptions === 'string'
+        ? { url: urlOrOptions }
+        : urlOrOptions;
+    const { url = '' } = options;
+
     return {
+        url,
         initialComparable,
         initialBuffer,
         currentComparable: initialComparable,
+        captureCount: 0,
+        hasLoggedUrlChange: false,
     };
+}
+
+function hasWatchUrlChanged(state, currentUrl) {
+    return Boolean(state.url) && currentUrl !== state.url;
 }
 
 function processWatchStableChange(state, stableComparable, candidateBuffer, options = {}) {
@@ -134,26 +151,21 @@ function processWatchStableChange(state, stableComparable, candidateBuffer, opti
         minDiffPixels = MIN_DIFF_PIXELS,
         diffOptions = WATCH_DIFF_OPTIONS,
     } = options;
-    const {
-        diffPixels,
-        diffBuffer,
-    } = createDiffImageBuffer(state.initialBuffer, candidateBuffer, diffOptions);
+    const { diffPixels, diffBuffer } = createDiffImageBuffer(
+        state.initialBuffer,
+        candidateBuffer,
+        diffOptions
+    );
+    const shouldCapture = diffPixels >= minDiffPixels;
     const nextState = {
         ...state,
         currentComparable: stableComparable,
+        captureCount: shouldCapture ? state.captureCount + 1 : state.captureCount,
+        hasLoggedUrlChange: false,
     };
 
-    if (diffPixels < minDiffPixels) {
-        return {
-            shouldCapture: false,
-            diffPixels,
-            diffBuffer,
-            nextState,
-        };
-    }
-
     return {
-        shouldCapture: true,
+        shouldCapture,
         diffPixels,
         diffBuffer,
         nextState,
@@ -290,7 +302,7 @@ function cleanupLegacyArtifacts(outputRoot) {
 
 function cleanupCaseDiffArtifacts(outputRoot, casePrefix) {
     const normalizedPrefix = normalizeWatchName(casePrefix);
-    const diffPattern = new RegExp(`^diff-${escapeRegex(normalizedPrefix)}(?:-\\d+(?:-.*)?)?\\.png$`, 'i');
+    const diffPattern = new RegExp(`^diff-${escapeRegex(normalizedPrefix)}(?:-\\d+(?:-.*)?|-累积)?\\.png$`, 'i');
 
     for (const entry of fs.readdirSync(outputRoot, { withFileTypes: true })) {
         if (!entry.isFile()) {
@@ -554,7 +566,7 @@ async function main() {
     const initialBuffer = await page.screenshot({
         fullPage: FULL_PAGE,
     });
-    let watchState = createWatchSessionState(initialComparable, initialBuffer);
+    let watchState = createWatchSessionState(initialComparable, initialBuffer, page.url());
 
     const initialPath = getStableScreenshotPath(outputRoot, changeName, 'before');
     fs.writeFileSync(initialPath, initialBuffer);
@@ -569,6 +581,21 @@ async function main() {
 
     while (true) {
         await sleep(POLL_INTERVAL);
+
+        const currentUrl = page.url();
+
+        if (hasWatchUrlChanged(watchState, currentUrl)) {
+            if (!watchState.hasLoggedUrlChange) {
+                console.log(`ℹ️ 当前 watcher 只验证启动页面，已忽略 URL 切换: ${currentUrl}`);
+                console.log(`   如需验证该页面，请重新启动 watcher 并设置 TARGET_URL=${currentUrl}`);
+                console.log('');
+                watchState = {
+                    ...watchState,
+                    hasLoggedUrlChange: true,
+                };
+            }
+            continue;
+        }
 
         let currentComparable = '';
         try {
@@ -587,6 +614,20 @@ async function main() {
         await sleep(WAIT_AFTER_CHANGE);
         await page.waitForLoadState('networkidle', { timeout: 3000 }).catch(() => {});
         await disableAnimations(page);
+
+        const stableUrl = page.url();
+        if (hasWatchUrlChanged(watchState, stableUrl)) {
+            if (!watchState.hasLoggedUrlChange) {
+                console.log(`ℹ️ 当前 watcher 只验证启动页面，已忽略 URL 切换: ${stableUrl}`);
+                console.log(`   如需验证该页面，请重新启动 watcher 并设置 TARGET_URL=${stableUrl}`);
+                console.log('');
+                watchState = {
+                    ...watchState,
+                    hasLoggedUrlChange: true,
+                };
+            }
+            continue;
+        }
 
         const stableComparable = await waitForStableSnapshot(page);
         if (!stableComparable || stableComparable === watchState.currentComparable) {
@@ -653,8 +694,10 @@ module.exports = {
     cleanupCaseStableArtifacts,
     cleanupLegacyArtifacts,
     createWatchSessionState,
+    hasWatchUrlChanged,
     main,
     processWatchStableChange,
+    resolveTargetUrl,
     resolveWatchDiffOptions,
     shouldExitOnFirstCapture,
 };
