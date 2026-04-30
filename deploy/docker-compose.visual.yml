@@ -19,6 +19,7 @@ services:
       - ../visual_regression:/workspace/visual_regression
       - ../test-results:/workspace/test-results
       - ../playwright-report:/workspace/playwright-report
+      - ../visual-review:/workspace/visual-review
       - visual_node_modules:/workspace/react_laiwan_com/node_modules
 
 volumes:

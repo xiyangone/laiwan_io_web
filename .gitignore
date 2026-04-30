@@ -121,6 +121,7 @@ node_modules/
 # Visual regression artifacts
 playwright-report/
 test-results/
+visual-review/
 visual_regression/test/*.png
 !visual_regression/test/baseline-*.png
 visual_regression/test/*.log
