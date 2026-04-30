@@ -34,8 +34,51 @@ function buildVisualReviewGateSummary({ approved }) {
     ].join('\n');
 }
 
-function decorateVisualReviewSummary(body, { approved }) {
-    return `${body.trimEnd()}\n\n---\n\n${buildVisualReviewGateSummary({ approved })}`;
+function buildRunMetadataSummary({ env }) {
+    const lines = [];
+
+    if (env.GITHUB_RUN_ID) {
+        lines.push(`Run ID: \`${env.GITHUB_RUN_ID}\``);
+    }
+
+    if (env.GITHUB_SHA) {
+        lines.push(`Commit: \`${env.GITHUB_SHA.slice(0, 8)}\``);
+    }
+
+    if (env.GITHUB_SERVER_URL && env.GITHUB_REPOSITORY && env.GITHUB_RUN_ID) {
+        lines.push(`Actions: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}`);
+    }
+
+    if (lines.length === 0) {
+        return '';
+    }
+
+    return ['### 本轮运行', '', ...lines].join('\n');
+}
+
+function decorateVisualReviewSummary(body, { approved, env = process.env }) {
+    const runMetadata = buildRunMetadataSummary({ env });
+    const reviewSummary = body.trimEnd();
+    const sections = runMetadata
+        ? [insertAfterVisualReviewHeading(reviewSummary, runMetadata)]
+        : [reviewSummary];
+
+    sections.push(buildVisualReviewGateSummary({ approved }));
+
+    return sections.join('\n\n---\n\n');
+}
+
+function insertAfterVisualReviewHeading(body, content) {
+    const heading = '## 视觉回归 Diff';
+    const headingIndex = body.indexOf(heading);
+
+    if (headingIndex === -1) {
+        return `${content}\n\n${body}`;
+    }
+
+    const insertIndex = headingIndex + heading.length;
+
+    return `${body.slice(0, insertIndex)}\n\n${content}${body.slice(insertIndex)}`;
 }
 
 function findVisualReviewComment(comments) {
@@ -139,6 +182,7 @@ function readCommentBody({ env = process.env, readFile = fs.readFileSync } = {})
         if (Object.prototype.hasOwnProperty.call(env, 'VISUAL_REVIEW_APPROVED')) {
             return decorateVisualReviewSummary(body, {
                 approved: env.VISUAL_REVIEW_APPROVED === 'true',
+                env,
             });
         }
 
@@ -177,6 +221,7 @@ if (require.main === module) {
 module.exports = {
     buildBaselineInitializedSummary,
     buildPassSummary,
+    buildRunMetadataSummary,
     buildVisualReviewGateSummary,
     decorateVisualReviewSummary,
     findVisualReviewComment,

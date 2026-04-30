@@ -31,6 +31,9 @@ docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun r
 - `visual-pr / visual` 仍然为 success
 - workflow 会收集发生变化的用例
 - PR 评论会直接展示：
+  - 本轮 `Run ID`
+  - 本轮 `Commit`
+  - 本轮 `Actions` 链接
   - `before`
   - `after`
   - `diff`
@@ -41,24 +44,28 @@ docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun r
 现在只有这类情况才算 workflow 失败：
 
 - 视觉测试命令异常退出
-- 或者理论上检测到失败，但没有成功产出可审阅的截图结果
+- base 分支无法生成视觉 baseline
+- PR 新增了 base 分支不存在的视觉用例，导致缺少 baseline
+- 检测到视觉变化，但没有成功产出可审阅的截图结果
 
 也就是说：
 
 - 无 diff：success
 - 有 diff 且成功生成 PR 评论：success
-- 跑坏了且没有可审阅结果：failure
+- 缺 baseline、跑坏了或没有可审阅结果：failure
 
-### 5. 没有 baseline 的首次运行
+### 5. baseline 生成方式
 
-如果 PR 分支里没有 `visual_regression/test/baseline-*.png`，CI 会自动初始化 baseline：
+PR 视觉 CI 不依赖 PR 分支提交的 baseline。每次 PR 运行时，GitHub Actions 会：
 
-- 先识别 Playwright 的 `A snapshot doesn't exist...` 错误
-- 再运行 `bun run test:visual:update` 生成 baseline
-- 然后把 `visual_regression/test/baseline-*.png` 提交回当前 PR 分支
-- 最后在 PR 评论里提示 baseline 已初始化
+- checkout `base.sha` 到临时目录
+- 用 base 分支代码运行 `bun run test:visual:update` 生成 `baseline-*.png`
+- 把这些 baseline 复制到 PR 工作区
+- 再运行 PR head 的视觉对比
 
-这一步只是建立视觉基准，不会生成 `before / after / diff`。从下一次提交开始，CI 才会基于这些 baseline 做真正的视觉对比。
+CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baseline，或者带了过期 baseline，也不会影响本轮判断。
+
+如果 PR 新增了 base 分支不存在的视觉用例，base 无法生成对应 baseline，这类情况会失败，需要先确认是否应该在 base 里补稳定用例。
 
 ## 当前覆盖页面
 
@@ -84,6 +91,12 @@ docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun r
 ## PR 评论里会看到什么
 
 当 PR 里有视觉变化时，评论会显示“视觉变更用例”，不是“失败用例”。
+
+评论会更新同一条 GitHub Actions bot 评论。GitHub 页面可能仍显示这条评论第一次创建的 `commented ... ago`，所以判断截图是否属于本轮时，看评论顶部的“本轮运行”信息：
+
+- `Run ID` 应等于本次 `visual-pr` Actions run id
+- `Commit` 应等于本次 PR head commit
+- `Actions` 链接应指向本次运行
 
 每个变更用例下会包含：
 
@@ -168,11 +181,9 @@ bun run test:visual:update:docker
 - 样式改版
 - 新增稳定的视觉用例
 
-更新后要重新提交 baseline 图片，否则 CI 会持续把它识别为视觉变化。
+PR 视觉 CI 会从 `base.sha` 临时生成 baseline，所以 PR 分支里的 baseline 不会影响本轮判断。
 
-PR 视觉 CI 不再依赖 PR 分支提交的 baseline。每次 PR 运行时，GitHub Actions 会先 checkout `base.sha`，用 base 分支代码临时生成 `baseline-*.png`，再复制到 PR 工作区运行视觉对比。这样即使 PR 里没有更新 baseline，或带了过期 baseline，也不会影响判断。
-
-如果产生视觉 diff，CI 默认阻止合并并在 PR 评论中发布对比图。确认这次 UI 变化符合预期后，给 PR 添加 `visual-approved` label；带 label 的重新运行会放行这次视觉 diff。
+如果产生视觉 diff，CI 默认仍然保持绿色，并在 PR 评论中发布对比图。确认这次 UI 变化符合预期后，可以给 PR 添加 `visual-approved` label 作为已审阅标记；这个 label 不控制 CI 红绿，只改变评论中的审阅状态说明。
 
 ## watcher 现在怎么用
 
