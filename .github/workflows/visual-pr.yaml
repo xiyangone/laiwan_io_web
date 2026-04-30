@@ -56,6 +56,17 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha }}
           path: visual-base
 
+      - name: Prepare base visual runner
+        if: github.event_name == 'pull_request'
+        run: |
+          mkdir -p visual-base/deploy visual-base/docker visual-base/react_laiwan_com
+          cp deploy/docker-compose.visual.yml visual-base/deploy/docker-compose.visual.yml
+          cp -R docker/visual visual-base/docker/visual
+          cp docker/visual.Dockerfile visual-base/docker/visual.Dockerfile
+          cp -R visual_regression visual-base/visual_regression
+          cp react_laiwan_com/package.json visual-base/react_laiwan_com/package.json
+          cp react_laiwan_com/bun.lock visual-base/react_laiwan_com/bun.lock
+
       - name: Build base visual runner
         if: github.event_name == 'pull_request'
         working-directory: visual-base
