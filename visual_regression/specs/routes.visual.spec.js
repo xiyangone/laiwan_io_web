@@ -69,7 +69,7 @@ test('H5 来玩 life 教程页视觉回归', async ({ page }) => {
     await page.goto('/#/h5-tutorial/laiwan-life');
     await page.waitForLoadState('networkidle');
     await expect(page.getByText('什么是H5？', { exact: true })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'https://h5.laiwan.life/' }).first()).toBeVisible();
+    await expect(page.locator('a[href="https://h5.laiwan.life/"]').first()).toBeVisible();
 
     await expectVisualSnapshot(page, 'h5-tutorial-laiwan-life');
 });
@@ -79,7 +79,7 @@ test('H5 来玩派教程页视觉回归', async ({ page }) => {
     await page.goto('/#/h5-tutorial/laiwanpai-com');
     await page.waitForLoadState('networkidle');
     await expect(page.getByText('什么是H5？', { exact: true })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'https://h5.laiwanpai.com/' }).first()).toBeVisible();
+    await expect(page.locator('a[href="https://h5.laiwanpai.com/"]').first()).toBeVisible();
 
     await expectVisualSnapshot(page, 'h5-tutorial-laiwanpai-com');
 });
