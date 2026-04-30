@@ -10,10 +10,32 @@ function buildBaselineInitializedSummary() {
         COMMENT_MARKER,
         '## 视觉回归 Diff',
         '',
-        '已自动初始化视觉 baseline，本次没有可对比的历史截图。',
+        '已从 base sha 临时生成视觉 baseline，本次使用 base 分支截图作为对比基准。',
         '',
-        'CI 已把新生成的 `visual_regression/test/baseline-*.png` 提交回当前 PR 分支。后续提交会基于这些 baseline 生成视觉变更评论。',
+        'CI 不会提交回 PR 分支；后续提交仍会重新从 base sha 生成 baseline 后再对比 PR。',
     ].join('\n');
+}
+
+function buildVisualReviewGateSummary({ approved }) {
+    if (approved) {
+        return [
+            '### 合并状态',
+            '',
+            '检测到 `visual-approved` label，本次视觉 diff 已放行。',
+        ].join('\n');
+    }
+
+    return [
+        '### 合并状态',
+        '',
+        '检测到视觉 diff，当前 PR 未标记 `visual-approved`，CI 会阻止合并。',
+        '',
+        '确认这次 UI 变化符合预期后，给 PR 添加 `visual-approved` label 并重新运行视觉 CI。',
+    ].join('\n');
+}
+
+function decorateVisualReviewSummary(body, { approved }) {
+    return `${body.trimEnd()}\n\n---\n\n${buildVisualReviewGateSummary({ approved })}`;
 }
 
 function findVisualReviewComment(comments) {
@@ -112,7 +134,15 @@ async function upsertReviewComment({
 
 function readCommentBody({ env = process.env, readFile = fs.readFileSync } = {}) {
     if (env.COMMENT_BODY_PATH) {
-        return readFile(env.COMMENT_BODY_PATH, 'utf8');
+        const body = readFile(env.COMMENT_BODY_PATH, 'utf8');
+
+        if (Object.prototype.hasOwnProperty.call(env, 'VISUAL_REVIEW_APPROVED')) {
+            return decorateVisualReviewSummary(body, {
+                approved: env.VISUAL_REVIEW_APPROVED === 'true',
+            });
+        }
+
+        return body;
     }
 
     if (env.VISUAL_REVIEW_STATUS === 'pass') {
@@ -147,6 +177,8 @@ if (require.main === module) {
 module.exports = {
     buildBaselineInitializedSummary,
     buildPassSummary,
+    buildVisualReviewGateSummary,
+    decorateVisualReviewSummary,
     findVisualReviewComment,
     readCommentBody,
     upsertReviewComment,
