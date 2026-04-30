@@ -170,7 +170,9 @@ bun run test:visual:update:docker
 
 更新后要重新提交 baseline 图片，否则 CI 会持续把它识别为视觉变化。
 
-如果是第一次接入或某个分支没有 baseline，也可以让 GitHub Actions 自动初始化；初始化提交进入 PR 后，再继续提交业务修改即可触发正常视觉对比。
+PR 视觉 CI 不再依赖 PR 分支提交的 baseline。每次 PR 运行时，GitHub Actions 会先 checkout `base.sha`，用 base 分支代码临时生成 `baseline-*.png`，再复制到 PR 工作区运行视觉对比。这样即使 PR 里没有更新 baseline，或带了过期 baseline，也不会影响判断。
+
+如果产生视觉 diff，CI 默认阻止合并并在 PR 评论中发布对比图。确认这次 UI 变化符合预期后，给 PR 添加 `visual-approved` label；带 label 的重新运行会放行这次视觉 diff。
 
 ## watcher 现在怎么用
 

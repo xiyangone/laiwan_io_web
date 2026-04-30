@@ -6,6 +6,7 @@ const {
     buildBaselineInitializedSummary,
     buildPassSummary,
     findVisualReviewComment,
+    readCommentBody,
     upsertReviewComment,
 } = require('./scripts/upsert-review-comment');
 const {
@@ -30,7 +31,34 @@ describe('upsertReviewComment', () => {
 
     test('builds the baseline initialized summary with the stable marker', () => {
         expect(buildBaselineInitializedSummary()).toContain('<!-- visual-review-comment -->');
-        expect(buildBaselineInitializedSummary()).toContain('已自动初始化视觉 baseline');
+        expect(buildBaselineInitializedSummary()).toContain('已从 base sha 临时生成视觉 baseline');
+        expect(buildBaselineInitializedSummary()).toContain('不会提交回 PR 分支');
+    });
+
+    test('marks visual diff comments as blocking until visual-approved is applied', () => {
+        const body = readCommentBody({
+            env: {
+                COMMENT_BODY_PATH: 'summary.md',
+                VISUAL_REVIEW_APPROVED: 'false',
+            },
+            readFile: () => '<!-- visual-review-comment -->\n## 视觉回归 Diff\n\n### home-nav-zh',
+        });
+
+        expect(body).toContain('`visual-approved`');
+        expect(body).toContain('CI 会阻止合并');
+    });
+
+    test('marks visual diff comments as approved when visual-approved is applied', () => {
+        const body = readCommentBody({
+            env: {
+                COMMENT_BODY_PATH: 'summary.md',
+                VISUAL_REVIEW_APPROVED: 'true',
+            },
+            readFile: () => '<!-- visual-review-comment -->\n## 视觉回归 Diff\n\n### home-nav-zh',
+        });
+
+        expect(body).toContain('`visual-approved`');
+        expect(body).toContain('已放行');
     });
 
     test('finds an existing visual review comment by marker', () => {
