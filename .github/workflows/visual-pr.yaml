@@ -83,7 +83,7 @@ jobs:
 
       - name: Remove base checkout
         if: github.event_name == 'pull_request'
-        run: rm -rf visual-base
+        run: sudo rm -rf visual-base
 
       - name: Build visual runner
         run: docker compose -f deploy/docker-compose.visual.yml build visual
