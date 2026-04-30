@@ -82,6 +82,8 @@
 
 .title {
     margin-top: 2.2rem;
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
     font-weight: 600;
     font-size: 3.75rem;
     line-height: 1;

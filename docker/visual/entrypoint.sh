@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# shellcheck shell=sh
+
 set -eu
 
 cd /workspace/react_laiwan_com
