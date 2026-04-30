@@ -189,6 +189,29 @@ describe('collect PR code context helpers', () => {
         expect(summarizePatch('@@ -1,3 +1,3 @@\n unchanged\n-old\n+new\n unchanged 2')).toBe('@@ -1,3 +1,3 @@\n-old\n+new');
     });
 
+    test('summarizes only case-related locale hunks and removes no-op EOF hunks', () => {
+        const localePatch = [
+            '@@ -29,7 +29,7 @@',
+            '-    "glossary_text_1": "old glossary",',
+            '+    "glossary_text_1": "new glossary",',
+            '@@ -63,7 +63,7 @@',
+            '-    "h5_what_is_h5_body": "old h5",',
+            '+    "h5_what_is_h5_body": "new h5",',
+            '@@ -74,4 +74,4 @@',
+            '-}',
+            '+}',
+        ].join('\n');
+
+        const glossarySummary = summarizePatch(localePatch, { keywords: ['glossary_'] });
+        const h5Summary = summarizePatch(localePatch, { keywords: ['h5_'] });
+
+        expect(glossarySummary).toContain('glossary_text_1');
+        expect(glossarySummary).not.toContain('h5_what_is_h5_body');
+        expect(glossarySummary).not.toContain('-}\n+}');
+        expect(h5Summary).toContain('h5_what_is_h5_body');
+        expect(h5Summary).not.toContain('glossary_text_1');
+    });
+
     test('builds markdown with fallback UI files when a case has no direct match', () => {
         const markdown = buildCodeContextMarkdown({
             caseNames: ['tutorial-page'],

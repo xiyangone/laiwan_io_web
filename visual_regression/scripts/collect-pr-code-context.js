@@ -45,6 +45,25 @@ const CASE_FILE_PATTERNS = [
     },
 ];
 
+const CASE_PATCH_KEYWORDS = [
+    {
+        test: (caseName) => caseName.startsWith('home-'),
+        keywords: ['home_page_', 'navbar_'],
+    },
+    {
+        test: (caseName) => caseName.startsWith('glossary-'),
+        keywords: ['glossary_', 'terminolog'],
+    },
+    {
+        test: (caseName) => caseName.startsWith('tutorial-'),
+        keywords: ['apple_tutorial_', 'tutorial'],
+    },
+    {
+        test: (caseName) => caseName.startsWith('h5-tutorial-'),
+        keywords: ['h5_'],
+    },
+];
+
 function isUiFile(file) {
     return UI_FILE_PATTERNS.some((pattern) => file.filename.startsWith(pattern));
 }
@@ -69,38 +88,93 @@ function filterChangedFilesForCase(caseName, changedFiles) {
     return changedFiles.filter(isUiFile).slice(0, MAX_FILES_PER_CASE);
 }
 
-function summarizePatch(patch = '') {
+function getPatchKeywordsForCase(caseName) {
+    const mapping = CASE_PATCH_KEYWORDS.find((item) => item.test(caseName));
+    return mapping ? mapping.keywords : [];
+}
+
+function isNoopChangedLines(changedLines) {
+    if (changedLines.length === 0) {
+        return true;
+    }
+
+    const removed = changedLines
+        .filter((line) => line.startsWith('-') && !line.startsWith('---'))
+        .map((line) => line.slice(1).trim());
+    const added = changedLines
+        .filter((line) => line.startsWith('+') && !line.startsWith('+++'))
+        .map((line) => line.slice(1).trim());
+
+    return removed.length === added.length
+        && removed.every((line, index) => line === added[index]);
+}
+
+function hunkMatchesKeywords(header, changedLines, keywords) {
+    if (keywords.length === 0) {
+        return true;
+    }
+
+    const content = `${header}\n${changedLines.join('\n')}`.toLowerCase();
+    return keywords.some((keyword) => content.includes(keyword.toLowerCase()));
+}
+
+function shouldFilterPatchByKeywords(file) {
+    return file.filename.startsWith('react_laiwan_com/src/localization/locales/');
+}
+
+function summarizePatch(patch = '', { keywords = [] } = {}) {
     const lines = patch.split('\n');
     const summaryLines = [];
-    let hunkCount = 0;
-    let inIncludedHunk = false;
+    const hunks = [];
+    let currentHunk = null;
 
     lines.forEach((line) => {
         if (line.startsWith('@@')) {
-            hunkCount += 1;
-            inIncludedHunk = hunkCount <= MAX_HUNKS_PER_FILE;
-            if (inIncludedHunk) {
-                summaryLines.push(line);
-            }
+            currentHunk = {
+                header: line,
+                changedLines: [],
+            };
+            hunks.push(currentHunk);
             return;
         }
 
-        if (!inIncludedHunk) {
-            return;
-        }
-
-        if (line.startsWith('+') || line.startsWith('-')) {
-            summaryLines.push(line);
+        if (
+            currentHunk
+            && (line.startsWith('+') || line.startsWith('-'))
+            && !line.startsWith('+++')
+            && !line.startsWith('---')
+        ) {
+            currentHunk.changedLines.push(line);
         }
     });
+
+    hunks
+        .filter((hunk) => !isNoopChangedLines(hunk.changedLines))
+        .filter((hunk) => hunkMatchesKeywords(hunk.header, hunk.changedLines, keywords))
+        .slice(0, MAX_HUNKS_PER_FILE)
+        .forEach((hunk) => {
+            summaryLines.push(hunk.header);
+            summaryLines.push(...hunk.changedLines);
+        });
 
     return summaryLines.join('\n');
 }
 
 function buildCodeContextMarkdownForCase({ caseName, changedFiles }) {
+    const patterns = getPatternsForCase(caseName);
+    const hasDirectFiles = changedFiles.some((file) => fileMatchesPatterns(file, patterns));
     const relatedFiles = filterChangedFilesForCase(caseName, changedFiles);
+    const caseKeywords = hasDirectFiles ? getPatchKeywordsForCase(caseName) : [];
+    const relatedSummaries = relatedFiles
+        .map((file) => ({
+            file,
+            patchSummary: summarizePatch(file.patch || '', {
+                keywords: shouldFilterPatchByKeywords(file) ? caseKeywords : [],
+            }),
+        }))
+        .filter(({ patchSummary }) => patchSummary);
 
-    if (relatedFiles.length === 0) {
+    if (relatedSummaries.length === 0) {
         return [
             '#### 相关代码改动',
             '',
@@ -114,17 +188,13 @@ function buildCodeContextMarkdownForCase({ caseName, changedFiles }) {
         '',
     ];
 
-    relatedFiles.forEach((file) => {
-        const patchSummary = summarizePatch(file.patch || '');
+    relatedSummaries.forEach(({ file, patchSummary }) => {
         lines.push(`- \`${file.filename}\``);
-
-        if (patchSummary) {
-            lines.push('');
-            lines.push('```diff');
-            lines.push(patchSummary);
-            lines.push('```');
-            lines.push('');
-        }
+        lines.push('');
+        lines.push('```diff');
+        lines.push(patchSummary);
+        lines.push('```');
+        lines.push('');
     });
 
     return lines.join('\n');
@@ -253,6 +323,7 @@ module.exports = {
     buildCodeContextMarkdown,
     buildCodeContextMarkdownForCase,
     filterChangedFilesForCase,
+    getPatchKeywordsForCase,
     listCaseNames,
     requestChangedFiles,
     summarizePatch,
