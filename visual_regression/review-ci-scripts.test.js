@@ -3,6 +3,7 @@ const os = require('os');
 const path = require('path');
 
 const {
+    buildBaselineInitializedSummary,
     buildPassSummary,
     findVisualReviewComment,
     upsertReviewComment,
@@ -17,10 +18,19 @@ const {
     filterChangedFilesForCase,
     summarizePatch,
 } = require('./scripts/collect-pr-code-context');
+const {
+    detectMissingBaselines,
+    writeGitHubOutput,
+} = require('./scripts/detect-missing-baselines');
 
 describe('upsertReviewComment', () => {
     test('builds the pass summary with the stable marker', () => {
         expect(buildPassSummary()).toBe('<!-- visual-review-comment -->\n## 视觉回归 Diff\n\n✅ 视觉回归通过，无 diff。');
+    });
+
+    test('builds the baseline initialized summary with the stable marker', () => {
+        expect(buildBaselineInitializedSummary()).toContain('<!-- visual-review-comment -->');
+        expect(buildBaselineInitializedSummary()).toContain('已自动初始化视觉 baseline');
     });
 
     test('finds an existing visual review comment by marker', () => {
@@ -251,5 +261,44 @@ describe('collect PR code context helpers', () => {
         expect(summary).toContain('glossaryStyle.module.css');
         expect(summary).toContain('-.glossaryHeader { font-size: 60px; }');
         expect(summary).toContain('+.glossaryHeader { font-size: 64px; }');
+    });
+});
+
+describe('detect missing visual baselines', () => {
+    let tempDir;
+
+    beforeEach(() => {
+        tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'visual-missing-baseline-'));
+    });
+
+    afterEach(() => {
+        fs.rmSync(tempDir, { recursive: true, force: true });
+    });
+
+    test('finds missing baseline paths in Playwright error contexts', () => {
+        const resultsDir = path.join(tempDir, 'test-results');
+        const contextPath = path.join(resultsDir, 'home.visual', 'error-context.md');
+
+        fs.mkdirSync(path.dirname(contextPath), { recursive: true });
+        fs.writeFileSync(contextPath, [
+            'Error: A snapshot doesn\'t exist at /workspace/visual_regression/test/baseline-home-nav-en.png, writing actual.',
+            'Error: A snapshot doesn\'t exist at /workspace/visual_regression/test/baseline-home-nav-zh.png, writing actual.',
+        ].join('\n'));
+
+        expect(detectMissingBaselines({ resultsDir })).toEqual([
+            '/workspace/visual_regression/test/baseline-home-nav-en.png',
+            '/workspace/visual_regression/test/baseline-home-nav-zh.png',
+        ]);
+    });
+
+    test('writes GitHub output flags for missing baseline state', () => {
+        const outputPath = path.join(tempDir, 'github-output.txt');
+
+        writeGitHubOutput({
+            missingBaselines: ['baseline-home-nav-en.png'],
+            outputPath,
+        });
+
+        expect(fs.readFileSync(outputPath, 'utf8')).toBe('missing=true\ncount=1\n');
     });
 });

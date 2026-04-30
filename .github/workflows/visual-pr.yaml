@@ -37,8 +37,43 @@ jobs:
         continue-on-error: true
         run: docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun run test:visual
 
-      - name: Collect visual review artifacts
+      - name: Detect missing baselines
+        id: missing-baselines
         if: steps.visual.outcome == 'failure'
+        env:
+          TEST_RESULTS_DIR: test-results
+        run: node visual_regression/scripts/detect-missing-baselines.js
+
+      - name: Initialize visual baselines
+        if: steps.missing-baselines.outputs.missing == 'true'
+        run: docker compose -f deploy/docker-compose.visual.yml run --rm visual bun run test:visual:update
+
+      - name: Commit initialized baselines
+        if: github.event_name == 'pull_request' && steps.missing-baselines.outputs.missing == 'true'
+        env:
+          PR_HEAD_REF: ${{ github.head_ref }}
+        run: |
+          sudo chown -R "$USER":"$USER" visual_regression/test
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f visual_regression/test/baseline-*.png
+          if git diff --cached --quiet; then
+            echo "No baseline changes to commit."
+          else
+            git commit -m "test: 初始化视觉回归 baseline"
+            git push origin "HEAD:$PR_HEAD_REF"
+          fi
+
+      - name: Upsert baseline initialized comment
+        if: github.event_name == 'pull_request' && steps.missing-baselines.outputs.missing == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          VISUAL_REVIEW_STATUS: baseline-initialized
+        run: node visual_regression/scripts/upsert-review-comment.js
+
+      - name: Collect visual review artifacts
+        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         env:
           PR_NUMBER: ${{ github.event.pull_request.number || 'manual' }}
           VISUAL_REVIEW_ARTIFACT_BRANCH: visual-review-artifacts
@@ -55,7 +90,7 @@ jobs:
             visual node /workspace/visual_regression/scripts/collect-review-artifacts.js
 
       - name: Collect PR code context
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure'
+        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -65,7 +100,7 @@ jobs:
           node visual_regression/scripts/collect-pr-code-context.js
 
       - name: Upload visual review
-        if: steps.visual.outcome == 'failure'
+        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: visual-review
@@ -73,7 +108,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Publish visual review images
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure'
+        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -81,7 +116,7 @@ jobs:
         run: node visual_regression/scripts/publish-review-artifacts.js
 
       - name: Upsert visual review comment
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure'
+        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -97,7 +132,7 @@ jobs:
         run: node visual_regression/scripts/upsert-review-comment.js
 
       - name: Complete visual review
-        if: steps.visual.outcome == 'failure'
+        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         run: |
           echo "Visual diffs were found and published to the PR review comment."
           echo "Keeping this workflow green because the review artifacts were generated successfully."

@@ -5,6 +5,17 @@ function buildPassSummary() {
     return `${COMMENT_MARKER}\n## 视觉回归 Diff\n\n✅ 视觉回归通过，无 diff。`;
 }
 
+function buildBaselineInitializedSummary() {
+    return [
+        COMMENT_MARKER,
+        '## 视觉回归 Diff',
+        '',
+        '已自动初始化视觉 baseline，本次没有可对比的历史截图。',
+        '',
+        'CI 已把新生成的 `visual_regression/test/baseline-*.png` 提交回当前 PR 分支。后续提交会基于这些 baseline 生成视觉变更评论。',
+    ].join('\n');
+}
+
 function findVisualReviewComment(comments) {
     return comments.find((comment) => comment.body && comment.body.includes(COMMENT_MARKER));
 }
@@ -108,6 +119,10 @@ function readCommentBody({ env = process.env, readFile = fs.readFileSync } = {})
         return buildPassSummary();
     }
 
+    if (env.VISUAL_REVIEW_STATUS === 'baseline-initialized') {
+        return buildBaselineInitializedSummary();
+    }
+
     throw new Error('COMMENT_BODY_PATH or VISUAL_REVIEW_STATUS=pass is required');
 }
 
@@ -130,6 +145,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+    buildBaselineInitializedSummary,
     buildPassSummary,
     findVisualReviewComment,
     readCommentBody,

@@ -1,142 +1,203 @@
 # visual_regression
 
-这里是项目的视觉回归目录，主要做两件事：
+这里是项目当前的视觉回归目录。现在的主流程已经切到 GitHub Actions，目标是：
 
-- 跑 Playwright 视觉对比
-- 用 Docker watcher 盯页面改动并自动出图
+- PR 提交后自动跑 Playwright 视觉回归
+- 有视觉变化时，在 PR 评论里直接展示图片和相关代码 diff
+- workflow 默认保持成功，方便把视觉结果当作审阅信息来使用
 
-现在这套流程统一走 Docker，不再以本地 Node 环境作为主要使用方式。
+本地 Docker watcher 仍然保留，但现在属于辅助手段，不再是主入口。
 
-## 平时会产出什么
+## 当前工作流
 
-watcher 每次只验证一个页面，默认会生成 3 张图，文件都放在 `visual_regression/test`：
+### 1. 日常开发
 
-- `修改内容-修改前.png`
-- `修改内容-修改后.png`
-- `diff-修改内容.png`
+开发时直接改页面、样式或文案，然后提交 PR。
 
-例如执行：
-
-```sh
-sh visual_regression/run-visual-watch.sh 文案-来玩
-```
-
-会得到：
-
-```text
-visual_regression/test/文案-来玩-修改前.png
-visual_regression/test/文案-来玩-修改后.png
-visual_regression/test/diff-文案-来玩.png
-```
-
-`diff-*.png` 表示“本轮启动时的修改前”和“当前最新状态”的最终差异。  
-同一轮里可以连续改多次同一个页面，watcher 只覆盖更新最终的 `修改后` 和 `diff`，不额外保存每一步的 diff。
-
-验证其他页面时，重新启动 watcher 并在第二个参数传入目标 URL：
+GitHub Actions 会自动运行：
 
 ```sh
-sh visual_regression/run-visual-watch.sh 文案-术语页 http://127.0.0.1:8080/#/glossary
+docker compose -f deploy/docker-compose.visual.yml build visual
+docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun run test:visual
 ```
 
-## 怎么用
+### 2. 没有视觉变化
 
-### 1. 先构建视觉测试镜像
+- `visual-pr / visual` 为 success
+- PR 评论会更新为“视觉回归通过，无 diff”
+
+### 3. 有视觉变化
+
+- `visual-pr / visual` 仍然为 success
+- workflow 会收集发生变化的用例
+- PR 评论会直接展示：
+  - `before`
+  - `after`
+  - `diff`
+  - 对应的代码改动摘要
+
+### 4. 真正失败的情况
+
+现在只有这类情况才算 workflow 失败：
+
+- 视觉测试命令异常退出
+- 或者理论上检测到失败，但没有成功产出可审阅的截图结果
+
+也就是说：
+
+- 无 diff：success
+- 有 diff 且成功生成 PR 评论：success
+- 跑坏了且没有可审阅结果：failure
+
+### 5. 没有 baseline 的首次运行
+
+如果 PR 分支里没有 `visual_regression/test/baseline-*.png`，CI 会自动初始化 baseline：
+
+- 先识别 Playwright 的 `A snapshot doesn't exist...` 错误
+- 再运行 `bun run test:visual:update` 生成 baseline
+- 然后把 `visual_regression/test/baseline-*.png` 提交回当前 PR 分支
+- 最后在 PR 评论里提示 baseline 已初始化
+
+这一步只是建立视觉基准，不会生成 `before / after / diff`。从下一次提交开始，CI 才会基于这些 baseline 做真正的视觉对比。
+
+## 当前覆盖页面
+
+现在视觉回归覆盖这些主要页面：
+
+- 首页英文：`home-nav-en`
+- 首页中文：`home-nav-zh`
+- 首页 iOS 下载弹窗：`home-ios-modal-zh`
+- Glossary 中文列表：`glossary-page-zh`
+- Glossary 英文列表：`glossary-list-en`
+- Glossary 中文定义页：`glossary-definition-zh`
+- Glossary 英文定义页：`glossary-definition-en`
+- 教程页：`tutorial-page`
+- H5 教程页：`h5-tutorial-laiwan-life`
+- H5 教程页：`h5-tutorial-laiwanpai-com`
+
+对应测试文件：
+
+- `visual_regression/specs/home.visual.spec.js`
+- `visual_regression/specs/glossary.visual.spec.js`
+- `visual_regression/specs/routes.visual.spec.js`
+
+## PR 评论里会看到什么
+
+当 PR 里有视觉变化时，评论会显示“视觉变更用例”，不是“失败用例”。
+
+每个变更用例下会包含：
+
+- 修改前截图
+- 修改后截图
+- diff 截图
+- 相关代码改动
+
+代码改动不是像素级定位，而是按页面维度做实用映射：
+
+- `home-*` 关联首页、导航、语言包
+- `glossary-*` 关联 glossary 页面和语言包
+- `tutorial-*` 关联教程页和语言包
+- `h5-tutorial-*` 关联 h5 tutorial 页面和语言包
+
+## 目录说明
+
+### 核心目录
+
+- `helpers/`
+  视觉截图、diff 计算、服务启动等辅助逻辑。
+- `specs/`
+  Playwright 视觉回归用例。
+- `scripts/`
+  PR 评论、截图整理、发布 artifact 分支、代码上下文收集等 CI 脚本。
+- `test/`
+  baseline 图片、本地 watcher 产物和临时截图目录。
+
+### 关键文件
+
+- `playwright.visual.config.js`
+  Playwright 视觉回归配置。
+- `jest.visual.config.js`
+  视觉相关 Node 脚本测试配置。
+- `scripts/collect-review-artifacts.js`
+  从 `test-results/` 收集发生视觉变化的截图，生成 `visual-review/summary.md`。
+- `scripts/collect-pr-code-context.js`
+  给每个视觉变更用例补充相关代码 diff。
+- `scripts/publish-review-artifacts.js`
+  把 `visual-review/` 发布到 `visual-review-artifacts` 分支。
+- `scripts/upsert-review-comment.js`
+  在 PR 中创建或更新同一条视觉评论。
+- `watch.js`
+  本地 Docker watcher 主逻辑。
+- `run-visual-watch.sh`
+  watcher 启动脚本。
+
+## 本地常用命令
+
+### 构建视觉测试镜像
 
 ```sh
 bun run visual:docker:build
 ```
 
-### 2. 跑 Playwright 视觉回归
+### 跑完整视觉回归
 
 ```sh
 bun run test:visual:docker
 ```
 
-### 3. 更新 Playwright baseline
+### 更新 baseline
 
 ```sh
 bun run test:visual:update:docker
 ```
 
-### 4. 启动 watcher 看页面改动
+### 跑视觉脚本测试
 
 ```sh
-sh visual_regression/run-visual-watch.sh 文案-来玩
+./react_laiwan_com/node_modules/.bin/jest --runTestsByPath visual_regression/review-ci-scripts.test.js visual_regression/collect-review-artifacts.test.js -c visual_regression/jest.visual.config.js --runInBand
 ```
 
-这个命令会做几件事：
+## 什么时候更新 baseline
 
-- 通过 `deploy/docker-compose.visual.yml` 拉起 Docker 容器
-- 容器里启动页面服务
-- 打开目标页面并先保存一张 `修改前`
-- 持续监听当前页面变化
-- 捕获到有效变化后覆盖生成 `修改后` 和最终 `diff`
+只有在你确认“这次 UI 变化就是新的预期”时，才更新 baseline。
 
-Docker watcher 默认会持续监听。完成本轮修改后，在宿主端用 `Ctrl-C` 关闭 compose 进程。
+常见场景：
 
-## 这套逻辑现在怎么理解
+- 文案正式修改
+- 页面结构调整
+- 样式改版
+- 新增稳定的视觉用例
 
-- watcher 的截图目录固定是 `visual_regression/test`
-- 一次 watcher 只验证启动时打开的目标页面
-- `修改前` 表示目标页面启动时的初始状态
-- `修改后` 表示目标页面当前最新状态
-- `diff` 表示目标页面初始状态和当前最新状态的最终差异
-- 运行中切到其他 URL 时，watcher 会提示重新启动并忽略跨页面 capture，避免污染 diff
-- diff 图使用整页截图，样式是旧版的粉色高亮
-- watcher 启动时会清理同名旧图，避免和本轮结果混在一起
-- 页面里的动态类会直接被禁用，日志里会输出 `已禁用动态类`
+更新后要重新提交 baseline 图片，否则 CI 会持续把它识别为视觉变化。
 
-## 目录里每个东西是做什么的
+如果是第一次接入或某个分支没有 baseline，也可以让 GitHub Actions 自动初始化；初始化提交进入 PR 后，再继续提交业务修改即可触发正常视觉对比。
 
-### 目录
+## watcher 现在怎么用
 
-- `helpers/`
-  放 watcher 和视觉对比用到的辅助逻辑，比如截图处理、服务启动命令、命名规则。
-- `specs/`
-  放 Playwright 视觉回归用例。
-- `test/`
-  放 watcher 生成的截图、diff、日志和锁文件。
+watcher 主要用于你本地快速盯某个页面，不用于替代 CI。
 
-### 文件
-
-- `README.md`
-  就是你现在看的这份说明。
-- `run-visual-watch.sh`
-  watcher 的启动脚本。平时手动盯页面改动，直接跑它。
-- `watch.js`
-  watcher 主程序。负责起页面、开浏览器、监听变化、生成截图和 diff。
-- `watch.test.js`
-  watcher 的单测，主要验证命名、清理逻辑和 diff 行为。
-- `docker-watch.spec.js`
-  和 Docker watcher 相关的测试入口文件。
-- `playwright.visual.config.js`
-  Playwright 视觉回归的配置文件。
-- `jest.visual.config.js`
-  watcher 单测用的 Jest 配置文件。
-
-### helpers 里的文件
-
-- `helpers/screenshot.js`
-  处理截图、生成 diff、禁用动态类、等待字体稳定。
-- `helpers/serverCommand.js`
-  决定视觉回归页面服务该怎么启动。
-- `helpers/watchNaming.js`
-  统一管理截图和 diff 的命名规则。
-
-### specs 里的文件
-
-- `specs/home.visual.spec.js`
-  首页视觉回归用例。
-- `specs/glossary.visual.spec.js`
-  术语页视觉回归用例。
-
-## 相关入口
-
-- Docker Compose：`deploy/docker-compose.visual.yml`
-- 根脚本：`package.json`
-
-如果只记一个命令，日常最常用的是：
+最常用命令：
 
 ```sh
 sh visual_regression/run-visual-watch.sh 修改内容
 ```
+
+如果要指定页面：
+
+```sh
+sh visual_regression/run-visual-watch.sh 文案-术语页 http://127.0.0.1:8080/#/glossary
+```
+
+watcher 仍然会在 `visual_regression/test/` 里生成：
+
+- `修改内容-修改前.png`
+- `修改内容-修改后.png`
+- `diff-修改内容.png`
+
+它更适合本地快速观察，不负责 PR 评论和 CI 审阅链路。
+
+## 相关入口
+
+- workflow：[`.github/workflows/visual-pr.yaml`](/Z:/laiwan_io_web/.github/workflows/visual-pr.yaml)
+- Docker Compose：[deploy/docker-compose.visual.yml](/Z:/laiwan_io_web/deploy/docker-compose.visual.yml)
+- 根命令入口：[package.json](/Z:/laiwan_io_web/package.json)
