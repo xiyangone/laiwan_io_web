@@ -110,14 +110,6 @@ CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baselin
 - `tutorial-*` 关联教程页和语言包
 - `h5-tutorial-*` 关联 h5 tutorial 页面和语言包
 
-### 评论截图示例
-
-以下截图来自已跑通的测试 PR：`https://github.com/xiyangone/laiwan_io_web/pull/9`，用例为 `home-nav-zh`。
-
-| 修改前 | 修改后 | 差异 |
-| --- | --- | --- |
-| ![home-nav-zh before](https://raw.githubusercontent.com/xiyangone/laiwan_io_web/visual-review-artifacts/pr-9/run-25161034045/home-nav-zh/before.png) | ![home-nav-zh after](https://raw.githubusercontent.com/xiyangone/laiwan_io_web/visual-review-artifacts/pr-9/run-25161034045/home-nav-zh/after.png) | ![home-nav-zh diff](https://raw.githubusercontent.com/xiyangone/laiwan_io_web/visual-review-artifacts/pr-9/run-25161034045/home-nav-zh/diff.png) |
-
 ## 目录说明
 
 ### 核心目录
