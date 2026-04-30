@@ -1,0 +1,58 @@
+name: visual-pr
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "react_laiwan_com/**"
+      - "visual_regression/**"
+      - "deploy/docker-compose.visual.yml"
+      - "docker/visual.Dockerfile"
+      - "docker/visual/**"
+      - "package.json"
+      - ".github/workflows/visual-pr.yaml"
+  workflow_dispatch:
+
+concurrency:
+  group: visual-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build visual runner
+        run: docker compose -f deploy/docker-compose.visual.yml build visual
+
+      - name: Run visual regression
+        run: docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun run test:visual
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          if-no-files-found: ignore
+
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
+          if-no-files-found: ignore
+
+      - name: Upload visual artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-artifacts
+          path: visual_regression/test/
+          if-no-files-found: ignore
