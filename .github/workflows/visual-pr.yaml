@@ -51,6 +51,7 @@ jobs:
             -e PR_NUMBER="$PR_NUMBER" \
             -e GITHUB_RUN_ID=${{ github.run_id }} \
             -e VISUAL_REVIEW_ARTIFACT_BRANCH="$VISUAL_REVIEW_ARTIFACT_BRANCH" \
+            -e VISUAL_REVIEW_REQUIRE_CASES=1 \
             visual node /workspace/visual_regression/scripts/collect-review-artifacts.js
 
       - name: Collect PR code context

@@ -157,4 +157,23 @@ describe('collectReviewArtifacts', () => {
             rmSyncSpy.mockRestore();
         }
     });
+
+    test('throws when reviewable artifacts are required but no failed visual cases exist', () => {
+        const resultsDir = path.join(tempDir, 'test-results');
+        const outputDir = path.join(tempDir, 'visual-review');
+
+        fs.mkdirSync(resultsDir, { recursive: true });
+
+        expect(() => collectReviewArtifacts({
+            resultsDir,
+            outputDir,
+            repo: 'xiyangone/laiwan_io_web',
+            prNumber: '1',
+            runId: '123',
+            artifactBranch: 'visual-review-artifacts',
+            requireCases: true,
+        })).toThrow('Visual regression failed, but no reviewable screenshot diff artifacts were found.');
+
+        expect(fs.readFileSync(path.join(outputDir, 'summary.md'), 'utf8')).toContain('未找到失败视觉用例的截图产物。');
+    });
 });

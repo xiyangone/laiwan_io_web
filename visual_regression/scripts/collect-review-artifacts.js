@@ -98,6 +98,7 @@ function collectReviewArtifacts({
     prNumber,
     runId,
     artifactBranch = 'visual-review-artifacts',
+    requireCases = false,
 }) {
     emptyDir(outputDir);
 
@@ -151,6 +152,10 @@ function collectReviewArtifacts({
     });
     fs.writeFileSync(path.join(outputDir, 'summary.md'), summary);
 
+    if (requireCases && cases.length === 0) {
+        throw new Error('Visual regression failed, but no reviewable screenshot diff artifacts were found.');
+    }
+
     return {
         cases,
         summary,
@@ -165,6 +170,7 @@ if (require.main === module) {
         prNumber: process.env.PR_NUMBER || 'local',
         runId: process.env.GITHUB_RUN_ID || 'local',
         artifactBranch: process.env.VISUAL_REVIEW_ARTIFACT_BRANCH || 'visual-review-artifacts',
+        requireCases: process.env.VISUAL_REVIEW_REQUIRE_CASES === '1',
     });
 
     console.log(`Collected ${result.cases.length} visual review case(s).`);
