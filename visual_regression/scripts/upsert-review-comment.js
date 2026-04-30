@@ -19,18 +19,18 @@ function buildBaselineInitializedSummary() {
 function buildVisualReviewGateSummary({ approved }) {
     if (approved) {
         return [
-            '### 合并状态',
+            '### 审阅状态',
             '',
-            '检测到 `visual-approved` label，本次视觉 diff 已放行。',
+            '检测到 `visual-approved` label，本次视觉 diff 已确认；CI 保持绿色。',
         ].join('\n');
     }
 
     return [
-        '### 合并状态',
+        '### 审阅状态',
         '',
-        '检测到视觉 diff，当前 PR 未标记 `visual-approved`，CI 会阻止合并。',
+        '检测到视觉 diff，CI 保持绿色，等待人工或 AI 审阅。',
         '',
-        '确认这次 UI 变化符合预期后，给 PR 添加 `visual-approved` label 并重新运行视觉 CI。',
+        '确认这次 UI 变化符合预期后，可以给 PR 添加 `visual-approved` label 作为已审阅标记。',
     ].join('\n');
 }
 

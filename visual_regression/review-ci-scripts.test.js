@@ -35,7 +35,7 @@ describe('upsertReviewComment', () => {
         expect(buildBaselineInitializedSummary()).toContain('不会提交回 PR 分支');
     });
 
-    test('marks visual diff comments as blocking until visual-approved is applied', () => {
+    test('marks visual diff comments as needing review without blocking merge', () => {
         const body = readCommentBody({
             env: {
                 COMMENT_BODY_PATH: 'summary.md',
@@ -45,10 +45,11 @@ describe('upsertReviewComment', () => {
         });
 
         expect(body).toContain('`visual-approved`');
-        expect(body).toContain('CI 会阻止合并');
+        expect(body).toContain('CI 保持绿色');
+        expect(body).toContain('等待人工或 AI 审阅');
     });
 
-    test('marks visual diff comments as approved when visual-approved is applied', () => {
+    test('marks visual diff comments as reviewed when visual-approved is applied', () => {
         const body = readCommentBody({
             env: {
                 COMMENT_BODY_PATH: 'summary.md',
@@ -58,7 +59,8 @@ describe('upsertReviewComment', () => {
         });
 
         expect(body).toContain('`visual-approved`');
-        expect(body).toContain('已放行');
+        expect(body).toContain('已确认');
+        expect(body).toContain('CI 保持绿色');
     });
 
     test('finds an existing visual review comment by marker', () => {
