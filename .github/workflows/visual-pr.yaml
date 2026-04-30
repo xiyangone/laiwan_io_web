@@ -59,7 +59,9 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           VISUAL_REVIEW_DIR: visual-review
-        run: node visual_regression/scripts/collect-pr-code-context.js
+        run: |
+          sudo chown -R "$USER":"$USER" visual-review
+          node visual_regression/scripts/collect-pr-code-context.js
 
       - name: Upload visual review
         if: steps.visual.outcome == 'failure'
