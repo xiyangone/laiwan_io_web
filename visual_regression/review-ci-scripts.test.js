@@ -35,7 +35,7 @@ describe('upsertReviewComment', () => {
         expect(buildBaselineInitializedSummary()).toContain('不会提交回 PR 分支');
     });
 
-    test('marks visual diff comments as needing review without blocking merge', () => {
+    test('marks visual diff comments as needing review without run metadata', () => {
         const body = readCommentBody({
             env: {
                 COMMENT_BODY_PATH: 'summary.md',
@@ -48,14 +48,14 @@ describe('upsertReviewComment', () => {
             readFile: () => '<!-- visual-review-comment -->\n## 视觉回归 Diff\n\n### home-nav-zh',
         });
 
-        expect(body).toContain('### 本轮运行');
-        expect(body).toContain('Run ID: `25160001688`');
-        expect(body).toContain('Commit: `a5448314`');
-        expect(body).toContain('https://github.com/xiyangone/laiwan_io_web/actions/runs/25160001688');
-        expect(body.indexOf('### 本轮运行')).toBeLessThan(body.indexOf('### home-nav-zh'));
+        expect(body).not.toContain('### 本轮运行');
+        expect(body).not.toContain('Run ID:');
+        expect(body).not.toContain('Commit:');
+        expect(body).not.toContain('Actions:');
         expect(body).toContain('`visual-approved`');
         expect(body).toContain('CI 保持绿色');
         expect(body).toContain('等待人工或 AI 审阅');
+        expect(body.indexOf('### home-nav-zh')).toBeLessThan(body.indexOf('### 审阅状态'));
     });
 
     test('marks visual diff comments as reviewed when visual-approved is applied', () => {

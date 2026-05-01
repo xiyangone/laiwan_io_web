@@ -36,8 +36,8 @@ function emptyDir(dir) {
     });
 }
 
-function buildRawUrl({ repo, artifactBranch, prNumber, runId, caseName, fileName }) {
-    return `https://raw.githubusercontent.com/${repo}/${artifactBranch}/pr-${prNumber}/run-${runId}/${caseName}/${fileName}`;
+function buildReviewImageUrl({ repo, artifactBranch, prNumber, runId, caseName, fileName }) {
+    return `https://github.com/${repo}/blob/${artifactBranch}/pr-${prNumber}/run-${runId}/${caseName}/${fileName}?raw=true`;
 }
 
 function buildSummary({ cases, repo, prNumber, runId, artifactBranch }) {
@@ -56,7 +56,7 @@ function buildSummary({ cases, repo, prNumber, runId, artifactBranch }) {
     lines.push('');
 
     cases.forEach((visualCase) => {
-        const beforeUrl = buildRawUrl({
+        const beforeUrl = buildReviewImageUrl({
             repo,
             artifactBranch,
             prNumber,
@@ -64,7 +64,7 @@ function buildSummary({ cases, repo, prNumber, runId, artifactBranch }) {
             caseName: visualCase.name,
             fileName: 'before.png',
         });
-        const afterUrl = buildRawUrl({
+        const afterUrl = buildReviewImageUrl({
             repo,
             artifactBranch,
             prNumber,
@@ -72,7 +72,7 @@ function buildSummary({ cases, repo, prNumber, runId, artifactBranch }) {
             caseName: visualCase.name,
             fileName: 'after.png',
         });
-        const diffUrl = buildRawUrl({
+        const diffUrl = buildReviewImageUrl({
             repo,
             artifactBranch,
             prNumber,

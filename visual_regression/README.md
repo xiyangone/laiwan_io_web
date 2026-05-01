@@ -29,9 +29,6 @@ docker compose -f deploy/docker-compose.visual.yml run --rm -e CI=1 visual bun r
 - `visual-pr / visual` 仍然为 success
 - workflow 会收集发生变化的用例
 - PR 评论会直接展示：
-  - 本轮 `Run ID`
-  - 本轮 `Commit`
-  - 本轮 `Actions` 链接
   - `before`
   - `after`
   - `diff`
@@ -90,11 +87,7 @@ CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baselin
 
 当 PR 里有视觉变化时，评论会显示“视觉变更用例”，不是“失败用例”。
 
-评论会更新同一条 GitHub Actions bot 评论。GitHub 页面可能仍显示这条评论第一次创建的 `commented ... ago`，所以判断截图是否属于本轮时，看评论顶部的“本轮运行”信息：
-
-- `Run ID` 应等于本次 `visual-pr` Actions run id
-- `Commit` 是本次 GitHub Actions 运行使用的短 SHA
-- `Actions` 链接应指向本次运行
+评论会更新同一条 GitHub Actions bot 评论。GitHub 页面可能仍显示这条评论第一次创建的 `commented ... ago`，以评论内容中的截图和代码 diff 为准。
 
 每个变更用例下会包含：
 

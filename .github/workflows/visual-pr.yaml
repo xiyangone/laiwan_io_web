@@ -168,7 +168,6 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           COMMENT_BODY_PATH: visual-review/summary.md
           VISUAL_REVIEW_APPROVED: ${{ steps.visual-approval.outputs.approved }}
-          GITHUB_SHA: ${{ github.event.pull_request.head.sha }}
         run: node visual_regression/scripts/upsert-review-comment.js
 
       - name: Upsert visual pass comment
@@ -177,7 +176,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           VISUAL_REVIEW_STATUS: pass
-          GITHUB_SHA: ${{ github.event.pull_request.head.sha }}
         run: node visual_regression/scripts/upsert-review-comment.js
 
       - name: Complete visual review
