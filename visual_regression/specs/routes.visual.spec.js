@@ -16,6 +16,10 @@ async function setLanguageCookie(page, locale) {
     }, locale);
 }
 
+async function waitForRouteReady(page) {
+    await page.waitForLoadState('domcontentloaded');
+}
+
 async function expectVisualSnapshot(page, snapshotName) {
     await stabilizePage(page);
     const { buffer } = await captureTimestampedScreenshotBuffer(page, snapshotName);
@@ -28,7 +32,7 @@ async function expectVisualSnapshot(page, snapshotName) {
 test('术语表英文列表页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'en');
     await page.goto('/#/glossary');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.locator('select')).toHaveCount(0);
     await expect(page.getByText("Texas Hold'em Glossary", { exact: true })).toBeVisible();
     await expect(page.getByRole('textbox', { name: 'Search glossary' })).toBeVisible();
@@ -39,7 +43,7 @@ test('术语表英文列表页视觉回归', async ({ page }) => {
 test('术语表中文定义页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'zh');
     await page.goto('/#/glossary/zh/agaodepaixingzuhe');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.getByText('A高的牌型组合', { exact: true })).toBeVisible();
     await expect(page.getByText('返回列表', { exact: true })).toBeVisible();
 
@@ -49,10 +53,10 @@ test('术语表中文定义页视觉回归', async ({ page }) => {
 test('术语表英文定义页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'en');
     await page.goto('/#/glossary');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.getByText("Texas Hold'em Glossary", { exact: true })).toBeVisible();
     await page.goto('/#/glossary/en/agame');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.getByText('A-Game', { exact: true }).first()).toBeVisible();
     await expect(page.getByText('Return to list', { exact: true })).toBeVisible();
 
@@ -62,7 +66,7 @@ test('术语表英文定义页视觉回归', async ({ page }) => {
 test('苹果下载教程页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'zh');
     await page.goto('/#/tutorial/');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.getByText('一、注册一个新的AppleID并下载来玩:', { exact: true })).toBeVisible();
 
     await expectVisualSnapshot(page, 'tutorial-page');
@@ -71,7 +75,7 @@ test('苹果下载教程页视觉回归', async ({ page }) => {
 test('H5 来玩 life 教程页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'zh');
     await page.goto('/#/h5-tutorial/laiwan-life');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.getByText('什么是H5？', { exact: true })).toBeVisible();
     await expect(page.locator(`a[href="${h5VersionUrl1}"]`).first()).toBeVisible();
 
@@ -81,7 +85,7 @@ test('H5 来玩 life 教程页视觉回归', async ({ page }) => {
 test('H5 来玩派教程页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'zh');
     await page.goto('/#/h5-tutorial/laiwanpai-com');
-    await page.waitForLoadState('networkidle');
+    await waitForRouteReady(page);
     await expect(page.getByText('什么是H5？', { exact: true })).toBeVisible();
     await expect(page.locator(`a[href="${h5VersionUrl2}"]`).first()).toBeVisible();
 

@@ -113,9 +113,9 @@ describe('collectReviewArtifacts', () => {
         expect(summary).toContain('修改前');
         expect(summary).toContain('修改后');
         expect(summary).toContain('差异');
-        expect(summary).toContain('https://raw.githubusercontent.com/xiyangone/laiwan_io_web/visual-review-artifacts/pr-1/run-123/home-nav-en/before.png');
-        expect(summary).toContain('https://raw.githubusercontent.com/xiyangone/laiwan_io_web/visual-review-artifacts/pr-1/run-123/home-nav-en/after.png');
-        expect(summary).toContain('https://raw.githubusercontent.com/xiyangone/laiwan_io_web/visual-review-artifacts/pr-1/run-123/home-nav-en/diff.png');
+        expect(summary).toContain('https://github.com/xiyangone/laiwan_io_web/blob/visual-review-artifacts/pr-1/run-123/home-nav-en/before.png?raw=true');
+        expect(summary).toContain('https://github.com/xiyangone/laiwan_io_web/blob/visual-review-artifacts/pr-1/run-123/home-nav-en/after.png?raw=true');
+        expect(summary).toContain('https://github.com/xiyangone/laiwan_io_web/blob/visual-review-artifacts/pr-1/run-123/home-nav-en/diff.png?raw=true');
     });
 
     test('clears output directory contents without removing the mounted root', () => {

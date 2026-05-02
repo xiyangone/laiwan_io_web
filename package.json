@@ -3,11 +3,7 @@
   "private": true,
   "scripts": {
     "test:visual": "bun --cwd react_laiwan_com run test:visual",
-    "test:visual:docker": "docker compose -f deploy/docker-compose.visual.yml run --rm visual bun run test:visual",
-    "test:visual:update": "bun --cwd react_laiwan_com run test:visual:update",
-    "test:visual:update:docker": "docker compose -f deploy/docker-compose.visual.yml run --rm visual bun run test:visual:update",
-    "test:visual:watch:docker": "sh visual_regression/run-visual-watch.sh",
-    "visual:docker:build": "docker compose -f deploy/docker-compose.visual.yml build visual"
+    "test:visual:update": "bun --cwd react_laiwan_com run test:visual:update"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.1.5"
