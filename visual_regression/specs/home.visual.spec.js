@@ -34,6 +34,7 @@ test('首页导航链接鼠标悬停视觉回归', async ({ page }) => {
     await expect(glossaryLink).toBeVisible();
     await expectVisualSnapshot(page, 'home-nav-hover', {
         hoverSelector: 'a[href$="glossary"]',
+        fullPage: false,
     });
 });
 
