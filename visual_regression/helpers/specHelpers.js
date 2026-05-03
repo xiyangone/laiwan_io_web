@@ -16,12 +16,13 @@ async function waitForRouteReady(page) {
     await page.waitForLoadState('domcontentloaded');
 }
 
-async function expectVisualSnapshot(page, snapshotName) {
+async function expectVisualSnapshot(page, snapshotName, options = {}) {
     await stabilizePage(page);
     const { buffer } = await captureTimestampedScreenshotBuffer(page, snapshotName);
     saveSnapshotDiffFromBuffer(`${snapshotName}.png`, buffer, snapshotName);
     await expect(page).toHaveScreenshot(`${snapshotName}.png`, {
         fullPage: true,
+        ...options,
     });
 }
 

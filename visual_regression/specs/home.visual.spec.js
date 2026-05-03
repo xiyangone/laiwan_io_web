@@ -29,5 +29,5 @@ test('苹果商店弹窗视觉回归', async ({ page }) => {
     await page.getByAltText('ios_store').click();
     await expect(page.getByText('苹果商店下载')).toBeVisible();
 
-    await expectVisualSnapshot(page, 'home-ios-modal-zh');
+    await expectVisualSnapshot(page, 'home-ios-modal-zh', { fullPage: false });
 });

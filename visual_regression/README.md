@@ -1,11 +1,6 @@
 # visual_regression
 
-`visual_regression` 现在只维护 GitHub Actions 视觉回归链路。它的职责是：
-
-- PR 提交后自动跑 Playwright 视觉回归
-- 用 base 分支临时生成 baseline，再对比 PR head
-- 有视觉变化时，在 PR 评论里展示 `before` / `after` / `diff` 图片和相关代码 diff
-- 有 diff 时 workflow 默认保持绿色，把结果作为审阅信息
+PR 视觉回归 CI，基于 Playwright 截图对比，结果以 PR 评论呈现。
 
 ## CI 工作流
 
