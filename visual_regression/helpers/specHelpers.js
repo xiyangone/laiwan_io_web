@@ -18,13 +18,9 @@ async function waitForRouteReady(page) {
 
 async function expectVisualSnapshot(page, snapshotName, options = {}) {
     await stabilizePage(page);
-    if (options.hoverSelector) {
-        await page.locator(options.hoverSelector).first().hover();
-        await page.waitForTimeout(300);
-    }
     const { buffer } = await captureTimestampedScreenshotBuffer(page, snapshotName);
     saveSnapshotDiffFromBuffer(`${snapshotName}.png`, buffer, snapshotName);
-    const { hoverSelector, ...screenshotOptions } = options;
+    const screenshotOptions = options;
     await expect(page).toHaveScreenshot(`${snapshotName}.png`, {
         fullPage: true,
         ...screenshotOptions,

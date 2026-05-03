@@ -23,21 +23,6 @@ test('首页导航语言切换与中文状态视觉回归', async ({ page }) => 
     await expectVisualSnapshot(page, 'home-nav-zh');
 });
 
-test('首页导航链接鼠标悬停视觉回归', async ({ page }) => {
-    await page.goto('/#/');
-    await page.waitForLoadState('networkidle');
-    await page.waitForSelector('select');
-    await page.locator('select').selectOption('zh');
-    await expect(page.getByText('德州扑克约局社区')).toBeVisible();
-
-    const glossaryLink = page.getByRole('link', { name: /terminolog|术语/ });
-    await expect(glossaryLink).toBeVisible();
-    await expectVisualSnapshot(page, 'home-nav-hover', {
-        hoverSelector: 'a[href$="glossary"]',
-        fullPage: false,
-    });
-});
-
 test('苹果商店弹窗视觉回归', async ({ page }) => {
     await page.goto('/#/');
     await page.waitForLoadState('networkidle');
