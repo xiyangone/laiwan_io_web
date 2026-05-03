@@ -30,8 +30,10 @@ test('首页导航链接鼠标悬停视觉回归', async ({ page }) => {
     await page.locator('select').selectOption('zh');
     await expect(page.getByText('德州扑克约局社区')).toBeVisible();
 
+    const glossaryLink = page.getByRole('link', { name: /terminolog|术语/ });
+    await expect(glossaryLink).toBeVisible();
     await expectVisualSnapshot(page, 'home-nav-hover', {
-        hoverSelector: '.navList .navItem:nth-child(2)',
+        hoverSelector: 'a[href$="glossary"]',
     });
 });
 
