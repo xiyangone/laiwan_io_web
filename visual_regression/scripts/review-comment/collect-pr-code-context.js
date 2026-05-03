@@ -1,76 +1,21 @@
 const fs = require('fs');
 const path = require('path');
+const {
+    fallbackUiFiles,
+    findCaseByName,
+    getKeywordsForCase,
+    getSourcesForCase,
+} = require('../case-mapping');
 
 const MAX_FILES_PER_CASE = 5;
 const MAX_HUNKS_PER_FILE = 3;
-const UI_FILE_PATTERNS = [
-    'react_laiwan_com/src/',
-    '.github/workflows/visual-pr.yaml',
-    'visual_regression/',
-];
-
-const CASE_FILE_PATTERNS = [
-    {
-        test: (caseName) => caseName.startsWith('home-'),
-        patterns: [
-            'react_laiwan_com/src/page/home/',
-            'react_laiwan_com/src/common/view/NavBar',
-            'react_laiwan_com/src/common/view/LanguageSelect',
-            'react_laiwan_com/src/common/style/NavBar',
-            'react_laiwan_com/src/localization/locales/',
-        ],
-    },
-    {
-        test: (caseName) => caseName.startsWith('glossary-'),
-        patterns: [
-            'react_laiwan_com/src/page/glossary/',
-            'react_laiwan_com/src/localization/locales/',
-        ],
-    },
-    {
-        test: (caseName) => caseName.startsWith('tutorial-'),
-        patterns: [
-            'react_laiwan_com/src/Tutorial.js',
-            'react_laiwan_com/src/view/style/tutorial.css',
-            'react_laiwan_com/src/localization/locales/',
-        ],
-    },
-    {
-        test: (caseName) => caseName.startsWith('h5-tutorial-'),
-        patterns: [
-            'react_laiwan_com/src/page/h5-tutorial/',
-            'react_laiwan_com/src/config.json',
-            'react_laiwan_com/src/localization/locales/',
-        ],
-    },
-];
-
-const CASE_PATCH_KEYWORDS = [
-    {
-        test: (caseName) => caseName.startsWith('home-'),
-        keywords: ['home_page_', 'navbar_'],
-    },
-    {
-        test: (caseName) => caseName.startsWith('glossary-'),
-        keywords: ['glossary_', 'terminolog'],
-    },
-    {
-        test: (caseName) => caseName.startsWith('tutorial-'),
-        keywords: ['apple_tutorial_', 'tutorial'],
-    },
-    {
-        test: (caseName) => caseName.startsWith('h5-tutorial-'),
-        keywords: ['h5_'],
-    },
-];
 
 function isUiFile(file) {
-    return UI_FILE_PATTERNS.some((pattern) => file.filename.startsWith(pattern));
+    return fallbackUiFiles.some((pattern) => file.filename.startsWith(pattern));
 }
 
 function getPatternsForCase(caseName) {
-    const mapping = CASE_FILE_PATTERNS.find((item) => item.test(caseName));
-    return mapping ? mapping.patterns : [];
+    return getSourcesForCase(caseName);
 }
 
 function fileMatchesPatterns(file, patterns) {
@@ -89,8 +34,7 @@ function filterChangedFilesForCase(caseName, changedFiles) {
 }
 
 function getPatchKeywordsForCase(caseName) {
-    const mapping = CASE_PATCH_KEYWORDS.find((item) => item.test(caseName));
-    return mapping ? mapping.keywords : [];
+    return getKeywordsForCase(caseName);
 }
 
 function isNoopChangedLines(changedLines) {
@@ -324,6 +268,8 @@ module.exports = {
     buildCodeContextMarkdownForCase,
     filterChangedFilesForCase,
     getPatchKeywordsForCase,
+    getPatternsForCase,
+    findCaseByName,
     listCaseNames,
     requestChangedFiles,
     summarizePatch,

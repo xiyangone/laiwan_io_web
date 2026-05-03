@@ -8,21 +8,21 @@ const {
     findVisualReviewComment,
     readCommentBody,
     upsertReviewComment,
-} = require('./scripts/upsert-review-comment');
+} = require('../scripts/review-comment/upsert-review-comment');
 const {
     copyReviewArtifacts,
     resolvePublishTargets,
-} = require('./scripts/publish-review-artifacts');
+} = require('../scripts/artifacts/publish-review-artifacts');
 const {
     appendCodeContextToSummary,
     buildCodeContextMarkdown,
     filterChangedFilesForCase,
     summarizePatch,
-} = require('./scripts/collect-pr-code-context');
+} = require('../scripts/review-comment/collect-pr-code-context');
 const {
     detectMissingBaselines,
     writeGitHubOutput,
-} = require('./scripts/detect-missing-baselines');
+} = require('../scripts/baselines/detect-missing-baselines');
 
 describe('upsertReviewComment', () => {
     test('builds the pass summary with the stable marker', () => {

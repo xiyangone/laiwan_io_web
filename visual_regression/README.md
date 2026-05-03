@@ -64,7 +64,8 @@ CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baselin
 
 - `visual_regression/specs/home.visual.spec.js`
 - `visual_regression/specs/glossary.visual.spec.js`
-- `visual_regression/specs/routes.visual.spec.js`
+- `visual_regression/specs/tutorial.visual.spec.js`
+- `visual_regression/specs/h5-tutorial.visual.spec.js`
 
 ## PR 评论
 
@@ -89,11 +90,13 @@ CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baselin
 ## 目录说明
 
 - `helpers/`
-  视觉截图、diff 计算、服务启动等辅助逻辑。
+  视觉截图辅助按职责拆分：`pageStabilize.js`（动画/字体/动态 class 隐藏）、`pngDiff.js`（pixelmatch + 上下文 diff）、`screenshotIO.js`（路径/时间戳/写盘/baseline 比对）、`specHelpers.js`（`expectVisualSnapshot` / `setLanguageCookie` / `waitForRouteReady`）、`serverCommand.js`（视觉 dev server 启动命令）。
 - `specs/`
-  Playwright 视觉回归用例。
+  Playwright 视觉回归用例，按页面拆分：`home` / `glossary` / `tutorial` / `h5-tutorial`。
 - `scripts/`
-  PR 评论、截图整理、artifact 分支发布、代码上下文收集等 CI 脚本。
+  CI 脚本按职责分组：`artifacts/`（diff 截图收集、artifact 分支发布）、`review-comment/`（PR 评论 upsert、PR 代码上下文）、`baselines/`（缺失 baseline 检测）。`scripts/case-mapping.js` 是 case → 源码 / 关键字映射的单一来源，新增视觉用例只需改这一处。
+- `__tests__/`
+  上述 CI 脚本的 jest 单测。
 - `test/`
   CI baseline 图片目录。PR 运行时会临时写入 base 分支生成的 `baseline-*.png`。
 
@@ -108,13 +111,14 @@ CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baselin
 ## 本地验证命令
 
 ```sh
-node --check visual_regression/scripts/collect-review-artifacts.js
-node --check visual_regression/scripts/collect-pr-code-context.js
-node --check visual_regression/scripts/detect-missing-baselines.js
-node --check visual_regression/scripts/publish-review-artifacts.js
-node --check visual_regression/scripts/upsert-review-comment.js
+node --check visual_regression/scripts/artifacts/collect-review-artifacts.js
+node --check visual_regression/scripts/artifacts/publish-review-artifacts.js
+node --check visual_regression/scripts/review-comment/upsert-review-comment.js
+node --check visual_regression/scripts/review-comment/collect-pr-code-context.js
+node --check visual_regression/scripts/baselines/detect-missing-baselines.js
+node --check visual_regression/scripts/case-mapping.js
 ```
 
 ```sh
-./react_laiwan_com/node_modules/.bin/jest --runTestsByPath visual_regression/review-ci-scripts.test.js visual_regression/collect-review-artifacts.test.js -c visual_regression/jest.visual.config.js --runInBand
+./react_laiwan_com/node_modules/.bin/jest --runTestsByPath visual_regression/__tests__/review-ci-scripts.test.js visual_regression/__tests__/collect-review-artifacts.test.js -c visual_regression/jest.visual.config.js --runInBand
 ```

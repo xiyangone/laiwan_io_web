@@ -35,7 +35,7 @@ jest.mock(
     { virtual: true }
 );
 
-const { collectReviewArtifacts } = require('./scripts/collect-review-artifacts');
+const { collectReviewArtifacts } = require('../scripts/artifacts/collect-review-artifacts');
 
 function writePng(filePath, pixels, width = 4, height = 4) {
     const png = new PNG({ width, height });
