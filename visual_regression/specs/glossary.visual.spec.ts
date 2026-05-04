@@ -1,9 +1,9 @@
-const { test, expect } = require('@playwright/test');
-const {
+import { test, expect } from '@playwright/test';
+import {
     expectVisualSnapshot,
     setLanguageCookie,
     waitForRouteReady,
-} = require('../helpers/specHelpers');
+} from '../helpers/visualHelpers';
 
 test('术语表页面视觉回归且不显示语言下拉', async ({ page }) => {
     await page.goto('/#/glossary');

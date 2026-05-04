@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const { expectVisualSnapshot } = require('../helpers/specHelpers');
+import { test, expect } from '@playwright/test';
+import { expectVisualSnapshot } from '../helpers/visualHelpers';
 
 test('首页导航语言切换与英文状态视觉回归', async ({ page }) => {
     await page.goto('/#/');

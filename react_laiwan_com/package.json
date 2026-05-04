@@ -8,9 +8,9 @@
         "build": "webpack",
         "test": "jest",
         "lint": "eslint .",
-        "test:visual": "playwright test -c ../visual_regression/playwright.visual.config.js",
-        "test:visual:update": "playwright test -c ../visual_regression/playwright.visual.config.js --update-snapshots",
-        "test:visual:report": "playwright show-report ../playwright-report"
+        "test:visual": "NODE_PATH=./node_modules playwright test -c ../visual_regression/playwright.visual.config.ts",
+        "test:visual:update": "NODE_PATH=./node_modules playwright test -c ../visual_regression/playwright.visual.config.ts --update-snapshots",
+        "test:visual:report": "NODE_PATH=./node_modules playwright show-report ../playwright-report"
     },
     "husky": {
         "hooks": {
@@ -36,7 +36,6 @@
         "@types/jest": "^29.0.3",
         "babel-eslint": "10.1.0",
         "babel-loader": "8.0.6",
-        "chokidar": "^5.0.0",
         "cross-fetch": "^3.1.5",
         "eslint": "5.16.0",
         "eslint-config-airbnb": "18.0.1",

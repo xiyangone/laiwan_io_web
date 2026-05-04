@@ -1,13 +1,15 @@
-const { test, expect } = require('@playwright/test');
-const {
+import { test, expect } from '@playwright/test';
+import {
     expectVisualSnapshot,
     setLanguageCookie,
     waitForRouteReady,
-} = require('../helpers/specHelpers');
+} from '../helpers/visualHelpers';
+import config from '../../react_laiwan_com/src/config.json';
+
 const {
     h5_version_url_1: h5VersionUrl1,
     h5_version_url_2: h5VersionUrl2,
-} = require('../../react_laiwan_com/src/config.json');
+} = config;
 
 test('H5 来玩 life 教程页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'zh');

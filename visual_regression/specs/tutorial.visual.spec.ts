@@ -1,9 +1,9 @@
-const { test, expect } = require('@playwright/test');
-const {
+import { test, expect } from '@playwright/test';
+import {
     expectVisualSnapshot,
     setLanguageCookie,
     waitForRouteReady,
-} = require('../helpers/specHelpers');
+} from '../helpers/visualHelpers';
 
 test('苹果下载教程页视觉回归', async ({ page }) => {
     await setLanguageCookie(page, 'zh');
