@@ -6,8 +6,6 @@ on:
       - opened
       - synchronize
       - reopened
-      - labeled
-      - unlabeled
     branches:
       - master
     paths:
@@ -28,26 +26,10 @@ jobs:
   visual:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      issues: write
-      pull-requests: write
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Detect visual approval
-        id: visual-approval
-        if: github.event_name == 'pull_request'
-        env:
-          LABELS_JSON: ${{ toJson(github.event.pull_request.labels.*.name) }}
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const labels = JSON.parse(process.env.LABELS_JSON || '[]');
-          const approved = labels.includes('visual-approved');
-          fs.appendFileSync(process.env.GITHUB_OUTPUT, `approved=${approved}\n`);
-          console.log(`visual-approved label present: ${approved}`);
-          NODE
 
       - name: Checkout base for visual baselines
         if: github.event_name == 'pull_request'
@@ -59,6 +41,7 @@ jobs:
       - name: Prepare base visual runner
         if: github.event_name == 'pull_request'
         run: |
+          # base sha 只用于生成本轮对比 baseline，不会把截图提交回 PR 分支。
           mkdir -p visual-base/deploy visual-base/docker visual-base/react_laiwan_com
           cp deploy/docker-compose.visual.yml visual-base/deploy/docker-compose.visual.yml
           cp -R docker/visual visual-base/docker/visual
@@ -80,6 +63,7 @@ jobs:
       - name: Use base visual baselines
         if: github.event_name == 'pull_request'
         run: |
+          # 把 base 分支生成的 baseline 复制到 PR 工作区，让 PR 只比较代码改动后的最终截图。
           mkdir -p visual_regression/test
           find visual_regression/test -maxdepth 1 -name 'baseline-*.png' -type f -delete
           mapfile -t baselines < <(find visual-base/visual_regression/test -maxdepth 1 -name 'baseline-*.png' -type f | sort)
@@ -118,71 +102,8 @@ jobs:
           echo "This usually means the PR introduced a new visual case that does not exist on the base branch."
           exit 1
 
-      - name: Collect visual review artifacts
-        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
-        env:
-          PR_NUMBER: ${{ github.event.pull_request.number || 'manual' }}
-          VISUAL_REVIEW_ARTIFACT_BRANCH: visual-review-artifacts
-        run: |
-          docker compose -f deploy/docker-compose.visual.yml run --rm \
-            -e CI=1 \
-            -e TEST_RESULTS_DIR=/workspace/test-results \
-            -e VISUAL_REVIEW_DIR=/workspace/visual-review \
-            -e GITHUB_REPOSITORY=${{ github.repository }} \
-            -e PR_NUMBER="$PR_NUMBER" \
-            -e GITHUB_RUN_ID=${{ github.run_id }} \
-            -e VISUAL_REVIEW_ARTIFACT_BRANCH="$VISUAL_REVIEW_ARTIFACT_BRANCH" \
-            -e VISUAL_REVIEW_REQUIRE_CASES=1 \
-            visual node /workspace/visual_regression/scripts/artifacts/collect-review-artifacts.js
-
-      - name: Collect PR code context
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          VISUAL_REVIEW_DIR: visual-review
-        run: |
-          sudo chown -R "$USER":"$USER" visual-review
-          node visual_regression/scripts/review-comment/collect-pr-code-context.js
-
-      - name: Upload visual review
-        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: visual-review
-          path: visual-review/
-          if-no-files-found: ignore
-
-      - name: Publish visual review images
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          VISUAL_REVIEW_ARTIFACT_BRANCH: visual-review-artifacts
-        run: node visual_regression/scripts/artifacts/publish-review-artifacts.js
-
-      - name: Upsert visual review comment
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          COMMENT_BODY_PATH: visual-review/summary.md
-          VISUAL_REVIEW_APPROVED: ${{ steps.visual-approval.outputs.approved }}
-        run: node visual_regression/scripts/review-comment/upsert-review-comment.js
-
-      - name: Upsert visual pass comment
-        if: github.event_name == 'pull_request' && steps.visual.outcome == 'success'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          VISUAL_REVIEW_STATUS: pass
-        run: node visual_regression/scripts/review-comment/upsert-review-comment.js
-
-      - name: Complete visual review
+      - name: Fail on visual diffs
         if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
         run: |
-          if [ "${{ steps.visual-approval.outputs.approved }}" = "true" ]; then
-            echo "Visual diffs were found and marked as reviewed by the visual-approved label."
-          else
-            echo "Visual diffs were found and published for review. Keeping this workflow green."
-          fi
+          echo "Visual diffs were found. Review the Playwright failure output and test-results artifacts from this job."
+          exit 1

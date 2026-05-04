@@ -1,9 +1,5 @@
 const { expect } = require('@playwright/test');
 const { stabilizePage } = require('./pageStabilize');
-const {
-    captureTimestampedScreenshotBuffer,
-    saveSnapshotDiffFromBuffer,
-} = require('./screenshotIO');
 
 async function setLanguageCookie(page, locale) {
     await page.goto('/#/');
@@ -18,12 +14,9 @@ async function waitForRouteReady(page) {
 
 async function expectVisualSnapshot(page, snapshotName, options = {}) {
     await stabilizePage(page);
-    const { buffer } = await captureTimestampedScreenshotBuffer(page, snapshotName);
-    saveSnapshotDiffFromBuffer(`${snapshotName}.png`, buffer, snapshotName);
-    const screenshotOptions = options;
     await expect(page).toHaveScreenshot(`${snapshotName}.png`, {
         fullPage: true,
-        ...screenshotOptions,
+        ...options,
     });
 }
 

@@ -9,7 +9,6 @@ services:
       VISUAL_SCREENSHOT_DIR: /workspace/visual_regression/test
       PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
       NODE_PATH: /workspace/react_laiwan_com/node_modules
-      VISUAL_DOCKER: "1"
       CHOKIDAR_USEPOLLING: "1"
       WATCHPACK_POLLING: "true"
     volumes:
@@ -17,7 +16,6 @@ services:
       - ../visual_regression:/workspace/visual_regression
       - ../test-results:/workspace/test-results
       - ../playwright-report:/workspace/playwright-report
-      - ../visual-review:/workspace/visual-review
       - visual_node_modules:/workspace/react_laiwan_com/node_modules
 
 volumes:
