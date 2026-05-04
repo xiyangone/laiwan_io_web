@@ -1,0 +1,119 @@
+name: visual-pr
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    branches:
+      - master
+    paths:
+      - "react_laiwan_com/**"
+      - "visual_regression/**"
+      - ".github/workflows/visual-pr.yaml"
+
+concurrency:
+  group: visual-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.13
+
+      - name: Install dependencies
+        working-directory: react_laiwan_com
+        run: bun install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        working-directory: react_laiwan_com
+        run: bun run playwright install --with-deps chromium
+
+      - name: Run visual CI unit tests
+        run: bun test visual_regression/__tests__/visualCi.test.ts
+
+      - name: Checkout base for visual baselines
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: visual-base
+
+      - name: Prepare base visual workspace
+        run: |
+          # base sha 只用于生成本轮对比 baseline，不会把截图提交回 PR 分支。
+          mkdir -p visual-base/react_laiwan_com
+          cp -R visual_regression visual-base/visual_regression
+          cp react_laiwan_com/package.json visual-base/react_laiwan_com/package.json
+          cp react_laiwan_com/bun.lock visual-base/react_laiwan_com/bun.lock
+
+      - name: Install base dependencies
+        working-directory: visual-base/react_laiwan_com
+        run: bun install --frozen-lockfile
+
+      - name: Generate base visual baselines
+        working-directory: visual-base/react_laiwan_com
+        run: bun run test:visual:update
+
+      - name: Use base visual baselines
+        run: |
+          # 把 base 分支生成的 baseline 复制到 PR 工作区，让 PR 只比较代码改动后的最终截图。
+          mkdir -p visual_regression/test
+          find visual_regression/test -maxdepth 1 -name 'baseline-*.png' -type f -delete
+          mapfile -t baselines < <(find visual-base/visual_regression/test -maxdepth 1 -name 'baseline-*.png' -type f | sort)
+
+          if [ "${#baselines[@]}" -eq 0 ]; then
+            echo "No visual baselines were generated from base sha ${{ github.event.pull_request.base.sha }}."
+            exit 1
+          fi
+
+          cp "${baselines[@]}" visual_regression/test/
+          echo "Copied ${#baselines[@]} visual baseline(s) from base sha ${{ github.event.pull_request.base.sha }}."
+
+      - name: Remove base checkout
+        run: sudo rm -rf visual-base
+
+      - name: Run visual regression
+        id: visual
+        continue-on-error: true
+        working-directory: react_laiwan_com
+        run: bun run test:visual
+
+      - name: Detect missing baselines
+        id: missing-baselines
+        if: steps.visual.outcome == 'failure'
+        env:
+          TEST_RESULTS_DIR: test-results
+        run: bun visual_regression/scripts/detectMissingBaselines.ts
+
+      - name: Upload Playwright artifacts
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-playwright-artifacts
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+      - name: Fail on missing visual baselines
+        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing == 'true'
+        run: |
+          echo "Visual baselines are still missing after generating baselines from the base sha."
+          echo "This usually means the PR introduced a new visual case that does not exist on the base branch."
+          exit 1
+
+      - name: Fail on visual diffs
+        if: steps.visual.outcome == 'failure' && steps.missing-baselines.outputs.missing != 'true'
+        run: |
+          echo "Visual diffs were found. Review the uploaded Playwright report and test-results artifacts from this job."
+          exit 1

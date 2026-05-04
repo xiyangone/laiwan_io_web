@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "../react_laiwan_com/node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@playwright/test": [
+        "../react_laiwan_com/node_modules/@playwright/test"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
