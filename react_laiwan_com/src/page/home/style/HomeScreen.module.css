@@ -3,7 +3,7 @@
     min-height: 100vh;
     background-position: center;
     background-size: cover;
-    background-color: #5b2a86;
+    background-color: #03080d;
     background-image: url('../image/background.jpg');
 }
 
@@ -82,11 +82,16 @@
 
 .title {
     margin-top: 2.2rem;
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    background-color: #6a0dad;
+    color: #fff;
     font-weight: 600;
     font-size: 3.75rem;
-    line-height: 1;
-    width: 700px;
-    max-width: 105%;
+    line-height: 1.1;
 }
 
 .subtitle {
