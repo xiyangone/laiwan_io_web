@@ -84,16 +84,46 @@ CI 不会把 baseline 提交回 PR 分支。这样即使 PR 分支没有 baselin
 
 ## 目录说明
 
-- `helpers/`
-  视觉截图辅助按职责拆分：`pageStabilize.js`（动画/字体/动态 class 隐藏）、`pngDiff.js`（pixelmatch + 上下文 diff）、`screenshotIO.js`（路径/时间戳/写盘/baseline 比对）、`specHelpers.js`（`expectVisualSnapshot` / `setLanguageCookie` / `waitForRouteReady`）、`serverCommand.js`（视觉 dev server 启动命令）。
-- `specs/`
-  Playwright 视觉回归用例，按页面拆分：`home` / `glossary` / `tutorial` / `h5-tutorial`。
-- `scripts/`
-  CI 脚本按职责分组：`artifacts/`（diff 截图收集、artifact 分支发布）、`review-comment/`（PR 评论 upsert、PR 代码上下文）、`baselines/`（缺失 baseline 检测）。`scripts/case-mapping.js` 是 case → 源码 / 关键字映射的单一来源，新增视觉用例只需改这一处。
-- `__tests__/`
-  上述 CI 脚本的 jest 单测。
-- `test/`
-  CI baseline 图片目录。PR 运行时会临时写入 base 分支生成的 `baseline-*.png`。
+```text
+visual_regression/
+├── README.md                                   # 本文档：视觉回归 CI 说明、流程约定与本地验证命令
+├── playwright.visual.config.js                 # Playwright 视觉回归配置入口
+├── jest.visual.config.js                       # Jest 配置，供 CI 辅助脚本单测使用
+│
+├── helpers/
+│   ├── pageStabilize.js                        # 截图前页面稳定化：隐藏动画、字体波动和动态 class
+│   ├── pngDiff.js                              # 像素比对与 diff 图生成
+│   ├── screenshotIO.js                         # 截图路径、写盘、时间戳和 baseline 比对
+│   ├── specHelpers.js                          # 用例级辅助：expectVisualSnapshot / 语言 cookie / 路由就绪等待
+│   └── serverCommand.js                        # 视觉测试 dev server 启动命令
+│
+├── specs/
+│   ├── home.visual.spec.js                     # 首页与导航相关视觉用例
+│   ├── glossary.visual.spec.js                 # glossary 列表与定义页视觉用例
+│   ├── tutorial.visual.spec.js                 # tutorial 页面视觉用例
+│   └── h5-tutorial.visual.spec.js              # H5 tutorial 页面视觉用例
+│
+├── scripts/
+│   ├── case-mapping.js                         # case -> 源码路径 / 关键字映射的单一来源
+│   ├── artifacts/
+│   │   ├── collect-review-artifacts.js         # 收集 before / after / diff 截图与审阅素材
+│   │   └── publish-review-artifacts.js         # 发布审阅产物，供 PR 评论引用
+│   ├── baselines/
+│   │   └── detect-missing-baselines.js         # 检测 base 分支缺失 baseline 的失败场景
+│   └── review-comment/
+│       ├── collect-pr-code-context.js          # 按 case 收集相关代码改动上下文
+│       ├── review-comment-constants.js         # PR 评论渲染常量与共享配置
+│       └── upsert-review-comment.js            # 更新或复用同一条 GitHub Actions bot 评论
+│
+└── __tests__/
+    ├── collect-review-artifacts.test.js        # artifacts 脚本单测
+    └── review-ci-scripts.test.js               # 评论与 baseline 相关脚本单测
+```
+
+补充：
+
+- baseline 图片目录在仓库根目录 `test/` 下；PR 运行时会临时写入 base 分支生成的 `baseline-*.png`。
+- 新增视觉 case 时，通常同时调整 `specs/*.visual.spec.js` 与 `scripts/case-mapping.js`，这样 PR 评论里的代码关联才能保持准确。
 
 ## 关键入口
 
