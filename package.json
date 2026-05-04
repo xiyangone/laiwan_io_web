@@ -1,0 +1,11 @@
+{
+  "name": "laiwan_io_web",
+  "private": true,
+  "scripts": {
+    "test:visual": "bun --cwd react_laiwan_com run test:visual",
+    "test:visual:update": "bun --cwd react_laiwan_com run test:visual:update"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.5"
+  }
+}

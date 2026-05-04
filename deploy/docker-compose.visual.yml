@@ -1,0 +1,22 @@
+services:
+  visual:
+    build:
+      context: ..
+      dockerfile: docker/visual.Dockerfile
+    image: laiwan-visual-runner:local
+    working_dir: /workspace/react_laiwan_com
+    environment:
+      VISUAL_SCREENSHOT_DIR: /workspace/visual_regression/test
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      NODE_PATH: /workspace/react_laiwan_com/node_modules
+      CHOKIDAR_USEPOLLING: "1"
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - ../react_laiwan_com:/workspace/react_laiwan_com
+      - ../visual_regression:/workspace/visual_regression
+      - ../test-results:/workspace/test-results
+      - ../playwright-report:/workspace/playwright-report
+      - visual_node_modules:/workspace/react_laiwan_com/node_modules
+
+volumes:
+  visual_node_modules:
