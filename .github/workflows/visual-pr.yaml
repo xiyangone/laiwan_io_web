@@ -8,10 +8,6 @@ on:
       - reopened
     branches:
       - master
-    paths:
-      - "react_laiwan_com/**"
-      - "visual_regression/**"
-      - ".github/workflows/visual-pr.yaml"
 
 concurrency:
   group: visual-${{ github.event.pull_request.number }}
