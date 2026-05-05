@@ -1,32 +1,19 @@
 import { expect, type Page, type PageAssertionsToHaveScreenshotOptions } from '@playwright/test';
 
-const DEFAULT_DYNAMIC_CLASS_NAMES = '_1zAX1KISmCqHJI2_KxdiQu';
-
-export function normalizeDynamicClassNames(rawValue?: string | string[] | null): string[] {
-    const source: string | string[] = rawValue
-        ?? process.env.VISUAL_DYNAMIC_CLASS_NAMES
-        ?? process.env.IGNORED_CLASS_NAMES
-        ?? DEFAULT_DYNAMIC_CLASS_NAMES;
-    const values: string[] = Array.isArray(source) ? source : source.split(',');
-
-    return [...new Set(values.map((item: string) => item.trim()).filter(Boolean))];
-}
+const DYNAMIC_CLASS_NAMES = ['_1zAX1KISmCqHJI2_KxdiQu'];
 
 function escapeClassName(className: string): string {
     return className.replace(/([^A-Za-z0-9_-])/g, '\\$1');
 }
 
-export function buildDynamicClassHideCss(classNames = normalizeDynamicClassNames()): string {
-    if (!classNames.length) {
-        return '';
-    }
-
-    return `${classNames.map((className) => `.${escapeClassName(className)}`).join(',\n')} {
+function buildDynamicClassHideCss(): string {
+    return `${DYNAMIC_CLASS_NAMES.map((className) => `.${escapeClassName(className)}`).join(',\n')} {
         display: none !important;
     }`;
 }
 
-export async function stabilizePage(page: Page): Promise<void> {
+export async function 稳定视觉页面(page: Page): Promise<void> {
+    // 视觉回归只关心稳定页面状态，动画和光标会制造无意义截图差异。
     await page.addStyleTag({
         content: `
             *, *::before, *::after {
@@ -37,31 +24,29 @@ export async function stabilizePage(page: Page): Promise<void> {
         `,
     });
 
-    const dynamicClassHideCss = buildDynamicClassHideCss();
-    if (dynamicClassHideCss) {
-        await page.addStyleTag({ content: dynamicClassHideCss });
-    }
+    // webpack/css-loader 生成的动态类名会随构建变化，这里隐藏对应元素避免误报。
+    await page.addStyleTag({ content: buildDynamicClassHideCss() });
 
-    await page.evaluate(() => (document.fonts?.ready ?? Promise.resolve()));
+    await page.evaluate(() => document.fonts.ready);
 }
 
-export async function setLanguageCookie(page: Page, locale: string): Promise<void> {
+export async function 设置页面语言(page: Page, locale: string): Promise<void> {
     await page.goto('/#/');
     await page.evaluate((language: string) => {
         document.cookie = `language=${language}; path=/`;
     }, locale);
 }
 
-export async function waitForRouteReady(page: Page): Promise<void> {
+export async function 等待页面路由稳定(page: Page): Promise<void> {
     await page.waitForLoadState('domcontentloaded');
 }
 
-export async function expectVisualSnapshot(
+export async function 匹配视觉截图(
     page: Page,
     snapshotName: string,
     options: PageAssertionsToHaveScreenshotOptions = {}
 ): Promise<void> {
-    await stabilizePage(page);
+    await 稳定视觉页面(page);
     await expect(page).toHaveScreenshot(`${snapshotName}.png`, {
         fullPage: true,
         ...options,
