@@ -1,0 +1,87 @@
+name: visual-pr
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    branches:
+      - master
+
+concurrency:
+  group: visual-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.13
+
+      - name: Install PR dependencies
+        working-directory: react_laiwan_com
+        run: bun install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        working-directory: react_laiwan_com
+        run: bun run playwright install --with-deps chromium
+
+      - name: Checkout base for baselines
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: visual-base
+
+      - name: Prepare base visual workspace
+        run: |
+          # base sha 只用于生成本轮对比 baseline，不会把截图提交回 PR 分支。
+          mkdir -p visual-base/react_laiwan_com
+          cp -R visual_regression visual-base/visual_regression
+          cp react_laiwan_com/package.json visual-base/react_laiwan_com/package.json
+          cp react_laiwan_com/bun.lock visual-base/react_laiwan_com/bun.lock
+
+      - name: Install base dependencies
+        working-directory: visual-base/react_laiwan_com
+        run: bun install --frozen-lockfile
+
+      - name: Generate base baselines
+        working-directory: visual-base/react_laiwan_com
+        run: bun run test:visual:update
+
+      - name: Copy base baselines
+        run: |
+          # 把 base 分支生成的 baseline 复制到 PR 工作区，让 PR 只比较代码改动后的最终截图。
+          mkdir -p visual_regression/test
+          rm -f visual_regression/test/baseline-*.png
+          cp visual-base/visual_regression/test/baseline-*.png visual_regression/test/
+
+      - name: Remove base checkout
+        run: sudo rm -rf visual-base
+
+      - name: Run visual regression
+        working-directory: react_laiwan_com
+        run: |
+          set +e
+          bun run test:visual
+          echo $? > ../visual-status
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+      - name: Complete visual regression
+        run: exit "$(cat visual-status)"

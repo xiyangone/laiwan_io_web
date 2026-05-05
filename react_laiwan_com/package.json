@@ -7,7 +7,10 @@
         "start": "webpack-dev-server --open --mode development --host=0.0.0.0 --disable-host-check --useLocalIp",
         "build": "webpack",
         "test": "jest",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "test:visual": "NODE_PATH=./node_modules playwright test -c ../visual_regression/playwright.visual.config.ts",
+        "test:visual:update": "NODE_PATH=./node_modules playwright test -c ../visual_regression/playwright.visual.config.ts --update-snapshots",
+        "test:visual:report": "NODE_PATH=./node_modules playwright show-report ../playwright-report"
     },
     "husky": {
         "hooks": {
@@ -27,6 +30,7 @@
         "@babel/core": "^7.29.0",
         "@babel/preset-env": "^7.29.2",
         "@babel/preset-react": "^7.28.5",
+        "@playwright/test": "^1.59.1",
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "12.1.2",
         "@types/jest": "^29.0.3",
